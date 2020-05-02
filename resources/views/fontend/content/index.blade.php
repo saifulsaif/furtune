@@ -8,12 +8,12 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-				<img src="images/online_consultation.jpg" alt="">
+				<img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
                 <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
                 <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
                 <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
                 <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
-                <p class="align_center_cust"><img src="images/popup_logo_sur.png" alt=""></p>
+                <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
             </div>
         </div>
     </div>
@@ -372,7 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="mainheaderdiv">
 
 
-           <a href="index.html"> <div class="logo_maindiv_sticky"><img src="images/suraksha_newlogo_updated.png" class="img_css"  alt="logo" /></div>
+           <a href="index.html"> <div class="logo_maindiv_sticky"><img src="{!! asset('public/images/suraksha_newlogo_updated.png') !!}" class="img_css"  alt="logo" /></div>
            </a>
 
 
@@ -395,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li>
+{{-- <li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li> --}}
 <li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
 
 
@@ -505,7 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="header_middle_div_main">
 
-<a href="index.html"><div class="logo_div"><img src="images/suraksha_newlogo_updated.png" class="img_css"  alt="logo" /></div>
+<a href="index.html"><div class="logo_div"><img src="{!! asset('public/images/suraksha_newlogo_updated.png') !!}" class="img_css"  alt="logo" /></div>
 </a>
 
 
@@ -525,10 +525,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="accreditation_div">
-<div class="nabl_logodiv2"><img src="images/28_years.png" class="img_css" alt="Excellence" /></div>
-<div class="nabl_logodiv1"><img src="images/cap-logo-new.jpg" class="img_css" alt="CAP" /></div>
-<div class="nabl_logodiv"><img src="images/nabl-newlogo.png" class="img_css" alt="NABL" /></div>
-<div class="nabl_logodiv"><img src="images/nabh-logo.png" class="img_css" alt="NABH" /></div>
+<div class="nabl_logodiv2"><img src="{!! asset('public/images/28_years.png') !!}" class="img_css" alt="Excellence" /></div>
+<div class="nabl_logodiv1"><img src="{!! asset('public/images/cap-logo-new.jpg') !!}" class="img_css" alt="CAP" /></div>
+<div class="nabl_logodiv"><img src="{!! asset('public/images/nabl-newlogo.png') !!}" class="img_css" alt="NABL" /></div>
+<div class="nabl_logodiv"><img src="{!! asset('public/images/nabh-logo.png') !!}" class="img_css" alt="NABH" /></div>
 
 
 </div>
@@ -592,7 +592,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </li>
 
-<li><a href="javascript:AddNew1()" onmouseover="AddNew1()" onmouseout="DivHide()" onclick="center()">Our Centers</a></li>
+{{-- <li><a href="javascript:AddNew1()" onmouseover="AddNew1()" onmouseout="DivHide()" onclick="center()">Our Centers</a></li> --}}
 <li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
 <!--<li><a href="career.php" >Career</a></li>-->
 
@@ -721,7 +721,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="megamenu_div" id="addnew1" onmouseover="AddNew1()" onmouseout="DivHide()" style="height:240px;">
 
 
-<div class="megamenu_box2" style="height:240px;">
+{{-- <div class="megamenu_box2" style="height:240px;">
 <div class="megamenu_header">WEST BENGAL</div>
 
 <div class="megamenu_body_div">
@@ -802,7 +802,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-</div>
+</div> --}}
 
 <div class="megamenu_box1" style="padding-left:25px; width:200px; height:240px; border-right:0px;">
 <!--<div class="megamenu_header">Delhi & NCR</div>-->
@@ -828,7 +828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<div class="megamenu_header" style="margin-top:15px;">Bihar</div>
+{{-- <div class="megamenu_header" style="margin-top:15px;">Bihar</div>
 
 <div class="megamenu_leftdiv">
 
@@ -840,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-</div>
+</div> --}}
 
 </div>
 
@@ -1034,9 +1034,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<a href="https://surakshanet.com/home-collection"> Home Collection</a></li>
 
                             <li>
-								<a href="#"> Our Centers</a>
+								{{-- <a href="#"> Our Centers</a> --}}
 
-                                <ul class="dl-submenu">
+                                {{-- <ul class="dl-submenu">
                                 <li><a href="#">West Bengal</a>
 
                                 <ul class="dl-submenu">
@@ -1084,7 +1084,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-                                </ul>
+                                </ul> --}}
 
                                 </li>
                                 <!--<li><a href="#">Delhi & NCR</a>
@@ -1102,7 +1102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
                                 </li>-->
-                                <li><a href="#">Bihar</a>
+                                {{-- <li><a href="#">Bihar</a>
                                  <ul class="dl-submenu">
                                       <!-- <li><a href="#">Phulwari Sharif</a></li>-->
                                        <li><a href="our-centers/bihar/kamini-center.html">Kamini Centre</a></li>
@@ -1110,7 +1110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                      <!-- <li><a href="#">LCT Ghat</a></li>-->
 
 
-                                 </ul>
+                                 </ul> --}}
 
 
 
@@ -1218,11 +1218,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="banner_div" style="max-height:450px;">
     <div class="owl-carousel owl-theme" id="banner_slider">
         <div class="item">
-           <a href="covid19/index.html"> <img src="images/covid19.jpg"  style="width:100%; height:100%;" alt="Banner"></a>
+           <a href="covid19/index.html"> <img src="{!! asset('public/images/covid19.jpg') !!}"  style="width:100%; height:100%;" alt="Banner"></a>
         </div>
 
         <div class="item">
-            <a href="online_consultation/index.html" target="_blank"><img src="images/banner_17042020.jpg"  style="width:100%; height:100%;" alt="Banner"></a>
+            <a href="online_consultation/index.html" target="_blank"><img src="{!! asset('public/images/banner_17042020.jpg') !!}"  style="width:100%; height:100%;" alt="Banner"></a>
         </div>
     </div>
 </div>
@@ -1665,7 +1665,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 </div>
 
-<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/pDjxZilfQ30"><img src="images/robot-video.jpg" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
+<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/pDjxZilfQ30"><img src="{!! asset('public/images/robot-video.jpg') !!}" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
 
 </div>
 
@@ -1792,7 +1792,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-      <div class="panel_img"><img src="images/new-centre-tamluk/img4_s.jpg" class="img_css" alt="Tamluk Centre" /></div>
+      <div class="panel_img"><img src="{!! asset('public/images/new-centre-tamluk/img4_s.jpg') !!}" class="img_css" alt="Tamluk Centre" /></div>
 
 
 
@@ -1812,7 +1812,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-     <div class="panel_img"><img src="images/press-conference/Press_Conference_s.jpg" class="img_css" alt="Press Conference" /></div>
+     <div class="panel_img"><img src="{!! asset('public/images/press-conference/Press_Conference_s.jpg') !!}" class="img_css" alt="Press Conference" /></div>
 
 
 
@@ -1830,7 +1830,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-     <div class="panel_img"><img src="images/gateway-cme.jpg" class="img_css" alt="CME" /></div>
+     <div class="panel_img"><img src="{!! asset('public/images/gateway-cme.jpg') !!}" class="img_css" alt="CME" /></div>
 
 
 
@@ -1920,7 +1920,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/business/india-business/suraksha-diagnostics-in-talks-with-us-based-mayo-labs/articleshow/58255183.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
@@ -1932,7 +1932,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/business/india-business/OrbiMed-to-invest-40m-in-Suraksha-Diagnostics/articleshow/55465431.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">OrbiMed to invest $40m in Suraksha Diagnostics</div>
@@ -1943,7 +1943,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/city/kolkata/robotics-to-help-test-blood-samples-in-half-an-hour-and-with-zero-error/articleshow/68003049.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Robotics to help test blood samples in half an hour, and with zero error</div>
@@ -1954,7 +1954,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://www.indiatoday.in/pti-feed/story/suraksha-diagnostics-in-talks-with-us-based-mayo-labs-910416-2017-04-18" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="images/india-today-logo.jpg" style="width:100%;" alt="India Today" /></div>
+<div class="latest_news_datemaindiv"><img src="{!! asset('public/mages/india-today-logo.jpg') !!}" style="width:100%;" alt="India Today" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>

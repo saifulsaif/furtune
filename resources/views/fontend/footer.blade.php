@@ -10,7 +10,7 @@ Copyright @ 2020 Suraksha Diagnostics Private Limited.<br />
 Developed by GL Technologies
 </div>
 
-<div class="copyright_txt"><a href="https://play.google.com/store/apps/details?id=com.diagnostics.suraksha" target="_blank" rel="noopener"><img src="images/badges-Apps.png"   alt="Google Play" /></a>
+<div class="copyright_txt"><a href="https://play.google.com/store/apps/details?id=com.diagnostics.suraksha" target="_blank" rel="noopener"><img src="{!! asset('public/images/badges-Apps.png') !!}"   alt="Google Play" /></a>
 
 <div class="socialicon_mainBG">
 
@@ -87,7 +87,7 @@ Developed by GL Technologies
 <div class="copyright_txt">Copyright @ 2019 Suraksha Diagnostic Private Limited.<br />
 Developed By GL Technologies</div>
 
-<div class="copyright_txt"><div class="app_imgdiv"><a href="https://play.google.com/store/apps/details?id=com.diagnostic.suraksha" target="_blank"><img src="images/badges-Apps.png" alt="Google Play" class="img_css" /></a></div></div>
+<div class="copyright_txt"><div class="app_imgdiv"><a href="https://play.google.com/store/apps/details?id=com.diagnostic.suraksha" target="_blank"><img src="{!! asset('public/images/badges-Apps.png') !!}" alt="Google Play" class="img_css" /></a></div></div>
 
 <div class="copyright_txt"><div class="socialicon_mainBG_responsive">
 
@@ -131,9 +131,9 @@ Developed By GL Technologies</div>
 </div>
 
 
-<script src='js/jquery-1.9.1.min.js'></script>
+<script src='{!! asset('public/js/jquery-1.9.1.min.js') !!}'></script>
 
-<script src='js/bootstrap.min.js'></script>
+<script src='{!! asset('public/js/bootstrap.min.js') !!}'></script>
 <script>
 	$(document).ready(function(){
 		$("#pop_mod_onl_con").modal('show');
@@ -141,8 +141,8 @@ Developed By GL Technologies</div>
 </script>
 
 
-	<script src="js/modernizr.custom.js" ></script>
-		<script src="js/jquery.dlmenu.js" ></script>
+	<script src="{!! asset('public/js/modernizr.custom.js') !!}" ></script>
+		<script src="{!! asset('public/js/jquery.dlmenu.js') !!}" ></script>
 		<script>
 			$(function() {
 				$( '#dl-menu' ).dlmenu({
@@ -152,10 +152,10 @@ Developed By GL Technologies</div>
 		</script>
 
 
-     <script src="owlcarousel/owl.carousel.js" ></script>
-      <script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+     <script src="{!! asset('public/owlcarousel/owl.carousel.js') !!}" ></script>
+      <script src="{!! asset('public/js/jquery.mCustomScrollbar.concat.min.js') !!}" ></script>
 
-      <script src="source/jquery.fancybox.pack8cbb.js?v=2.1.5" ></script>
+      <script src="{!! asset('public/source/jquery.fancybox.pack8cbb.js?v=2.1.5') !!}" ></script>
 
       <script>
 

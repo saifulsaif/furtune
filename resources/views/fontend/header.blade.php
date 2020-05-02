@@ -1,6 +1,3 @@
-
-
-<!-- Mirrored from www.surakshanet.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Apr 2020 13:55:58 GMT -->
 <head>
 <meta charset="utf-8">
 
@@ -19,15 +16,15 @@
 
 
 
- <link rel="icon" type="image/png" href="images/fav-icon.png">
+ <link rel="icon" type="image/png" href="{{ asset('public/images/fav-icon.png') }}">
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
-<link rel="stylesheet" href="css/suraksha8e0e.css?v=8" type="text/css" />
+<link rel="stylesheet" href="{!! asset('public/css/suraksha8e0e.css?v=8') !!}" type="text/css" />
 
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="{!! asset('public/css/bootstrap.min.css') !!}" type="text/css" />
 
 <!--<script src='js/jquery.min.js'></script>-->
 
@@ -57,7 +54,7 @@ select{
 <!--responsive multilevel menu-->
 
 
-<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('public/css/component.css')}}" />
 
 
 
@@ -223,8 +220,8 @@ select{
 
  <!-- Owl Stylesheets -->
 
-  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="{!! asset('public/owlcarousel/assets/owl.carousel.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('public/owlcarousel/assets/owl.theme.default.min.css') !!}">
 
 
 
@@ -234,7 +231,7 @@ select{
 
 <!--scroll effect-->
 <!-- <link rel="stylesheet" href="css/style.css">-->
- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+ <link rel="stylesheet" href="{!! asset('public/css/jquery.mCustomScrollbar.css') !!}">
 
 
 
@@ -246,7 +243,7 @@ select{
 
 <!-- Font Awesome -->
 
-<link href="assets/css/font-awesome.css" rel="stylesheet">
+<link href="{!! asset('public/assets/css/font-awesome.css') !!}" rel="stylesheet">
 
 <!-- Font Awesome -->
 
@@ -262,7 +259,7 @@ select{
 <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.2" media="screen" />-->
 
 
-	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox8cbb.css?v=2.1.5" media="screen" />
+<link rel="stylesheet" type="text/css" href="{!! asset('public/source/jquery.fancybox8cbb.css?v=2.1.5') !!}" media="screen" />
 
 
 
@@ -305,7 +302,7 @@ function isNumberKey(evt)
 
 
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="{!! asset('public/css/style.css') !!}">
 
 
 
