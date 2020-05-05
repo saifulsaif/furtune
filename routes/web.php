@@ -18,3 +18,4 @@
 Auth::routes();
 Route::get('/', 'PageController@index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
