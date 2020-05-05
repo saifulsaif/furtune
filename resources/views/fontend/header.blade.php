@@ -320,6 +320,7 @@
 
 
 </li>
+
 <li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
 
 <li><a href="{!! route('sajib.getDoctor') !!}" >Book an Appointment</a></li>
