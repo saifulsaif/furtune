@@ -323,7 +323,7 @@
 
 <li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
 
-<li><a href="https://surakshanet.com/book-an-appointment" >Book an Appointment</a></li>
+<li><a href="{!! route('sajib.getDoctor') !!}" >Book an Appointment</a></li>
 <li><a href="https://surakshanet.com/home-collection" >Home Collection</a></li>
 <li><a href="https://surakshanet.com/health-package" >Health Packages</a></li>
 

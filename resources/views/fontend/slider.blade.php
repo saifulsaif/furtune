@@ -17,7 +17,7 @@
 </script>
 
 
-<div class="banner_div" style="max-height:450px;">
+<div class="banner_div" style="max-height:450px;height:400px;">
     <div class="owl-carousel owl-theme" id="banner_slider">
       @foreach($sliders as $slider)
         <div class="item">

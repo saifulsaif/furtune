@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Best Diagnostic Clinic in Kolkata - Suraksha Diagnostics</title>
+<title>Furtune</title>
 <meta name="description" content="Suraksha Diagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
 <meta name="keywords" content="Best Diagnostic Clinic in Kolkata"/>
 <link rel="canonical" href="index.html" />
@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="{!! asset('public/css/suraksha8e0e.css?v=8') !!}" type="text/css" />
 
 <link rel="stylesheet" href="{!! asset('public/css/bootstrap.min.css') !!}" type="text/css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
 <!--<script src='js/jquery.min.js'></script>-->
 

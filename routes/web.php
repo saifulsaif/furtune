@@ -22,7 +22,7 @@ Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_
 
 Route::group(['as' => 'sajib.', 'prefix' => 'sajib', 'namespace' => 'Frontend'], function () {
 
-    // Route::post('/pdf', 'CartController@generatePDF')->name('pdf');
+    Route::get('/show', 'AppointmentController@show')->name('getDoctor');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
 });
 Route::group(['as' => 'saiful.', 'prefix' => 'saiful', 'namespace' => 'Frontend'], function () {
