@@ -120,7 +120,7 @@ $sub_menu = DB::table('sub_menu')
     <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
      <ul>
           @foreach($sub_menu as $sub)
-           <li><a href="{{route('company_profile')}}" >{{$sub->sub_munu_name}}</a></li>
+           <li><a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a></li>
           @endforeach
       </ul>
       </li>
