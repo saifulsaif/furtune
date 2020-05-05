@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-@include('fontend.header')
- <body>
-   @yield('content')
-   @include('fontend.footer')
-</body>
-</html>
+
+ @include('fontend.head')
+ @include('fontend.header')
+ @include('fontend.menu')
+ @include('fontend.slider')
+ @yield('content')
+ @include('fontend.footer')

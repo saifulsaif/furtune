@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('fontend.content.index');
-});
+// Route::get('/', function () {
+//     return view('fontend.content.index');
+// });
 
 Auth::routes();
+Route::get('/', 'PageController@index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

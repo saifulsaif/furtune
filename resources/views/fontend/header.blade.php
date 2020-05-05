@@ -1,616 +1,362 @@
-<head>
-<meta charset="utf-8">
+<body>
+  <div id="pop_mod_onl_con" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+         <img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
+                  <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
+                  <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
+                  <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
+                  <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
+                  <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="home">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ7JXFR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="main_h">
 
-<title>Best Diagnostic Clinic in Kolkata - Suraksha Diagnostics</title>
-<meta name="description" content="Suraksha Diagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
-<meta name="keywords" content="Best Diagnostic Clinic in Kolkata"/>
-<link rel="canonical" href="index.html" />
+<div class="megamenu_sticky_maindiv" style="display:block;">
 
+<div class="megamenu_sticky_div">
 
-<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-121338201-1"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-121338201-1');</script><link rel="icon" type="image/png" href="images/fav-icon.png">
+<!--<div class="megamenu_div3" style="margin-top:0px;" id="addnew6" onmouseover="AddNew6()" onmouseout="DivHide()" >
 
+<a href="executive-package-gold.php"><div class="about_menudiv">Executive Health Checkup Gold Package</div></a>
+<a href="#"><div class="about_menudiv">Executive Health Checkup Package</div></a>
+<a href="#"><div class="about_menudiv">Pre-Marriage Health Checkup Package</div></a>
+<a href="#"><div class="about_menudiv">Senior Citizen Health Checkup Gold Package</div></a>
+<a href="#"><div class="about_menudiv">Senior Citizen Health Checkup Package</div></a>
+<a href="#"><div class="about_menudiv">Well Women Health Checkup Gold Package</div></a>
+<a href="#"><div class="about_menudiv">Well Women Health Checkup Package</div></a>
+<a href="#"><div class="about_menudiv">Diabetes Health Checkup Package</div></a>
+<a href="#"><div class="about_menudiv">Diabetes Comprehensive Package</div></a>
 
+</div>-->
 
 
 
 
- <link rel="icon" type="image/png" href="{{ asset('public/images/fav-icon.png') }}">
-   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
-<link rel="stylesheet" href="{!! asset('public/css/suraksha8e0e.css?v=8') !!}" type="text/css" />
 
-<link rel="stylesheet" href="{!! asset('public/css/bootstrap.min.css') !!}" type="text/css" />
 
-<!--<script src='js/jquery.min.js'></script>-->
+<div class="megamenu_div2" style="margin-top:0px;" id="addnew5" onmouseover="AddNew5()" onmouseout="DivHide()" >
 
- <script>
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) {
+<a href="https://surakshanet.com/contact-us/get-in-touch"><div class="about_menudiv">Get in Touch</div></a>
+<a href="https://surakshanet.com/contact-us/career"><div class="about_menudiv">Career</div></a>
+<a href="https://surakshanet.com/contact-us/feedback"><div class="about_menudiv">Feedback</div></a>
+<!--<a href="franchisee.php"><div class="about_menudiv">Franchisee</div></a>-->
 
-    window.location.href='index-m.html'
-} else {
- // window.location.href='dashboard.php'
-}
-</script>
 
-<style>
 
-select{
- color:black !important;
-}
-</style>
 
 
 
+<!--<a href="delhi-contact.php"><div class="about_menudiv">Delhi & NCR</div></a>
+<a href="bihar-contact.php"><div class="about_menudiv">Bihar</div></a>-->
 
+</div>
 
+<div class="megamenu_div1" style="margin-top:0px;" id="addnew4" onmouseover="AddNew4()" onmouseout="DivHide()" >
 
+<a href="https://surakshanet.com/about-us/"><div class="about_menudiv">Company Profile</div></a>
+<a href="https://surakshanet.com/about-us/team-of-experts"><div class="about_menudiv">Team of Experts</div></a>
+<!--<a href="mission.php"><div class="about_menudiv">Mission & Vision</div></a>-->
+<a href="https://surakshanet.com/about-us/csr"><div class="about_menudiv">CSR</div></a>
+<a href="https://surakshanet.com/about-us/customer-care"><div class="about_menudiv">Customer Care</div></a>
+</div>
 
-<!--responsive multilevel menu-->
+<div class="megamenu_div" style="margin-top:0px;" id="addnew2" onmouseover="AddNew2()" onmouseout="DivHide()">
 
+<div class="megamenu_box2" style="width:100%; border-right:0px;">
+<!--<div class="megamenu_header">WEST BENGAL</div>-->
 
-<link rel="stylesheet" type="text/css" href="{{ asset('public/css/component.css')}}" />
+<div class="megamenu_body_div">
+<div class="megamenu_leftdiv" style="width:16%;">
+<div class="menu_serviceheading">Imaging</div>
+<a href="our-services/imaging/x-ray.html"><div class="menu_servicetxt">X-ray</div></a>
+<a href="our-services/imaging/usg.html"><div class="menu_servicetxt">USG</div></a>
+<a href="our-services/imaging/ct-scan.html"><div class="menu_servicetxt">CT Scan</div></a>
+<a href="our-services/imaging/mri.html"><div class="menu_servicetxt">MRI</div></a>
+<a href="our-services/imaging/dexa-scan.html"><div class="menu_servicetxt">DEXA Scan</div></a>
+<a href="our-services/imaging/mammography.html"><div class="menu_servicetxt">Mammography</div></a>
 
 
 
 
-<!--responsive multilevel menu-->
+</div>
 
+<div class="megamenu_leftdiv" style="width:16%;">
+<div class="menu_serviceheading">Cardiology</div>
+<a href="our-services/cardiology/electrocardiogram.html"><div class="menu_servicetxt">Electrocardiogram</div></a>
+<a href="our-services/cardiology/echocardiogram.html"><div class="menu_servicetxt">Echocardiogram</div></a>
+<a href="our-services/cardiology/stress-test.html"><div class="menu_servicetxt">Stress Test (TMT)</div></a>
+<a href="our-services/cardiology/holter-monitoring.html"><div class="menu_servicetxt">Holter Monitoring</div></a>
+<a href="our-services/cardiology/color-doppler.html"><div class="menu_servicetxt">Color Doppler</div></a>
+<a href="our-services/cardiology/peripheral-doppler.html"><div class="menu_servicetxt">Peripheral Doppler</div></a>
+<a href="our-services/cardiology/pft.html"><div class="menu_servicetxt">PFT</div></a>
 
 
 
 
 
+</div>
 
+<div class="megamenu_leftdiv" style="width:11%;">
+<div class="menu_serviceheading">Neurology</div>
+<a href="our-services/neurology/eeg.html"><div class="menu_servicetxt">EEG</div></a>
+<a href="our-services/neurology/emg.html"><div class="menu_servicetxt">EMG</div></a>
+<a href="our-services/neurology/ncv.html"><div class="menu_servicetxt">NCV</div></a>
+</div>
 
- <script>
-	function AddNew()
-	{
-		  $("#addnew").show();
-		  $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew3").hide();
+<div class="megamenu_leftdiv" style="width:18%;">
+<div class="menu_serviceheading">Gastroenterology</div>
+<a href="our-services/gastroenterology/upper-gi-endoscopy.html"><div class="menu_servicetxt">Upper GI Endoscopy</div></a>
+<a href="our-services/gastroenterology/lower-gi-endoscopy.html"><div class="menu_servicetxt">Lower GI Endoscopy</div></a>
+<a href="our-services/gastroenterology/sigmoidoscopy.html"><div class="menu_servicetxt">Sigmoidoscopy</div></a>
+<a href="our-services/gastroenterology/proctoscopy.html"><div class="menu_servicetxt">Proctoscopy</div></a>
+<a href="our-services/gastroenterology/colonoscopy.html"><div class="menu_servicetxt">Colonoscopy</div></a>
+<a href="our-services/gastroenterology/proctosigmoidoscopy2.html"><div class="menu_servicetxt">Proctosigmoidoscopy</div></a>
 
-	}
-	function DivHide()
-	{
-		  $('#addnew').hide();
-		  $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew3").hide();
-	}
-</script>
 
 
-<script>
-	function AddNew1()
-	{
-		  $("#addnew1").show();
-		 $("#addnew").hide();
-		 $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-	function DivHide()
-	{
-		  $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-</script>
-
-<script>
-	function AddNew2()
-	{
-
-		  $("#addnew2").show();
-		 $("#addnew").hide();
-		 $("#addnew1").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-	function DivHide()
-	{
-		  $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-</script>
-
-<script>
-	function AddNew3()
-	{
-		  $("#addnew3").show();
-		 $("#addnew").hide();
-		 $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-	function DivHide()
-	{
-		  $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-</script>
-
-
-<script>
-	function AddNew4()
-	{
-		 $("#addnew3").hide();
-		 $("#addnew").hide();
-		 $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew4").show();
-		   $("#addnew5").hide();
-	}
-	function DivHide()
-	{
-		  $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-</script>
 
-<script>
-	function AddNew5()
-	{
-		  $("#addnew3").hide();
-		 $("#addnew").hide();
-		 $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").show();
-	}
-	function DivHide()
-	{
-		  $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		  $("#addnew3").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-	}
-</script>
+</div>
 
+<div class="megamenu_leftdiv" style="width:18%;">
 
-<script>
-	function AddNew6()
-	{
-		  $("#addnew3").hide();
-		 $("#addnew").hide();
-		 $("#addnew1").hide();
-		  $("#addnew2").hide();
-		  $("#addnew4").hide();
-		   $("#addnew5").hide();
-		    $("#addnew6").show();
-	}
-	function DivHide()
-	{
-		   $('#addnew1').hide();
-		   $("#addnew").hide();
-		   $("#addnew2").hide();
-		   $("#addnew3").hide();
-		   $("#addnew4").hide();
-		   $("#addnew5").hide();
-		   $("#addnew6").hide();
-	}
-</script>
+<div class="menu_serviceheading">Pathology</div>
+<a href="our-services/pathology/microbiology.html"><div class="menu_servicetxt">Microbiology</div></a>
+<a href="our-services/pathology/serology.html"><div class="menu_servicetxt">Serology</div></a>
+<a href="our-services/pathology/molecular-biology.html"><div class="menu_servicetxt">Molecular Biology</div></a>
+<a href="our-services/pathology/histopathology.html"><div class="menu_servicetxt">Histopathology</div></a>
+<a href="our-services/pathology/cytopathology.html"><div class="menu_servicetxt">Cytopathology</div></a>
+<a href="our-services/pathology/clinical-pathology.html"><div class="menu_servicetxt">Clinical Pathology</div></a>
+<a href="our-services/pathology/next-generation-sequencing.html"><div class="menu_servicetxt">Next Generation Sequencing (NGS)</div></a>
 
- <!-- Owl Stylesheets -->
 
-  <link rel="stylesheet" href="{!! asset('public/owlcarousel/assets/owl.carousel.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('public/owlcarousel/assets/owl.theme.default.min.css') !!}">
 
+</div>
 
+<div class="megamenu_leftdiv" style="width:16%;">
 
-  <!-- Owl Stylesheets -->
+<div class="menu_serviceheading">Pathology</div>
 
+<a href="our-services/pathology/hematology.html"><div class="menu_servicetxt">Hematology</div></a>
+<a href="our-services/pathology/biochemistry.html"><div class="menu_servicetxt">Biochemistry</div></a>
+<a href="our-services/pathology/immunohistochemistry.html"><div class="menu_servicetxt">Immunohistochemistry</div></a>
+<a href="our-services/pathology/flourescence-in-situ-hybridization.html"><div class="menu_servicetxt">Flourescence In-situ Hybridization</div></a>
+<a href="our-services/pathology/cytogenetics.html"><div class="menu_servicetxt">Cytogenetics</div></a>
+<a href="our-services/pathology/flow-cytometry.html"><div class="menu_servicetxt">Flow Cytometry</div></a>
+<a href="our-services/pathology/liquid-chromatography-tandem-mass-spectrometry.html"><div class="menu_servicetxt">Liquid chromatography-tandem mass spectrometry (LC-MS/MS)</div></a>
 
+<!--<a href="health-package.php"><div class="megamenu_header" style=" margin-top:10px;">Health Packages</div></a>-->
 
-<!--scroll effect-->
-<!-- <link rel="stylesheet" href="css/style.css">-->
- <link rel="stylesheet" href="{!! asset('public/css/jquery.mCustomScrollbar.css') !!}">
+</div>
 
+</div>
 
 
+</div>
 
+</div>
 
-<!--scroll effect-->
+<div class="megamenu_div" id="addnew3" style="margin-top:0px; height:240px;" onmouseover="AddNew3()" onmouseout="DivHide()" >
 
+<div class="megamenu_box2" style="height:240px;">
+<div class="megamenu_header">WEST BENGAL</div>
 
+<div class="megamenu_body_div">
 
-<!-- Font Awesome -->
+<div class="megamenu_leftdiv" style="width:20%;">
 
-<link href="{!! asset('public/assets/css/font-awesome.css') !!}" rel="stylesheet">
+<a href="our-centers/west-bengal/barasat.html"><div class="menu_servicetxt">Barasat</div></a>
+<a href="our-centers/west-bengal/birati.html"><div class="menu_servicetxt">Birati</div></a>
+<a href="our-centers/west-bengal/barrackpore.html"><div class="menu_servicetxt">Barrackpore</div></a>
+<a href="our-centers/west-bengal/basirhat.html"><div class="menu_servicetxt">Basirhat</div></a>
+<a href="our-centers/west-bengal/bhatpara.html"><div class="menu_servicetxt">Bhatpara</div></a>
+<a href="our-centers/west-bengal/bangaon.html"><div class="menu_servicetxt">Bangaon </div></a>
+<a href="our-centers/west-bengal/chinar-park.html"><div class="menu_servicetxt">Chinar Park</div></a>
+<a href="our-centers/west-bengal/dunlop.html"><div class="menu_servicetxt"> Dunlop</div></a>
+<a href="our-centers/west-bengal/diamond-harbour.html"><div class="menu_servicetxt">Diamond Harbour</div></a>
 
-<!-- Font Awesome -->
+<a href="our-centers/collection-center/index.html"><div class="megamenu_header" style=" margin-top:10px; font-size:18px;">Collection Center</div></a>
 
 
 
-<!-- Add fancyBox main JS and CSS files -->
+</div>
 
+<div class="megamenu_leftdiv" style="width:20%;">
 
-<!--<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>-->
+<a href="our-centers/west-bengal/elgin-road.html"><div class="menu_servicetxt">Elgin Road</div></a>
+<a href="our-centers/west-bengal/garia.html"><div class="menu_servicetxt">Garia</div></a>
+<a href="our-centers/west-bengal/howrah.html"><div class="menu_servicetxt">Howrah</div></a>
+<a href="our-centers/west-bengal/habra.html"><div class="menu_servicetxt">Habra</div></a>
+<a href="our-centers/west-bengal/hatibagan.html"><div class="menu_servicetxt">Hatibagan</div></a>
+<a href="our-centers/west-bengal/jalpaiguri.html"><div class="menu_servicetxt">Jalpaiguri</div></a>
+<a href="our-centers/west-bengal/jodhpur-park.html"><div class="menu_servicetxt">Jodhpur Park</div></a>
+<a href="our-centers/west-bengal/kasba.html"><div class="menu_servicetxt">Kasba</div></a>
+<a href="our-centers/west-bengal/krishnanagar.html"><div class="menu_servicetxt">Krishnanagar</div></a>
 
 
-<!--<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.3"></script>
-<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.2" media="screen" />-->
 
 
-<link rel="stylesheet" type="text/css" href="{!! asset('public/source/jquery.fancybox8cbb.css?v=2.1.5') !!}" media="screen" />
+</div>
 
+<div class="megamenu_leftdiv" style="width:20%;">
+<a href="our-centers/west-bengal/kestopur.html"><div class="menu_servicetxt">Kestopur</div></a>
+<a href="our-centers/west-bengal/kharda.html"><div class="menu_servicetxt">Khardah</div></a>
+<a href="our-centers/west-bengal/laketown.html"><div class="menu_servicetxt">Laketown</div></a>
+<a href="our-centers/west-bengal/madhyamgram.html"><div class="menu_servicetxt">Madhyamgram</div></a>
+<a href="our-centers/west-bengal/nagerbazar.html"><div class="menu_servicetxt">Nagerbazar</div></a>
+<a href="our-centers/west-bengal/nrs.html"><div class="menu_servicetxt">NRS</div></a>
+<a href="our-centers/west-bengal/new-barrackpore.html"><div class="menu_servicetxt">New Barrackpore</div></a>
+<a href="our-centers/west-bengal/phoolbagan.html"><div class="menu_servicetxt">Phoolbagan</div></a>
 
 
 
 
 
 
+</div>
 
+<div class="megamenu_leftdiv" style="width:20%;">
 
+<a href="our-centers/west-bengal/phoolbagan-polyclinic.html"><div class="menu_servicetxt">Phoolbagan Polyclinic</div></a>
+<a href="our-centers/west-bengal/pradhan-nagar.html"><div class="menu_servicetxt">Pradhan Nagar</div></a>
+<a href="our-centers/west-bengal/salt-lake-dd-18.html"><div class="menu_servicetxt">Salt Lake DD 18/1</div></a>
+<a href="our-centers/west-bengal/salt-lake-jc-21.html"><div class="menu_servicetxt">Salt Lake JC 21</div></a>
+<a href="our-centers/west-bengal/siliguri.html"><div class="menu_servicetxt">Siliguri </div></a>
+<a href="our-centers/west-bengal/sodepur.html"><div class="menu_servicetxt">Sodepur</div></a>
+<a href="our-centers/west-bengal/sinthee.html"><div class="menu_servicetxt">Sinthee</div></a>
+<a href="our-centers/west-bengal/serampore.html"><div class="menu_servicetxt">Serampore</div></a>
+<a href="our-centers/west-bengal/tamluk.html"><div class="menu_servicetxt">Tamluk</div></a>
 
+</div>
 
+</div>
 
 
+</div>
 
+<div class="megamenu_box1" style="padding-left:25px; width:200px; height:240px; border-right:0px;">
+<!--<div class="megamenu_header">Delhi & NCR</div>-->
 
+<div class="megamenu_body_div">
 
 
+<!--<div class="megamenu_leftdiv">
+<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/janakpuri"><div class="menu_servicetxt">Janakpuri</div></a>
+<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/kirti-nagar"><div class="menu_servicetxt">Kirti Nagar</div></a>
 
+<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/noida"><div class="menu_servicetxt">Noida</div></a>
+<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/saini-enclave"><div class="menu_servicetxt">Saini Enclave</div></a>
 
 
- <script>
-function isNumberKey(evt)
-{
-	var charCode = (evt.which) ? evt.which : event.keyCode;
-	if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
-}
 
-</script>
+</div>-->
 
 
 
+<div class="megamenu_header" style="margin-top:15px;">Bihar</div>
 
+<div class="megamenu_leftdiv">
 
 
+<a href="our-centers/bihar/kamini-center.html"><div class="menu_servicetxt">Kamini Centre</div></a>
 
-<link rel="stylesheet" href="{!! asset('public/css/style.css') !!}">
+<!--<a href="lab-location.php?center_Id=33"><div class="menu_servicetxt">Kankarbagh</div></a>-->
 
 
 
+</div>
 
-<script>
-function get_center()
-{
-	var center_Id=$('#center_id').val();
-	if(center_Id=='')
-	{
-		alert('Please Select Lab Location');
+</div>
 
-	}
-	else
-	{
-		window.location.href='https://surakshanet.com/our-centers/'+center_Id;
-    }
-}
-</script>
 
-<script>
-function resget_center()
-{
-	var center_Id=$('#res_center').val();
-	window.location.href='index.html?center_Id='+center_Id;
+</div>
 
-}
 
-</script>
 
 
-<style>
 
 
-.overlay {
-	width:100%;
-	min-height:400px;
-	position:absolute;
-	top:0;
-}
-</style>
 
-<style>
-#nav li a {
-/*padding: 13px 30px !important;*/
-padding: 13px 19px !important;
-}
-</style>
+</div>
 
+</div>
 
-<script>
+</div>
 
-function GetOptionList()
-{
-	var a=$('#search-box1').val();
 
 
-		$.ajax({
-		type: "POST",
-		url: "test_search.php",
-		data:'keyword='+a,
-		success: function(data){
-			//alert(data);
-			$("#suggesstion-box").show();
-			$("#suggesstion-box").html(data);
 
-		}
-		});
+ <div class="header_div header_div_sticky" >
 
-}
+        <div class="header_topband" style="height:3px; background-color:#e1272c;"></div>
 
-/*$(document).ready(function(){
-	$("#search-box1").keyup(function(){
-	 //  alert(111);
-	  var a=$('#search-box1').val();
-	  //alert(a);
-		$.ajax({
-		type: "POST",
-		url: "test_search.php",
-		data:'keyword='+$(this).val(),
-		success: function(data){
-			//alert(data);
-			$("#suggesstion-box").show();
-			$("#suggesstion-box").html(data);
+            <div class="header_middlemaindiv">
 
-		}
-		});
-	});
-	});
-*/
+            <div class="mainheaderdiv">
 
-function selectCountry(val) {
-$("#search-box1").val(val);
-$("#suggesstion-box").hide();
-}
 
-</script>
+           <a href="index.html"> <div class="logo_maindiv_sticky"><img src="{!! asset('public/images/suraksha_newlogo_updated.png') !!}" class="img_css"  alt="logo" /></div>
+           </a>
 
-<script>
-function get_search()
-{
 
-/*var c= 'd e'
-var query= '?='+encodeURIComponent(c);
-var uri= 'http://www.example.com/script?query='+encodeURIComponent(query);
-*/
+			<div class="sticky_menu">
+					<ul id="nav1">
+<!--<li><a href="index.php" >Home</a></li>-->
 
-	var search_home=$('#search-box1').val();
-	if(search_home=='')
-	{
-		//alert('Please Select Test Name');
-	}
-	else
-	{
-		window.location.href='find-test7407.html?search_item='+encodeURIComponent(search_home);
-	}
-}
+<li><a href="javascript:AddNew4()"  onmouseout="DivHide()" onclick="AddNew4(),profile()" onmouseover="AddNew4()">About Us</a>
 
-</script>
-<script>
-function ShowMap(map_location)
-{
-    if(map_location=="west_bengal")
-	{
-	  $('#west_bengal').show();
-	  $('#delhi').hide();
-	  $('#bihar').hide();
 
-	  $("#wb_btn").addClass("tab_css_select");
 
-	  $("#wb_btn").removeClass("tab_css");
-	  $("#delhi_btn").removeClass("tab_css_select");
-	  $("#bihar_btn").removeClass("tab_css_select");
 
+</li>
 
-	  $("#delhi_btn").addClass("tab_css");
-	  $("#bihar_btn").addClass("tab_css");
-	  document.getElementById('wbmap').src += '';
-	}
-	else if(map_location=="delhi")
-    {
-	   $('#west_bengal').hide();
-	   $('#delhi').show();
-	   $('#bihar').hide();
+<li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
 
-	   $("#delhi_btn").addClass("tab_css_select");
+<li><a href="https://surakshanet.com/book-an-appointment" >Book an Appointment</a></li>
+<li><a href="https://surakshanet.com/home-collection" >Home Collection</a></li>
+<li><a href="https://surakshanet.com/health-package" >Health Packages</a></li>
 
-	   $("#delhi_btn").removeClass("tab_css");
-	   $("#wb_btn").removeClass("tab_css_select");
-	   $("#bihar_btn").removeClass("tab_css_select");
 
-	   $("#wb_btn").addClass("tab_css");
-	   $("#bihar_btn").addClass("tab_css");
 
-	   document.getElementById('delhimap').src += '';
+{{-- <li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li> --}}
+<li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
 
-	}
-	else if(map_location=="bihar")
-    {
-	   $('#west_bengal').hide();
-	   $('#delhi').hide();
-	   $('#bihar').show();
 
-	    $("#bihar_btn").addClass("tab_css_select");
 
-		 $("#bihar_btn").removeClass("tab_css");
-	     $("#wb_btn").removeClass("tab_css_select");
-		 $("#delhi_btn").removeClass("tab_css_select");
+<!--<li><a href="feedback.php" >Feedback</a></li>-->
+<li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">Contact Us</a>
 
-		 $("#wb_btn").addClass("tab_css");
-	     $("#delhi_btn").addClass("tab_css");
 
-		  document.getElementById('biharmap').src += '';
+</li>
 
-	}
+</ul>
+			</div>
 
-}
-</script>
 
+            </div>
 
+            </div>
 
-<style>
 
-.icon_subheading select{
-width: 100%;
-height: 40px;
-padding-left:10px;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-text-indent: 0.01px;
-text-overflow: '';
-background: transparent url(images/select-icon.png) no-repeat scroll 97% 17px;
-font-size: 15px;
-font-family: 'Lato', sans-serif;
-color:#333333;
-}
-
-}
-</style>
-
-
-<style>
-.back-to-top {
-cursor: pointer;
-position: fixed;
-bottom: 20px;
-right: 20px;
-display:none;
-}
-</style>
-
-<style>
-	#pop_mod_onl_con .modal-backdrop{
-		z-index:0 !important;
-	}
-
-	.popup_title_main{
-		width: 100%;
-		height: auto;
-		font-family: 'Raleway', sans-serif;
-		font-size: 31px;
-		text-align: center;
-		font-weight: bold;
-		color: #e1272c;
-	}
-
-	.normal_pra{
-		height: auto;
-		margin-bottom: 10px;
-		font-family: 'Arimo', sans-serif;
-		font-size: 20px;
-		text-align: center;
-		line-height: 28px;
-		color: #333333;
-		font-weight: 300;
-		padding: 0px 25px;
-	}
-
-	.normal_pra .click_here_anc{
-		color: #e1272c;
-	}
-
-	#pop_mod_onl_con .align_center_cust{
-		text-align: center;
-		padding: 5px 0px;
-	}
-
-	.align_center_cust img{
-		display:inline-block;
-	}
-
-	#pop_mod_onl_con .modal-body{
-		padding:0px;
-	}
-
-	#pop_mod_onl_con .modal-header .close{
-		width: 27px;
-		height: 27px;
-		background: #ff0007;
-		opacity: 1;
-		color: #fff;
-		border-radius: 50%;
-		padding: 0px 4px 2px 6px;
-		outline:none;
-	}
-
-	#pop_mod_onl_con .modal-header{
-		z-index: 999;
-		position: relative;
-		border: none;
-		padding: 15px 15px 0px 15px;
-	}
-
-	#pop_mod_onl_con .modal-body {
-		position: absolute;
-		top: 0;
-		background: #fff;
-	}
-
-	.normal_pra {
-		height: auto;
-		margin-bottom: 8px;
-		font-family: 'Arimo', sans-serif;
-		font-size: 18px;
-		text-align: center;
-		line-height: 25px;
-		color: #333333;
-		font-weight: 300;
-		padding: 0px 25px;
-	}
-</style>
-
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  '../connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '556624911842874');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=556624911842874&amp;ev=PageView&amp;noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-
-</head>
+
+    </div>
+
+
+
+
+</header>
+
+   <div class="wrapper">
+
+<!--###############  Sticky Header  ######################-->
