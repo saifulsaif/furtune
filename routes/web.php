@@ -19,3 +19,14 @@ Auth::routes();
 Route::get('/', 'PageController@index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
+
+Route::group(['as' => 'sajib.', 'prefix' => 'sajib', 'namespace' => 'Frontend'], function () {
+
+    // Route::post('/pdf', 'CartController@generatePDF')->name('pdf');
+    // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
+});
+Route::group(['as' => 'saiful.', 'prefix' => 'saiful', 'namespace' => 'Frontend'], function () {
+
+    // Route::post('/pdf', 'CartController@generatePDF')->name('pdf');
+    // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
+});
