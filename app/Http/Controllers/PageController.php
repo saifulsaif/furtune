@@ -5,7 +5,7 @@ use DB;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
-{
+{   
    public function index(){
      $menu = DB::table('menu')
                 ->select('*')
@@ -32,5 +32,20 @@ class PageController extends Controller
                 ->select('*')
                 ->get();
       return view('fontend.content.company_profile',compact('menu','sub_menu','sliders','com_profiles'));
+   }
+   public function teamOfExpert(){
+     $menu = DB::table('menu')
+                ->select('*')
+                ->get();
+     $sub_menu = DB::table('sub_menu')
+                ->select('*')
+                ->get();
+     $sliders = DB::table('slider')
+                ->select('*')
+                ->get();
+     $experts = DB::table('expert_team')
+                ->select('*')
+                ->get();
+      return view('fontend.content.team_of_expert',compact('menu','sub_menu','sliders','experts'));
    }
 }

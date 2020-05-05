@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('/', 'PageController@index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
+Route::get('/team-of-expert', 'PageController@teamOfExpert')->name('team_of_expert');
 
 Route::group(['as' => 'sajib.', 'prefix' => 'sajib', 'namespace' => 'Frontend'], function () {
 
