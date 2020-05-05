@@ -12,8 +12,7 @@ class PageController extends Controller
                 ->get();
      $sub_menu = DB::table('sub_menu')
                 ->select('*')
-                ->get($sub_menu);
-                dd();
+                ->get();
      $sliders = DB::table('slider')
                 ->select('*')
                 ->get();
