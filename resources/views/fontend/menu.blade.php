@@ -108,115 +108,60 @@
 
 
 <ul id="nav">
-<!--<li><a href="index.php" >Home</a></li>-->
+
 @foreach(getMenuList() as $me)
 @php
     $sub_menu = getAll_id('menu_id',$me->id,'sub_menu');
 @endphp
-@if($sub_menu)
-    <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
-     <ul>
-          @foreach($sub_menu as $sub)
-           <li><a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a></li>
-          @endforeach
-      </ul>
-      </li>
+@if($me->id<=1)
+  <li><a href="javascript:AddNew()" onmouseover="AddNew()" onmouseout="DivHide()" onclick="service()">Our Services</a></li>
+  <div class="megamenu_div" id="addnew" onmouseover="AddNew()" onmouseout="DivHide()">
+
+  <div class="megamenu_box2" style="width:100%; border-right:0px;">
+  <!--<div class="megamenu_header">WEST BENGAL</div>-->
+
+  <div class="megamenu_body_div">
+    @foreach($sub_menu as $sub)
+  <div class="megamenu_leftdiv" style="width:16%;">
+  <div class="menu_serviceheading">{{$sub->sub_munu_name}}</div>
+  @foreach($sub_menu_list as $list)
+    @if($list->sub_menu_id==$sub->id)
+      <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
+    @endif
+  @endforeach
+  </div>
+  @endforeach
+
+
+  </div>
+
+
+  </div>
+
+
+
+
+  </div>
 @else
-    <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a></li>
+  @if($sub_menu)
+      <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
+       <ul>
+            @foreach($sub_menu as $sub)
+             <li><a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a></li>
+            @endforeach
+        </ul>
+        </li>
+  @else
+      <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a></li>
+  @endif
 @endif
   @endforeach
-<li><a href="javascript:AddNew()" onmouseover="AddNew()" onmouseout="DivHide()" onclick="service()">Our Services</a></li>
+
 </ul>
 
 </div>
 
-<div class="megamenu_div" id="addnew" onmouseover="AddNew()" onmouseout="DivHide()">
 
-<div class="megamenu_box2" style="width:100%; border-right:0px;">
-<!--<div class="megamenu_header">WEST BENGAL</div>-->
-
-<div class="megamenu_body_div">
-<div class="megamenu_leftdiv" style="width:16%;">
-<div class="menu_serviceheading">Imaging</div>
-<a href="our-services/imaging/x-ray.html"><div class="menu_servicetxt">X-ray</div></a>
-<a href="our-services/imaging/usg.html"><div class="menu_servicetxt">USG</div></a>
-<a href="our-services/imaging/ct-scan.html"><div class="menu_servicetxt">CT Scan</div></a>
-<a href="our-services/imaging/mri.html"><div class="menu_servicetxt">MRI</div></a>
-<a href="our-services/imaging/dexa-scan.html"><div class="menu_servicetxt">DEXA Scan</div></a>
-<a href="our-services/imaging/mammography.html"><div class="menu_servicetxt">Mammography</div></a>
-</div>
-
-<div class="megamenu_leftdiv" style="width:16%;">
-<div class="menu_serviceheading">Cardiology</div>
-<a href="our-services/cardiology/electrocardiogram.html"><div class="menu_servicetxt">Electrocardiogram</div></a>
-<a href="our-services/cardiology/echocardiogram.html"><div class="menu_servicetxt">Echocardiogram</div></a>
-<a href="our-services/cardiology/stress-test.html"><div class="menu_servicetxt">Stress Test (TMT)</div></a>
-<a href="our-services/cardiology/holter-monitoring.html"><div class="menu_servicetxt">Holter Monitoring</div></a>
-<a href="our-services/cardiology/color-doppler.html"><div class="menu_servicetxt">Color Doppler</div></a>
-<a href="our-services/cardiology/peripheral-doppler.html"><div class="menu_servicetxt">Peripheral Doppler</div></a>
-<a href="our-services/cardiology/pft.html"><div class="menu_servicetxt">PFT</div></a>
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:11%;">
-<div class="menu_serviceheading">Neurology</div>
-<a href="our-services/neurology/eeg.html"><div class="menu_servicetxt">EEG</div></a>
-<a href="our-services/neurology/emg.html"><div class="menu_servicetxt">EMG</div></a>
-<a href="our-services/neurology/ncv.html"><div class="menu_servicetxt">NCV</div></a>
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:18%;">
-<div class="menu_serviceheading">Gastroenterology</div>
-<a href="our-services/gastroenterology/upper-gi-endoscopy.html"><div class="menu_servicetxt">Upper GI Endoscopy</div></a>
-<a href="our-services/gastroenterology/lower-gi-endoscopy.html"><div class="menu_servicetxt">Lower GI Endoscopy</div></a>
-<a href="our-services/gastroenterology/sigmoidoscopy.html"><div class="menu_servicetxt">Sigmoidoscopy</div></a>
-<a href="our-services/gastroenterology/proctoscopy.html"><div class="menu_servicetxt">Proctoscopy</div></a>
-<a href="our-services/gastroenterology/colonoscopy.html"><div class="menu_servicetxt">Colonoscopy</div></a>
-<a href="our-services/gastroenterology/proctosigmoidoscopy.html"><div class="menu_servicetxt">Proctosigmoidoscopy</div></a>
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:18%;">
-
-<div class="menu_serviceheading">Pathology</div>
-<a href="our-services/pathology/microbiology.html"><div class="menu_servicetxt">Microbiology</div></a>
-<a href="our-services/pathology/serology.html"><div class="menu_servicetxt">Serology</div></a>
-<a href="our-services/pathology/molecular-biology.html"><div class="menu_servicetxt">Molecular Biology</div></a>
-<a href="our-services/pathology/histopathology.html"><div class="menu_servicetxt">Histopathology</div></a>
-<a href="our-services/pathology/cytopathology.html"><div class="menu_servicetxt">Cytopathology</div></a>
-<a href="our-services/pathology/clinical-pathology.html"><div class="menu_servicetxt">Clinical Pathology</div></a>
-<a href="our-services/pathology/next-generation-sequencing.html"><div class="menu_servicetxt">Next Generation Sequencing (NGS)</div></a>
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:16%;">
-
-<div class="menu_serviceheading">Pathology</div>
-
-<a href="our-services/pathology/hematology.html"><div class="menu_servicetxt">Hematology</div></a>
-<a href="our-services/pathology/biochemistry.html"><div class="menu_servicetxt">Biochemistry</div></a>
-<a href="our-services/pathology/immunohistochemistry.html"><div class="menu_servicetxt">Immunohistochemistry</div></a>
-<a href="our-services/pathology/flourescence-in-situ-hybridization.html"><div class="menu_servicetxt">Flourescence In-situ Hybridization</div></a>
-<a href="our-services/pathology/cytogenetics.html"><div class="menu_servicetxt">Cytogenetics</div></a>
-<a href="our-services/pathology/flow-cytometry.html"><div class="menu_servicetxt">Flow Cytometry</div></a>
-<a href="our-services/pathology/liquid-chromatography-tandem-mass-spectrometry.html"><div class="menu_servicetxt">Liquid chromatography-tandem mass spectrometry (LC-MS/MS)</div></a>
-
-<!--<a href="health-package.php"><div class="megamenu_header" style=" margin-top:10px;">Health Packages</div></a>-->
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-
-</div>
 
 <div class="megamenu_div" id="addnew1" onmouseover="AddNew1()" onmouseout="DivHide()" style="height:240px;">
 

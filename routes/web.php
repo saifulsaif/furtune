@@ -21,6 +21,11 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
 Route::get('/team-of-expert', 'PageController@teamOfExpert')->name('team_of_expert');
 Route::get('/CSR', 'PageController@csr')->name('csr');
+Route::get('/service/{id}', 'PageController@service');
+Route::get('/#', 'PageController@index')->name('#');
+
+
+
 
 Route::group(['as' => 'sajib.', 'prefix' => 'sajib', 'namespace' => 'Frontend'], function () {
 
@@ -29,6 +34,5 @@ Route::group(['as' => 'sajib.', 'prefix' => 'sajib', 'namespace' => 'Frontend'],
 });
 Route::group(['as' => 'saiful.', 'prefix' => 'saiful', 'namespace' => 'Frontend'], function () {
 
-    // Route::post('/pdf', 'CartController@generatePDF')->name('pdf');
-    // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
+
 });

@@ -21,7 +21,7 @@
     <div class="owl-carousel owl-theme" id="banner_slider">
       @foreach($sliders as $slider)
         <div class="item">
-           <a href="covid19/index.html"> <img src="{{$slider->image_link}}"  style="width:100%; height:100%;" alt="Banner"></a>
+           <a href="covid19/index.html"> <img src="{{asset($slider->image_link)}}"  style="width:100%; height:100%;" alt="Banner"></a>
         </div>
      @endforeach
     </div>
