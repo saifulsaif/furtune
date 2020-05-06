@@ -111,7 +111,7 @@
 <!--<li><a href="index.php" >Home</a></li>-->
 @foreach(getMenuList() as $me)
 @php
-    $sub_menu = getAll_id('menu_id',2,'sub_menu');
+    $sub_menu = getAll_id('menu_id',$me->id,'sub_menu');
 @endphp
 @if($sub_menu)
     <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>

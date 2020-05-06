@@ -33,12 +33,9 @@
         }
     },
     "autoload": {
-<<<<<<< HEAD
         "files": [
             "app/Helper/generalHelper.php"
         ],
-=======
->>>>>>> 988abb884fea244006c87013e7a043162a797894
         "psr-4": {
             "App\\": "app/"
         },

@@ -48,4 +48,19 @@ class PageController extends Controller
                 ->get();
       return view('fontend.content.team_of_expert',compact('menu','sub_menu','sliders','experts'));
    }
+   public function csr(){
+     $menu = DB::table('menu')
+                ->select('*')
+                ->get();
+     $sub_menu = DB::table('sub_menu')
+                ->select('*')
+                ->get();
+     $sliders = DB::table('slider')
+                ->select('*')
+                ->get();
+     $csrs = DB::table('csrs')
+                ->select('*')
+                ->get();
+      return view('fontend.content.csr',compact('menu','sub_menu','sliders','csrs'));
+   }
 }
