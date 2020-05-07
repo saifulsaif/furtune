@@ -124,7 +124,7 @@
     @foreach($sub_menu as $sub)
   <div class="megamenu_leftdiv" style="width:16%;">
   <div class="menu_serviceheading">{{$sub->sub_munu_name}}</div>
-  @foreach($sub_menu_list as $list)
+  @foreach($dashboard_array['sub_menu_list'] as $list)
     @if($list->sub_menu_id==$sub->id)
       <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
     @endif
@@ -314,7 +314,7 @@
 <div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
 						<ul class="dl-menu">
-              @foreach($menu as $me)
+              @foreach($dashboard_array['menu'] as $me)
                   <li><a href="{!! route('sajib.getDoctor') !!}">{{$me->menu_name}} </a></li>
                @endforeach
 							 <li>
