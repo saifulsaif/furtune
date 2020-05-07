@@ -101,204 +101,158 @@
 
 <!--**************  Desktop Menu Start ********************-->
 <div class="mainmenu">
-<div class="menudiv" >
-
-
-
-
-
-<ul id="nav">
-
-@foreach(getMenuList() as $me)
-@php
-    $sub_menu = getAll_id('menu_id',$me->id,'sub_menu');
-@endphp
-@if($me->id<=1)
-  <li><a href="javascript:AddNew()" onmouseover="AddNew()" onmouseout="DivHide()" onclick="service()">Our Services</a></li>
-  <div class="megamenu_div" id="addnew" onmouseover="AddNew()" onmouseout="DivHide()">
-
-  <div class="megamenu_box2" style="width:100%; border-right:0px;">
-  <!--<div class="megamenu_header">WEST BENGAL</div>-->
-
-  <div class="megamenu_body_div">
-    @foreach($sub_menu as $sub)
-  <div class="megamenu_leftdiv" style="width:16%;">
-  <div class="menu_serviceheading">{{$sub->sub_munu_name}}</div>
-  @foreach($sub_menu_list as $list)
-    @if($list->sub_menu_id==$sub->id)
-      <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
-    @endif
-  @endforeach
-  </div>
-  @endforeach
-
-
-  </div>
-
-
-  </div>
-
-
-
-
-  </div>
-@else
-  @if($sub_menu)
-      <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
-       <ul>
-            @foreach($sub_menu as $sub)
-             <li><a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a></li>
-            @endforeach
+    <div class="menudiv" >
+        <ul id="nav">
+            @if (!empty(getMenuList()))
+                @foreach(getMenuList() as $me)
+                    @php
+                        $sub_menu = getAll_id('menu_id',$me->id,'sub_menu');
+                    @endphp
+                    @if($me->id<=1)
+                        <li>
+                            <a href="javascript:AddNew()" onmouseover="AddNew()" onmouseout="DivHide()" onclick="service()">Our Services</a>
+                        </li>
+                        <div class="megamenu_div" id="addnew" onmouseover="AddNew()" onmouseout="DivHide()">
+                            <div class="megamenu_box2" style="width:100%; border-right:0px;">
+                            <!--<div class="megamenu_header">WEST BENGAL</div>-->
+                                <div class="megamenu_body_div">
+                                    @if(!empty($sub_menu))
+                                        @foreach($sub_menu as $sub)
+                                        <div class="megamenu_leftdiv" style="width:16%;">
+                                            <div class="menu_serviceheading">{{$sub->sub_munu_name}}</div>
+                                            @if (!empty($sub_menu_list))
+                                                @foreach($sub_menu_list as $list)
+                                                    @if($list->sub_menu_id==$sub->id)
+                                                        <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
+                                                    @endif
+                                                @endforeach
+                                            @endif
+                                        </div>
+                                        @endforeach
+                                    @endif
+                                 </div>
+                            </div>
+                        </div>
+                    @else
+                        @if($sub_menu)
+                        <li>
+                            <a href="{!! route('sajib.getDoctor') !!}" >{{$me->menu_name}}</a>
+                            <ul>
+                                @foreach($sub_menu as $sub)
+                                    <li>
+                                        <a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @else
+                        <li>
+                            <a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
+                        </li>
+                        @endif
+                    @endif
+                @endforeach
+            @endif
         </ul>
-        </li>
-  @else
-      <li><a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a></li>
-  @endif
-@endif
-  @endforeach
+    </div>
 
-</ul>
+    <div class="megamenu_div" id="addnew1" onmouseover="AddNew1()" onmouseout="DivHide()" style="height:240px;">
 
-</div>
 
+    {{-- <div class="megamenu_box2" style="height:240px;">
+    <div class="megamenu_header">WEST BENGAL</div>
 
+    <div class="megamenu_body_div">
 
-<div class="megamenu_div" id="addnew1" onmouseover="AddNew1()" onmouseout="DivHide()" style="height:240px;">
+    <div class="megamenu_leftdiv" style="width:20%;">
 
+    <a href="our-centers/west-bengal/barasat.html"><div class="menu_servicetxt">Barasat</div></a>
+    <a href="our-centers/west-bengal/birati.html"><div class="menu_servicetxt">Birati</div></a>
+    <a href="our-centers/west-bengal/barrackpore.html"><div class="menu_servicetxt">Barrackpore</div></a>
+    <a href="our-centers/west-bengal/basirhat.html"><div class="menu_servicetxt">Basirhat</div></a>
+    <a href="our-centers/west-bengal/bhatpara.html"><div class="menu_servicetxt">Bhatpara</div></a>
+    <a href="our-centers/west-bengal/bangaon.html"><div class="menu_servicetxt">Bangaon </div></a>
+    <a href="our-centers/west-bengal/chinar-park.html"><div class="menu_servicetxt">Chinar Park</div></a>
+    <a href="our-centers/west-bengal/dunlop.html"><div class="menu_servicetxt"> Dunlop</div></a>
+    <a href="our-centers/west-bengal/diamond-harbour.html"><div class="menu_servicetxt">Diamond Harbour</div></a>
 
-{{-- <div class="megamenu_box2" style="height:240px;">
-<div class="megamenu_header">WEST BENGAL</div>
+    <a href="our-centers/collection-center/index.html"><div class="megamenu_header" style=" margin-top:10px; font-size:18px;">Collection Center</div></a>
 
-<div class="megamenu_body_div">
+    </div>
+    <div class="megamenu_leftdiv" style="width:20%;">
 
-<div class="megamenu_leftdiv" style="width:20%;">
+    <a href="our-centers/west-bengal/elgin-road.html"><div class="menu_servicetxt">Elgin Road</div></a>
+    <a href="our-centers/west-bengal/garia.html"><div class="menu_servicetxt">Garia</div></a>
+    <a href="our-centers/west-bengal/howrah.html"><div class="menu_servicetxt">Howrah</div></a>
+    <a href="our-centers/west-bengal/habra.html"><div class="menu_servicetxt">Habra</div></a>
+    <a href="our-centers/west-bengal/hatibagan.html"><div class="menu_servicetxt">Hatibagan</div></a>
+    <a href="our-centers/west-bengal/jalpaiguri.html"><div class="menu_servicetxt">Jalpaiguri</div></a>
+    <a href="our-centers/west-bengal/jodhpur-park.html"><div class="menu_servicetxt">Jodhpur Park</div></a>
+    <a href="our-centers/west-bengal/kasba.html"><div class="menu_servicetxt">Kasba</div></a>
+    <a href="our-centers/west-bengal/krishnanagar.html"><div class="menu_servicetxt">Krishnanagar</div></a>
 
-<a href="our-centers/west-bengal/barasat.html"><div class="menu_servicetxt">Barasat</div></a>
-<a href="our-centers/west-bengal/birati.html"><div class="menu_servicetxt">Birati</div></a>
-<a href="our-centers/west-bengal/barrackpore.html"><div class="menu_servicetxt">Barrackpore</div></a>
-<a href="our-centers/west-bengal/basirhat.html"><div class="menu_servicetxt">Basirhat</div></a>
-<a href="our-centers/west-bengal/bhatpara.html"><div class="menu_servicetxt">Bhatpara</div></a>
-<a href="our-centers/west-bengal/bangaon.html"><div class="menu_servicetxt">Bangaon </div></a>
-<a href="our-centers/west-bengal/chinar-park.html"><div class="menu_servicetxt">Chinar Park</div></a>
-<a href="our-centers/west-bengal/dunlop.html"><div class="menu_servicetxt"> Dunlop</div></a>
-<a href="our-centers/west-bengal/diamond-harbour.html"><div class="menu_servicetxt">Diamond Harbour</div></a>
+    </div>
+    <div class="megamenu_leftdiv" style="width:20%;">
+    <a href="our-centers/west-bengal/kestopur.html"><div class="menu_servicetxt">Kestopur</div></a>
+    <a href="our-centers/west-bengal/kharda.html"><div class="menu_servicetxt">Khardah</div></a>
+    <a href="our-centers/west-bengal/laketown.html"><div class="menu_servicetxt">Laketown</div></a>
+    <a href="our-centers/west-bengal/madhyamgram.html"><div class="menu_servicetxt">Madhyamgram</div></a>
+    <a href="our-centers/west-bengal/nagerbazar.html"><div class="menu_servicetxt">Nagerbazar</div></a>
+    <a href="our-centers/west-bengal/nrs.html"><div class="menu_servicetxt">NRS</div></a>
+    <a href="our-centers/west-bengal/new-barrackpore.html"><div class="menu_servicetxt">New Barrackpore</div></a>
+    <a href="our-centers/west-bengal/phoolbagan.html"><div class="menu_servicetxt">Phoolbagan</div></a>
 
-<a href="our-centers/collection-center/index.html"><div class="megamenu_header" style=" margin-top:10px; font-size:18px;">Collection Center</div></a>
+    </div>
 
-</div>
+    <div class="megamenu_leftdiv" style="width:20%;">
+    <a href="our-centers/west-bengal/phoolbagan-polyclinic.html"><div class="menu_servicetxt">Phoolbagan Polyclinic</div></a>
+    <a href="our-centers/west-bengal/pradhan-nagar.html"><div class="menu_servicetxt">Pradhan Nagar</div></a>
+    <a href="our-centers/west-bengal/salt-lake-dd-18.html"><div class="menu_servicetxt">Salt Lake DD 18/1</div></a>
+    <a href="our-centers/west-bengal/salt-lake-jc-21.html"><div class="menu_servicetxt">Salt Lake JC 21</div></a>
 
+    <a href="our-centers/west-bengal/siliguri.html"><div class="menu_servicetxt">Siliguri </div></a>
+    <a href="our-centers/west-bengal/sodepur.html"><div class="menu_servicetxt">Sodepur</div></a>
+    <a href="our-centers/west-bengal/sinthee.html"><div class="menu_servicetxt">Sinthee</div></a>
+    <a href="our-centers/west-bengal/serampore.html"><div class="menu_servicetxt">Serampore</div></a>
+    <a href="our-centers/west-bengal/tamluk.html"><div class="menu_servicetxt">Tamluk</div></a>
 
+    </div>
 
-<div class="megamenu_leftdiv" style="width:20%;">
+    </div>
 
-<a href="our-centers/west-bengal/elgin-road.html"><div class="menu_servicetxt">Elgin Road</div></a>
-<a href="our-centers/west-bengal/garia.html"><div class="menu_servicetxt">Garia</div></a>
-<a href="our-centers/west-bengal/howrah.html"><div class="menu_servicetxt">Howrah</div></a>
-<a href="our-centers/west-bengal/habra.html"><div class="menu_servicetxt">Habra</div></a>
-<a href="our-centers/west-bengal/hatibagan.html"><div class="menu_servicetxt">Hatibagan</div></a>
-<a href="our-centers/west-bengal/jalpaiguri.html"><div class="menu_servicetxt">Jalpaiguri</div></a>
-<a href="our-centers/west-bengal/jodhpur-park.html"><div class="menu_servicetxt">Jodhpur Park</div></a>
-<a href="our-centers/west-bengal/kasba.html"><div class="menu_servicetxt">Kasba</div></a>
-<a href="our-centers/west-bengal/krishnanagar.html"><div class="menu_servicetxt">Krishnanagar</div></a>
+    </div> --}}
 
+    <div class="megamenu_box1" style="padding-left:25px; width:200px; height:240px; border-right:0px;">
+    <!--<div class="megamenu_header">Delhi & NCR</div>-->
 
+    <div class="megamenu_body_div">
 
-</div>
+    <!--<div class="megamenu_leftdiv">
+    <a href="https://www.surakshanet.com/our-centers/delhi-&ncr/janakpuri"><div class="menu_servicetxt">Janakpuri</div></a>
+    <a href="https://www.surakshanet.com/our-centers/delhi-&ncr/kirti-nagar"><div class="menu_servicetxt">Kirti Nagar</div></a>
 
+    <a href="https://www.surakshanet.com/our-centers/delhi-&ncr/noida"><div class="menu_servicetxt">Noida</div></a>
+    <a href="https://www.surakshanet.com/our-centers/delhi-&ncr/saini-enclave"><div class="menu_servicetxt">Saini Enclave</div></a>
 
 
+    </div>-->
 
+    {{-- <div class="megamenu_header" style="margin-top:15px;">Bihar</div>
 
+    <div class="megamenu_leftdiv">
 
 
+    <a href="our-centers/bihar/kamini-center.html"><div class="menu_servicetxt">Kamini Centre  </div></a>
+    <!--<a href="lab-location.php?center_Id=33"><div class="menu_servicetxt"> Kankarbagh</div></a>-->
 
-<div class="megamenu_leftdiv" style="width:20%;">
-<a href="our-centers/west-bengal/kestopur.html"><div class="menu_servicetxt">Kestopur</div></a>
-<a href="our-centers/west-bengal/kharda.html"><div class="menu_servicetxt">Khardah</div></a>
-<a href="our-centers/west-bengal/laketown.html"><div class="menu_servicetxt">Laketown</div></a>
-<a href="our-centers/west-bengal/madhyamgram.html"><div class="menu_servicetxt">Madhyamgram</div></a>
-<a href="our-centers/west-bengal/nagerbazar.html"><div class="menu_servicetxt">Nagerbazar</div></a>
-<a href="our-centers/west-bengal/nrs.html"><div class="menu_servicetxt">NRS</div></a>
-<a href="our-centers/west-bengal/new-barrackpore.html"><div class="menu_servicetxt">New Barrackpore</div></a>
-<a href="our-centers/west-bengal/phoolbagan.html"><div class="menu_servicetxt">Phoolbagan</div></a>
+    </div> --}}
 
+    </div>
 
 
+    </div>
 
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:20%;">
-<a href="our-centers/west-bengal/phoolbagan-polyclinic.html"><div class="menu_servicetxt">Phoolbagan Polyclinic</div></a>
-<a href="our-centers/west-bengal/pradhan-nagar.html"><div class="menu_servicetxt">Pradhan Nagar</div></a>
-<a href="our-centers/west-bengal/salt-lake-dd-18.html"><div class="menu_servicetxt">Salt Lake DD 18/1</div></a>
-<a href="our-centers/west-bengal/salt-lake-jc-21.html"><div class="menu_servicetxt">Salt Lake JC 21</div></a>
-
-<a href="our-centers/west-bengal/siliguri.html"><div class="menu_servicetxt">Siliguri </div></a>
-<a href="our-centers/west-bengal/sodepur.html"><div class="menu_servicetxt">Sodepur</div></a>
-<a href="our-centers/west-bengal/sinthee.html"><div class="menu_servicetxt">Sinthee</div></a>
-<a href="our-centers/west-bengal/serampore.html"><div class="menu_servicetxt">Serampore</div></a>
-<a href="our-centers/west-bengal/tamluk.html"><div class="menu_servicetxt">Tamluk</div></a>
-
-
-
-</div>
-
-</div>
-
-
-</div> --}}
-
-<div class="megamenu_box1" style="padding-left:25px; width:200px; height:240px; border-right:0px;">
-<!--<div class="megamenu_header">Delhi & NCR</div>-->
-
-<div class="megamenu_body_div">
-
-
-<!--<div class="megamenu_leftdiv">
-<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/janakpuri"><div class="menu_servicetxt">Janakpuri</div></a>
-<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/kirti-nagar"><div class="menu_servicetxt">Kirti Nagar</div></a>
-
-<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/noida"><div class="menu_servicetxt">Noida</div></a>
-<a href="https://www.surakshanet.com/our-centers/delhi-&ncr/saini-enclave"><div class="menu_servicetxt">Saini Enclave</div></a>
-
-
-
-
-
-
-
-
-</div>-->
-
-
-
-{{-- <div class="megamenu_header" style="margin-top:15px;">Bihar</div>
-
-<div class="megamenu_leftdiv">
-
-
-<a href="our-centers/bihar/kamini-center.html"><div class="menu_servicetxt">Kamini Centre  </div></a>
-<!--<a href="lab-location.php?center_Id=33"><div class="menu_servicetxt"> Kankarbagh</div></a>-->
-
-
-
-
-
-</div> --}}
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-</div>
+    </div>
 
 </div>
 
@@ -314,9 +268,13 @@
 <div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
 						<ul class="dl-menu">
-              @foreach($menu as $me)
-                  <li><a href="{!! route('sajib.getDoctor') !!}">{{$me->menu_name}} </a></li>
-               @endforeach
+        @if (!empty(getMenuList()))
+            @foreach(getMenuList() as $me)
+                <li>
+                    <a href="">{{$me->menu_name}} </a>
+                </li>
+            @endforeach
+        @endif
 							 <li>
 								<a href="#">About Us</a>
 
@@ -420,7 +378,7 @@
 
 							</li>
 
-                            <li><a href="{!! route('sajib.getDoctor') !!}">Book an Appointment </a></li>
+                            <li><a href="">Book an Appointment </a></li>
                              <li>
                                 <a href="find-test.html"> Find a Test</a>
                                 </li>

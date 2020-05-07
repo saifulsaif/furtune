@@ -24,3 +24,9 @@ function getSingle_id($fild_name,$value,$table_name){
     $result = DB::table($table_name)->where($fild_name, $value)->first();
     return $result;
 }
+
+function getValueByTBName($table_name)
+{
+    $result = DB::table($table_name)->get();
+    return $result;
+}

@@ -27,7 +27,12 @@
 <link rel="stylesheet" href="{!! asset('public/css/suraksha8e0e.css?v=8') !!}" type="text/css" />
 
 <link rel="stylesheet" href="{!! asset('public/css/bootstrap.min.css') !!}" type="text/css" />
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<!-- MDBootstrap Datatables  -->
+<link href="css/addons/datatables.min.css" rel="stylesheet">
+
+<!-- MDBootstrap Datatables  -->
+<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+
 
 <!--<script src='js/jquery.min.js'></script>-->
 
@@ -39,12 +44,25 @@ if (isMobile) {
 } else {
  // window.location.href='dashboard.php'
 }
+
 </script>
 
 <style>
 
 select{
  color:black !important;
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
 }
 </style>
 

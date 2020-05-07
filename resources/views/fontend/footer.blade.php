@@ -322,6 +322,7 @@ $('nav a').click(function(event) {
     }, 500);
     event.preventDefault();
 });
+
 </script>
 
 
@@ -455,6 +456,7 @@ $(document).ready(function() {
 
 })
 </script>
+
 
 
 </div>

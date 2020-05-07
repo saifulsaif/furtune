@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\appointment;
 use App\doctors;
 use Illuminate\Http\Request;
 
-class AppointmentController extends Controller
+class DoctorsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -42,21 +41,21 @@ class AppointmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\appointment  $appointment
+     * @param  \App\doctors  $doctors
      * @return \Illuminate\Http\Response
      */
-    public function show(appointment $appointment)
+    public function show(doctors $doctors)
     {
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\appointment  $appointment
+     * @param  \App\doctors  $doctors
      * @return \Illuminate\Http\Response
      */
-    public function edit(appointment $appointment)
+    public function edit(doctors $doctors)
     {
         //
     }
@@ -65,10 +64,10 @@ class AppointmentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\appointment  $appointment
+     * @param  \App\doctors  $doctors
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, appointment $appointment)
+    public function update(Request $request, doctors $doctors)
     {
         //
     }
@@ -76,19 +75,11 @@ class AppointmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\appointment  $appointment
+     * @param  \App\doctors  $doctors
      * @return \Illuminate\Http\Response
      */
-    public function destroy(appointment $appointment)
+    public function destroy(doctors $doctors)
     {
         //
     }
-
-    public function getDoctor()
-    {
-        $doctors = doctors::with('times')->orderBy('id', 'DESC')->get();
-        return view('fontend.appoinment.appointment',compact('doctors'));
-    }
-
-
 }

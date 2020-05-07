@@ -28,18 +28,14 @@
 
 <div class="static_mainbody_div">
 
-
-
-
 <div class="static_pagetxt" style="border-bottom:1px solid #333333;">
+    @foreach($com_profiles as $pro)
+        <span class="static_subheading"  style="font-weight:500; font-size:18px;">{{$pro->title}}</span><br />
 
-@foreach($com_profiles as $pro)
-<span class="static_subheading"  style="font-weight:500; font-size:18px;">{{$pro->title}}</span><br />
-
-{{$pro->description}}
-<br />
-<br />
-@endforeach
+        {{$pro->description}}
+        <br />
+        <br />
+    @endforeach
 </div>
 
 
