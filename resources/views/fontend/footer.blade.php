@@ -138,6 +138,10 @@ Developed By GL Technologies</div>
 	$(document).ready(function(){
 		$("#pop_mod_onl_con").modal('show');
 	});
+
+	function appointment_modal(id){
+		$('#appointment_from').modal('show');
+    }
 </script>
 
 
@@ -455,6 +459,13 @@ $(document).ready(function() {
 	});
 
 })
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#dtBasicExample').DataTable();
+		$('.dataTables_length').addClass('bs-select');
+	});
+
 </script>
 
 
