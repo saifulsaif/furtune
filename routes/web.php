@@ -17,12 +17,21 @@
 
 Auth::routes();
 Route::get('/', 'PageController@index');
+Route::get('/#', 'PageController@index')->name('#');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
 Route::get('/team-of-expert', 'PageController@teamOfExpert')->name('team_of_expert');
 Route::get('/CSR', 'PageController@csr')->name('csr');
 Route::get('/service/{id}', 'PageController@service');
-Route::get('/#', 'PageController@index')->name('#');
+Route::get('/package-details/{id}', 'PageController@packageDetails');
+Route::get('/home-collection', 'PageController@homeCollection')->name('home_collection');
+Route::get('/health-package', 'PageController@healthPackage')->name('health_package');
+Route::get('/career', 'PageController@career')->name('career');
+
+Route::get('/franchisee', 'PageController@franchisee')->name('franchisee');
+Route::get('/customer-care', 'PageController@customerCare')->name('customer_care');
+Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
+Route::get('/feedback', 'PageController@feedback')->name('feedback');
 
 
 

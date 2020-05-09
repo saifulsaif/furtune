@@ -134,9 +134,9 @@
                             </div>
                         </div>
                     @else
-                        @if($sub_menu)
+                      @if($sub_menu)
                         <li>
-                            <a href="{!! route('sajib.getDoctor') !!}" >{{$me->menu_name}}</a>
+                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
                             <ul>
                                 @foreach($sub_menu as $sub)
                                     <li>
@@ -147,7 +147,7 @@
                         </li>
                         @else
                         <li>
-                            <a href="https://surakshanet.com/about-us/" >{{$me->menu_name}}</a>
+                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
                         </li>
                         @endif
                     @endif
