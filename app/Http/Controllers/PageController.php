@@ -84,4 +84,36 @@ class PageController extends Controller
              ->get();
       return view('fontend.content.package_details',compact('menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
    }
+   public function career(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('sub_menu');
+     $sub_menu_list = getValueByTBName('sub_menu_lists');
+     $sliders = getValueByTBName('slider');
+     $careers = getValueByTBName('careers');
+      return view('fontend.content.career',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
+   public function customerCare(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('sub_menu');
+     $sub_menu_list = getValueByTBName('sub_menu_lists');
+     $sliders = getValueByTBName('slider');
+     $careers = getValueByTBName('careers');
+      return view('fontend.content.customer_care',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
+   public function getInTouch(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('sub_menu');
+     $sub_menu_list = getValueByTBName('sub_menu_lists');
+     $sliders = getValueByTBName('slider');
+     $careers = getValueByTBName('careers');
+      return view('fontend.content.get_in_touch',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
+   public function feedback(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('sub_menu');
+     $sub_menu_list = getValueByTBName('sub_menu_lists');
+     $sliders = getValueByTBName('slider');
+     $careers = getValueByTBName('careers');
+      return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
 }
