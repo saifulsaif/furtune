@@ -16,7 +16,7 @@
           </div>
       </div> --}}
   {{-- </div> --}}
-  #appointment modal
+  {{-- #appointment modal --}}
   <div id="appointment_from" class="modal fade" style="width:100%">
       <div class="modal-dialog">
           <div class="modal-content">
@@ -44,7 +44,7 @@
           </div>
       </div>
   </div>
-  #appointment modal Close
+  {{-- #appointment modal Close --}}
   <div id="home">
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ7JXFR"

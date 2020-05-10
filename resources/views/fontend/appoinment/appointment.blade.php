@@ -84,7 +84,12 @@
                             <td>{{ $doctor->department }}</td>
                             <td>C{{ $doctor->doctor_name }}</td>
                             <td>{{ $doctor->doctor_degree }}</td>
-                            <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
+                            @if(!empty($doctor->times->start_days))
+                                <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
+                            @else
+                                <td>NO Time</td>
+                            @endif
+
                             <td class="text-center"><a type="button" onclick="appointment_modal({{ $doctor->id }})"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a></td>
                         </tr>
                     @endforeach

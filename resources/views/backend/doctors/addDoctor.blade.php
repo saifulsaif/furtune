@@ -200,7 +200,7 @@
                            <div class="col-md-12">
                                <div class="col-md-12">
                                    <div class="form-group">
-                                     <label for="exampleFormControlTextarea1">Oinion</label>
+                                     <label for="exampleFormControlTextarea1">Opinion</label>
                                      <textarea class="form-control" name="opinion" id="exampleFormControlTextarea1" rows="3"></textarea>
                                    </div>
                                </div>

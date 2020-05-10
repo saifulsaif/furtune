@@ -134,22 +134,24 @@
                             </div>
                         </div>
                     @else
-                      @if($sub_menu)
-                        <li>
-                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
-                            <ul>
-                                @foreach($sub_menu as $sub)
-                                    <li>
-                                        <a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        @else
-                        <li>
-                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
-                        </li>
-                        @endif
+                      @if (!empty($sub_menu))
+                          @if($sub_menu)
+                            <li>
+                                <a href="{!! route('sajib.getDoctor') !!}" >{{$me->menu_name}}</a>
+                                <ul>
+                                    @foreach($sub_menu as $sub)
+                                        <li>
+                                            <a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            @else
+                            <li>
+                                <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
+                            </li>
+                            @endif
+                      @endif
                     @endif
                 @endforeach
             @endif

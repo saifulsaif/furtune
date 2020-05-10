@@ -377,5 +377,48 @@
 			return redirect('admin/doctors');
 		}
 
+		// Doctor Edit
+		public function getEdit($id)
+		{
+			$data = [];
+			$data['page_title'] = 'Edit Doctor';
+			$doctor = doctors::with('times')->where('id', $id)->first();
+			return $this->cbView("backend.doctors.editDoctor", compact('user', 'doctor'));
+		}
+
+		public function postEdit()
+		{
+			$request = request();
+
+			// // dd($request->all());
+			// \Validator::make($request->all(), [
+			// 	"pool_id" => "required",
+			// 	"name" => "required",
+			// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
+			// ], [
+			// 	'pool_id.required' => "pool name field is required.",
+			// ]);
+			$doctor = doctors::with('times')->find($request->doctor_id);
+			$doctor->center = $request->center;
+			$doctor->department = $request->department;
+			$doctor->doctor_degree = $request->doctor_degree;
+			$doctor->doctor_name = $request->doctor_name;
+			$doctor->status = ($request->status == 'on')?1:0;
+			$doctor->update();
+
+			$doctor->times->doctor_id = $doctor->id;
+			$doctor->times->start_days = $request->start_days;
+			$doctor->times->end_days = $request->end_days;
+			$doctor->times->strat_time = $request->start_time;
+			$doctor->times->end_time = $request->end_time;
+			$doctor->times->special_days = $request->special_days;
+			$doctor->times->special_strat_time = $request->special_start_time;
+			$doctor->times->special_end_time = $request->special_end_time;
+			$doctor->times->opinion = $request->opinion;
+			$doctor->times->update();
+			return redirect('admin/doctors');
+
+		}
+
 
 	}
