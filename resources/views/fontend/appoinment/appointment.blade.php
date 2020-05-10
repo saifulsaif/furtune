@@ -58,7 +58,6 @@
 </form>
 
 <!--###################  Desktop Version     ######################-->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
 
 <div class="appointment_mainBG">
@@ -78,7 +77,6 @@
                 </tr>
             </thead>
             <tbody>
-
                 @if(!empty($doctors))
                     @foreach ($doctors as $key => $doctor)
                         <tr>
@@ -86,8 +84,13 @@
                             <td>{{ $doctor->department }}</td>
                             <td>C{{ $doctor->doctor_name }}</td>
                             <td>{{ $doctor->doctor_degree }}</td>
-                            <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
-                            <td class="text-center"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></td>
+                            @if(!empty($doctor->times->start_days))
+                                <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
+                            @else
+                                <td>NO Time</td>
+                            @endif
+
+                            <td class="text-center"><a type="button" onclick="appointment_modal({{ $doctor->id }})"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a></td>
                         </tr>
                     @endforeach
                 @else
@@ -100,16 +103,6 @@
         </table>
     </div>
 </div>
-<script type="text/javascript">
-	$(document).ready(function () {
-		$('#dtBasicExample').DataTable();
-		$('.dataTables_length').addClass('bs-select');
-	});
-</script>
-
-
-
-
 
 
 
@@ -128,10 +121,8 @@
       <thead>
 
         <tr>
-          <th data-class="expand">
-            Center Location          </th>
-          <th>
-             Department          </th>
+          <th data-class="expand"> Center Location </th>
+          <th> Department </th>
           <th data-hide="phone,tablet" style="display: none;">
           Doctor's Name          </th>
           <th data-hide="phone,tablet" style="display: none;">

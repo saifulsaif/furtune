@@ -4,6 +4,8 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
+	use App\submenus;
+	use App\submenu_facility;
 
 	class AdminSubMenuController extends \crocodicstudio\crudbooster\controllers\CBController {
 
@@ -25,20 +27,20 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "sub_menu";
+			$this->table = "submenuses";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Sub Munu Name","name"=>"sub_munu_name"];
+			$this->col[] = ["label"=>"Sub Menu Name","name"=>"sub_menu_name"];
 			$this->col[] = ["label"=>"Route Name","name"=>"route_name"];
 			$this->col[] = ["label"=>"Menu","name"=>"menu_id","join"=>"menu,menu_name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Sub Munu Name','name'=>'sub_munu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Sub Munu Name','name'=>'sub_menu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Menu Id','name'=>'menu_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9','datatable' => 'menu,menu_name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
@@ -323,6 +325,45 @@
 
 
 	    //By the way, you can still create your own method in here... :)
+
+
+		public function getAdd()
+		{
+			$data = [];
+			$data['page_title'] = 'Add Sub-Menus';
+			$menus = getMenuList();
+			return $this->cbView("backend.submenus.addSubmenu", compact('data', 'menus'));
+		}
+		public function postSave()
+		{
+			$request = request();
+
+			// $request->validate([
+			// 	"center" => "required|integer",
+			// 	"department" => "required|integer",
+			// 	"doctor_degree" => "required|integer",
+			// 	"doctor_name" => "required|integer",
+			// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
+			// ], [
+			// 	'center.required' => "Center name field is required.",
+			// 	'department.required' => "Department name field is required.",
+			// 	'doctor_degree.required' => "Doctor Degree name field is required.",
+			// 	'doctor_name.required' => "Doctor name field is required.",
+			// ]);
+
+			$submenu = new submenus;
+			$submenu->sub_menu_name = $request->sub_menu_name;
+			$submenu->route_name = $request->route_name;
+			$submenu->menu_id = $request->menu_id;
+			$submenu->save();
+			foreach ($request->facility as $key => $facility) {
+				$subFacility = new submenu_facility;
+				$subFacility->item_name =$facility;
+				$subFacility->submenu_id = $submenu->id;
+				$subFacility->save();
+			}
+			return redirect('admin/sub_menu');
+		}
 
 
 	}

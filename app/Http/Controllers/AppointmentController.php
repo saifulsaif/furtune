@@ -90,5 +90,7 @@ class AppointmentController extends Controller
         return view('fontend.appoinment.appointment',compact('doctors'));
     }
 
+    
+
 
 }

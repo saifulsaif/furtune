@@ -106,7 +106,7 @@
             @if (!empty(getMenuList()))
                 @foreach(getMenuList() as $me)
                     @php
-                        $sub_menu = getAll_id('menu_id',$me->id,'sub_menu');
+                        $sub_menu = getAll_id('menu_id',$me->id,'submenuses');
                     @endphp
                     @if($me->id<=1)
                         <li>
@@ -118,10 +118,13 @@
                                 <div class="megamenu_body_div">
                                     @if(!empty($sub_menu))
                                         @foreach($sub_menu as $sub)
+                                            @php
+                                                 $submenu_list = getAll_id('submenu_id',$sub->id,'submenu_facilities');
+                                            @endphp
                                         <div class="megamenu_leftdiv" style="width:16%;">
-                                            <div class="menu_serviceheading">{{$sub->sub_munu_name}}</div>
-                                            @if (!empty($sub_menu_list))
-                                                @foreach($sub_menu_list as $list)
+                                            <div class="menu_serviceheading">{{$sub->sub_menu_name}}</div>
+                                            @if (!empty($submenu_list))
+                                                @foreach($submenu_list as $list)
                                                     @if($list->sub_menu_id==$sub->id)
                                                         <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
                                                     @endif
@@ -134,22 +137,29 @@
                             </div>
                         </div>
                     @else
-                      @if($sub_menu)
-                        <li>
-                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
-                            <ul>
-                                @foreach($sub_menu as $sub)
-                                    <li>
-                                        <a href="{{route($sub->route_name)}}" >{{$sub->sub_munu_name}}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        @else
-                        <li>
-                            <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
-                        </li>
-                        @endif
+                        {{-- @php
+                            echo '</br>';
+                            print_r($me->route_name);
+                            continue;
+                        @endphp --}}
+                      @if (!empty($sub_menu))
+                          @if($sub_menu)
+                            <li>
+                                <a href="@if($me->route_name != null) {{ route($me->route_name) }} @else {{ route('#') }}  @endif" >{{$me->menu_name}}</a>
+                                <ul>
+                                    @foreach($sub_menu as $sub)
+                                        <li>
+                                            <a href="@if(!empty($sub->route_name)) {{ route($sub->route_name) }} @else "#" @endif">{{$sub->sub_menu_name}}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            @else
+                            <li>
+                                <a href="{{route($me->route_name)}}" >{{$me->menu_name}}</a>
+                            </li>
+                            @endif
+                      @endif
                     @endif
                 @endforeach
             @endif
