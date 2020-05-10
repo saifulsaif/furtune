@@ -14,12 +14,12 @@
     }
 </script>
 
-<div class="banner_div" style="max-height:450px;height:400px;">
+<div class="banner_div" style="max-height:450px;">
     <div class="owl-carousel owl-theme" id="banner_slider">
         @if (!empty(getValueByTBName('slider')))
             @foreach(getValueByTBName('slider') as $slider)
               <div class="item">
-                 <a href="covid19/index.html"> <img src="{{asset($slider->image_link)}}"  style="width:100%; height:100%;" alt="Banner"></a>
+                 <a href="#"> <img src="{{asset($slider->image_link)}}" style="max-height:450px;" alt="Banner"></a>
               </div>
            @endforeach
         @endif

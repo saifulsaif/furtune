@@ -1,7 +1,7 @@
 @extends('fontend.app')
 @section('content')
 
-<div class="body_maindiv">
+<div class="body_maindiv" >
 
 <!------------------  profile  ------------------->
 
@@ -95,7 +95,7 @@
                     @endforeach
                 @else
                     <tr>
-                        <th colspan="5">No Record Found !!</th>
+                        <th colspan="4"><a class="bg-danger">No Record Found !!</a></th>
                     </tr>
                 @endif
 
