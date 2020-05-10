@@ -377,21 +377,21 @@
 <!--  BODY Part2 -->
 
 <div class="index_aboutmaindiv">
-
+@foreach($index_infos as $info)
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">Suraksha Diagnostic</span>-->Our <span style="color:#e1272c;">28 year old</span> legacy continues</div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">Suraksha Diagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
 
-<div class="welcome_bodytxt"  >Suraksha is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government. <br />
+
 <br />
 
 
-Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, etc.</div>
+{{$info->description}}</div>
 
 <div class="welcome_bodytxt"><a href="about-us/index.html"><div style="margin:0px auto;" class="button"><span>Read More </span></div></a></div>
 
 </div>
-
+@endforeach
 
 </div>
 
@@ -408,14 +408,15 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 <div class="newindex_aboutdiv">
+  @foreach($lab_infos as $lab)
 <div class="newhome_aboutdiv" style="width:100%; margin-right;0%">
 
 
-<div class="welcome_header welcome_header_new" style="text-align:left; color:#e1272c; font-weight:400; font-size:28px;">Suraksha Diagnostics brings Robots to its Lab</div>
+<div class="welcome_header welcome_header_new" style="text-align:left; color:#e1272c; font-weight:400; font-size:28px;">{{$lab->title}}</div>
 <div class="home_robot">
 
 <div class="robot_txt">
-<div class="welcome_bodytxt" style="text-align:left; text-align:justify; line-height:28px;">Suraksha has come up with 'Aptio' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.<br />
+<div class="welcome_bodytxt" style="text-align:left; text-align:justify; line-height:28px;">{{$lab->description}}<br />
 <br />
  </div>
 
@@ -423,13 +424,13 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 </div>
 
-<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/pDjxZilfQ30"><img src="http://localhost/furtune/public/images/robot-video.jpg" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
+<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="{{$lab->video_link}}"><img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
 
 </div>
 
 </div>
 
-
+@endforeach
 
 
 
@@ -779,13 +780,9 @@ Corporate <span style="color:#e1272c;">Partners</span>
   <span style="color: #e1272c; font-weight: 400; font-size: 30px;"> What can we do for your company?</span><br/><br/>
 
       <ul style="list-style:none; margin-left:-35px;">
-
-      <li>We entertain tenders for both Pathology and Non-Pathology tests</li>
-      <li>Employees get discount cards</li>
-      <li>Pre-Employment Check-Ups</li>
-      <li>Annual Health Check-Ups for employees</li>
-      <li>On-site (office) and Off-site (factory) Health Camps</li>
-      <li>And other benefits tailor-made to suit your company's employees </li>
+     @foreach($corporate_services as $service)
+      <li>{{$service->service}}</li>
+    @endforeach
 
 
       </ul>

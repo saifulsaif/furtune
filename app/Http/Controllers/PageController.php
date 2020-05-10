@@ -12,7 +12,10 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $sub_menu_list = getValueByTBName('sub_menu_lists');
      $partners = getValueByTBName('corporate_partners');
-      return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners'));
+     $index_infos = getValueByTBName('index_infos');
+     $lab_infos = getValueByTBName('lab_infos');
+     $corporate_services= getValueByTBName('corporate_services');
+      return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services'));
    }
    public function companyProfile(){
      $menu = getValueByTBName('menu');
