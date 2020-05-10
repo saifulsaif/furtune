@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2020 at 11:37 PM
+-- Generation Time: May 10, 2020 at 08:16 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -40,6 +40,30 @@ CREATE TABLE `appointments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `careers`
+--
+
+CREATE TABLE `careers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `careers`
+--
+
+INSERT INTO `careers` (`id`, `image`, `title`, `created_at`, `updated_at`) VALUES
+(1, 'uploads/1/2020-05/career1.jpg', 'Why With US?', '2020-05-09 23:21:07', NULL),
+(2, 'uploads/1/2020-05/career2.jpg', 'Discover Opportunity', '2020-05-09 23:21:30', NULL),
+(3, 'uploads/1/2020-05/career3.jpg', 'Shared Value', '2020-05-09 23:22:02', NULL),
+(4, 'uploads/1/2020-05/career3.jpg', 'Life @ Furtune', '2020-05-09 23:28:13', '2020-05-09 23:35:14');
 
 -- --------------------------------------------------------
 
@@ -229,7 +253,51 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (60, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/sub_menu_lists/add-save', 'Add New Data Mammography at Sub Menu List', '', 1, '2020-05-06 17:06:24', NULL),
 (61, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-07 00:47:11', NULL),
 (62, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/module_generator/delete/21', 'Delete data Service Details at Module Generator', '', 1, '2020-05-07 02:39:46', NULL),
-(63, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/service_infos22/add-save', 'Add New Data Diagnostic Service - X Ray at Service Details', '', 1, '2020-05-07 03:22:14', NULL);
+(63, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/service_infos22/add-save', 'Add New Data Diagnostic Service - X Ray at Service Details', '', 1, '2020-05-07 03:22:14', NULL),
+(64, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-07 14:55:30', NULL),
+(65, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-07 23:41:14', NULL),
+(66, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-08 22:42:45', NULL),
+(67, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/menu/edit-save/6', 'Update data Franchisee at Menu', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>route_name</td><td>#</td><td>franchisee</td></tr></tbody></table>', 1, '2020-05-09 00:22:15', NULL),
+(68, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/menu/edit-save/5', 'Update data Health Packages at Menu', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>route_name</td><td>#</td><td>health_package</td></tr></tbody></table>', 1, '2020-05-09 00:22:26', NULL),
+(69, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-09 14:48:48', NULL),
+(70, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/add-save', 'Add New Data  at Home Collection', '', 1, '2020-05-09 15:21:29', NULL),
+(71, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/add-save', 'Add New Data  at Home Collection', '', 1, '2020-05-09 15:22:05', NULL),
+(72, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/add-save', 'Add New Data  at Home Collection', '', 1, '2020-05-09 15:22:38', NULL),
+(73, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/add-save', 'Add New Data  at Home Collection', '', 1, '2020-05-09 15:23:26', NULL),
+(74, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/add-save', 'Add New Data  at Home Collection', '', 1, '2020-05-09 15:23:40', NULL),
+(75, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/edit-save/3', 'Update data  at Home Collection', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td><div class=\"timingdiv\"></td><td>timingdiv</td></tr></tbody></table>', 1, '2020-05-09 15:24:08', NULL),
+(76, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/edit-save/2', 'Update data  at Home Collection', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td><div class=\"reportdiv\"></div></td><td>reportdiv</td></tr></tbody></table>', 1, '2020-05-09 15:24:20', NULL),
+(77, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/edit-save/2', 'Update data  at Home Collection', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2020-05-09 15:24:20', NULL),
+(78, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/home_services/edit-save/1', 'Update data  at Home Collection', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td><div class=\"staffdiv\"></div></td><td>staffdiv</td></tr></tbody></table>', 1, '2020-05-09 15:24:29', NULL),
+(79, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/health_packages/add-save', 'Add New Data Exclusive Health Package at Health Package', '', 1, '2020-05-09 15:51:49', NULL),
+(80, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/health_packages/add-save', 'Add New Data Exclusive Health Gold Package at Health Package', '', 1, '2020-05-09 15:54:15', NULL),
+(81, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/package_details/add-save', 'Add New Data  at Health Package Details', '', 1, '2020-05-09 16:23:08', NULL),
+(82, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/package_details/add-save', 'Add New Data  at Health Package Details', '', 1, '2020-05-09 16:23:30', NULL),
+(83, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/package_details/add-save', 'Add New Data  at Health Package Details', '', 1, '2020-05-09 16:24:48', NULL),
+(84, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/package_details/add-save', 'Add New Data  at Health Package Details', '', 1, '2020-05-09 16:27:02', NULL),
+(85, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/package_details/edit-save/4', 'Update data  at Health Package Details', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>package_id</td><td>1</td><td>2</td></tr></tbody></table>', 1, '2020-05-09 16:28:31', NULL),
+(86, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-09 23:05:37', NULL),
+(87, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/sub_menu/edit-save/8', 'Update data Career at Submenu', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>route_name</td><td>company_profile</td><td>career</td></tr></tbody></table>', 1, '2020-05-09 23:06:03', NULL),
+(88, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/careers/add-save', 'Add New Data Why With US? at Career', '', 1, '2020-05-09 23:21:07', NULL),
+(89, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/careers/add-save', 'Add New Data Discover Opportunity at Career', '', 1, '2020-05-09 23:21:30', NULL),
+(90, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/careers/add-save', 'Add New Data Shared Value at Career', '', 1, '2020-05-09 23:22:02', NULL),
+(91, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/careers/add-save', 'Add New Data Samsung at Career', '', 1, '2020-05-09 23:28:13', NULL),
+(92, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36', 'http://localhost/furtune/admin/careers/edit-save/4', 'Update data Life @ Furtune at Career', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>title</td><td>Samsung</td><td>Life @ Furtune</td></tr></tbody></table>', 1, '2020-05-09 23:35:14', NULL),
+(93, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-10 16:03:35', NULL),
+(94, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_partners/add-save', 'Add New Data  at Corporate Partner', '', 1, '2020-05-10 16:05:46', NULL),
+(95, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_partners/add-save', 'Add New Data  at Corporate Partner', '', 1, '2020-05-10 16:05:53', NULL),
+(96, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_partners/add-save', 'Add New Data  at Corporate Partner', '', 1, '2020-05-10 16:06:01', NULL),
+(97, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_partners/add-save', 'Add New Data  at Corporate Partner', '', 1, '2020-05-10 16:06:11', NULL),
+(98, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/index_infos/add-save', 'Add New Data Our 28 year old legacy continues at Legacy  Info', '', 1, '2020-05-10 17:44:31', NULL),
+(99, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/lab_infos/add-save', 'Add New Data Suraksha Diagnostics brings Robots to its Lab at Lab Info', '', 1, '2020-05-10 17:46:39', NULL),
+(100, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:04', NULL),
+(101, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:24', NULL),
+(102, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:31', NULL),
+(103, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:40', NULL),
+(104, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:48', NULL),
+(105, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:59', NULL),
+(106, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:50:01', NULL),
+(107, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-10 23:06:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -265,7 +333,15 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (6, 'Team of Expert', 'Route', 'AdminExpertTeamControllerGetIndex', NULL, 'fa fa-user', 0, 1, 0, 1, 5, '2020-05-05 17:04:35', NULL),
 (8, 'CSR', 'Route', 'AdminCsrs19ControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 6, '2020-05-06 12:36:45', NULL),
 (9, 'Sub Menu List', 'Route', 'AdminSubMenuListsControllerGetIndex', NULL, 'fa fa-th-list', 0, 1, 0, 1, 7, '2020-05-06 16:49:11', NULL),
-(11, 'Service Details', 'Route', 'AdminServiceInfos22ControllerGetIndex', NULL, 'fa fa-plus', 0, 1, 0, 1, 8, '2020-05-07 02:40:28', NULL);
+(11, 'Service Details', 'Route', 'AdminServiceInfos22ControllerGetIndex', NULL, 'fa fa-plus', 0, 1, 0, 1, 8, '2020-05-07 02:40:28', NULL),
+(12, 'Home Collection', 'Route', 'AdminHomeServicesControllerGetIndex', NULL, 'fa fa-server', 0, 1, 0, 1, 9, '2020-05-09 15:20:07', NULL),
+(13, 'Health Package', 'Route', 'AdminHealthPackagesControllerGetIndex', NULL, 'fa fa-plus-circle', 0, 1, 0, 1, 10, '2020-05-09 15:49:10', NULL),
+(14, 'Health Package Details', 'Route', 'AdminPackageDetailsControllerGetIndex', NULL, 'fa fa-plus-circle', 0, 1, 0, 1, 11, '2020-05-09 16:14:12', NULL),
+(15, 'Career', 'Route', 'AdminCareersControllerGetIndex', NULL, 'fa fa-file', 0, 1, 0, 1, 12, '2020-05-09 23:19:41', NULL),
+(16, 'Corporate Partner', 'Route', 'AdminCorporatePartnersControllerGetIndex', NULL, 'fa fa-users', 0, 1, 0, 1, 13, '2020-05-10 16:04:35', NULL),
+(17, 'Legacy  Info', 'Route', 'AdminIndexInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 14, '2020-05-10 17:43:36', NULL),
+(18, 'Lab Info', 'Route', 'AdminLabInfosControllerGetIndex', NULL, 'fa fa-flask', 0, 1, 0, 1, 15, '2020-05-10 17:45:26', NULL),
+(19, 'Corporate  Service', 'Route', 'AdminCorporateServicesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 16, '2020-05-10 17:48:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -294,7 +370,15 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (8, 8, 1),
 (9, 9, 1),
 (10, 10, 1),
-(11, 11, 1);
+(11, 11, 1),
+(12, 12, 1),
+(13, 13, 1),
+(14, 14, 1),
+(15, 15, 1),
+(16, 16, 1),
+(17, 17, 1),
+(18, 18, 1),
+(19, 19, 1);
 
 -- --------------------------------------------------------
 
@@ -342,7 +426,15 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (19, 'CSR', 'fa fa-glass', 'csrs19', 'csrs', 'AdminCsrs19Controller', 0, 0, '2020-05-06 12:36:45', NULL, NULL),
 (20, 'Sub Menu List', 'fa fa-th-list', 'sub_menu_lists', 'sub_menu_lists', 'AdminSubMenuListsController', 0, 0, '2020-05-06 16:49:11', NULL, NULL),
 (21, 'Service Details', 'fa fa-glass', 'service_infos', 'service_infos', 'AdminServiceInfosController', 0, 0, '2020-05-07 02:36:32', NULL, '2020-05-07 02:39:46'),
-(22, 'Service Details', 'fa fa-plus', 'service_infos22', 'service_infos', 'AdminServiceInfos22Controller', 0, 0, '2020-05-07 02:40:28', NULL, NULL);
+(22, 'Service Details', 'fa fa-plus', 'service_infos22', 'service_infos', 'AdminServiceInfos22Controller', 0, 0, '2020-05-07 02:40:28', NULL, NULL),
+(23, 'Home Collection', 'fa fa-server', 'home_services', 'home_services', 'AdminHomeServicesController', 0, 0, '2020-05-09 15:20:06', NULL, NULL),
+(24, 'Health Package', 'fa fa-plus-circle', 'health_packages', 'health_packages', 'AdminHealthPackagesController', 0, 0, '2020-05-09 15:49:09', NULL, NULL),
+(25, 'Health Package Details', 'fa fa-plus-circle', 'package_details', 'package_details', 'AdminPackageDetailsController', 0, 0, '2020-05-09 16:14:12', NULL, NULL),
+(26, 'Career', 'fa fa-file', 'careers', 'careers', 'AdminCareersController', 0, 0, '2020-05-09 23:19:41', NULL, NULL),
+(27, 'Corporate Partner', 'fa fa-users', 'corporate_partners', 'corporate_partners', 'AdminCorporatePartnersController', 0, 0, '2020-05-10 16:04:35', NULL, NULL),
+(28, 'Legacy  Info', 'fa fa-info', 'index_infos', 'index_infos', 'AdminIndexInfosController', 0, 0, '2020-05-10 17:43:36', NULL, NULL),
+(29, 'Lab Info', 'fa fa-flask', 'lab_infos', 'lab_infos', 'AdminLabInfosController', 0, 0, '2020-05-10 17:45:26', NULL, NULL),
+(30, 'Corporate  Service', 'fa fa-star', 'corporate_services', 'corporate_services', 'AdminCorporateServicesController', 0, 0, '2020-05-10 17:48:16', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -427,7 +519,15 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL),
 (20, 1, 1, 1, 1, 1, 1, 20, NULL, NULL),
 (21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL),
-(22, 1, 1, 1, 1, 1, 1, 22, NULL, NULL);
+(22, 1, 1, 1, 1, 1, 1, 22, NULL, NULL),
+(23, 1, 1, 1, 1, 1, 1, 23, NULL, NULL),
+(24, 1, 1, 1, 1, 1, 1, 24, NULL, NULL),
+(25, 1, 1, 1, 1, 1, 1, 25, NULL, NULL),
+(26, 1, 1, 1, 1, 1, 1, 26, NULL, NULL),
+(27, 1, 1, 1, 1, 1, 1, 27, NULL, NULL),
+(28, 1, 1, 1, 1, 1, 1, 28, NULL, NULL),
+(29, 1, 1, 1, 1, 1, 1, 29, NULL, NULL),
+(30, 1, 1, 1, 1, 1, 1, 30, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -556,6 +656,56 @@ INSERT INTO `company_profile` (`id`, `title`, `description`, `created_at`, `upda
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `corporate_partners`
+--
+
+CREATE TABLE `corporate_partners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `website_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `corporate_partners`
+--
+
+INSERT INTO `corporate_partners` (`id`, `image`, `website_link`, `created_at`, `updated_at`) VALUES
+(1, 'uploads/1/2020-05/logo48_inside.jpg', '#', '2020-05-10 16:05:46', NULL),
+(2, 'uploads/1/2020-05/logo23_inside.jpg', '#', '2020-05-10 16:05:53', NULL),
+(3, 'uploads/1/2020-05/logo49_inside.jpg', '#', '2020-05-10 16:06:01', NULL),
+(4, 'uploads/1/2020-05/logo50_inside.jpg', '#', '2020-05-10 16:06:11', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `corporate_services`
+--
+
+CREATE TABLE `corporate_services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `corporate_services`
+--
+
+INSERT INTO `corporate_services` (`id`, `service`, `created_at`, `updated_at`) VALUES
+(1, 'We entertain tenders for both Pathology and Non-Pathology tests', '2020-05-10 17:49:00', NULL),
+(2, 'Employees get discount cards', '2020-05-10 17:49:24', NULL),
+(3, 'Pre-Employment Check-Ups', '2020-05-10 17:49:31', NULL),
+(4, 'Annual Health Check-Ups for employees', '2020-05-10 17:49:36', NULL),
+(5, 'On-site (office) and Off-site (factory) Health Camps', '2020-05-10 17:49:48', NULL),
+(6, 'And other benefits tailor-made to suit your company\'s employees', '2020-05-10 17:49:59', NULL),
+(7, 'And other benefits tailor-made to suit your company\'s employees', '2020-05-10 17:50:00', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `csrs`
 --
 
@@ -579,6 +729,45 @@ CREATE TABLE `csrs` (
 
 INSERT INTO `csrs` (`id`, `school_name`, `location`, `distance`, `students`, `teachers`, `before`, `during`, `after`, `created_at`, `updated_at`) VALUES
 (1, 'Sarswati Sishu Mandir', 'Raipur', '220km to Bankura. From Bankura it’s a drive of 58km to the school in Raipur', 'Before Construction 307 & after Construction 359', '6 Males & 7 Females', 'uploads/1/2020-05/1_l.jpg', 'uploads/1/2020-05/2_l.jpg', 'uploads/1/2020-05/3_l.jpg', '2020-05-06 12:32:03', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctors`
+--
+
+CREATE TABLE `doctors` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `center` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `doctor_name` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `doctor_degree` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor_times`
+--
+
+CREATE TABLE `doctor_times` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `doctor_id` int(10) UNSIGNED NOT NULL,
+  `start_days` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `end_days` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `strat_time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `end_time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `special_days` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `special_strat_time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `special_end_time` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `opinion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -627,10 +816,10 @@ CREATE TABLE `facilities` (
 --
 
 INSERT INTO `facilities` (`id`, `note`, `status`, `menu_list_id`, `created_at`, `updated_at`) VALUES
-(1, 'All views X ray reports (AP/Lateral/Oblique)', '1', '1', NULL, NULL),
-(2, 'Latest technology instruments from Siemens and Allengers.', '1', '1', NULL, NULL),
-(3, 'Digital X-ray: We bring to you highly accurate X-ray images printed instantly and delivered to you within a couple of hours.', '1', '1', NULL, NULL),
-(4, 'Hysterosalpingogram (HSG):  Our skilled staff helps patients to acquire detailed report of their uterine cavity.', '1', '1', NULL, NULL);
+(1, 'All views X ray reports (AP/Lateral/Oblique)', '1', '8', NULL, NULL),
+(2, 'Latest technology instruments from Siemens and Allengers.', '1', '8', NULL, NULL),
+(3, 'Digital X-ray: We bring to you highly accurate X-ray images printed instantly and delivered to you within a couple of hours.', '1', '8', NULL, NULL),
+(4, 'Hysterosalpingogram (HSG):  Our skilled staff helps patients to acquire detailed report of their uterine cavity.', '1', '8', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -646,6 +835,97 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `health_packages`
+--
+
+CREATE TABLE `health_packages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `package_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hover_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `health_packages`
+--
+
+INSERT INTO `health_packages` (`id`, `package_name`, `image`, `hover_image`, `created_at`, `updated_at`) VALUES
+(1, 'Exclusive Health Package', 'uploads/1/2020-05/executive_health_package_new.jpg', 'uploads/1/2020-05/executive_health_text.jpg', '2020-05-09 15:51:49', NULL),
+(2, 'Exclusive Health Gold Package', 'uploads/1/2020-05/executive_gold_package_new.jpg', 'uploads/1/2020-05/executive_gold_package_text.jpg', '2020-05-09 15:54:15', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_services`
+--
+
+CREATE TABLE `home_services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `home_services`
+--
+
+INSERT INTO `home_services` (`id`, `icon`, `service`, `created_at`, `updated_at`) VALUES
+(1, 'staffdiv', 'Friendly Staff', '2020-05-09 15:21:29', '2020-05-09 15:24:29'),
+(2, 'reportdiv', 'Accurate Reports', '2020-05-09 15:22:05', '2020-05-09 15:24:20'),
+(3, 'timingdiv', 'Flexible Timings', '2020-05-09 15:22:36', '2020-05-09 15:24:08'),
+(4, 'smsdiv', 'SMS Alerts', '2020-05-09 15:23:26', NULL),
+(5, 'pricediv', 'Affordable Prices', '2020-05-09 15:23:40', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `index_infos`
+--
+
+CREATE TABLE `index_infos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `index_infos`
+--
+
+INSERT INTO `index_infos` (`id`, `title`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Our 28 year old legacy continues', 'Suraksha is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et', '2020-05-10 17:44:31', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lab_infos`
+--
+
+CREATE TABLE `lab_infos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `video_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `lab_infos`
+--
+
+INSERT INTO `lab_infos` (`id`, `title`, `description`, `video_link`, `created_at`, `updated_at`) VALUES
+(1, 'Suraksha Diagnostics brings Robots to its Lab', 'Suraksha has come up with \'Aptio\' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.', 'https://www.youtube.com/embed/pDjxZilfQ30', '2020-05-10 17:46:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -666,13 +946,13 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `menu_name`, `route_name`, `created_at`, `updated_at`) VALUES
-(1, 'Our Service', '', '2020-05-04 00:31:41', NULL),
-(2, 'About Us', '', '2020-05-04 00:31:51', NULL),
-(3, 'Book An Appointment', '', '2020-05-04 00:32:20', NULL),
-(4, 'Home Collection', '', '2020-05-04 00:32:28', NULL),
-(5, 'Health Packages', '', '2020-05-04 00:32:48', NULL),
-(6, 'Franchisee', '', '2020-05-04 00:33:35', NULL),
-(7, 'Contact Us', '', '2020-05-04 00:33:44', NULL);
+(1, 'Our Service', '#', '2020-05-04 00:31:41', NULL),
+(2, 'About Us', '#', '2020-05-04 00:31:51', NULL),
+(3, 'Book An Appointment', '#', '2020-05-04 00:32:20', NULL),
+(4, 'Home Collection', 'home_collection', '2020-05-04 00:32:28', NULL),
+(5, 'Health Packages', 'health_package', '2020-05-04 00:32:48', '2020-05-09 00:22:26'),
+(6, 'Franchisee', 'franchisee', '2020-05-04 00:33:35', '2020-05-09 00:22:15'),
+(7, 'Contact Us', '#', '2020-05-04 00:33:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -726,7 +1006,44 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (34, '2020_05_06_055427_create_csrs_table', 7),
 (35, '2020_05_06_104417_create_sub_menu_lists_table', 8),
 (37, '2020_05_06_184529_create_service_infos_table', 9),
-(39, '2020_05_06_211443_create_facilities_table', 10);
+(39, '2020_05_06_211443_create_facilities_table', 10),
+(40, '2020_05_07_200331_create_doctors_table', 11),
+(41, '2020_05_07_200813_create_doctor_times_table', 11),
+(42, '2020_05_09_090942_create_home_services_table', 12),
+(43, '2020_05_09_094645_create_health_packages_table', 13),
+(44, '2020_05_09_100845_create_package_details_table', 14),
+(45, '2020_05_09_170823_create_careers_table', 15),
+(46, '2020_05_10_095917_create_corporate_partners_table', 16),
+(47, '2020_05_10_113624_create_index_infos_table', 17),
+(48, '2020_05_10_113714_create_lab_infos_table', 17),
+(49, '2020_05_10_113759_create_corporate_services_table', 18),
+(50, '2020_05_10_141935_create_submenuses_table', 19),
+(51, '2020_05_10_142442_create_submenu_facilities_table', 19);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `package_details`
+--
+
+CREATE TABLE `package_details` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `package_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `package_details`
+--
+
+INSERT INTO `package_details` (`id`, `service`, `description`, `package_id`, `created_at`, `updated_at`) VALUES
+(1, 'Chest', 'X-RAY CHEST (PA) / AP', '1', '2020-05-09 16:23:08', NULL),
+(2, 'HEART', 'BILIRUBIN (TOTAL), SGOT / AST, SGPT / ALT, ALKALINE PHOSPHATASE, TOTAL PROTEIN (BLOOD) ALB:GLO RATIO & GAMMA GT (GGTP)', '1', '2020-05-09 16:23:30', NULL),
+(3, 'DIABETES', 'SUGASUGAR FASTING & SUGAR PPR FASTING & SUGAR PP', '1', '2020-05-09 16:24:47', NULL),
+(4, 'PATHOLOGY', 'CBC WITH PLATELET (THROMBOCYTE) COUNT, ESR (ERYTHROCYTE SEDIMENTATION RATE), 25-HYDROXY VITAMIN D - TOTAL, VITAMIN B12 (CYANOCOBALAMIN)', '2', '2020-05-09 16:27:02', '2020-05-09 16:28:31');
 
 -- --------------------------------------------------------
 
@@ -749,7 +1066,7 @@ CREATE TABLE `service_infos` (
 --
 
 INSERT INTO `service_infos` (`id`, `title`, `description`, `image`, `menu_list_id`, `created_at`, `updated_at`) VALUES
-(1, 'Diagnostic Service - X Ray', 'An X-ray report is a photographic or digital image of the internal composition of something, especially a part of the body, produced by X-rays being passed through it and being absorbed to different degrees by different materials.\r\n\r\nDuring X-ray examination, you are required to change into light cloths and remove all jewelry. The technician guides you in taking the right position in front of the X-ray receiving plate. Depending upon the target body part, you may be asked to lie down or stand to facilitate the X-ray report.', 'uploads/1/2020-05/5829237_stock_vector_special_offer_red_sticky_notes_vector_icon_design.jpg', '1', '2020-05-07 03:22:14', NULL);
+(1, 'Diagnostic Service - X Ray', 'An X-ray report is a photographic or digital image of the internal composition of something, especially a part of the body, produced by X-rays being passed through it and being absorbed to different degrees by different materials.\r\n\r\nDuring X-ray examination, you are required to change into light cloths and remove all jewelry. The technician guides you in taking the right position in front of the X-ray receiving plate. Depending upon the target body part, you may be asked to lie down or stand to facilitate the X-ray report.', 'uploads/1/2020-05/5829237_stock_vector_special_offer_red_sticky_notes_vector_icon_design.jpg', '8', '2020-05-07 03:22:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -775,12 +1092,72 @@ INSERT INTO `slider` (`id`, `image_link`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sub_menu`
+-- Table structure for table `submenuses`
 --
 
-CREATE TABLE `sub_menu` (
+CREATE TABLE `submenuses` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sub_menu_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `route_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `menu_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `submenuses`
+--
+
+INSERT INTO `submenuses` (`id`, `sub_menu_name`, `route_name`, `menu_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Company Profile', 'company_profile', 2, '2020-05-04 16:29:07', NULL, NULL),
+(2, 'Team of Experts', 'team_of_expert', 2, '2020-05-04 16:29:28', NULL, NULL),
+(3, 'CSR', 'csr', 2, '2020-05-04 16:29:41', '2020-05-06 12:00:07', NULL),
+(4, 'Customer Care', 'customer_care', 2, '2020-05-04 16:29:51', NULL, NULL),
+(5, 'Feedback', 'feedback', 7, '2020-05-04 16:52:20', NULL, NULL),
+(6, 'Career', 'career', 7, '2020-05-04 16:52:50', '2020-05-09 23:06:03', NULL),
+(7, 'Get in Teach', 'get_in_touch', 7, '2020-05-04 16:53:05', NULL, NULL),
+(8, 'Imging', '#', 1, '2020-05-06 16:23:50', NULL, NULL),
+(9, 'Cardiology', '#', 1, '2020-05-06 16:24:12', NULL, NULL),
+(10, 'Neurology', '#', 1, '2020-05-06 16:24:35', NULL, NULL),
+(11, 'Gastroenterology', '#', 1, '2020-05-06 16:24:56', NULL, NULL),
+(12, 'Pathology', '#', 1, '2020-05-06 16:25:07', NULL, NULL),
+(13, 'Pathology', '#', 1, '2020-05-06 16:25:15', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submenu_facilities`
+--
+
+CREATE TABLE `submenu_facilities` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `sub_munu_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item_name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `submenu_id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `submenu_facilities`
+--
+
+INSERT INTO `submenu_facilities` (`id`, `item_name`, `submenu_id`, `created_at`, `updated_at`) VALUES
+(6, 'X-ray', 8, '2020-05-06 16:50:57', NULL),
+(7, 'MRI', 8, '2020-05-06 16:51:18', NULL),
+(8, 'CT Scan', 8, '2020-05-06 16:51:37', NULL),
+(9, 'DEXA Sacn', 8, '2020-05-06 17:06:03', NULL),
+(10, 'Mammography', 8, '2020-05-06 17:06:24', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_menus`
+--
+
+CREATE TABLE `sub_menus` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `sub_menu_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `route_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   `menu_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -788,17 +1165,17 @@ CREATE TABLE `sub_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `sub_menu`
+-- Dumping data for table `sub_menus`
 --
 
-INSERT INTO `sub_menu` (`id`, `sub_munu_name`, `route_name`, `menu_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `sub_menus` (`id`, `sub_menu_name`, `route_name`, `menu_id`, `created_at`, `updated_at`) VALUES
 (3, 'Company Profile', 'company_profile', '2', '2020-05-04 16:29:07', NULL),
 (4, 'Team of Experts', 'team_of_expert', '2', '2020-05-04 16:29:28', NULL),
 (5, 'CSR', 'csr', '2', '2020-05-04 16:29:41', '2020-05-06 12:00:07'),
-(6, 'Customer Care', 'company_profile', '2', '2020-05-04 16:29:51', NULL),
-(7, 'Feedback', 'company_profile', '7', '2020-05-04 16:52:20', NULL),
-(8, 'Career', 'company_profile', '7', '2020-05-04 16:52:50', NULL),
-(9, 'Get in Teach', 'company_profile', '7', '2020-05-04 16:53:05', NULL),
+(6, 'Customer Care', 'customer_care', '2', '2020-05-04 16:29:51', NULL),
+(7, 'Feedback', 'feedback', '7', '2020-05-04 16:52:20', NULL),
+(8, 'Career', 'career', '7', '2020-05-04 16:52:50', '2020-05-09 23:06:03'),
+(9, 'Get in Teach', 'get_in_touch', '7', '2020-05-04 16:53:05', NULL),
 (10, 'Imging', '#', '1', '2020-05-06 16:23:50', NULL),
 (11, 'Cardiology', '#', '1', '2020-05-06 16:24:12', NULL),
 (12, 'Neurology', '#', '1', '2020-05-06 16:24:35', NULL),
@@ -815,7 +1192,7 @@ INSERT INTO `sub_menu` (`id`, `sub_munu_name`, `route_name`, `menu_id`, `created
 CREATE TABLE `sub_menu_lists` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `item_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sub_menu_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `submenu_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -824,7 +1201,7 @@ CREATE TABLE `sub_menu_lists` (
 -- Dumping data for table `sub_menu_lists`
 --
 
-INSERT INTO `sub_menu_lists` (`id`, `item_name`, `sub_menu_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `sub_menu_lists` (`id`, `item_name`, `submenu_id`, `created_at`, `updated_at`) VALUES
 (1, 'X-ray', '10', '2020-05-06 16:50:57', NULL),
 (2, 'MRI', '10', '2020-05-06 16:51:18', NULL),
 (3, 'CT Scan', '10', '2020-05-06 16:51:37', NULL),
@@ -839,6 +1216,12 @@ INSERT INTO `sub_menu_lists` (`id`, `item_name`, `sub_menu_id`, `created_at`, `u
 -- Indexes for table `appointments`
 --
 ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `careers`
+--
+ALTER TABLE `careers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -944,10 +1327,35 @@ ALTER TABLE `company_profile`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `corporate_partners`
+--
+ALTER TABLE `corporate_partners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `corporate_services`
+--
+ALTER TABLE `corporate_services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `csrs`
 --
 ALTER TABLE `csrs`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `doctors`
+--
+ALTER TABLE `doctors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `doctor_times`
+--
+ALTER TABLE `doctor_times`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `doctor_times_doctor_id_foreign` (`doctor_id`);
 
 --
 -- Indexes for table `expert_team`
@@ -968,6 +1376,30 @@ ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `health_packages`
+--
+ALTER TABLE `health_packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `home_services`
+--
+ALTER TABLE `home_services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `index_infos`
+--
+ALTER TABLE `index_infos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lab_infos`
+--
+ALTER TABLE `lab_infos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
@@ -977,6 +1409,12 @@ ALTER TABLE `menu`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `package_details`
+--
+ALTER TABLE `package_details`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -992,9 +1430,22 @@ ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sub_menu`
+-- Indexes for table `submenuses`
 --
-ALTER TABLE `sub_menu`
+ALTER TABLE `submenuses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `submenu_facilities`
+--
+ALTER TABLE `submenu_facilities`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `submenu_facilities_submenu_id_foreign` (`submenu_id`);
+
+--
+-- Indexes for table `sub_menus`
+--
+ALTER TABLE `sub_menus`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1012,6 +1463,12 @@ ALTER TABLE `sub_menu_lists`
 --
 ALTER TABLE `appointments`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `careers`
+--
+ALTER TABLE `careers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cms_apicustom`
@@ -1047,25 +1504,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `cms_notifications`
@@ -1083,7 +1540,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -1116,10 +1573,34 @@ ALTER TABLE `company_profile`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `corporate_partners`
+--
+ALTER TABLE `corporate_partners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `corporate_services`
+--
+ALTER TABLE `corporate_services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `csrs`
 --
 ALTER TABLE `csrs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `doctors`
+--
+ALTER TABLE `doctors`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `doctor_times`
+--
+ALTER TABLE `doctor_times`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `expert_team`
@@ -1140,6 +1621,30 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `health_packages`
+--
+ALTER TABLE `health_packages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `home_services`
+--
+ALTER TABLE `home_services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `index_infos`
+--
+ALTER TABLE `index_infos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `lab_infos`
+--
+ALTER TABLE `lab_infos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
@@ -1149,7 +1654,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `package_details`
+--
+ALTER TABLE `package_details`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `service_infos`
@@ -1164,9 +1675,21 @@ ALTER TABLE `slider`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `sub_menu`
+-- AUTO_INCREMENT for table `submenuses`
 --
-ALTER TABLE `sub_menu`
+ALTER TABLE `submenuses`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `submenu_facilities`
+--
+ALTER TABLE `submenu_facilities`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `sub_menus`
+--
+ALTER TABLE `sub_menus`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
@@ -1174,6 +1697,22 @@ ALTER TABLE `sub_menu`
 --
 ALTER TABLE `sub_menu_lists`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `doctor_times`
+--
+ALTER TABLE `doctor_times`
+  ADD CONSTRAINT `doctor_times_doctor_id_foreign` FOREIGN KEY (`doctor_id`) REFERENCES `doctors` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `submenu_facilities`
+--
+ALTER TABLE `submenu_facilities`
+  ADD CONSTRAINT `submenu_facilities_submenu_id_foreign` FOREIGN KEY (`submenu_id`) REFERENCES `submenuses` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
