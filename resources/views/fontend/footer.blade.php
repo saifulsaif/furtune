@@ -52,7 +52,7 @@ Developed by GL Technologies
 
 <div class="footer_menudiv">
 
-<a href="corporate-tieup.html"><div class="footer_menutxt">Corporate Partners</div></a>
+<a href="{{route('corporeate_partner')}}"><div class="footer_menutxt">Corporate Partners</div></a>
 <a href="https://surakshanet.com/home-collection"><div class="footer_menutxt">Home Collection </div></a>
 <a href="https://surakshanet.com/about-us/customer-care"><div class="footer_menutxt">Customer Care</div></a>
 <a href="faq.html"><div class="footer_menutxt">FAQ's</div></a>

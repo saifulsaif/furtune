@@ -326,7 +326,7 @@
 
 </form>
 
-<!--<div class="desktop_box1">
+<div class="desktop_box1">
 
 <div class="icon_maindiv">
 <div class="icon1_maindiv"><div class="icon3"></div></div>
@@ -342,7 +342,7 @@
 <a href="media.php"><div class="icon_subheading1">Media & Events</div></a>
 
 
-</div>-->
+</div>
 
 <div class="desktop_box1">
 
@@ -423,7 +423,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 </div>
 
-<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/pDjxZilfQ30"><img src="{!! asset('public/images/robot-video.jpg') !!}" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
+<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/pDjxZilfQ30"><img src="http://localhost/furtune/public/images/robot-video.jpg" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
 
 </div>
 
@@ -550,7 +550,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-      <div class="panel_img"><img src="{!! asset('public/images/new-centre-tamluk/img4_s.jpg') !!}" class="img_css" alt="Tamluk Centre" /></div>
+      <div class="panel_img"><img src="http://localhost/furtune/public/images/new-centre-tamluk/img4_s.jpg" class="img_css" alt="Tamluk Centre" /></div>
 
 
 
@@ -570,7 +570,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-     <div class="panel_img"><img src="{!! asset('public/images/press-conference/Press_Conference_s.jpg') !!}" class="img_css" alt="Press Conference" /></div>
+     <div class="panel_img"><img src="http://localhost/furtune/public/images/press-conference/Press_Conference_s.jpg" class="img_css" alt="Press Conference" /></div>
 
 
 
@@ -588,7 +588,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 
 
-     <div class="panel_img"><img src="{!! asset('public/images/gateway-cme.jpg') !!}" class="img_css" alt="CME" /></div>
+     <div class="panel_img"><img src="http://localhost/furtune/public/images/gateway-cme.jpg" class="img_css" alt="CME" /></div>
 
 
 
@@ -678,7 +678,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/business/india-business/suraksha-diagnostics-in-talks-with-us-based-mayo-labs/articleshow/58255183.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
@@ -690,7 +690,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/business/india-business/OrbiMed-to-invest-40m-in-Suraksha-Diagnostics/articleshow/55465431.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">OrbiMed to invest $40m in Suraksha Diagnostics</div>
@@ -701,7 +701,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://timesofindia.indiatimes.com/city/kolkata/robotics-to-help-test-blood-samples-in-half-an-hour-and-with-zero-error/articleshow/68003049.cms" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="{!! asset('public/images/toi.png') !!}" style="width:100%;" alt="Times of India" /></div>
+<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Robotics to help test blood samples in half an hour, and with zero error</div>
@@ -712,7 +712,7 @@ Suraksha diagnostics services span Pathology, Histopathology, Molecular Diagnost
 
 <a href="https://www.indiatoday.in/pti-feed/story/suraksha-diagnostics-in-talks-with-us-based-mayo-labs-910416-2017-04-18" target="_blank"><div class="latest_news_maindiv">
 
-<div class="latest_news_datemaindiv"><img src="{!! asset('public/mages/india-today-logo.jpg') !!}" style="width:100%;" alt="India Today" /></div>
+<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/mages/india-today-logo.jpg" style="width:100%;" alt="India Today" /></div>
 <div class="news_testdiv">
 
 <div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
@@ -797,7 +797,13 @@ Corporate <span style="color:#e1272c;">Partners</span>
 <!--<div class="welcome_bodytxt" style="margin-top:25px;"><a href="corporate-tieup.php"><button class="button" style="float:right;"> Read More </button></a></div>-->
 </div>
 
-<div class="franchisee_img_div"><div class="merchants-list"><div class="wrapper1"><div class="merchants-image"></div></div>
+<div class="franchisee_img_div">
+  <div class="merchants-list">
+    <div class="wrapper1">
+    <div class="merchants-image">
+      vsdfsdfsdf
+    </div>
+  </div>
 
 
 
@@ -825,5 +831,4 @@ Corporate <span style="color:#e1272c;">Partners</span>
 
 
 </div>
-
 @endsection

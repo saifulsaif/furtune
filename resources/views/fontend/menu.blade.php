@@ -66,7 +66,7 @@
 </a>
 
 
-<!--<div class="header_social_div">
+<div class="header_social_div">
 
 <div class="icon_div" style="margin-bottom:5px;"><div class="twitter_button"><a href="https://twitter.com/surakshatweets " target="_blank" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
@@ -78,7 +78,7 @@
 
 <div class="icon_div"><div class="instagram_button"><a href="https://www.instagram.com/suraksha_diagnostics/" target="_blank"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
-</div>-->
+</div>
 
 
 <div class="accreditation_div">

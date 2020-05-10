@@ -11,7 +11,8 @@ class PageController extends Controller
      $sub_menu = getValueByTBName('sub_menu');
      $sliders = getValueByTBName('slider');
      $sub_menu_list = getValueByTBName('sub_menu_lists');
-      return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list'));
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners'));
    }
    public function companyProfile(){
      $menu = getValueByTBName('menu');
@@ -115,5 +116,13 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $careers = getValueByTBName('careers');
       return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
+   public function corporateParter(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('sub_menu');
+     $sub_menu_list = getValueByTBName('sub_menu_lists');
+     $sliders = getValueByTBName('slider');
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.corporate_partner',compact('menu','sub_menu','sliders','sub_menu_list','partners'));
    }
 }
