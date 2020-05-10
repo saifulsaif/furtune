@@ -125,7 +125,7 @@
                                             <div class="menu_serviceheading">{{$sub->sub_menu_name}}</div>
                                             @if (!empty($submenu_list))
                                                 @foreach($submenu_list as $list)
-                                                    @if($list->sub_menu_id==$sub->id)
+                                                    @if($list->submenu_id==$sub->id)
                                                         <a href="{{url('service/'.$list->id)}}"><div class="menu_servicetxt">{{$list->item_name}}</div></a>
                                                     @endif
                                                 @endforeach

@@ -25,19 +25,19 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "sub_menu_lists";
+			$this->table = "submenu_facilities";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Item Name","name"=>"item_name"];
-			$this->col[] = ["label"=>"Sub Menu Id","name"=>"sub_menu_id","join"=>"sub_menu,sub_munu_name"];
+			$this->col[] = ["label"=>"Sub Menu Id","name"=>"submenu_id","join"=>"submenuses,sub_munu_name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Item Name','name'=>'item_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sub Menu Id','name'=>'sub_menu_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'sub_menu,sub_munu_name'];
+			$this->form[] = ['label'=>'Sub Menu Id','name'=>'submenu_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'submenuses,sub_menu_name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
