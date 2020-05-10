@@ -31,7 +31,7 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Item Name","name"=>"item_name"];
-			$this->col[] = ["label"=>"Sub Menu Id","name"=>"submenu_id","join"=>"submenuses,sub_munu_name"];
+			$this->col[] = ["label"=>"Sub Menu Id","name"=>"submenu_id","join"=>"submenuses,sub_menu_name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE

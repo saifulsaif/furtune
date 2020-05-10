@@ -33,7 +33,7 @@
 			$this->col[] = ["label"=>"Title","name"=>"title"];
 			$this->col[] = ["label"=>"Description","name"=>"description"];
 			$this->col[] = ["label"=>"Image","name"=>"image","image"=>true];
-			$this->col[] = ["label"=>"Menu List Id","name"=>"menu_list_id","join"=>"sub_menu_lists,item_name"];
+			$this->col[] = ["label"=>"Menu List Id","name"=>"menu_list_id","join"=>"submenu_facilities,item_name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
