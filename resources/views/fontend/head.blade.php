@@ -26,7 +26,9 @@
 <link rel="stylesheet" href="{!! asset('public/css/bootstrap.min.css') !!}" type="text/css" />
 <!-- MDBootstrap Datatables  -->
 <link href="css/addons/datatables.min.css" rel="stylesheet">
+<link href="../netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="{!! asset('public/css/social.css') !!}" media="all">
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
 
