@@ -11,7 +11,7 @@
 
 <!------------------  profile  ------------------->
 
-<div class="profile_aboutmaindiv" style="margin-top:218px;">
+<div class="profile_aboutmaindiv">
 
 <div class="header_bandmaindiv">
 <div class="header_banddiv">

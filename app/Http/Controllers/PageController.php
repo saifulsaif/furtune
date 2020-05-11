@@ -101,8 +101,8 @@ class PageController extends Controller
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
-     $careers = getValueByTBName('careers');
-      return view('fontend.content.customer_care',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+     $customer_care = getValueByTBName('customer_cares');
+      return view('fontend.content.customer_care',compact('menu','sub_menu','sliders','sub_menu_list','customer_care'));
    }
    public function getInTouch(){
      $menu = getValueByTBName('menu');

@@ -13,7 +13,7 @@
 
 <!------------------  profile  ------------------->
 
-<div class="profile_aboutmaindiv" style="margin-top:200px;">
+<div class="profile_aboutmaindiv">
 
 <div class="header_bandmaindiv">
 <div class="header_banddiv">

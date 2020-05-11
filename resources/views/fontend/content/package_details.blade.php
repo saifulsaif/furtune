@@ -16,7 +16,7 @@
 
 <!------------------  profile  ------------------->
 
-<div class="profile_aboutmaindiv" style="margin-top:200px;">
+<div class="profile_aboutmaindiv">
 
 <div class="header_bandmaindiv">
 <div class="header_banddiv">
@@ -61,7 +61,7 @@
     <td width="80%" class="table_txt" style="padding-left:15px; border-bottom:2px solid #99cf4e; padding-bottom:10px;">{{$pack->description}}</td>
   </tr>
   @endforeach
-  
+
 </table>
 
 
