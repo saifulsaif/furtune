@@ -28,9 +28,10 @@ Route::get('/home-collection', 'PageController@homeCollection')->name('home_coll
 Route::get('/health-package', 'PageController@healthPackage')->name('health_package');
 Route::get('/career', 'PageController@career')->name('career');
 Route::get('/corporate-partner', 'PageController@corporateParter')->name('corporeate_partner');
-
 Route::get('/franchisee', 'PageController@franchisee')->name('franchisee');
+Route::post('/save-franchisee', 'PageController@saveFranchisee');
 Route::get('/customer-care', 'PageController@customerCare')->name('customer_care');
+
 Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 Route::get('/feedback', 'PageController@feedback')->name('feedback');
 

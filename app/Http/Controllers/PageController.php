@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use DB;
+use App\franchisee;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -70,6 +71,25 @@ class PageController extends Controller
       return view('fontend.content.health_package',compact('menu','sub_menu','sliders','sub_menu_list','health_package'));
    }
    public function franchisee(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+      return view('fontend.content.franchisee',compact('menu','sub_menu','sliders','sub_menu_list'));
+   }
+   public function saveFranchisee(Request $request){
+
+     // DB::table('franchisees')->insert();
+     $franch = new franchisee;
+     $franch->name =  $request->name;
+     $franch->age =  $request->age;
+     $franch->locality =  $request->locality;
+     $franch->area =  $request->area;
+     $franch->phone =  $request->phone;
+     $franch->email = $request->email;
+     $franch->pin_code = $request->pin;
+     $franch->save();
+
      $menu = getValueByTBName('menu');
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');

@@ -39,7 +39,7 @@
 
 <div class="static_pagetxt">
 <div class="static_pagetxt" style="text-align:left;">
- <span style="font-size:28px; font-weight:bold; line-height:35px;">WANT TO BE A SURAKSHA FRANCHISEE? </span>
+ <span style="font-size:28px; font-weight:bold; line-height:35px;">WANT TO BE A FURTUNE FRANCHISEE? </span>
 <br /><br />
 
 Fill in your details here:
@@ -48,7 +48,8 @@ Fill in your details here:
 
 
 
-<form action="" method="post" name="franchisee">
+<form action="{{action('PageController@saveFranchisee')}}" method="post">
+@csrf
 
 <div class="static_pagetxt">
 
@@ -94,7 +95,7 @@ Fill in your details here:
 
 <div class="registrationmain_divright">
 <div class="formtxt">Carpet Area of Commercial Property </div>
-<div class="feedbackformdiv"><div class="carpet_area"><input name="carpet_area" id="carpet_area" type="text" class="form_style" placeholder="Enter Your Carpet Area of Commercial Property" autocomplete="off" onkeypress="return isNumberKey(event)"/></div>sq.ft.</div>
+<div class="feedbackformdiv"><div class="carpet_area"><input name="area" id="carpet_area" type="text" class="form_style" placeholder="Enter Your Carpet Area of Commercial Property" autocomplete="off" onkeypress="return isNumberKey(event)"/></div>sq.ft.</div>
 
 </div>
 
@@ -106,7 +107,7 @@ Fill in your details here:
 <div class="registrationmain_divleft">
 <div class="formtxt">Mobile No</div>
 
-<div class="feedbackformdiv"><input name="mob" id="mob" type="text" class="form_style" placeholder="Enter Your Mobile No" autocomplete="off"  onkeypress="return isNumberKey(event)"/>
+<div class="feedbackformdiv"><input name="phone" id="mob" type="text" class="form_style" placeholder="Enter Your Mobile No" autocomplete="off"  onkeypress="return isNumberKey(event)"/>
 
 
 
