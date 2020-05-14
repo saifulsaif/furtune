@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use App\franchisee;
+use App\feedback;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -78,8 +79,6 @@ class PageController extends Controller
       return view('fontend.content.franchisee',compact('menu','sub_menu','sliders','sub_menu_list'));
    }
    public function saveFranchisee(Request $request){
-
-     // DB::table('franchisees')->insert();
      $franch = new franchisee;
      $franch->name =  $request->name;
      $franch->age =  $request->age;
@@ -89,7 +88,6 @@ class PageController extends Controller
      $franch->email = $request->email;
      $franch->pin_code = $request->pin;
      $franch->save();
-
      $menu = getValueByTBName('menu');
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');
@@ -139,6 +137,25 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $careers = getValueByTBName('careers');
       return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+   }
+   public function saveFeedback(Request $request){
+     $franch = new feedback;
+     $franch->first_name =  $request->f_name;
+     $franch->last_name =  $request->l_name;
+     $franch->phone =  $request->phone;
+     $franch->email =  $request->email;
+     $franch->visited_center =  $request->visited_center;
+     $franch->experiance = $request->experiance;
+     $franch->moment = $request->moment;
+     $franch->suggest = $request->suggest;
+     $franch->location = $request->location;
+     $franch->complaint = $request->complaint;
+     $franch->save();
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+      return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list'));
    }
    public function corporateParter(){
      $menu = getValueByTBName('menu');

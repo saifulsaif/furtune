@@ -34,6 +34,7 @@ Route::get('/customer-care', 'PageController@customerCare')->name('customer_care
 
 Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 Route::get('/feedback', 'PageController@feedback')->name('feedback');
+Route::post('/save-feedback', 'PageController@saveFeedback');
 
 
 

@@ -351,23 +351,12 @@
 </li>
 
 <li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
-
 <li><a href="{!! route('sajib.getDoctor') !!}" >Book an Appointment</a></li>
 <li><a href="https://surakshanet.com/home-collection" >Home Collection</a></li>
 <li><a href="https://surakshanet.com/health-package" >Health Packages</a></li>
-
-
-
 {{-- <li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li> --}}
 <li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
-
-
-
-<!--<li><a href="feedback.php" >Feedback</a></li>-->
-<li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">Contact Us</a>
-
-
-</li>
+<li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">Contact Us</a></li>
 
 </ul>
 			</div>
@@ -385,5 +374,3 @@
 
 
 </header>
-
-  

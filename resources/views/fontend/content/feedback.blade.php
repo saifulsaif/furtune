@@ -44,28 +44,29 @@
 
 Your opinion has weight! We encourage you to appraise our services.</div>
 
-<div class="starrating_imgdiv" id="display_avg_ratting"><img src="../../images/rating/0.0.png" class="img_css" /></div>
+<div class="starrating_imgdiv" id="display_avg_ratting"><img src="{{asset('public/images/0.0.png')}}" class="img_css" /></div>
 </div>
 </div>
 
 <div class="static_pagetxt" style="margin-bottom:30px;">
- <span style="font-size:28px; font-weight:bold; color:#990000;" >Assess Suraksha </span>
+ <span style="font-size:28px; font-weight:bold; color:#990000;" >Assess Furtune </span>
 
 </div>
 
-<form action="" method="post" name="feedback">
+<form action="{{action('PageController@saveFeedback')}}" method="post">
+@csrf
 
 <div class="static_pagetxt">
 
 <div class="registration_div">
 
 <div class="registrationmain_divleft">
-<div class="formtxt">Are you happy with your experience at Suraksha?</div>
+<div class="formtxt">Are you happy with your experience at Furtune?</div>
 
 <div class="feedbackformdiv" >
-<select name="experiance" id="experiance" class="form_style">
+<select name="experiance" required id="experiance" class="form_style">
 
-<option selected="selected"  value="">Please Choose</option>
+<option selected="selected"   value="">Please Choose</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
 
@@ -82,7 +83,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="registrationmain_divright">
 <div class="formtxt">What was your best moment with us?</div>
-<div class="feedbackformdiv"><input name="best_moment" id="best_moment" type="text" class="form_style" placeholder="Please Enter Your Best Moment" autocomplete="off" /></div>
+<div class="feedbackformdiv"><input name="moment" required id="best_moment" type="text" class="form_style" placeholder="Please Enter Your Best Moment" autocomplete="off" /></div>
 
 </div>
 
@@ -96,8 +97,8 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="feedbackformdiv" style="height:25px; padding-top:10px;">
 
-<input type="radio" name="branch" id="radio1" class="css-checkbox" value="Yes" /><label for="radio1" class="css-label radGroup1" style="margin-right:10px;">Yes</label>
-<input type="radio" name="branch" id="radio2" class="css-checkbox"  value="No"/><label for="radio2" class="css-label radGroup1">No</label>
+<input type="radio" name="suggest" id="radio1" class="css-checkbox" value="Yes" /><label for="radio1" class="css-label radGroup1" style="margin-right:10px;">Yes</label>
+<input type="radio" name="suggest" id="radio2" class="css-checkbox"  value="No"/><label for="radio2" class="css-label radGroup1">No</label>
 
 </div>
 
@@ -106,14 +107,14 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="registrationmain_divright">
 <div class="formtxt">Where ?</div>
-<div class="feedbackformdiv"><input name="where" id="where" type="text" class="form_style" placeholder="Please Enter Where you suggest a new branch" autocomplete="off" /></div>
+<div class="feedbackformdiv"><input  required  name="location" id="location" type="text" class="form_style" placeholder="Please Enter Where you suggest a new branch" autocomplete="off" /></div>
 
 </div>
 
 
 </div>
 
-<div class="static_pagetxt" style="margin-bottom:30px;  margin-top:30px;">
+<!-- <div class="static_pagetxt" style="margin-bottom:30px;  margin-top:30px;">
  <span style="font-size:28px; font-weight:bold; color:#990000;" >Rate Your Experience</span>
 
 </div>
@@ -200,7 +201,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 <div class="starrating_div" > <div class="demo5" ></div></div>
 </div>-->
 
-</div>
+<!-- </div>  -->
 
 
 
@@ -225,7 +226,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="registration_div">
 
-<textarea name="complaint" id="complaint" cols="" rows="" class="form_style" style="resize:none; width:95%; height:100px;" placeholder="Please Enter Your Complaint, Request or Message" autocomplete="off"></textarea>
+<textarea name="complaint" id="complaint" required  cols="" rows="" class="form_style" style="resize:none; width:95%; height:100px;" placeholder="Please Enter Your Complaint, Request or Message" autocomplete="off"></textarea>
 
 </div>
 
@@ -234,7 +235,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 <div class="registrationmain_divleft">
 <div class="formtxt">First Name</div>
 
-<div class="feedbackformdiv"><input name="f_name" id="f_name" type="text" class="form_style" placeholder="Please Enter First Name " autocomplete="off" />
+<div class="feedbackformdiv"><input name="f_name" required  id="f_name" type="text" class="form_style" placeholder="Please Enter First Name " autocomplete="off" />
 
 
 
@@ -245,7 +246,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="registrationmain_divright">
 <div class="formtxt">Last Name</div>
-<div class="feedbackformdiv"><input name="l_name" id="l_name" type="text" class="form_style" placeholder="Please Enter Your Last Name" autocomplete="off" /></div>
+<div class="feedbackformdiv"><input name="l_name" required  id="l_name" type="text" class="form_style" placeholder="Please Enter Your Last Name" autocomplete="off" /></div>
 
 </div>
 
@@ -257,7 +258,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 <div class="registrationmain_divleft">
 <div class="formtxt">Mobile No</div>
 
-<div class="feedbackformdiv"><input name="mob" id="mob" type="text" class="form_style" placeholder="Enter Your Mobile No" autocomplete="off" onkeypress="return isNumberKey(event)" />
+<div class="feedbackformdiv"><input name="phone" required  id="mob" type="text" class="form_style" placeholder="Enter Your Mobile No" autocomplete="off" onkeypress="return isNumberKey(event)" />
 
 
 
@@ -268,7 +269,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 
 <div class="registrationmain_divright">
 <div class="formtxt">Email Id</div>
-<div class="feedbackformdiv"><input name="email" id="email" type="text" class="form_style" placeholder="Enter Your Email Id" autocomplete="off" /></div>
+<div class="feedbackformdiv"><input name="email" required  id="email" type="text" class="form_style" placeholder="Enter Your Email Id" autocomplete="off" /></div>
 
 </div>
 
@@ -282,7 +283,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 <div class="registrationmain_divleft">
 <div class="formtxt">Centre you last visited</div>
 
-<div class="feedbackformdiv"><input name="last_visit" id="last_visit" type="text" class="form_style" placeholder="Centre you last visited" autocomplete="off" />
+<div class="feedbackformdiv"><input name="visited_center" required  id="last_visit" type="text" class="form_style" placeholder="Centre you last visited" autocomplete="off" />
 
 
 
