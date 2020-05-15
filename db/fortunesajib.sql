@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 08:46 PM
+-- Generation Time: May 15, 2020 at 11:53 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -320,7 +320,9 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (127, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/service_infos22/delete/8', 'Delete data Test at Service Details', '', 1, '2020-05-15 09:57:39', NULL),
 (128, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/service_infos22/delete/8', 'Delete data Test at Service Details', '', 1, '2020-05-15 09:58:21', NULL),
 (129, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/logout', 'admin@crudbooster.com logout', '', 1, '2020-05-15 10:03:30', NULL),
-(130, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 10:03:33', NULL);
+(130, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 10:03:33', NULL),
+(131, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/logout', 'admin@crudbooster.com logout', '', 1, '2020-05-15 15:46:26', NULL),
+(132, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 15:46:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -370,7 +372,8 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (22, 'Feedback', 'Route', 'AdminFeedbackControllerGetIndex', NULL, 'fa fa-repeat', 0, 1, 0, 1, 19, '2020-05-15 00:23:38', NULL),
 (23, 'Site Information', 'Route', 'AdminSiteInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 20, '2020-05-15 14:52:23', NULL),
 (24, 'Doctor', 'Route', 'AdminDoctorsControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 21, '2020-05-15 14:52:23', NULL),
-(25, 'Doctors', 'Route', 'AdminDoctors36ControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 22, '2020-05-15 11:35:55', NULL);
+(25, 'Doctors', 'Route', 'AdminDoctors36ControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 22, '2020-05-15 11:35:55', NULL),
+(26, 'Appointment List', 'Route', 'AdminListAppointmentsControllerGetIndex', NULL, 'fa fa-medkit', 0, 1, 0, 1, 23, '2020-05-15 15:47:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -412,7 +415,8 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (21, 21, 1),
 (22, 22, 1),
 (23, 23, 1),
-(24, 25, 1);
+(24, 25, 1),
+(25, 26, 1);
 
 -- --------------------------------------------------------
 
@@ -474,7 +478,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (33, 'Feedback', 'fa fa-repeat', 'feedback', 'feedback', 'AdminFeedbackController', 0, 0, '2020-05-15 00:23:37', NULL, NULL),
 (34, 'Site Information', 'fa fa-info', 'site_infos', 'site_infos', 'AdminSiteInfosController', 0, 0, '2020-05-15 14:52:22', NULL, NULL),
 (35, 'Doctors', 'fa fa-info', 'doctors', 'doctors', 'AdminDoctorsController', 0, 0, '2020-05-15 14:52:22', NULL, NULL),
-(36, 'Doctors', 'fa fa-glass', 'doctors36', 'doctors', 'AdminDoctors36Controller', 0, 0, '2020-05-15 11:35:55', NULL, NULL);
+(36, 'Doctors', 'fa fa-glass', 'doctors36', 'doctors', 'AdminDoctors36Controller', 0, 0, '2020-05-15 11:35:55', NULL, NULL),
+(37, 'Appointment List', 'fa fa-medkit', 'list_appointments', 'list_appointments', 'AdminListAppointmentsController', 0, 0, '2020-05-15 15:47:38', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -572,7 +577,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (32, 1, 1, 1, 1, 1, 1, 32, NULL, NULL),
 (33, 1, 1, 1, 1, 1, 1, 33, NULL, NULL),
 (34, 1, 1, 1, 1, 1, 1, 34, NULL, NULL),
-(35, 1, 1, 1, 1, 1, 1, 36, NULL, NULL);
+(35, 1, 1, 1, 1, 1, 1, 36, NULL, NULL),
+(36, 1, 1, 1, 1, 1, 1, 37, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1086,6 +1092,35 @@ INSERT INTO `lab_infos` (`id`, `title`, `description`, `video_link`, `created_at
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `list_appointments`
+--
+
+CREATE TABLE `list_appointments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `firstName` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lastName` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dateOfAppoinment` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `timeAppoinment` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phoneNumber` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `diseaseTopic` text COLLATE utf8mb4_unicode_ci,
+  `doctor_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `list_appointments`
+--
+
+INSERT INTO `list_appointments` (`id`, `firstName`, `lastName`, `email`, `dateOfAppoinment`, `timeAppoinment`, `phoneNumber`, `diseaseTopic`, `doctor_id`, `created_at`, `updated_at`) VALUES
+(1, 'dwqd', 'dwedew', 'dew@gmail.com', '2020-05-16', '13:01', NULL, 'cdafwaefwe', 1, '2020-05-15 15:39:32', '2020-05-15 15:39:32'),
+(2, 'MD Sajib', 'Mulla', 'dew@gmail.com', '2020-05-16', '13:01', '01748', 'Something urgent to solve', 1, '2020-05-15 15:43:52', '2020-05-15 15:43:52'),
+(3, 'Md Sajib', 'Mulla', 'sajib155@gmail.com', '2020-05-16', '01:01', '01748920048', 'Something very urgent', 1, '2020-05-15 15:45:36', '2020-05-15 15:45:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `menu`
 --
 
@@ -1104,7 +1139,7 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`id`, `menu_name`, `route_name`, `created_at`, `updated_at`) VALUES
 (1, 'Our Service', '#', '2020-05-04 00:31:41', NULL),
 (2, 'About Us', '#', '2020-05-04 00:31:51', NULL),
-(3, 'Book An Appointment', 'sajib.getDoctor', '2020-05-04 00:32:20', NULL),
+(3, 'Book An Appointment', 'fortune.getDoctor', '2020-05-04 00:32:20', NULL),
 (4, 'Home Collection', 'home_collection', '2020-05-04 00:32:28', NULL),
 (5, 'Health Packages', 'health_package', '2020-05-04 00:32:48', '2020-05-09 00:22:26'),
 (6, 'Franchisee', 'franchisee', '2020-05-04 00:33:35', '2020-05-09 00:22:15'),
@@ -1179,7 +1214,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (53, '2020_05_12_175735_create_franchisees_table', 21),
 (54, '2020_05_14_175054_create_feedback_table', 22),
 (55, '2020_05_15_084324_create_site_infos_table', 23),
-(56, '2020_05_15_102336_create_faqs_table', 24);
+(56, '2020_05_15_102336_create_faqs_table', 24),
+(57, '2020_05_15_205150_create_list_appointments_table', 25);
 
 -- --------------------------------------------------------
 
@@ -1562,6 +1598,12 @@ ALTER TABLE `lab_infos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `list_appointments`
+--
+ALTER TABLE `list_appointments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
@@ -1660,25 +1702,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `cms_notifications`
@@ -1696,7 +1738,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -1825,6 +1867,12 @@ ALTER TABLE `lab_infos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `list_appointments`
+--
+ALTER TABLE `list_appointments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
@@ -1834,7 +1882,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `package_details`
