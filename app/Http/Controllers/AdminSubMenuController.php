@@ -355,13 +355,13 @@
 			$submenu->sub_menu_name = $request->sub_menu_name;
 			$submenu->route_name = $request->route_name;
 			$submenu->menu_id = $request->menu_id;
-			$submenu->save();
-			foreach ($request->facility as $key => $facility) {
-				$subFacility = new submenu_facility;
-				$subFacility->item_name =$facility;
-				$subFacility->submenu_id = $submenu->id;
-				$subFacility->save();
-			}
+			// $submenu->save();
+			// foreach ($request->facility as $key => $facility) {
+			// 	$subFacility = new submenu_facility;
+			// 	$subFacility->item_name =$facility;
+			// 	$subFacility->submenu_id = $submenu->id;
+			// 	$subFacility->save();
+			// }
 			return redirect('admin/sub_menu');
 		}
 

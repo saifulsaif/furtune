@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <div class="form-group header-group-0 " id="form-group-menu_id" style="">
+        {{-- <div class="form-group header-group-0 " id="form-group-menu_id" style="">
             <label class="control-label col-sm-2">Facility
                 <span class="text-danger" title="This field is required">*</span>
             </label>
@@ -100,7 +100,7 @@
                 <p class="help-block"></p>
 
             </div>
-        </div>
+        </div> --}}
 
         <div class="new_facility">
 
@@ -129,7 +129,7 @@
 </div>
 </div>
 @endsection
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     function addNewFacility(){
         $('.addfacility').remove();
         $('.new_facility').append(` <div class="form-group header-group-0 " id="form-group-menu_id" style="">
@@ -155,4 +155,4 @@
              </div>
          </div>`)
     }
-</script>
+</script> --}}
