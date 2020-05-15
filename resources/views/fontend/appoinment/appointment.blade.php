@@ -1,6 +1,15 @@
 @extends('fontend.app')
 @section('content')
+<style media="screen">
+    #appointment_model{
+          z-index: 9999;
+    }
+    .modal{
+        z-index: 9999 !important;
+        display: fixed !important;
+    }
 
+</style>
 <div class="body_maindiv" >
 
 <!------------------  profile  ------------------->
@@ -89,8 +98,15 @@
                             @else
                                 <td>NO Time</td>
                             @endif
+                            {{-- <td class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointment_model">
+                                              <i class="fa fa-medkit" style="font-size:32px;color:red"></i>
+                                            </button>
+                                        </td> --}}
 
-                            <td class="text-center"><a type="button" onclick="appointment_modal({{ $doctor->id }})"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a></td>
+
+                            {{-- <td class="text-center"><a type="button" onclick="appointment_modal({{ $doctor->id }})"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a> --}}
+                            <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a>
+                            </td>
                         </tr>
                     @endforeach
                 @else

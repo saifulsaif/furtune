@@ -32,6 +32,9 @@
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
 
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
 
 <!--<script src='js/jquery.min.js'></script>-->
 
@@ -537,7 +540,7 @@ display:none;
 
 <style>
 	#pop_mod_onl_con .modal-backdrop{
-		z-index:0 !important;
+		z-index:999 !important;
 	}
 
 	.popup_title_main{

@@ -1,6 +1,6 @@
 <body>
-  {{-- <div id="pop_mod_onl_con" class="modal fade"> --}}
-      {{-- <div class="modal-dialog">
+  <div id="pop_mod_onl_con" class="modal fade">
+      <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -14,10 +14,10 @@
                   <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
               </div>
           </div>
-      </div> --}}
-  {{-- </div> --}}
+      </div>
+ </div>
   {{-- #appointment modal --}}
-  <div id="appointment_from" class="modal fade" style="width:100%">
+  <div id="appointment_from" class="modal fade">
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">

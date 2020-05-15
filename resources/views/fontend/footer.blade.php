@@ -135,7 +135,7 @@ Developed By GL Technologies</div>
 <script src='{!! asset('public/js/bootstrap.min.js') !!}'></script>
 <script>
 	$(document).ready(function(){
-		$("#pop_mod_onl_con").modal('show');
+		// $("#pop_mod_onl_con").modal('show');
 	});
 </script>
 

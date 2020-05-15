@@ -7,7 +7,7 @@
 	use App\doctors;
 	use App\doctor_time;
 
-	class AdminDoctorsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminDoctors36Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -332,93 +332,93 @@
 
 	    //By the way, you can still create your own method in here... :)
 
-		public function getAdd()
-		{
-			$data = [];
-			$data['page_title'] = 'Add Doctors';
-			return $this->cbView("backend.doctors.addDoctor", $data);
-		}
+				public function getAdd()
+				{
+					$data = [];
+					$data['page_title'] = 'Add Doctors';
+					return $this->cbView("backend.doctors.addDoctor", $data);
+				}
 
-		public function postSave()
-		{
-			$request = request();
-			// $request->validate([
-			// 	"center" => "required|integer",
-			// 	"department" => "required|integer",
-			// 	"doctor_degree" => "required|integer",
-			// 	"doctor_name" => "required|integer",
-			// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
-			// ], [
-			// 	'center.required' => "Center name field is required.",
-			// 	'department.required' => "Department name field is required.",
-			// 	'doctor_degree.required' => "Doctor Degree name field is required.",
-			// 	'doctor_name.required' => "Doctor name field is required.",
-			// ]);
-			$doctor = new doctors;
-			$doctor->center = $request->center;
-			$doctor->department = $request->department;
-			$doctor->doctor_degree = $request->doctor_degree;
-			$doctor->doctor_name = $request->doctor_name;
-			$doctor->status = ($request->status == 'on')?1:0;
-			$doctor->save();
+				public function postSave()
+				{
+					$request = request();
+					// $request->validate([
+					// 	"center" => "required|integer",
+					// 	"department" => "required|integer",
+					// 	"doctor_degree" => "required|integer",
+					// 	"doctor_name" => "required|integer",
+					// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
+					// ], [
+					// 	'center.required' => "Center name field is required.",
+					// 	'department.required' => "Department name field is required.",
+					// 	'doctor_degree.required' => "Doctor Degree name field is required.",
+					// 	'doctor_name.required' => "Doctor name field is required.",
+					// ]);
+					$doctor = new doctors;
+					$doctor->center = $request->center;
+					$doctor->department = $request->department;
+					$doctor->doctor_degree = $request->doctor_degree;
+					$doctor->doctor_name = $request->doctor_name;
+					$doctor->status = ($request->status == 'on')?1:0;
+					$doctor->save();
 
-			$doctor_time = new doctor_time;
-			$doctor_time->doctor_id = $doctor->id;
-			$doctor_time->start_days = $request->start_days;
-			$doctor_time->end_days = $request->end_days;
-			$doctor_time->strat_time = $request->start_time;
-			$doctor_time->end_time = $request->end_time;
-			$doctor_time->special_days = $request->special_days;
-			$doctor_time->special_strat_time = $request->special_start_time;
-			$doctor_time->special_end_time = $request->special_end_time;
-			$doctor_time->opinion = $request->opinion;
-			$doctor_time->save();
+					$doctor_time = new doctor_time;
+					$doctor_time->doctor_id = $doctor->id;
+					$doctor_time->start_days = $request->start_days;
+					$doctor_time->end_days = $request->end_days;
+					$doctor_time->strat_time = $request->start_time;
+					$doctor_time->end_time = $request->end_time;
+					$doctor_time->special_days = $request->special_days;
+					$doctor_time->special_strat_time = $request->special_start_time;
+					$doctor_time->special_end_time = $request->special_end_time;
+					$doctor_time->opinion = $request->opinion;
+					$doctor_time->save();
 
-			return redirect('admin/doctors');
-		}
+					return redirect('admin/doctors');
+				}
 
-		// Doctor Edit
-		public function getEdit($id)
-		{
-			$data = [];
-			$data['page_title'] = 'Edit Doctor';
-			$doctor = doctors::with('times')->where('id', $id)->first();
-			return $this->cbView("backend.doctors.editDoctor", compact('user', 'doctor'));
-		}
+				// Doctor Edit
+				public function getEdit($id)
+				{
+					$data = [];
+					$data['page_title'] = 'Edit Doctor';
+					$doctor = doctors::with('times')->where('id', $id)->first();
+					return $this->cbView("backend.doctors.editDoctor", compact('user', 'doctor'));
+				}
 
-		public function postEdit()
-		{
-			$request = request();
+				public function postEdit()
+				{
+					$request = request();
 
-			// // dd($request->all());
-			// \Validator::make($request->all(), [
-			// 	"pool_id" => "required",
-			// 	"name" => "required",
-			// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
-			// ], [
-			// 	'pool_id.required' => "pool name field is required.",
-			// ]);
-			$doctor = doctors::with('times')->find($request->doctor_id);
-			$doctor->center = $request->center;
-			$doctor->department = $request->department;
-			$doctor->doctor_degree = $request->doctor_degree;
-			$doctor->doctor_name = $request->doctor_name;
-			$doctor->status = ($request->status == 'on')?1:0;
-			$doctor->update();
+					// // dd($request->all());
+					// \Validator::make($request->all(), [
+					// 	"pool_id" => "required",
+					// 	"name" => "required",
+					// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
+					// ], [
+					// 	'pool_id.required' => "pool name field is required.",
+					// ]);
+					$doctor = doctors::with('times')->find($request->doctor_id);
+					$doctor->center = $request->center;
+					$doctor->department = $request->department;
+					$doctor->doctor_degree = $request->doctor_degree;
+					$doctor->doctor_name = $request->doctor_name;
+					$doctor->status = ($request->status == 'on')?1:0;
+					$doctor->update();
 
-			$doctor->times->doctor_id = $doctor->id;
-			$doctor->times->start_days = $request->start_days;
-			$doctor->times->end_days = $request->end_days;
-			$doctor->times->strat_time = $request->start_time;
-			$doctor->times->end_time = $request->end_time;
-			$doctor->times->special_days = $request->special_days;
-			$doctor->times->special_strat_time = $request->special_start_time;
-			$doctor->times->special_end_time = $request->special_end_time;
-			$doctor->times->opinion = $request->opinion;
-			$doctor->times->update();
-			return redirect('admin/doctors');
+					$doctor->times->doctor_id = $doctor->id;
+					$doctor->times->start_days = $request->start_days;
+					$doctor->times->end_days = $request->end_days;
+					$doctor->times->strat_time = $request->start_time;
+					$doctor->times->end_time = $request->end_time;
+					$doctor->times->special_days = $request->special_days;
+					$doctor->times->special_strat_time = $request->special_start_time;
+					$doctor->times->special_end_time = $request->special_end_time;
+					$doctor->times->opinion = $request->opinion;
+					$doctor->times->update();
+					return redirect('admin/doctors');
 
-		}
+				}
 
 
 	}
