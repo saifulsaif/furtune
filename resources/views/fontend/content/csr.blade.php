@@ -40,7 +40,7 @@
 
 
 
-<Span style="font-size:18px; font-weight:600; line-height:26px;">As a part of CSR initiative taken by Suraksha Diagnostics Private Limited, Saraswati Sishu mandir school buildings have been gifted to the children of Raipur & Dhanara in Bankura (West Bengal)</Span><br />
+<Span style="font-size:18px; font-weight:600; line-height:26px;">As a part of CSR initiative taken by FurtuneDiagnostics Private Limited, Saraswati Sishu mandir school buildings have been gifted to the children of Raipur & Dhanara in Bankura (West Bengal)</Span><br />
 <br />
 @foreach($csrs as $csr)
 <strong>School Name :</strong>{{$csr->school_name}}<br />

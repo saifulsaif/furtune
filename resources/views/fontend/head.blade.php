@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Furtune</title>
-<meta name="description" content="Suraksha Diagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
+<meta name="description" content="FurtuneDiagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
 <meta name="keywords" content="Best Diagnostic Clinic in Kolkata"/>
 <link rel="canonical" href="index.html" />
 
@@ -39,7 +39,7 @@
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
 
-    window.location.href='index-m.html'
+    window.location.href={{url('/')}}
 } else {
  // window.location.href='dashboard.php'
 }
@@ -629,7 +629,7 @@ display:none;
   fbq('init', '556624911842874');
   fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=556624911842874&amp;ev=PageView&amp;noscript=1"
+<noscript><img height="1" width="1" style="display:none" alt="" src="{{$site_infos->facebook}}"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 

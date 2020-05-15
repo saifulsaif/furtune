@@ -6,28 +6,27 @@
 
 <div class="copyright_mainBG">
 <div class="copyright_txt">
-Copyright @ 2020 Suraksha Diagnostics Private Limited.<br />
-Developed by GL Technologies
+{{$site_infos->footer_info}}
 </div>
 
-<div class="copyright_txt"><a href="https://play.google.com/store/apps/details?id=com.diagnostics.suraksha" target="_blank" rel="noopener"><img src="{!! asset('public/images/badges-Apps.png') !!}"   alt="Google Play" /></a>
+<div class="copyright_txt"><a href="{{$site_infos->app_link}}" target="_blank" rel="noopener"><img src="{!! asset($site_infos->app_icon) !!}"   alt="Google Play" /></a>
 
 <div class="socialicon_mainBG">
 
-<div class="icon_div"><div class="instagram_button"><a href="https://www.instagram.com/suraksha_diagnostics/" target="_blank" rel="noopener"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="instagram_button"><a href="{{$site_infos->instagram}}" target="_blank" rel="noopener"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div"><div class="linkedin_button"><a href="https://www.linkedin.com/company/suraksha-diagnostic-pvt-ltd-calcutta-india" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="linkedin_button"><a href="#" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div"><div class="youtube_button"><a href="https://www.youtube.com/channel/UC61ZuBx3CnjiwkZbLeR9deg" target="_blank" rel="noopener"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="youtube_button"><a href="{{$site_infos->youtube}}" target="_blank" rel="noopener"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
 
-<div class="icon_div"><div class="twitter_button"><a href="https://twitter.com/surakshatweets" target="_blank" rel="noopener"><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="twitter_button"><a href="{{$site_infos->twitter}}" target="_blank" rel="noopener"><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div" style="margin-left:0px;"><div class="facebook_button"><a href="https://www.facebook.com/SurakshaDiagnosticServices/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
+<div class="icon_div" style="margin-left:0px;"><div class="facebook_button"><a href="{{$site_infos->facebook}}" target="_blank" rel="noopener"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
 
 
 </div>
@@ -41,11 +40,11 @@ Developed by GL Technologies
 
 <div class="footer_menudiv">
 
-<a href="index.html"><div class="footer_menutxt">Home</div></a>
+<a href="{{url('/')}}"><div class="footer_menutxt">Home</div></a>
 <a href="find-test.html"><div class="footer_menutxt">Find a Test</div></a>
-<a href="https://surakshanet.com/book-an-appointment"><div class="footer_menutxt">Book an Appointment</div></a>
+<a href="{{url('/getDoctor')}}"><div class="footer_menutxt">Book an Appointment</div></a>
 <!--<a href="https://surakshadiagnostic.com/" target="_blank"><div class="footer_menutxt">Blog</div></a>-->
-<a href="https://surakshanet.com/contact-us/feedback"><div class="footer_menutxt">Feedback</div></a>
+<a href="{{route('feedback')}}"><div class="footer_menutxt">Feedback</div></a>
 
 
 </div>
@@ -53,9 +52,9 @@ Developed by GL Technologies
 <div class="footer_menudiv">
 
 <a href="{{route('corporeate_partner')}}"><div class="footer_menutxt">Corporate Partners</div></a>
-<a href="https://surakshanet.com/home-collection"><div class="footer_menutxt">Home Collection </div></a>
-<a href="https://surakshanet.com/about-us/customer-care"><div class="footer_menutxt">Customer Care</div></a>
-<a href="faq.html"><div class="footer_menutxt">FAQ's</div></a>
+<a href="{{route('home_collection')}}"><div class="footer_menutxt">Home Collection </div></a>
+<a href="{{route('customer_care')}}"><div class="footer_menutxt">Customer Care</div></a>
+<a href="{{route('faq')}}"><div class="footer_menutxt">FAQ's</div></a>
 
 </div>
 
@@ -64,7 +63,7 @@ Developed by GL Technologies
 <!--<a href="franchisee.php"><div class="footer_menutxt">Franchisee</div></a>-->
 <a href="media.html"><div class="footer_menutxt">Media & Events</div></a>
 <a href="latest-news.html"><div class="footer_menutxt">Latest News</div></a>
-<a href="https://surakshanet.com/contact-us/career"><div class="footer_menutxt">Career</div></a>
+<a href="{{route('career')}}"><div class="footer_menutxt">Career</div></a>
 <a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/hWmYfZmMWHI"><div class="footer_menutxt">Video Tour</div></a>
 
 </div>
@@ -72,7 +71,7 @@ Developed by GL Technologies
 <div class="footer_menudiv">
 
 
-<a href="https://surakshanet.com/contact-us/get-in-touch"><div class="footer_menutxt">Contact Us</div></a>
+<a href="{{route('get_in_touch')}}"><div class="footer_menutxt">Contact Us</div></a>
 <a  href="privacy-policy.html"><div class="footer_menutxt">Privacy Policy</div></a>
 <a href="terms.html"><div class="footer_menutxt">Terms and Conditions</div></a>
 <!--<a href="#"><div class="footer_menutxt">Polyclinic</div></a>-->
@@ -84,7 +83,7 @@ Developed by GL Technologies
 
 <div class="copyright_mainBG_responsive">
 
-<div class="copyright_txt">Copyright @ 2019 Suraksha Diagnostic Private Limited.<br />
+<div class="copyright_txt">Copyright @ 2019 FurtuneDiagnostic Private Limited.<br />
 Developed By GL Technologies</div>
 
 <div class="copyright_txt"><div class="app_imgdiv"><a href="https://play.google.com/store/apps/details?id=com.diagnostic.suraksha" target="_blank"><img src="{!! asset('public/images/badges-Apps.png') !!}" alt="Google Play" class="img_css" /></a></div></div>

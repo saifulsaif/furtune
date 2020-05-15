@@ -41,24 +41,18 @@
 
 
 <strong>Corporate office</strong> </span><br />
-<strong>Suraksha Diagnostics Private Limited</strong><br />
+<strong>{{$site_infos->applicaton_name}}</strong><br />
 
 
 
-12/1, Premises No. 02-0327,<br />
+{{$site_infos->address}}
+
+<br/>
+Phone: <a href="tel:03366059750" style="color:#333333; text-decoration:none;">{{$site_infos->phone}} </a><br />
+Helpline No : <a href="tel:03366191000" style="color:#333333; text-decoration:none;"> {{$site_infos->hoteline}}</a><br />
 
 
-DG Block, Action Area 1D,<br />
-
-
-New Town, Kolkata - 700156<br />
-
-
-Phone: <a href="tel:03366059750" style="color:#333333; text-decoration:none;">(033) 66059750 </a><br />
-Helpline No : <a href="tel:03366191000" style="color:#333333; text-decoration:none;"> 033-6619 1000</a><br />
-
-
-E-mail: <a href="mailto:info@surakshanet.com" style="color:#333333; text-decoration:none;">info@surakshanet.com</a>
+E-mail: <a href="{{$site_infos->email}}" style="color:#333333; text-decoration:none;">{{$site_infos->email}}</a>
 
 
 <br />

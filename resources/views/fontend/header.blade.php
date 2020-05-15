@@ -16,6 +16,23 @@
           </div>
       </div> --}}
   {{-- </div> --}}
+  {{-- <div id="pop_mod_onl_con" class="modal fade"> --}}
+      {{-- <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+         <img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
+                  <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
+                  <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
+                  <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
+                  <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
+                  <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
+              </div>
+          </div>
+      </div> --}}
+  {{-- </div> --}}
   {{-- #appointment modal --}}
   <div id="appointment_from" class="modal fade" style="width:100%">
       <div class="modal-dialog">
@@ -335,7 +352,7 @@
             <div class="mainheaderdiv">
 
 
-           <a href="index.html"> <div class="logo_maindiv_sticky"><img src="{!! asset('public/images/suraksha_newlogo_updated.png') !!}" class="img_css"  alt="logo" /></div>
+           <a href="{{url('/')}}"> <div class="logo_maindiv_sticky"><img src="{!! asset($site_infos->logo) !!}" class="img_css"  alt="logo" /></div>
            </a>
 
 
