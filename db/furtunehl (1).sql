@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2020 at 08:16 PM
+-- Generation Time: May 15, 2020 at 01:31 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -297,7 +297,20 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (104, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:48', NULL),
 (105, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:49:59', NULL),
 (106, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/corporate_services/add-save', 'Add New Data  at Corporate  Service', '', 1, '2020-05-10 17:50:01', NULL),
-(107, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-10 23:06:16', NULL);
+(107, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-10 23:06:16', NULL),
+(108, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/sub_menu_lists/add-save', 'Add New Data X-ray at Sub Menu List', '', 1, '2020-05-11 00:52:48', NULL),
+(109, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/sub_menu_lists/delete/11', 'Delete data X-ray at Sub Menu List', '', 1, '2020-05-11 00:52:54', NULL),
+(110, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-11 12:57:26', NULL),
+(111, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/customer_cares/add-save', 'Add New Data HELPLINE: at Customer Care', '', 1, '2020-05-12 00:17:43', NULL),
+(112, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/customer_cares/add-save', 'Add New Data ONLINE FEEDBACK: at Customer Care', '', 1, '2020-05-12 00:17:56', NULL),
+(113, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/customer_cares/add-save', 'Add New Data REALTIME CUSTOMER CARE: at Customer Care', '', 1, '2020-05-12 00:18:16', NULL),
+(114, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-13 00:21:11', NULL),
+(115, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-14 22:52:29', NULL),
+(116, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 14:48:21', NULL),
+(117, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/site_infos/add-save', 'Add New Data Furtune Diagnostics Private Limited at Site Information', '', 1, '2020-05-15 14:56:19', NULL),
+(118, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/lab_infos/edit-save/1', 'Update data Furtune Diagnostics brings Robots to its Lab at Lab Info', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>title</td><td>Suraksha Diagnostics brings Robots to its Lab</td><td>Furtune Diagnostics brings Robots to its Lab</td></tr><tr><td>description</td><td>Suraksha has come up with \'Aptio\' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.</td><td>Furtune has come up with \'Aptio\' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.</td></tr></tbody></table>', 1, '2020-05-15 15:43:42', NULL),
+(119, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/index_infos/edit-save/1', 'Update data Our 28 year old legacy continues at Legacy  Info', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>Suraksha is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et</td><td>Furtune is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et</td></tr></tbody></table>', 1, '2020-05-15 15:43:58', NULL),
+(120, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/index_infos/edit-save/1', 'Update data Our 28 year old legacy continues at Legacy  Info', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>Furtune is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et</td><td>Furtune is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Furtune also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et</td></tr></tbody></table>', 1, '2020-05-15 15:44:42', NULL);
 
 -- --------------------------------------------------------
 
@@ -341,7 +354,11 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (16, 'Corporate Partner', 'Route', 'AdminCorporatePartnersControllerGetIndex', NULL, 'fa fa-users', 0, 1, 0, 1, 13, '2020-05-10 16:04:35', NULL),
 (17, 'Legacy  Info', 'Route', 'AdminIndexInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 14, '2020-05-10 17:43:36', NULL),
 (18, 'Lab Info', 'Route', 'AdminLabInfosControllerGetIndex', NULL, 'fa fa-flask', 0, 1, 0, 1, 15, '2020-05-10 17:45:26', NULL),
-(19, 'Corporate  Service', 'Route', 'AdminCorporateServicesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 16, '2020-05-10 17:48:17', NULL);
+(19, 'Corporate  Service', 'Route', 'AdminCorporateServicesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 16, '2020-05-10 17:48:17', NULL),
+(20, 'Customer Care', 'Route', 'AdminCustomerCaresControllerGetIndex', NULL, 'fa fa-phone-square', 0, 1, 0, 1, 17, '2020-05-12 00:15:48', NULL),
+(21, 'Franchisee', 'Route', 'AdminFranchiseesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 18, '2020-05-13 00:21:49', NULL),
+(22, 'Feedback', 'Route', 'AdminFeedbackControllerGetIndex', NULL, 'fa fa-repeat', 0, 1, 0, 1, 19, '2020-05-15 00:23:38', NULL),
+(23, 'Site Information', 'Route', 'AdminSiteInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 20, '2020-05-15 14:52:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -378,7 +395,11 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (16, 16, 1),
 (17, 17, 1),
 (18, 18, 1),
-(19, 19, 1);
+(19, 19, 1),
+(20, 20, 1),
+(21, 21, 1),
+(22, 22, 1),
+(23, 23, 1);
 
 -- --------------------------------------------------------
 
@@ -434,7 +455,11 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (27, 'Corporate Partner', 'fa fa-users', 'corporate_partners', 'corporate_partners', 'AdminCorporatePartnersController', 0, 0, '2020-05-10 16:04:35', NULL, NULL),
 (28, 'Legacy  Info', 'fa fa-info', 'index_infos', 'index_infos', 'AdminIndexInfosController', 0, 0, '2020-05-10 17:43:36', NULL, NULL),
 (29, 'Lab Info', 'fa fa-flask', 'lab_infos', 'lab_infos', 'AdminLabInfosController', 0, 0, '2020-05-10 17:45:26', NULL, NULL),
-(30, 'Corporate  Service', 'fa fa-star', 'corporate_services', 'corporate_services', 'AdminCorporateServicesController', 0, 0, '2020-05-10 17:48:16', NULL, NULL);
+(30, 'Corporate  Service', 'fa fa-star', 'corporate_services', 'corporate_services', 'AdminCorporateServicesController', 0, 0, '2020-05-10 17:48:16', NULL, NULL),
+(31, 'Customer Care', 'fa fa-phone-square', 'customer_cares', 'customer_cares', 'AdminCustomerCaresController', 0, 0, '2020-05-12 00:15:47', NULL, NULL),
+(32, 'Franchisee', 'fa fa-star', 'franchisees', 'franchisees', 'AdminFranchiseesController', 0, 0, '2020-05-13 00:21:48', NULL, NULL),
+(33, 'Feedback', 'fa fa-repeat', 'feedback', 'feedback', 'AdminFeedbackController', 0, 0, '2020-05-15 00:23:37', NULL, NULL),
+(34, 'Site Information', 'fa fa-info', 'site_infos', 'site_infos', 'AdminSiteInfosController', 0, 0, '2020-05-15 14:52:22', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -527,7 +552,11 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (27, 1, 1, 1, 1, 1, 1, 27, NULL, NULL),
 (28, 1, 1, 1, 1, 1, 1, 28, NULL, NULL),
 (29, 1, 1, 1, 1, 1, 1, 29, NULL, NULL),
-(30, 1, 1, 1, 1, 1, 1, 30, NULL, NULL);
+(30, 1, 1, 1, 1, 1, 1, 30, NULL, NULL),
+(31, 1, 1, 1, 1, 1, 1, 31, NULL, NULL),
+(32, 1, 1, 1, 1, 1, 1, 32, NULL, NULL),
+(33, 1, 1, 1, 1, 1, 1, 33, NULL, NULL),
+(34, 1, 1, 1, 1, 1, 1, 34, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -733,6 +762,29 @@ INSERT INTO `csrs` (`id`, `school_name`, `location`, `distance`, `students`, `te
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customer_cares`
+--
+
+CREATE TABLE `customer_cares` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `customer_cares`
+--
+
+INSERT INTO `customer_cares` (`id`, `title`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'HELPLINE:', 'We have a dedicated CRM team that answers every call you make to any of our helpline numbers. The main aim of these representatives is to familiarize you with the testing protocol in our centers. They provide you with exhaustive information of the preparations required before every test and also help you book your slot in advance.\r\n\r\nOur State-wise Helpline Numbers are as follows:', '2020-05-12 00:17:43', NULL),
+(2, 'ONLINE FEEDBACK:', 'Customers are encouraged to leave their feedback in our website by filling in the Feedback Form and relating to us any complaints or suggestions that they may have regarding our services. Each complaint is looked into by our customer care department and meticulous details of the same are obtained.', '2020-05-12 00:17:56', NULL),
+(3, 'REALTIME CUSTOMER CARE:', 'Team Suraksha takes immense pride in pulling together all co-ordinates that bring a 360 degree approach to its customer care. We attend to calls at any hour of the day including Sundays and any patient who is facing trouble during test procedure and has brought it to our notice has received immediate assistance from staff at both the Head Office and the respective center.', '2020-05-12 00:18:16', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `doctors`
 --
 
@@ -839,6 +891,62 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `visited_center` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `experiance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `moment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `suggest` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `complaint` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `first_name`, `last_name`, `phone`, `email`, `visited_center`, `experiance`, `moment`, `suggest`, `location`, `complaint`, `created_at`, `updated_at`) VALUES
+(1, 'sda', 'adsf', '33', 'safdf', 'adas', 'No', 'asdfsad', 'Yes', NULL, 'sdfafassdffsa', '2020-05-15 00:18:20', '2020-05-15 00:18:20'),
+(2, 'dadf', 'sdfad', '333', 'sas', 'sfsfd', 'Yes', 'fdsfa', 'No', 'Dhaka', 'fdfa', '2020-05-15 00:21:40', '2020-05-15 00:21:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `franchisees`
+--
+
+CREATE TABLE `franchisees` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `age` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `locality` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pin_code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `franchisees`
+--
+
+INSERT INTO `franchisees` (`id`, `name`, `age`, `locality`, `area`, `phone`, `email`, `pin_code`, `created_at`, `updated_at`) VALUES
+(1, 'adf', '343', 'afds', '343', '2323', 'sas@admim.com', '323', '2020-05-13 00:19:49', '2020-05-13 00:19:49');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `health_packages`
 --
 
@@ -903,7 +1011,7 @@ CREATE TABLE `index_infos` (
 --
 
 INSERT INTO `index_infos` (`id`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Our 28 year old legacy continues', 'Suraksha is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Suraksha also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et', '2020-05-10 17:44:31', NULL);
+(1, 'Our 28 year old legacy continues', 'Furtune is a name people readily associate with diagnostic quality and convenience. The largest diagnostic chain in eastern India, it today ranks among the top 5 nationally with nearly 35 centres across West Bengal, Bihar and Delhi NCR. All diagnostic centres are owned and operated by the company to maintain strict quality protocols. Furtune also operates a centre in NRS Medical College & Hospital in Kolkata on PPP (Public Private Partnership) basis with the State Government.\r\n\r\nSuraksha diagnostics services span Pathology, Histopathology, Molecular Diagnostics and Radiology and include the latest tests. It is the first in India to receive the coveted CAP (College of American Pathologists) certification and is also NABH and NABL accredited. Apart from diagnostic services, Suraksha has a number of polyclinics with senior consultants from disciplines such as Cardiology, Gastroenterology, Neurology, Gynaecology, Oncology, Psychology, Endocrinology, Dermatology, Opthalmology, Homeopathy etc. It also runs Super Specialty Clinics for diabetes, hypertension, back pain, et', '2020-05-10 17:44:31', '2020-05-15 15:44:42');
 
 -- --------------------------------------------------------
 
@@ -925,7 +1033,7 @@ CREATE TABLE `lab_infos` (
 --
 
 INSERT INTO `lab_infos` (`id`, `title`, `description`, `video_link`, `created_at`, `updated_at`) VALUES
-(1, 'Suraksha Diagnostics brings Robots to its Lab', 'Suraksha has come up with \'Aptio\' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.', 'https://www.youtube.com/embed/pDjxZilfQ30', '2020-05-10 17:46:39', NULL);
+(1, 'Furtune Diagnostics brings Robots to its Lab', 'Furtune has come up with \'Aptio\' automation, the robotic track (track-based automation solution), as a unified and complete solution to its expanding need. The track is completely AI enabled and runs without human interference. It allows to provide the best therapeutic turnaround time in the industry. In an emergency can churn out a report in less than a minute. It allows the Task Targeted Automation by hugely reducing errors. The entire system is One flow One Touch.', 'https://www.youtube.com/embed/pDjxZilfQ30', '2020-05-10 17:46:39', '2020-05-15 15:43:42');
 
 -- --------------------------------------------------------
 
@@ -1018,7 +1126,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (48, '2020_05_10_113714_create_lab_infos_table', 17),
 (49, '2020_05_10_113759_create_corporate_services_table', 18),
 (50, '2020_05_10_141935_create_submenuses_table', 19),
-(51, '2020_05_10_142442_create_submenu_facilities_table', 19);
+(51, '2020_05_10_142442_create_submenu_facilities_table', 19),
+(52, '2020_05_11_181008_create_customer_cares_table', 20),
+(53, '2020_05_12_175735_create_franchisees_table', 21),
+(54, '2020_05_14_175054_create_feedback_table', 22),
+(55, '2020_05_15_084324_create_site_infos_table', 23);
 
 -- --------------------------------------------------------
 
@@ -1067,6 +1179,38 @@ CREATE TABLE `service_infos` (
 
 INSERT INTO `service_infos` (`id`, `title`, `description`, `image`, `menu_list_id`, `created_at`, `updated_at`) VALUES
 (1, 'Diagnostic Service - X Ray', 'An X-ray report is a photographic or digital image of the internal composition of something, especially a part of the body, produced by X-rays being passed through it and being absorbed to different degrees by different materials.\r\n\r\nDuring X-ray examination, you are required to change into light cloths and remove all jewelry. The technician guides you in taking the right position in front of the X-ray receiving plate. Depending upon the target body part, you may be asked to lie down or stand to facilitate the X-ray report.', 'uploads/1/2020-05/5829237_stock_vector_special_offer_red_sticky_notes_vector_icon_design.jpg', '8', '2020-05-07 03:22:14', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `site_infos`
+--
+
+CREATE TABLE `site_infos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `applicaton_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hoteline` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `youtube` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_info` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `app_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `site_infos`
+--
+
+INSERT INTO `site_infos` (`id`, `logo`, `applicaton_name`, `address`, `email`, `phone`, `hoteline`, `facebook`, `youtube`, `instagram`, `footer_info`, `app_icon`, `app_link`, `twitter`, `created_at`, `updated_at`) VALUES
+(1, 'uploads/1/2020-05/suraksha_newlogo_updated_1.png', 'Furtune Diagnostics Private Limited', '12/1, Premises No. 02-0327, DG Block, Action Area 1D, New Town, Kolkata - 700156', 'info@furtune.com', '03366191000', '(033) 66059750', '#', '#', '#', 'Copyright @ 2020 Furtune Diagnostics Private Limited. Developed by DzetIT Technologies', 'uploads/1/2020-05/badges_apps.png', '#', '#', '2020-05-15 14:56:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -1148,65 +1292,6 @@ INSERT INTO `submenu_facilities` (`id`, `item_name`, `submenu_id`, `created_at`,
 (8, 'CT Scan', 8, '2020-05-06 16:51:37', NULL),
 (9, 'DEXA Sacn', 8, '2020-05-06 17:06:03', NULL),
 (10, 'Mammography', 8, '2020-05-06 17:06:24', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sub_menus`
---
-
-CREATE TABLE `sub_menus` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `sub_menu_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `route_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `menu_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sub_menus`
---
-
-INSERT INTO `sub_menus` (`id`, `sub_menu_name`, `route_name`, `menu_id`, `created_at`, `updated_at`) VALUES
-(3, 'Company Profile', 'company_profile', '2', '2020-05-04 16:29:07', NULL),
-(4, 'Team of Experts', 'team_of_expert', '2', '2020-05-04 16:29:28', NULL),
-(5, 'CSR', 'csr', '2', '2020-05-04 16:29:41', '2020-05-06 12:00:07'),
-(6, 'Customer Care', 'customer_care', '2', '2020-05-04 16:29:51', NULL),
-(7, 'Feedback', 'feedback', '7', '2020-05-04 16:52:20', NULL),
-(8, 'Career', 'career', '7', '2020-05-04 16:52:50', '2020-05-09 23:06:03'),
-(9, 'Get in Teach', 'get_in_touch', '7', '2020-05-04 16:53:05', NULL),
-(10, 'Imging', '#', '1', '2020-05-06 16:23:50', NULL),
-(11, 'Cardiology', '#', '1', '2020-05-06 16:24:12', NULL),
-(12, 'Neurology', '#', '1', '2020-05-06 16:24:35', NULL),
-(13, 'Gastroenterology', '#', '1', '2020-05-06 16:24:56', NULL),
-(14, 'Pathology', '#', '1', '2020-05-06 16:25:07', NULL),
-(15, 'Pathology', '#', '1', '2020-05-06 16:25:15', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sub_menu_lists`
---
-
-CREATE TABLE `sub_menu_lists` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `item_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `submenu_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sub_menu_lists`
---
-
-INSERT INTO `sub_menu_lists` (`id`, `item_name`, `submenu_id`, `created_at`, `updated_at`) VALUES
-(1, 'X-ray', '10', '2020-05-06 16:50:57', NULL),
-(2, 'MRI', '10', '2020-05-06 16:51:18', NULL),
-(3, 'CT Scan', '10', '2020-05-06 16:51:37', NULL),
-(4, 'DEXA Sacn', '10', '2020-05-06 17:06:03', NULL),
-(5, 'Mammography', '10', '2020-05-06 17:06:24', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1345,6 +1430,12 @@ ALTER TABLE `csrs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `customer_cares`
+--
+ALTER TABLE `customer_cares`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
@@ -1373,6 +1464,18 @@ ALTER TABLE `facilities`
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `franchisees`
+--
+ALTER TABLE `franchisees`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1424,6 +1527,12 @@ ALTER TABLE `service_infos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `site_infos`
+--
+ALTER TABLE `site_infos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
@@ -1441,18 +1550,6 @@ ALTER TABLE `submenuses`
 ALTER TABLE `submenu_facilities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `submenu_facilities_submenu_id_foreign` (`submenu_id`);
-
---
--- Indexes for table `sub_menus`
---
-ALTER TABLE `sub_menus`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sub_menu_lists`
---
-ALTER TABLE `sub_menu_lists`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1504,25 +1601,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `cms_notifications`
@@ -1540,7 +1637,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -1591,6 +1688,12 @@ ALTER TABLE `csrs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `customer_cares`
+--
+ALTER TABLE `customer_cares`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
@@ -1619,6 +1722,18 @@ ALTER TABLE `facilities`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `franchisees`
+--
+ALTER TABLE `franchisees`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `health_packages`
@@ -1654,7 +1769,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `package_details`
@@ -1666,6 +1781,12 @@ ALTER TABLE `package_details`
 -- AUTO_INCREMENT for table `service_infos`
 --
 ALTER TABLE `service_infos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `site_infos`
+--
+ALTER TABLE `site_infos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -1684,19 +1805,7 @@ ALTER TABLE `submenuses`
 -- AUTO_INCREMENT for table `submenu_facilities`
 --
 ALTER TABLE `submenu_facilities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `sub_menus`
---
-ALTER TABLE `sub_menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `sub_menu_lists`
---
-ALTER TABLE `sub_menu_lists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
