@@ -62,21 +62,21 @@
 
 <div class="header_middle_div_main">
 
-<a href="index.html"><div class="logo_div"><img src="{!! asset('public/images/suraksha_newlogo_updated.png') !!}" class="img_css"  alt="logo" /></div>
+<a href="{{url('/')}}"><div class="logo_div"><img src="{!! asset($site_infos->logo) !!}" class="img_css"  alt="logo" /></div>
 </a>
 
 
 <div class="header_social_div">
 
-<div class="icon_div" style="margin-bottom:5px;"><div class="twitter_button"><a href="https://twitter.com/surakshatweets " target="_blank" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div" style="margin-bottom:5px;"><div class="twitter_button"><a href="{{$site_infos->twitter}}" target="_blank" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div" style="margin-left:0px; margin-bottom:5px;"><div class="facebook_button"><a href="https://www.facebook.com/SurakshaDiagnosticServices/ " target="_blank"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
+<div class="icon_div" style="margin-left:0px; margin-bottom:5px;"><div class="facebook_button"><a href="{{$site_infos->facebook}}" target="_blank"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
 
 
-<div class="icon_div"><div class="youtube_button"><a href="https://www.youtube.com/channel/UC61ZuBx3CnjiwkZbLeR9deg " target="_blank"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="youtube_button"><a href="{{$site_infos->youtube}}" target="_blank"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
-<div class="icon_div"><div class="instagram_button"><a href="https://www.instagram.com/suraksha_diagnostics/" target="_blank"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="instagram_button"><a href="{{$site_infos->instagram}}" target="_blank"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 </div>
 

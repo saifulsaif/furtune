@@ -1,23 +1,7 @@
 
 @extends('fontend.app')
 @section('content')
-{{-- <div id="pop_mod_onl_con" class="modal fade"> --}}
-    {{-- <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-       <img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
-                <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
-                <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
-                <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
-                <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
-                <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
-            </div>
-        </div>
-    </div> --}}
-{{-- </div> --}}
+
 <!-- Body Start  -->
 
 
@@ -135,7 +119,7 @@
 
   <option value="west-bengal/sodepur">Sodepur</option>
 
-  <option value="west-bengal/suraksha-mri-and-polyclinic">Suraksha MRI and Polyclinic</option>
+  <option value="west-bengal/suraksha-mri-and-polyclinic">FurtuneMRI and Polyclinic</option>
 
   <option value="west-bengal/tamluk">Tamluk</option>
 
@@ -194,7 +178,7 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<div class="icon_subheading2" style="margin-bottom:15px;">KOLKATA : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>033-6619-1000 </span></div>
+<div class="icon_subheading2" style="margin-bottom:15px;">KOLKATA : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hotline}}</span></div>
 
 
 
@@ -312,7 +296,7 @@
 
   <option value="25">Sodepur</option>
 
-  <option value="22">Suraksha MRI and Polyclinic</option>
+  <option value="22">FurtuneMRI and Polyclinic</option>
 
   <option value="38">Tamluk</option>
 
@@ -396,7 +380,7 @@
 @foreach($index_infos as $info)
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">Suraksha Diagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FurtuneDiagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
 
 
 <br />
@@ -453,7 +437,7 @@
 
 <!---<div class="clugenix_partner_div" >
 
-<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#e1272c;">Suraksha Diagnostics Pvt. Ltd </span>Inks JV with <span style="color:#e1272c;">Cluegenix</span>
+<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#e1272c;">FurtuneDiagnostics Pvt. Ltd </span>Inks JV with <span style="color:#e1272c;">Cluegenix</span>
  Introduces <span style="color:#e1272c;">AI Enabled Smart Lab</span></div>
 
 <div class="clugenix_logodiv"><img src="images/clugenix-logo.png" alt="Clugenix" /></div>
@@ -641,7 +625,7 @@
 
 <div class="news_testdiv">
 
-<div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
+<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
 
 
 </div>
@@ -653,7 +637,7 @@
 
 <div class="news_testdiv">
 
-<div class="news_heading">OrbiMed to invest $40m in Suraksha Diagnostics</div>
+<div class="news_heading">OrbiMed to invest $40m in FurtuneDiagnostics</div>
 
 
 </div>
@@ -677,7 +661,7 @@
 
 <div class="news_testdiv">
 
-<div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
+<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
 
 
 </div>
@@ -698,7 +682,7 @@
 <div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
-<div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
+<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
 
 
 </div>
@@ -710,7 +694,7 @@
 <div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
 <div class="news_testdiv">
 
-<div class="news_heading">OrbiMed to invest $40m in Suraksha Diagnostics</div>
+<div class="news_heading">OrbiMed to invest $40m in FurtuneDiagnostics</div>
 
 
 </div>
@@ -732,7 +716,7 @@
 <div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/mages/india-today-logo.jpg" style="width:100%;" alt="India Today" /></div>
 <div class="news_testdiv">
 
-<div class="news_heading">Suraksha Diagnostics in talks with US based Mayo Labs</div>
+<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
 
 
 </div>
@@ -763,7 +747,7 @@
 
 <div class="preferd_vendormainBG">
 
-<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/surakshatweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by Suraksha Diagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/surakshatweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by FurtuneDiagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 <div class="instagram_feeddiv"></div>
 

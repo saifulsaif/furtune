@@ -18,7 +18,8 @@ class PageController extends Controller
      $index_infos = getValueByTBName('index_infos');
      $lab_infos = getValueByTBName('lab_infos');
      $corporate_services= getValueByTBName('corporate_services');
-     return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.index',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services','site_infos'));
    }
    public function companyProfile(){
      $menu = getValueByTBName('menu');
@@ -26,7 +27,8 @@ class PageController extends Controller
      $sub_menu = getValueByTBName('submenuses');
      $sliders = getValueByTBName('slider');
      $com_profiles = getValueByTBName('company_profile');
-      return view('fontend.content.company_profile',compact('menu','sub_menu','sub_menu_list','sliders','com_profiles'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.company_profile',compact('site_infos','menu','sub_menu','sub_menu_list','sliders','com_profiles'));
    }
    public function teamOfExpert(){
      $menu = getValueByTBName('menu');
@@ -34,7 +36,8 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $experts = getValueByTBName('expert_team');
-      return view('fontend.content.team_of_expert',compact('menu','sub_menu','sliders','experts','sub_menu_list'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.team_of_expert',compact('site_infos','menu','sub_menu','sliders','experts','sub_menu_list'));
    }
    public function csr(){
      $menu = getValueByTBName('menu');
@@ -42,7 +45,8 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $csrs = getValueByTBName('csrs');
-      return view('fontend.content.csr',compact('menu','sub_menu','sliders','csrs','sub_menu_list'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.csr',compact('site_infos','menu','sub_menu','sliders','csrs','sub_menu_list'));
    }
    public function service($menu_list_id){
      $menu = getValueByTBName('menu');
@@ -54,7 +58,8 @@ class PageController extends Controller
              ->select('*')
              ->Where('menu_list_id', '=', $menu_list_id)
              ->get();
-      return view('fontend.content.service',compact('menu','sub_menu','sliders','sub_menu_list','facilities','service_info'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.service',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','facilities','service_info'));
    }
    public function homeCollection(){
      $menu = getValueByTBName('menu');
@@ -62,7 +67,8 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $home_collection = getValueByTBName('home_services');
-      return view('fontend.content.home_collection',compact('menu','sub_menu','sliders','sub_menu_list','home_collection'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.home_collection',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','home_collection'));
    }
    public function healthPackage(){
      $menu = getValueByTBName('menu');
@@ -70,14 +76,16 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $health_package= getValueByTBName('health_packages');
-      return view('fontend.content.health_package',compact('menu','sub_menu','sliders','sub_menu_list','health_package'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.health_package',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','health_package'));
    }
    public function franchisee(){
      $menu = getValueByTBName('menu');
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
-      return view('fontend.content.franchisee',compact('menu','sub_menu','sliders','sub_menu_list'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.franchisee',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
    }
    public function saveFranchisee(Request $request){
      $franch = new franchisee;
@@ -93,7 +101,8 @@ class PageController extends Controller
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
-      return view('fontend.content.franchisee',compact('menu','sub_menu','sliders','sub_menu_list'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.franchisee',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
    }
    public function packageDetails($package_id){
      $menu = getValueByTBName('menu');
@@ -105,7 +114,8 @@ class PageController extends Controller
              ->select('*')
              ->Where('package_id', '=', $package_id)
              ->get();
-      return view('fontend.content.package_details',compact('menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.package_details',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
    }
    public function career(){
      $menu = getValueByTBName('menu');
@@ -113,7 +123,8 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $careers = getValueByTBName('careers');
-      return view('fontend.content.career',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.career',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','careers'));
    }
    public function customerCare(){
      $menu = getValueByTBName('menu');
@@ -121,7 +132,8 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $customer_care = getValueByTBName('customer_cares');
-      return view('fontend.content.customer_care',compact('menu','sub_menu','sliders','sub_menu_list','customer_care'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.customer_care',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','customer_care'));
    }
    public function getInTouch(){
      $menu = getValueByTBName('menu');
@@ -129,7 +141,8 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $careers = getValueByTBName('careers');
-      return view('fontend.content.get_in_touch',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.get_in_touch',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','careers'));
    }
    public function feedback(){
      $menu = getValueByTBName('menu');
@@ -137,7 +150,8 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $careers = getValueByTBName('careers');
-      return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list','careers'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.feedback',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','careers'));
    }
    public function saveFeedback(Request $request){
      $franch = new feedback;
@@ -156,7 +170,8 @@ class PageController extends Controller
      $sub_menu = getValueByTBName('submenuses');
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
-      return view('fontend.content.feedback',compact('menu','sub_menu','sliders','sub_menu_list'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.feedback',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
    }
    public function corporateParter(){
      $menu = getValueByTBName('menu');
@@ -164,6 +179,7 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $partners = getValueByTBName('corporate_partners');
-      return view('fontend.content.corporate_partner',compact('menu','sub_menu','sliders','sub_menu_list','partners'));
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.corporate_partner',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
    }
 }

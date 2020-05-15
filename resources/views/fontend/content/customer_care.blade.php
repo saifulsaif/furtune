@@ -36,7 +36,7 @@
 
 
 <div class="static_pagetxt">
-Furtune takes extra care in ensuring customer satisfaction since it believes in reducing the pain of patients who walk in each day to get a clear assessment of their health condition. The main aim of Team Suraksha is to help patients and their families have a hassle-free experience during tests being conducted in our centers. <br />
+Furtune takes extra care in ensuring customer satisfaction since it believes in reducing the pain of patients who walk in each day to get a clear assessment of their health condition. The main aim of Team Furtuneis to help patients and their families have a hassle-free experience during tests being conducted in our centers. <br />
 <br />
 Therefore, we employ a multi-channel approach to  customer care services for each and every one of our patients who avail  our services.
 <br />
