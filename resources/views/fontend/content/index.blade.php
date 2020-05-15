@@ -388,7 +388,7 @@
 
 {{$info->description}}</div>
 
-<div class="welcome_bodytxt"><a href="about-us/index.html"><div style="margin:0px auto;" class="button"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt"><a href="about-us/index.html"><div style="margin:0px auto;margin-top: 31px;" class="button"><span>Read More </span></div></a></div>
 
 </div>
 @endforeach
