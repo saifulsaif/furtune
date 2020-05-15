@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\franchisee;
 use App\feedback;
+use App\sub_menu_list;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -17,7 +18,7 @@ class PageController extends Controller
      $index_infos = getValueByTBName('index_infos');
      $lab_infos = getValueByTBName('lab_infos');
      $corporate_services= getValueByTBName('corporate_services');
-      return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services'));
+     return view('fontend.content.index',compact('menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services'));
    }
    public function companyProfile(){
      $menu = getValueByTBName('menu');

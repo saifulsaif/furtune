@@ -13,7 +13,7 @@ function getMenuList(){
 
 function getSubMenu(){
 
-}
+} 
 
 function getAll_id($fild_name,$value,$table_name){
     $result = DB::table($table_name)->where($fild_name, $value)->get();
