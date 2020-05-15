@@ -797,8 +797,15 @@ Corporate <span style="color:#e1272c;">Partners</span>
 <div class="franchisee_img_div">
   <div class="merchants-list">
     <div class="wrapper1">
-    <div class="merchants-image">
+    <!-- <div class="merchants-image">
       vsdfsdfsdf
+    </div> -->
+    <div class="row">
+      @foreach($partners as $part)
+      <div class="col-md-3">
+        <img style="height: 100px;" src="{{$part->image}}" alt="">
+      </div>
+      @endforeach
     </div>
   </div>
 
