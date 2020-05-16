@@ -4,6 +4,7 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
+	use Illuminate\Support\Facades\Storage;
 
 	class AdminServiceInfos22Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
@@ -40,8 +41,9 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Title','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
-			$this->form[] = ['label'=>'Menu List Id','name'=>'menu_list_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'submenu_facilities,item_name'];
+			$this->form[] = ['label'=>'Facility','name'=>'facility','type'=>'textarea','validation'=>'','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','datatable'=>'submenu_facilities,item_name'];
+			$this->form[] = ['label'=>'Menu List Id','name'=>'menu_list_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -49,7 +51,7 @@
 			//$this->form[] = ['label'=>'Title','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'You can only enter the letter only'];
 			//$this->form[] = ['label'=>'Description','name'=>'description','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
-			//$this->form[] = ['label'=>'Menu List Id','name'=>'menu_list_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'sub_menu_lists,sub_menu_name'];
+			//$this->form[] = ['label'=>'Menu List Id','name'=>'menu_list_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'submenu_facilities,item_name'];
 			# OLD END FORM
 
 			/*
@@ -307,8 +309,14 @@
 	    |
 	    */
 	    public function hook_before_delete($id) {
-	        //Your code here
-
+			$getdata = DB::table('service_infos')->where('id',$id)->first();
+			if (Storage::disk("public")->exists("public/service/", $getdata->image)) {
+	            Storage::disk("public")->delete("public/service/", $getdata->image);
+	        }
+			$getFacility = DB::table('facilities')->where('id',$getdata->menu_list_id)->get();
+			foreach ($getFacility as $key => $value) {
+				DB::table('facilities')->where('id', '=', $getFacility->id)->delete();
+			}
 	    }
 
 	    /*
@@ -326,6 +334,102 @@
 
 
 	    //By the way, you can still create your own method in here... :)
+
+		public function getAdd()
+		{
+			$data = [];
+			$data['page_title'] = 'Add Service Details';
+			$data['submenu'] =  getValueByTBName('submenu_facilities');
+			return $this->cbView("backend.service.add_service_submenus", $data);
+		}
+
+
+		public function postSave()
+		{
+			$request = request();
+			if ($request->hasFile('image')) {
+				$image = $request->file('image');
+				$filename =	uniqid(5) . '_' . $image->getClientOriginalName();
+				$request->image->move(public_path('service'), $filename);
+			}
+			$data = array(
+				'title' => 			$request->title,
+				'description' => 	$request->description,
+				'image' => 			'public/service/'.$filename,
+				'menu_list_id' => 	$request->menu_list_id
+			);
+			DB::table('service_infos')->insertGetId($data);
+			foreach ($request->facility as $key => $value) {
+				$facility = array(
+					'note' 			=> $value,
+					'status' 			=> 1,
+					'menu_list_id' => $request->menu_list_id
+				);
+				DB::table('facilities')->insertGetId($facility);
+			}
+			return redirect('admin/service_infos22');
+		}
+
+		public function getEdit($id)
+		{
+			$data = [];
+			$data['page_title'] = 'Edit Service Details';
+			$service = getSingle_id('id',$id,'service_infos');
+			$facilitys = getAll_id('menu_list_id',$service->menu_list_id,'facilities');
+			$submenu = getValueByTBName('submenu_facilities');
+			// dd($facilitys);
+			return $this->cbView("backend.service.edit_service_submenus", compact('data','service','facilitys','submenu'));
+		}
+
+		public function postEdit()
+		{
+			$request = request();
+			// \Validator::make($request->all(), [
+			// 	"pool_id" => "required",
+			// 	"name" => "required",
+			// 	// "audio" => "required|mimes:mp4,mov,ogg,mp3"
+			// ], [
+			// 	'pool_id.required' => "pool name field is required.",
+			// ]);
+
+			#delete old facility
+			$service = getSingle_id('id',$request->service_id,'service_infos');
+			$facilitys = getAll_id('menu_list_id',$service->menu_list_id,'facilities');
+			foreach ($facilitys as $key => $value) {
+				DB::table('facilities')->where('id', '=', $value->id)->delete();
+			}
+			#insert data to service_infos
+			$imageURL = $service->image;
+			if ($request->hasFile('image')) {
+				$image = $request->file('image');
+				$filename =	uniqid(5) . '_' . $image->getClientOriginalName();
+				$request->image->move(public_path('service'), $filename);
+				$imageURL = 'public/service/'.$filename;
+			}
+
+			$data = array(
+				'title' => 			$request->title,
+				'description' => 	$request->description,
+				'image' => 			$imageURL,
+				'menu_list_id' => 	$request->menu_list_id
+			);
+			DB::table('service_infos')
+		        ->where('id', $request->service_id)  // find your user by their email
+		        ->update($data);  // update the record in the DB.
+
+			#insert into facilities
+			foreach ($request->facility as $key => $value) {
+				$facility = array(
+					'note' 			=> $value,
+					'status' 			=> 1,
+					'menu_list_id' => $request->menu_list_id
+				);
+				DB::table('facilities')->insertGetId($facility);
+			}
+
+			return redirect('admin/service_infos22');
+
+		}
 
 
 	}

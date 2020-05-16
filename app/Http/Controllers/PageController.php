@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\franchisee;
 use App\feedback;
+use App\sub_menu_list;
 use Illuminate\Http\Request;
 
 class PageController extends Controller

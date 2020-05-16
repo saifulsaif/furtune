@@ -278,13 +278,13 @@
 <div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
 						<ul class="dl-menu">
-        @if (!empty(getMenuList()))
-            @foreach(getMenuList() as $me)
-                <li>
-                    <a href="">{{$me->menu_name}} </a>
-                </li>
-            @endforeach
-        @endif
+                            @if (!empty(getMenuList()))
+                                @foreach(getMenuList() as $me)
+                                    <li>
+                                        <a href="">{{$me->menu_name}} </a>
+                                    </li>
+                                @endforeach
+                            @endif
 							 <li>
 								<a href="#">About Us</a>
 

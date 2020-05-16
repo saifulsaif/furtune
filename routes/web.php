@@ -40,8 +40,10 @@ Route::get('/faq', 'PageController@faq')->name('faq');
 
 
 
-Route::group(['as' => 'sajib.', 'prefix' => 'sajib'], function () {
+Route::group(['as' => 'fortune.', 'prefix' => 'sajib'], function () {
 
     Route::get('/getDoctor', 'AppointmentController@getDoctor')->name('getDoctor');
+    Route::get('/getAppoinmet/{id}', 'AppointmentController@getAppoinmet')->name('getAppoinmet');
+    Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
 });

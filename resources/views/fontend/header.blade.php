@@ -1,6 +1,6 @@
 <body>
-  {{-- <div id="pop_mod_onl_con" class="modal fade"> --}}
-      {{-- <div class="modal-dialog">
+  <div id="pop_mod_onl_con" class="modal fade">
+      <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -14,27 +14,10 @@
                   <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
               </div>
           </div>
-      </div> --}}
-  {{-- </div> --}}
-  {{-- <div id="pop_mod_onl_con" class="modal fade"> --}}
-      {{-- <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              </div>
-              <div class="modal-body">
-         <img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
-                  <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
-                  <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
-                  <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
-                  <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
-                  <p class="align_center_cust"><img src="{!! asset('public/images/popup_logo_sur.png') !!}" alt=""></p>
-              </div>
-          </div>
-      </div> --}}
-  {{-- </div> --}}
+      </div>
+ </div>
   {{-- #appointment modal --}}
-  <div id="appointment_from" class="modal fade" style="width:100%">
+  <div id="appointment_from" class="modal fade">
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
@@ -91,125 +74,53 @@
 
 
 
-
+{{-- Contact Us Submenu List --}}
 <div class="megamenu_div2" style="margin-top:0px;" id="addnew5" onmouseover="AddNew5()" onmouseout="DivHide()" >
-
-<a href="https://surakshanet.com/contact-us/get-in-touch"><div class="about_menudiv">Get in Touch</div></a>
-<a href="https://surakshanet.com/contact-us/career"><div class="about_menudiv">Career</div></a>
-<a href="https://surakshanet.com/contact-us/feedback"><div class="about_menudiv">Feedback</div></a>
-<!--<a href="franchisee.php"><div class="about_menudiv">Franchisee</div></a>-->
-
-
-
-
-
-
-<!--<a href="delhi-contact.php"><div class="about_menudiv">Delhi & NCR</div></a>
-<a href="bihar-contact.php"><div class="about_menudiv">Bihar</div></a>-->
-
+   @php $submenu_list = getAll_id('menu_id','7','submenuses'); @endphp
+   @if (!empty($submenu_list))
+       @foreach ($submenu_list as $key => $submenus)
+           <a href="@if($submenus->route_name != null) {{ route($submenus->route_name) }} @else {{ route('#') }}  @endif"><div class="about_menudiv">{{ $submenus->sub_menu_name }}</div></a>
+       @endforeach
+   @endif
 </div>
 
 <div class="megamenu_div1" style="margin-top:0px;" id="addnew4" onmouseover="AddNew4()" onmouseout="DivHide()" >
-
-<a href="https://surakshanet.com/about-us/"><div class="about_menudiv">Company Profile</div></a>
+@php $submenu_list_about = getAll_id('menu_id','2','submenuses'); @endphp
+@if (!empty($submenu_list_about))
+    @foreach ($submenu_list_about as $key => $about)
+        <a href="@if($about->route_name != null) {{ route($about->route_name) }} @else {{ route('#') }}  @endif"><div class="about_menudiv">{{ $about->sub_menu_name }}</div></a>
+    @endforeach
+@endif
+{{-- <a href="https://surakshanet.com/about-us/"><div class="about_menudiv">Company Profile</div></a>
 <a href="https://surakshanet.com/about-us/team-of-experts"><div class="about_menudiv">Team of Experts</div></a>
 <!--<a href="mission.php"><div class="about_menudiv">Mission & Vision</div></a>-->
 <a href="https://surakshanet.com/about-us/csr"><div class="about_menudiv">CSR</div></a>
-<a href="https://surakshanet.com/about-us/customer-care"><div class="about_menudiv">Customer Care</div></a>
+<a href="https://surakshanet.com/about-us/customer-care"><div class="about_menudiv">Customer Care</div></a> --}}
 </div>
 
 <div class="megamenu_div" style="margin-top:0px;" id="addnew2" onmouseover="AddNew2()" onmouseout="DivHide()">
 
-<div class="megamenu_box2" style="width:100%; border-right:0px;">
-<!--<div class="megamenu_header">WEST BENGAL</div>-->
+    <div class="megamenu_box2" style="width:100%; border-right:0px;">
+    <!--<div class="megamenu_header">WEST BENGAL</div>-->
 
-<div class="megamenu_body_div">
-<div class="megamenu_leftdiv" style="width:16%;">
-<div class="menu_serviceheading">Imaging</div>
-<a href="our-services/imaging/x-ray.html"><div class="menu_servicetxt">X-ray</div></a>
-<a href="our-services/imaging/usg.html"><div class="menu_servicetxt">USG</div></a>
-<a href="our-services/imaging/ct-scan.html"><div class="menu_servicetxt">CT Scan</div></a>
-<a href="our-services/imaging/mri.html"><div class="menu_servicetxt">MRI</div></a>
-<a href="our-services/imaging/dexa-scan.html"><div class="menu_servicetxt">DEXA Scan</div></a>
-<a href="our-services/imaging/mammography.html"><div class="menu_servicetxt">Mammography</div></a>
-
-
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:16%;">
-<div class="menu_serviceheading">Cardiology</div>
-<a href="our-services/cardiology/electrocardiogram.html"><div class="menu_servicetxt">Electrocardiogram</div></a>
-<a href="our-services/cardiology/echocardiogram.html"><div class="menu_servicetxt">Echocardiogram</div></a>
-<a href="our-services/cardiology/stress-test.html"><div class="menu_servicetxt">Stress Test (TMT)</div></a>
-<a href="our-services/cardiology/holter-monitoring.html"><div class="menu_servicetxt">Holter Monitoring</div></a>
-<a href="our-services/cardiology/color-doppler.html"><div class="menu_servicetxt">Color Doppler</div></a>
-<a href="our-services/cardiology/peripheral-doppler.html"><div class="menu_servicetxt">Peripheral Doppler</div></a>
-<a href="our-services/cardiology/pft.html"><div class="menu_servicetxt">PFT</div></a>
+    <div class="megamenu_body_div">
+            @php $submenu_list = getAll_id('menu_id','1','submenuses'); @endphp
+            @if (!empty($submenu_list))
+                @foreach ($submenu_list as $key => $submenus)
+                    <div class="megamenu_leftdiv" style="width:16%;">
+                        <div class="menu_serviceheading">{{ $submenus->sub_menu_name }}</div>
+                        @php $submenu_lists = getAll_id('submenu_id',$submenus->id,'submenu_facilities'); @endphp
+                        @foreach ($submenu_lists as $key => $sub_list)
+                            <a href="@if($submenus->route_name != null) {{ route($submenus->route_name) }} @else {{ route('#') }}  @endif"><div class="menu_servicetxt">{{ $sub_list->item_name }}</div></a>
+                        @endforeach
+                    </div>
+                    {{-- <a href="@if($submenus->route_name != null) {{ route($submenus->route_name) }} @else {{ route('#') }}  @endif"><div class="about_menudiv">{{ $submenus->sub_menu_name }}</div></a> --}}
+                @endforeach
+            @endif
+        </div>
 
 
-
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:11%;">
-<div class="menu_serviceheading">Neurology</div>
-<a href="our-services/neurology/eeg.html"><div class="menu_servicetxt">EEG</div></a>
-<a href="our-services/neurology/emg.html"><div class="menu_servicetxt">EMG</div></a>
-<a href="our-services/neurology/ncv.html"><div class="menu_servicetxt">NCV</div></a>
-</div>
-
-<div class="megamenu_leftdiv" style="width:18%;">
-<div class="menu_serviceheading">Gastroenterology</div>
-<a href="our-services/gastroenterology/upper-gi-endoscopy.html"><div class="menu_servicetxt">Upper GI Endoscopy</div></a>
-<a href="our-services/gastroenterology/lower-gi-endoscopy.html"><div class="menu_servicetxt">Lower GI Endoscopy</div></a>
-<a href="our-services/gastroenterology/sigmoidoscopy.html"><div class="menu_servicetxt">Sigmoidoscopy</div></a>
-<a href="our-services/gastroenterology/proctoscopy.html"><div class="menu_servicetxt">Proctoscopy</div></a>
-<a href="our-services/gastroenterology/colonoscopy.html"><div class="menu_servicetxt">Colonoscopy</div></a>
-<a href="our-services/gastroenterology/proctosigmoidoscopy2.html"><div class="menu_servicetxt">Proctosigmoidoscopy</div></a>
-
-
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:18%;">
-
-<div class="menu_serviceheading">Pathology</div>
-<a href="our-services/pathology/microbiology.html"><div class="menu_servicetxt">Microbiology</div></a>
-<a href="our-services/pathology/serology.html"><div class="menu_servicetxt">Serology</div></a>
-<a href="our-services/pathology/molecular-biology.html"><div class="menu_servicetxt">Molecular Biology</div></a>
-<a href="our-services/pathology/histopathology.html"><div class="menu_servicetxt">Histopathology</div></a>
-<a href="our-services/pathology/cytopathology.html"><div class="menu_servicetxt">Cytopathology</div></a>
-<a href="our-services/pathology/clinical-pathology.html"><div class="menu_servicetxt">Clinical Pathology</div></a>
-<a href="our-services/pathology/next-generation-sequencing.html"><div class="menu_servicetxt">Next Generation Sequencing (NGS)</div></a>
-
-
-
-</div>
-
-<div class="megamenu_leftdiv" style="width:16%;">
-
-<div class="menu_serviceheading">Pathology</div>
-
-<a href="our-services/pathology/hematology.html"><div class="menu_servicetxt">Hematology</div></a>
-<a href="our-services/pathology/biochemistry.html"><div class="menu_servicetxt">Biochemistry</div></a>
-<a href="our-services/pathology/immunohistochemistry.html"><div class="menu_servicetxt">Immunohistochemistry</div></a>
-<a href="our-services/pathology/flourescence-in-situ-hybridization.html"><div class="menu_servicetxt">Flourescence In-situ Hybridization</div></a>
-<a href="our-services/pathology/cytogenetics.html"><div class="menu_servicetxt">Cytogenetics</div></a>
-<a href="our-services/pathology/flow-cytometry.html"><div class="menu_servicetxt">Flow Cytometry</div></a>
-<a href="our-services/pathology/liquid-chromatography-tandem-mass-spectrometry.html"><div class="menu_servicetxt">Liquid chromatography-tandem mass spectrometry (LC-MS/MS)</div></a>
-
-<!--<a href="health-package.php"><div class="megamenu_header" style=" margin-top:10px;">Health Packages</div></a>-->
-
-</div>
-
-</div>
-
-
-</div>
+    </div>
 
 </div>
 
@@ -343,45 +254,52 @@
 
 
 
- <div class="header_div header_div_sticky" >
+<div class="header_div header_div_sticky" >
 
-        <div class="header_topband" style="height:3px; background-color:#e1272c;"></div>
+    <div class="header_topband" style="height:3px; background-color:#e1272c;"></div>
 
-            <div class="header_middlemaindiv">
+    <div class="header_middlemaindiv">
 
-            <div class="mainheaderdiv">
-
-
-           <a href="{{url('/')}}"> <div class="logo_maindiv_sticky"><img src="{!! asset($site_infos->logo) !!}" class="img_css"  alt="logo" /></div>
-           </a>
+        <div class="mainheaderdiv">
 
 
-			<div class="sticky_menu">
-					<ul id="nav1">
-<!--<li><a href="index.php" >Home</a></li>-->
+        <a href="{{ url("/") }}"> <div class="logo_maindiv_sticky"><img src="{!! asset($site_infos->logo) !!}" class="img_css"  alt="logo" /></div>
+        </a>
+        <div class="sticky_menu">
+            <ul id="nav1">
+            <!--<li><a href="index.php" >Home</a></li>-->
+                {{-- <li><a href="javascript:AddNew4()"  onmouseout="DivHide()" onclick="AddNew4(),profile()" onmouseover="AddNew4()">About Us</a>  </li>
 
-<li><a href="javascript:AddNew4()"  onmouseout="DivHide()" onclick="AddNew4(),profile()" onmouseover="AddNew4()">About Us</a>
+                <li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
+
+                <li><a href="{!! route('sajib.getDoctor') !!}" >Book an Appointment</a></li>
+                <li><a href="https://surakshanet.com/home-collection" >Home Collection</a></li>
+                <li><a href="https://surakshanet.com/health-package" >Health Packages</a></li>
+                <li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li>
+                <li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
+
+                <!--<li><a href="feedback.php" >Feedback</a></li>-->
+                <li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">Contact Us</a> </li> --}}
+                @if (!empty(getMenuList()))
+                    @foreach (getMenuList() as $key => $menu)
+                            @if ($menu->menu_name == 'Contact Us')
+                                <li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">{{ $menu->menu_name }}</a> </li>
+                            @elseif ($menu->menu_name == 'Our Service')
+                                <li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">{{ $menu->menu_name }}</a></li>
+                            @elseif ($menu->menu_name == 'About Us')
+                                <li><a href="javascript:AddNew4()"  onmouseout="DivHide()" onclick="AddNew4(),profile()" onmouseover="AddNew4()">{{ $menu->menu_name }}</a>  </li>
+                            @else
+                                <li><a href="@if($menu->route_name != null) {{ route($menu->route_name) }} @else {{ route('#') }}  @endif">{{ $menu->menu_name }}</a> </li>
+                            @endif
+                    @endforeach
+                @endif
 
 
+            </ul>
+        </div>
+    </div>
 
-
-</li>
-
-<li><a href="javascript:AddNew2()"  onclick="AddNew2(),service()" onmouseover="AddNew2()" onmouseout="DivHide()">Our Services</a></li>
-<li><a href="{!! route('sajib.getDoctor') !!}" >Book an Appointment</a></li>
-<li><a href="https://surakshanet.com/home-collection" >Home Collection</a></li>
-<li><a href="https://surakshanet.com/health-package" >Health Packages</a></li>
-{{-- <li><a href="javascript:AddNew3()" onmouseover="AddNew3()" onclick="AddNew3(), center()" onmouseout="DivHide()">Our Centers</a></li> --}}
-<li><a href="https://surakshanet.com/franchisee" >Franchisee</a></li>
-<li><a href="javascript:AddNew5()" onmouseover="AddNew5()" onclick="AddNew5(), contact()" onmouseout="DivHide()">Contact Us</a></li>
-
-</ul>
-			</div>
-
-
-            </div>
-
-            </div>
+</div>
 
 
 
@@ -391,3 +309,61 @@
 
 
 </header>
+
+   <div class="wrapper">
+     <div class="nav-main">
+
+     <!--<a class="css-tooltip-right color-red" href="polyclinic.php">
+     	<span>Book an Appointment</span><div class="box1">
+         	<div class="icon_img"><i class="fa fa-stethoscope" style="font-size:27px; color:#FFFFFF;"></i></div>
+
+         </div>
+     </a>
+
+     <a class="css-tooltip-right color-red" href="find-test.php">
+     	<span>Find a Test</span><div class="box1">
+         	<div class="icon_img"><i class="fa fa-flask" style="font-size:27px; color:#FFFFFF;"></i></div>
+
+         </div>
+     </a>
+
+     <a class="css-tooltip-right color-red" href="home-service.php">
+     	<span>Home Collection</span><div class="box1">
+         	<div class="icon_img"><i class="fa fa-home" style="font-size:27px; color:#FFFFFF;" ></i></div>
+
+         </div>
+     </a>
+
+
+     <a class="css-tooltip-right color-red" href="feedback.php">
+     	<span>Feedback</span><div class="box1">
+         	<div class="icon_img"><i class="fa fa-comments" style="font-size:27px; color:#FFFFFF;"></i></div>
+
+         </div>
+     </a>
+
+
+      <a class="css-tooltip-right color-red" href="franchisee.php">
+     	<span>Franchisee</span><div class="box1">
+         	<div class="icon_img"><i class="fa fa-users" style="font-size:27px; color:#FFFFFF;"></i></div>
+
+         </div>
+     </a>
+     -->
+
+
+      <nav class="social">
+               <ul>
+                   <li><a href="#" ><i class="fa fa-stethoscope"></i>  Appointment </a></li>
+                   <li><a href="find-test.html" ><i class="fa fa-flask"></i> Find a Test</a></li>
+                   <li><a href="#" ><i class="fa fa-home"></i> Home Collection </a></li>
+                    <li><a href="#" ><i class="fa fa-comments"></i> Feedback</a></li>
+                   <li><a href="#" ><i class="fa fa-users"></i> Franchisee</a></li>
+
+
+
+               </ul>
+           </nav>
+
+     </div>
+<!--###############  Sticky Header  ######################-->
