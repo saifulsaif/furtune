@@ -16,7 +16,7 @@
 // });
 
 Auth::routes();
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('home');
 Route::get('/#', 'PageController@index')->name('#');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
