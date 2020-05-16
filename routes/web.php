@@ -45,7 +45,3 @@ Route::group(['as' => 'sajib.', 'prefix' => 'sajib'], function () {
     Route::get('/getDoctor', 'AppointmentController@getDoctor')->name('getDoctor');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
 });
-Route::group(['as' => 'saiful.', 'prefix' => 'saiful', 'namespace' => 'Frontend'], function () {
-
-
-});
