@@ -43,12 +43,12 @@
 <div class="header_middle_div_main">
 
 <div class="top_band_txt">
-<span style="font-size:13px;">Helpline No :  01924129129</span>
+<span style="font-size:13px;">Helpline No :  {{$site_infos->hoteline}}</span>
 |&nbsp;
-<a href="https://www.facebook.com/SurakshaDiagnosticServices/" target="_blank" rel="noopener"><i class="fa fa-facebook-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
-<a href="https://twitter.com/surakshatweets" target="_blank" rel="noopener"><i class="fa fa-twitter-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
-<a href="https://www.youtube.com/channel/UC61ZuBx3CnjiwkZbLeR9deg" target="_blank" rel="noopener"><i class="fa fa-youtube-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
-<a href="https://www.instagram.com/suraksha_diagnostics/" target="_blank" rel="noopener"><i class="fa fa-instagram" style="color:#FFFFFF;"></i></a>
+<a href="{{$site_infos->facebook}}" target="_blank" rel="noopener"><i class="fa fa-facebook-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
+<a href="{{$site_infos->twitter}}" target="_blank" rel="noopener"><i class="fa fa-twitter-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
+<a href="{{$site_infos->youtube}}" target="_blank" rel="noopener"><i class="fa fa-youtube-square" style="margin-right:8px; color:#FFFFFF;" ></i></a>
+<a href="{{$site_infos->instagram}}" target="_blank" rel="noopener"><i class="fa fa-instagram" style="color:#FFFFFF;"></i></a>
 
 
 </div>
@@ -66,7 +66,7 @@
 </a>
 
 
-<div class="header_social_div">
+<div class="header_social_div" style="margin-left: 5px;">
 
 <div class="icon_div" style="margin-bottom:5px;"><div class="twitter_button"><a href="{{$site_infos->twitter}}" target="_blank" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
@@ -81,12 +81,17 @@
 </div>
 
 
-<div class="accreditation_div">
-<div class="nabl_logodiv2"><img src="{!! asset('public/images/28_years.png') !!}" class="img_css" alt="Excellence" /></div>
-<div class="nabl_logodiv1"><img src="{!! asset('public/images/cap-logo-new.jpg') !!}" class="img_css" alt="CAP" /></div>
-<div class="nabl_logodiv"><img src="{!! asset('public/images/nabl-newlogo.png') !!}" class="img_css" alt="NABL" /></div>
-<div class="nabl_logodiv"><img src="{!! asset('public/images/nabh-logo.png') !!}" class="img_css" alt="NABH" /></div>
-
+<div class="accreditation_div" style="width: 246px; margin-right: -11px;">
+<div class="nabl_logodiv2 header_icon">
+  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-register.png') !!}" class="img_css" alt="CAP" />
+  <a href="#">
+    <h4 style="margin-top: 13px;font-size: 11px;font-weight: 600;">Sign Up</h4>
+  </a>
+</div>
+<div class="nabl_logodiv2 header_icon">
+  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-appoinment.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Book</br>Appointment</h4></a> </div>
+<div class="nabl_logodiv2 header_icon">
+  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-portal.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Patient</br>Portal</h4></a> </div>
 
 </div>
 

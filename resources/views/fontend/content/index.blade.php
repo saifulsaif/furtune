@@ -25,15 +25,15 @@
 
 <div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to download report online</div>
 
-<a href="http://surakshanet.in/" target="_blank"><div class="download_report_div">Download Report</div></a>
+<a href="http://Furtunenet.in/" target="_blank"><div class="download_report_div">Download Report</div></a>
 
 
-<!--<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="download_report_div">Download Report</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="download_report_div">Download Report</div></a>-->
 
 
-<!--<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
-<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
-<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" >Online Report Bihar</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
+<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
+<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" >Online Report Bihar</div></a>-->
 
 </div>
 
@@ -119,7 +119,7 @@
 
   <option value="west-bengal/sodepur">Sodepur</option>
 
-  <option value="west-bengal/suraksha-mri-and-polyclinic">FurtuneMRI and Polyclinic</option>
+  <option value="west-bengal/Furtune-mri-and-polyclinic">FurtuneMRI and Polyclinic</option>
 
   <option value="west-bengal/tamluk">Tamluk</option>
 
@@ -205,11 +205,11 @@
 <div class="icon_heading">DOWNLOAD REPORT</div>
 <div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to download report online</div>
 
-<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="download_report_div">Download Report</div></a>
+<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="download_report_div">Download Report</div></a>
 
-<!--<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
-<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
-<a href="http://52.172.206.185:9623/surakshaweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Bihar</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
+<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
+<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Bihar</div></a>-->
 
 </div>
 
@@ -403,6 +403,7 @@
 
 
 
+
 <div class="index_aboutmaindiv" style="background-color:#eeeeee; margin-bottom:0px;">
 
 
@@ -420,7 +421,7 @@
 <br />
  </div>
 
-<!--<div class="welcome_bodytxt"><a href="https://surakshanet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>--->
+<!--<div class="welcome_bodytxt"><a href="https://Furtunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>--->
 
 </div>
 
@@ -446,7 +447,7 @@
 
 
 
-<div class="welcome_bodytxt"><a href="https://surakshanet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt"><a href="https://Furtunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>
 </div>--->
 
 
@@ -464,7 +465,7 @@
 
 
 
-<!--<a href="swine-flu.php"><div class="newindex_aboutdiv" style="margin-bottom:30px;"><img src="images/suraksha-h1n1-1.jpg" class="img_css" /></div></a>-->
+<!--<a href="swine-flu.php"><div class="newindex_aboutdiv" style="margin-bottom:30px;"><img src="images/Furtune-h1n1-1.jpg" class="img_css" /></div></a>-->
 
 
 
@@ -485,6 +486,104 @@
 
 
 
+<!--  BODY Part2 -->
+
+<div class="index_aboutmaindiv">
+<div class="index_aboutdiv">
+
+<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FurtuneDiagnostic</span>--> <span style="color:#e1272c;">Gallery</span> </div>
+
+
+<br />
+<!-- <div class="row">
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+  <div class="col-md-3" style="background-color:red;padding:5px;">
+    <img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/>
+  </div>
+</div> -->
+
+
+
+
+
+<div class="media_image_maindiv">
+
+
+
+@foreach($galleries as $pic)
+<div class="inner_imgbg mg-image" style="width: 23%;
+    height: auto;
+    float: left;
+    margin: 0px 1% 20px 0px;
+    4pxsolid #fff: ;
+    box-shadow: 0px 0px 2px #aaa;
+    -moz-box-shadow: 0px 0px 2px #aaa;
+    -webkit-box-shadow: 0px 0px 2px #aaa;
+    border: 1px solid #FFFFFF;">
+  <div class="single-effect">
+          <figure class="wpf-demo-1">
+           <img src="{{asset($pic->image)}}" class="img_css" />
+            <figcaption class="view-caption">
+
+             <a  href="{{asset($pic->image)}}" data-lightbox="example-5" data-title="Free Health Chackup, Sonarpur" class=" example-image-link" style="text-decoration:none;">	 More</a>
+
+             <a  href="{{asset($pic->image)}}" data-lightbox="example-5" data-title="Free Health Chackup, Sonarpur" class=" example-image-link" style="text-decoration:none;"></a>
+            </figcaption>
+          </figure>
+      </div>
+</div>
+@endforeach
+
+
+
+
+</div>
+
+</div>
+
+<div class="welcome_bodytxt">
+  <a href="{{route('gallery')}}">
+    <div style="margin:0px auto;" class="button">
+      <span>Read More </span>
+    </div>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>hello</h2>
+    </div>
+    <div class="col-md-4">
+      <h2>hello</h2>
+    </div>
+    <div class="col-md-4">
+      <h2>hello</h2>
+    </div>
+  </div>
+</div> -->
+
+
+<!--  BODY Part2 -->
 
 
 <!--  BODY Part3 -->
@@ -544,183 +643,23 @@
 
 
 <div class="owl-carousel1 owl-carousel owl-theme">
-
+    @foreach($events as $event)
           <a href="media.html#tamluk" > <div class="item">
             <div class="producthomeDiv">
 
+      <div class="panel_img"><img src="{{$event->image}}" class="img_css" alt="Tamluk Centre" /></div>
 
 
 
-      <div class="panel_img"><img src="http://localhost/furtune/public/images/new-centre-tamluk/img4_s.jpg" class="img_css" alt="Tamluk Centre" /></div>
-
-
-
-     <div class="panel_heading_new">New Centre Launch at Tamluk<br />
+     <div class="panel_heading_new">{{$event->title}}<br />
 <br />
 </div>
 
-
-
-
      </div>
 
             </div></a>
+@endforeach
 
-          <a href="media.html#Oberoi">  <div class="item">
-            <div class="producthomeDiv">
-
-
-
-     <div class="panel_img"><img src="http://localhost/furtune/public/images/press-conference/Press_Conference_s.jpg" class="img_css" alt="Press Conference" /></div>
-
-
-
-     <div class="panel_heading_new">Press Conference at The Oberoi Grand</div>
-
-
-
-
-     </div>
-
-            </div></a>
-
-           <a href="media.html#gateway-cme"> <div class="item">
-            <div class="producthomeDiv">
-
-
-
-     <div class="panel_img"><img src="http://localhost/furtune/public/images/gateway-cme.jpg" class="img_css" alt="CME" /></div>
-
-
-
-     <div class="panel_heading_new">Kasba and Garia Continual Medical Education Program</div>
-
-
-
-
-
-     </div>
-
-            </div></a>
-
-
-
-          </div>
-
-
-
-
-
-
-</div>
-</div>
-
-<!--<div class="news_div">
-<div class="media_heading"> News / Press</div>
-<div id="content-1" class="content mCustomScrollbar" style="top:0px;">
-<div class="latestnews_maindiv">
-
-<a href="https://timesofindia.indiatimes.com/business/india-business/suraksha-diagnostics-in-talks-with-us-based-mayo-labs/articleshow/58255183.cms" target="_blank"><div class="latest_news_maindiv">
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
-
-<div class="news_testdiv">
-
-<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
-
-
-</div>
-</div>
- </a>
-
-<a href="https://timesofindia.indiatimes.com/business/india-business/OrbiMed-to-invest-40m-in-Suraksha-Diagnostics/articleshow/55465431.cms" target="_blank"><div class="latest_news_maindiv">
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
-
-<div class="news_testdiv">
-
-<div class="news_heading">OrbiMed to invest $40m in FurtuneDiagnostics</div>
-
-
-</div>
-</div>
- </a>
-
- <a href="https://timesofindia.indiatimes.com/city/kolkata/robotics-to-help-test-blood-samples-in-half-an-hour-and-with-zero-error/articleshow/68003049.cms" target="_blank"><div class="latest_news_maindiv">
-<div class="latest_news_datemaindiv"><img src="images/toi.png" style="width:100%;" alt="Times of India" /></div>
-
-<div class="news_testdiv">
-
-<div class="news_heading">Robotics to help test blood samples in half an hour, and with zero error</div>
-
-
-</div>
-</div>
- </a>
-
- <a href="https://www.indiatoday.in/pti-feed/story/suraksha-diagnostics-in-talks-with-us-based-mayo-labs-910416-2017-04-18" target="_blank"><div class="latest_news_maindiv">
-<div class="latest_news_datemaindiv"><img src="images/india-today-logo.jpg" style="width:100%;" alt=" India Today" /></div>
-
-<div class="news_testdiv">
-
-<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
-
-
-</div>
-</div>
- </a>
-
-</div>
-</div>
-</div>-->
-
-<div class="news_div_responsive">
-<div class="media_heading"> News / Press</div>
-
-<div class="latestnews_maindiv">
-
-<a href="https://timesofindia.indiatimes.com/business/india-business/suraksha-diagnostics-in-talks-with-us-based-mayo-labs/articleshow/58255183.cms" target="_blank"><div class="latest_news_maindiv">
-
-<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
-<div class="news_testdiv">
-
-<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
-
-
-</div>
-</div> </a>
-
-
-<a href="https://timesofindia.indiatimes.com/business/india-business/OrbiMed-to-invest-40m-in-Suraksha-Diagnostics/articleshow/55465431.cms" target="_blank"><div class="latest_news_maindiv">
-
-<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
-<div class="news_testdiv">
-
-<div class="news_heading">OrbiMed to invest $40m in FurtuneDiagnostics</div>
-
-
-</div>
-</div> </a>
-
-<a href="https://timesofindia.indiatimes.com/city/kolkata/robotics-to-help-test-blood-samples-in-half-an-hour-and-with-zero-error/articleshow/68003049.cms" target="_blank"><div class="latest_news_maindiv">
-
-<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/images/toi.png" style="width:100%;" alt="Times of India" /></div>
-<div class="news_testdiv">
-
-<div class="news_heading">Robotics to help test blood samples in half an hour, and with zero error</div>
-
-
-</div>
-</div> </a>
-
-<a href="https://www.indiatoday.in/pti-feed/story/suraksha-diagnostics-in-talks-with-us-based-mayo-labs-910416-2017-04-18" target="_blank"><div class="latest_news_maindiv">
-
-<div class="latest_news_datemaindiv"><img src="http://localhost/furtune/public/mages/india-today-logo.jpg" style="width:100%;" alt="India Today" /></div>
-<div class="news_testdiv">
-
-<div class="news_heading">FurtuneDiagnostics in talks with US based Mayo Labs</div>
-
-
-</div>
-</div> </a>
 
 </div>
 
@@ -747,7 +686,7 @@
 
 <div class="preferd_vendormainBG">
 
-<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/surakshatweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by FurtuneDiagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/Furtunetweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by FurtuneDiagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 <div class="instagram_feeddiv"></div>
 

@@ -65,7 +65,17 @@ if (isMobile) {
     table.dataTable thead .sorting_desc_disabled:before {
       bottom: .5em;
     }
-
+  .header_icon{
+    color: #ffffff;
+        padding: 7px 0px !important;
+        margin: 4px 6px 0px 0px;
+        text-align: center;
+        vertical-align: top;
+        position: static !important;
+        width: 71px;
+        border-radius: 10px;
+        background-color: #e1272ceb;height: 67px;
+  }
 </style>
 
 

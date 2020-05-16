@@ -18,10 +18,7 @@ class CreateServiceSubmenusTable extends Migration
             $table->string('submenu_name',255)->nullable();
             $table->string('route_name',255)->nullable();
             $table->integer('subemnu')->nullable();
-            $table->timestamps();
             $table->softDeletes();
-
-            $table->increments('id');
             $table->timestamps();
         });
     }

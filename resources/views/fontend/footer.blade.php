@@ -61,8 +61,8 @@
 <div class="footer_menudiv">
 
 <!--<a href="franchisee.php"><div class="footer_menutxt">Franchisee</div></a>-->
-<a href="media.html"><div class="footer_menutxt">Media & Events</div></a>
-<a href="latest-news.html"><div class="footer_menutxt">Latest News</div></a>
+<a href="{{route('event')}}"><div class="footer_menutxt">Media & Events</div></a>
+<a href="{{route('blog')}}"><div class="footer_menutxt">Latest News</div></a>
 <a href="{{route('career')}}"><div class="footer_menutxt">Career</div></a>
 <a class="various2 fancybox.iframe" href="https://www.youtube.com/embed/hWmYfZmMWHI"><div class="footer_menutxt">Video Tour</div></a>
 
@@ -72,8 +72,9 @@
 
 
 <a href="{{route('get_in_touch')}}"><div class="footer_menutxt">Contact Us</div></a>
-<a  href="privacy-policy.html"><div class="footer_menutxt">Privacy Policy</div></a>
-<a href="terms.html"><div class="footer_menutxt">Terms and Conditions</div></a>
+<a  href="{{route('policy')}}"><div class="footer_menutxt">Privacy Policy</div></a>
+<a href="{{route('terms')}}"><div class="footer_menutxt">Terms and Conditions</div></a>
+<a href="{{route('gallery')}}"><div class="footer_menutxt">Gallery</div></a>
 <!--<a href="#"><div class="footer_menutxt">Polyclinic</div></a>-->
 
 </div>

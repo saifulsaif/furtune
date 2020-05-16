@@ -33,9 +33,13 @@ Route::post('/save-franchisee', 'PageController@saveFranchisee');
 Route::get('/customer-care', 'PageController@customerCare')->name('customer_care');
 Route::get('/feedback', 'PageController@feedback')->name('feedback');
 Route::post('/save-feedback', 'PageController@saveFeedback');
-
-Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
+Route::get('/meadia-and-event', 'PageController@event')->name('event');
+Route::get('/privacy-and-policy', 'PageController@policy')->name('policy');
+Route::get('/terms-and-conditions', 'PageController@terms')->name('terms');
 Route::get('/faq', 'PageController@faq')->name('faq');
+Route::get('/latest-news', 'PageController@blog')->name('blog');
+Route::get('/gallery', 'PageController@gallery')->name('gallery');
+Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 
 
 
