@@ -44,10 +44,10 @@ Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 
 
 
-Route::group(['as' => 'fortune.', 'prefix' => 'sajib'], function () {
+Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
+Route::group(['as' => 'fortune.', 'prefix' => 'fortune'], function () {
 
     Route::get('/getDoctor', 'AppointmentController@getDoctor')->name('getDoctor');
     Route::get('/getAppoinmet/{id}', 'AppointmentController@getAppoinmet')->name('getAppoinmet');
-    Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
 });

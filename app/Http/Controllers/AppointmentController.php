@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\appointment;
 use App\doctors;
 use App\listAppointment;
+use DB;
 use Illuminate\Http\Request;
 
 class AppointmentController extends Controller
@@ -91,14 +92,24 @@ class AppointmentController extends Controller
         return view('fontend.appoinment.appointment',compact('doctors'));
     }
 
-    public function getAppoinmet()
+    public function getAppoinmet($id)
     {
-       $doctors = doctors::with('times')->orderBy('id', 'DESC')->where('id',request()->segment(3))->first();
+       $doctors = doctors::with('times')->orderBy('id', 'DESC')->where('id',$id)->first();
        return view('fontend.appoinment.appointment_form',compact('doctors'));
     }
     public function sendAppointment()
     {
-        // dd(request()->all());
+        $data = array(
+            'doctor_id' => request()->doctor_id,
+            'firstName' => request()->firstName,
+            'lastName' => request()->lastName,
+            'email' => request()->email,
+            'dateOfAppoinment' => request()->dateOfAppoinment,
+            'timeAppoinment' => request()->timeAppoinmen,
+            'phoneNumber' => request()->phoneNumber,
+            'diseaseTopic' => request()->diseaseTopic,
+        );
+        // DB::table('list_appointments')->insert($data);
         $appointment = new listAppointment;
         $appointment->doctor_id = request()->doctor_id;
         $appointment->firstName = request()->firstName;
@@ -108,13 +119,19 @@ class AppointmentController extends Controller
         $appointment->timeAppoinment = request()->timeAppoinment;
         $appointment->phoneNumber = request()->phoneNumber;
         $appointment->diseaseTopic = request()->diseaseTopic;
-        $appointment->save();
-        $notification = array(
-            'message' => $msg,
-            'alert-type' => "Successfull Send"
-        );
-
-        return back()->with($notification);
+        if ($appointment->save()) {
+            $notification = array(
+                'message' => $msg,
+                'alert-type' => "Successfull Send"
+            );
+        }
+        else {
+            $notification = array(
+                'message' => $msg,
+                'alert-type' => "Not Sended"
+            );
+        }
+        return view('fontend.appoinment.appointment_form',compact('notification'));
 
     }
 
