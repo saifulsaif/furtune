@@ -74,7 +74,7 @@
 <div class="box-container-table">
     <div class="container-table">
 
-        <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <table id="" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>Center</th>
@@ -91,7 +91,7 @@
                         <tr>
                             <td>{{ $doctor->center }}</td>
                             <td>{{ $doctor->department }}</td>
-                            <td>C{{ $doctor->doctor_name }}</td>
+                            <td>{{ $doctor->doctor_name }}</td>
                             <td>{{ $doctor->doctor_degree }}</td>
                             @if(!empty($doctor->times->start_days))
                                 <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
@@ -136,7 +136,51 @@
 </div>
 
 
-<div class="pagination_responsive"><ul class="pagination"><li class="details">Page 1 of 35</li><li><a class="current">Prev</a></li><li><a class="current">1</a></li><li><a href="?page=2">Next</a></li></ul></div>
+<div class="pagination_responsive">
+
+    <ul class="pagination">
+        <div class="section-title" id="section-title">
+
+            <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Center</th>
+                        <th> Department</th>
+                        <th>Doctor's Name</th>
+                        <th>Doctor's Degree</th>
+                        <th>Timings</th>
+                        <th>Booking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(!empty($doctors))
+                        @foreach ($doctors as $key => $doctor)
+                            <tr>
+                                <td>{{ $doctor->center }}</td>
+                                <td>{{ $doctor->department }}</td>
+                                <td>{{ $doctor->doctor_name }}</td>
+                                <td>{{ $doctor->doctor_degree }}</td>
+                                @if(!empty($doctor->times->start_days))
+                                    <td>{{ $doctor->times->start_days }}&nbsp;To&nbsp;{{ $doctor->times->end_days }}&nbsp;From&nbsp;{{ $doctor->times->strat_time }}&nbsp;To&nbsp;{{ $doctor->times->end_time }}</td>
+                                @else
+                                    <td>NO Time</td>
+                                @endif
+                               <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <th colspan="4"><a class="bg-danger">No Record Found !!</a></th>
+                        </tr>
+                    @endif
+
+                </tbody>
+            </table>
+        </div>
+
+    </ul>
+</div>
 
 
 
@@ -148,49 +192,8 @@
 
 
 
-{{-- #appointment modal --}}
-<div class="modal fade bd-example-modal-lg" tabindex="-1" id="appointment_model" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="row" style="padding:20px">
-                    <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Name</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Email</label>
-                      <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Comment</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Commet">
-                    </div>
-                    {{-- <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div> --}}
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- #appointment modal Close --}}
 
 <!------------------  profile ------------------->
 </div>
 
-<script type="text/javascript">
-    function appointment_modal(){
-        $('#appointment_model').modal('show');
-    }
-</script>
 @endsection
