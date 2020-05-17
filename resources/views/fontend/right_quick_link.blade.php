@@ -42,11 +42,11 @@
 
 	<nav class="social">
 					<ul>
-							<li><a href="https://surakshanet.com/book-an-appointment" ><i class="fa fa-stethoscope"></i>  Appointment </a></li>
-							<li><a href="find-test.html" ><i class="fa fa-flask"></i> Find a Test</a></li>
-							<li><a href="https://surakshanet.com/home-collection" ><i class="fa fa-home"></i> Home Collection </a></li>
-							 <li><a href="https://surakshanet.com/contact-us/feedback" ><i class="fa fa-comments"></i> Feedback</a></li>
-							<li><a href="https://surakshanet.com/franchisee" ><i class="fa fa-users"></i> Franchisee</a></li>
+							<li><a href="{{route('#')}}" ><i class="fa fa-stethoscope"></i>  Appointment </a></li>
+							<li><a href="#" ><i class="fa fa-flask"></i> Find a Test</a></li>
+							<li><a href="{{route('home_collection')}}" ><i class="fa fa-home"></i> Home Collection </a></li>
+							 <li><a href="{{route('feedback')}}" ><i class="fa fa-comments"></i> Feedback</a></li>
+							<li><a href="{{route('franchisee')}}" ><i class="fa fa-users"></i> Franchisee</a></li>
 
 
 

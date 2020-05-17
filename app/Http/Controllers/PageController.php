@@ -19,7 +19,12 @@ class PageController extends Controller
      $lab_infos = getValueByTBName('lab_infos');
      $corporate_services= getValueByTBName('corporate_services');
      $site_infos= first_row_date('site_infos');
-      return view('fontend.content.index',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services','site_infos'));
+     $events = getValueByTBName('events');
+     $galleries = DB::table('galleries')
+             ->select('*')
+             ->limit(8)
+             ->get();
+      return view('fontend.content.index',compact('events','site_infos','menu','sub_menu','sliders','sub_menu_list','partners','index_infos','lab_infos','corporate_services','site_infos','galleries'));
    }
    public function companyProfile(){
      $menu = getValueByTBName('menu');
@@ -181,5 +186,61 @@ class PageController extends Controller
      $partners = getValueByTBName('corporate_partners');
      $site_infos= first_row_date('site_infos');
       return view('fontend.content.corporate_partner',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
+   }
+
+   public function event(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $events = getValueByTBName('events');
+      return view('fontend.content.event',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','events'));
+   }
+
+   public function faq(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.event',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
+   }
+   public function terms(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.terms',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
+   }
+   public function policy(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.policy',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
+   }
+   public function blog(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $partners = getValueByTBName('corporate_partners');
+      return view('fontend.content.blog',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','partners'));
+   }
+   public function gallery(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $galleries = getValueByTBName('galleries');
+      return view('fontend.content.gallery',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','galleries'));
    }
 }

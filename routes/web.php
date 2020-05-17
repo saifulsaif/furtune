@@ -16,7 +16,7 @@
 // });
 
 Auth::routes();
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('home');
 Route::get('/#', 'PageController@index')->name('#');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
@@ -33,9 +33,13 @@ Route::post('/save-franchisee', 'PageController@saveFranchisee');
 Route::get('/customer-care', 'PageController@customerCare')->name('customer_care');
 Route::get('/feedback', 'PageController@feedback')->name('feedback');
 Route::post('/save-feedback', 'PageController@saveFeedback');
-
-Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
+Route::get('/meadia-and-event', 'PageController@event')->name('event');
+Route::get('/privacy-and-policy', 'PageController@policy')->name('policy');
+Route::get('/terms-and-conditions', 'PageController@terms')->name('terms');
 Route::get('/faq', 'PageController@faq')->name('faq');
+Route::get('/latest-news', 'PageController@blog')->name('blog');
+Route::get('/gallery', 'PageController@gallery')->name('gallery');
+Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 
 
 
@@ -46,8 +50,4 @@ Route::group(['as' => 'fortune.', 'prefix' => 'sajib'], function () {
     Route::get('/getAppoinmet/{id}', 'AppointmentController@getAppoinmet')->name('getAppoinmet');
     Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');
-});
-Route::group(['as' => 'saiful.', 'prefix' => 'saiful', 'namespace' => 'Frontend'], function () {
-
-
 });
