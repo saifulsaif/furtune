@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 11:53 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: localhost:3306
+-- Generation Time: May 17, 2020 at 02:05 PM
+-- Server version: 10.3.23-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fortunehl`
+-- Database: `fortunehl_furtune`
 --
 
 -- --------------------------------------------------------
@@ -30,13 +30,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `appointments` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `center_Name` text COLLATE utf8mb4_unicode_ci,
+  `center_Name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `time` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone_number` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `view_status` int(11) DEFAULT '0',
+  `view_status` int(11) DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -86,8 +86,8 @@ CREATE TABLE `cms_apicustom` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `method_type` varchar(25) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parameters` longtext COLLATE utf8mb4_unicode_ci,
-  `responses` longtext COLLATE utf8mb4_unicode_ci
+  `parameters` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `responses` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -115,7 +115,7 @@ CREATE TABLE `cms_dashboard` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci,
+  `content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -134,8 +134,8 @@ CREATE TABLE `cms_email_queues` (
   `email_from_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_cc_email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email_content` text COLLATE utf8mb4_unicode_ci,
-  `email_attachments` text COLLATE utf8mb4_unicode_ci,
+  `email_content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_attachments` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_sent` tinyint(1) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -152,7 +152,7 @@ CREATE TABLE `cms_email_templates` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci,
+  `content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `from_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `from_email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -180,7 +180,7 @@ CREATE TABLE `cms_logs` (
   `useragent` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `details` text COLLATE utf8mb4_unicode_ci,
+  `details` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_cms_users` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -322,7 +322,59 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (129, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/logout', 'admin@crudbooster.com logout', '', 1, '2020-05-15 10:03:30', NULL),
 (130, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 10:03:33', NULL),
 (131, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/logout', 'admin@crudbooster.com logout', '', 1, '2020-05-15 15:46:26', NULL),
-(132, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 15:46:29', NULL);
+(132, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-15 15:46:29', NULL),
+(133, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/events/add-save', 'Add New Data NEW CENTRE LAUNCH AT TAMLUK : Eastern India’s largest Superspeciality at Media & Event', '', 1, '2020-05-16 13:32:58', NULL),
+(134, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/events/add-save', 'Add New Data NEW CENTRE LAUNCH AT TAMLUK : at Media & Event', '', 1, '2020-05-16 13:33:15', NULL),
+(135, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/events/add-save', 'Add New Data NEW CENTRE LAUNCH AT TAMLUK : Eastern India’s largest Superspeciality at Media & Event', '', 1, '2020-05-16 13:33:30', NULL),
+(136, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:07', NULL),
+(137, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:15', NULL),
+(138, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:24', NULL),
+(139, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:31', NULL),
+(140, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:40', NULL),
+(141, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:51:49', NULL),
+(142, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/delete/1', 'Delete data 1 at Gallery', '', 1, '2020-05-16 16:54:32', NULL),
+(143, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/delete/4', 'Delete data 4 at Gallery', '', 1, '2020-05-16 16:54:38', NULL),
+(144, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 16:59:17', NULL),
+(145, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 17:00:25', NULL),
+(146, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 17:00:50', NULL),
+(147, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 17:01:41', NULL),
+(148, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/delete/7', 'Delete data 7 at Gallery', '', 1, '2020-05-16 17:01:59', NULL),
+(149, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/galleries/add-save', 'Add New Data  at Gallery', '', 1, '2020-05-16 17:02:28', NULL),
+(150, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36', 'http://localhost/furtune/admin/login', 'admin@crudbooster.com login with IP Address ::1', '', 1, '2020-05-16 23:45:20', NULL),
+(151, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/login', 'admin@crudbooster.com login with IP Address 37.111.205.205', '', 1, '2020-05-17 21:49:37', NULL),
+(152, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/users/edit-save/1', 'Update data Super Admin at Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2020-05/admin.jpg</td></tr><tr><td>email</td><td>admin@crudbooster.com</td><td>admin@developer.com</td></tr><tr><td>password</td><td>$2y$10$4K0oVzQJfVpXUTY8iih1WO5rc0ZgeF8rg6l8com70roAy9861KxWa</td><td>$2y$10$I2q0tjLDOJefvOgmRx9edeQYaywY/KT4EVa2XxiOASKZ/t1Q5G.W.</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:52:45', NULL),
+(153, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/users/add-save', 'Add New Data Fortune at Users Management', '', 1, '2020-05-17 21:54:14', NULL),
+(154, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/2', 'Update data Slider at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr></tbody></table>', 1, '2020-05-17 21:55:47', NULL),
+(155, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/20', 'Update data Customer Care at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>17</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:06', NULL),
+(156, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/21', 'Update data Franchisee at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>18</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:13', NULL);
+INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `details`, `id_cms_users`, `created_at`, `updated_at`) VALUES
+(157, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/22', 'Update data Feedback at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>19</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:19', NULL),
+(158, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/23', 'Update data Site Information at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>20</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:23', NULL),
+(159, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/19', 'Update data Corporate  Service at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>16</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:29', NULL),
+(160, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/18', 'Update data Lab Info at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>15</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:33', NULL),
+(161, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/17', 'Update data Legacy  Info at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>14</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:37', NULL),
+(162, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/16', 'Update data Corporate Partner at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>13</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:40', NULL),
+(163, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/15', 'Update data Career at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>12</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:43', NULL),
+(164, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/14', 'Update data Health Package Details at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>11</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:46', NULL),
+(165, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/13', 'Update data Health Package at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>10</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:49', NULL),
+(166, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/12', 'Update data Home Collection at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>9</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:53', NULL),
+(167, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/11', 'Update data Service Details at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>8</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:57:56', NULL),
+(168, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/9', 'Update data Sub Menu List at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>7</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:00', NULL),
+(169, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/8', 'Update data CSR at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>6</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:03', NULL),
+(170, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/6', 'Update data Team of Expert at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>5</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:07', NULL),
+(171, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/28', 'Update data Gallery at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>25</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:24', NULL),
+(172, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/5', 'Update data Company Profile at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:29', NULL),
+(173, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/4', 'Update data Submenu at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:32', NULL),
+(174, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/3', 'Update data Menu at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:58:35', NULL),
+(175, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/24', 'Update data Doctor at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>21</td><td></td></tr></tbody></table>', 1, '2020-05-17 21:59:01', NULL),
+(176, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/logout', 'admin@developer.com logout', '', 1, '2020-05-17 22:00:11', NULL),
+(177, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/login', 'admin@fortune.com login with IP Address 37.111.205.205', '', 2, '2020-05-17 22:00:18', NULL),
+(178, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/logout', 'admin@fortune.com logout', '', 2, '2020-05-17 22:01:28', NULL),
+(179, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/login', 'admin@developer.com login with IP Address 37.111.205.205', '', 1, '2020-05-17 22:01:38', NULL),
+(180, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/28', 'Update data Gallery at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>25</td><td></td></tr></tbody></table>', 1, '2020-05-17 22:02:14', NULL),
+(181, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/27', 'Update data Media & Event at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>24</td><td></td></tr></tbody></table>', 1, '2020-05-17 22:02:23', NULL),
+(182, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/26', 'Update data Appointment List at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>23</td><td></td></tr></tbody></table>', 1, '2020-05-17 22:02:27', NULL),
+(183, '37.111.205.205', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0', 'https://fortunehl.com/admin/menu_management/edit-save/25', 'Update data Doctors at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>22</td><td></td></tr></tbody></table>', 1, '2020-05-17 22:02:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -338,8 +390,8 @@ CREATE TABLE `cms_menus` (
   `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `is_active` tinyint(1) NOT NULL DEFAULT '1',
-  `is_dashboard` tinyint(1) NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
+  `is_dashboard` tinyint(1) NOT NULL DEFAULT 0,
   `id_cms_privileges` int(11) DEFAULT NULL,
   `sorting` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -351,29 +403,31 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(2, 'Slider', 'Route', 'AdminSlider13ControllerGetIndex', NULL, 'fa fa-image', 0, 1, 0, 1, 1, '2020-05-04 00:26:23', NULL),
-(3, 'Menu', 'Route', 'AdminMenuControllerGetIndex', NULL, 'fa fa-bars', 0, 1, 0, 1, 2, '2020-05-04 00:31:01', NULL),
-(4, 'Submenu', 'Route', 'AdminSubMenuControllerGetIndex', NULL, 'fa fa-bars', 0, 1, 0, 1, 3, '2020-05-04 00:34:32', NULL),
-(5, 'Company Profile', 'Route', 'AdminCompanyProfileControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 4, '2020-05-05 10:54:40', NULL),
-(6, 'Team of Expert', 'Route', 'AdminExpertTeamControllerGetIndex', NULL, 'fa fa-user', 0, 1, 0, 1, 5, '2020-05-05 17:04:35', NULL),
-(8, 'CSR', 'Route', 'AdminCsrs19ControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 6, '2020-05-06 12:36:45', NULL),
-(9, 'Sub Menu List', 'Route', 'AdminSubMenuListsControllerGetIndex', NULL, 'fa fa-th-list', 0, 1, 0, 1, 7, '2020-05-06 16:49:11', NULL),
-(11, 'Service Details', 'Route', 'AdminServiceInfos22ControllerGetIndex', NULL, 'fa fa-plus', 0, 1, 0, 1, 8, '2020-05-07 02:40:28', NULL),
-(12, 'Home Collection', 'Route', 'AdminHomeServicesControllerGetIndex', NULL, 'fa fa-server', 0, 1, 0, 1, 9, '2020-05-09 15:20:07', NULL),
-(13, 'Health Package', 'Route', 'AdminHealthPackagesControllerGetIndex', NULL, 'fa fa-plus-circle', 0, 1, 0, 1, 10, '2020-05-09 15:49:10', NULL),
-(14, 'Health Package Details', 'Route', 'AdminPackageDetailsControllerGetIndex', NULL, 'fa fa-plus-circle', 0, 1, 0, 1, 11, '2020-05-09 16:14:12', NULL),
-(15, 'Career', 'Route', 'AdminCareersControllerGetIndex', NULL, 'fa fa-file', 0, 1, 0, 1, 12, '2020-05-09 23:19:41', NULL),
-(16, 'Corporate Partner', 'Route', 'AdminCorporatePartnersControllerGetIndex', NULL, 'fa fa-users', 0, 1, 0, 1, 13, '2020-05-10 16:04:35', NULL),
-(17, 'Legacy  Info', 'Route', 'AdminIndexInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 14, '2020-05-10 17:43:36', NULL),
-(18, 'Lab Info', 'Route', 'AdminLabInfosControllerGetIndex', NULL, 'fa fa-flask', 0, 1, 0, 1, 15, '2020-05-10 17:45:26', NULL),
-(19, 'Corporate  Service', 'Route', 'AdminCorporateServicesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 16, '2020-05-10 17:48:17', NULL),
-(20, 'Customer Care', 'Route', 'AdminCustomerCaresControllerGetIndex', NULL, 'fa fa-phone-square', 0, 1, 0, 1, 17, '2020-05-12 00:15:48', NULL),
-(21, 'Franchisee', 'Route', 'AdminFranchiseesControllerGetIndex', NULL, 'fa fa-star', 0, 1, 0, 1, 18, '2020-05-13 00:21:49', NULL),
-(22, 'Feedback', 'Route', 'AdminFeedbackControllerGetIndex', NULL, 'fa fa-repeat', 0, 1, 0, 1, 19, '2020-05-15 00:23:38', NULL),
-(23, 'Site Information', 'Route', 'AdminSiteInfosControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 20, '2020-05-15 14:52:23', NULL),
-(24, 'Doctor', 'Route', 'AdminDoctorsControllerGetIndex', NULL, 'fa fa-info', 0, 1, 0, 1, 21, '2020-05-15 14:52:23', NULL),
-(25, 'Doctors', 'Route', 'AdminDoctors36ControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 22, '2020-05-15 11:35:55', NULL),
-(26, 'Appointment List', 'Route', 'AdminListAppointmentsControllerGetIndex', NULL, 'fa fa-medkit', 0, 1, 0, 1, 23, '2020-05-15 15:47:38', NULL);
+(2, 'Slider', 'Route', 'AdminSlider13ControllerGetIndex', 'normal', 'fa fa-image', 0, 1, 0, 1, 1, '2020-05-04 00:26:23', '2020-05-17 21:55:47'),
+(3, 'Menu', 'Route', 'AdminMenuControllerGetIndex', 'normal', 'fa fa-bars', 0, 1, 0, 1, 2, '2020-05-04 00:31:01', '2020-05-17 21:58:35'),
+(4, 'Submenu', 'Route', 'AdminSubMenuControllerGetIndex', 'normal', 'fa fa-bars', 0, 1, 0, 1, 3, '2020-05-04 00:34:32', '2020-05-17 21:58:32'),
+(5, 'Company Profile', 'Route', 'AdminCompanyProfileControllerGetIndex', 'normal', 'fa fa-home', 0, 1, 0, 1, 4, '2020-05-05 10:54:40', '2020-05-17 21:58:29'),
+(6, 'Team of Expert', 'Route', 'AdminExpertTeamControllerGetIndex', 'normal', 'fa fa-user', 0, 1, 0, 1, 5, '2020-05-05 17:04:35', '2020-05-17 21:58:07'),
+(8, 'CSR', 'Route', 'AdminCsrs19ControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 6, '2020-05-06 12:36:45', '2020-05-17 21:58:03'),
+(9, 'Sub Menu List', 'Route', 'AdminSubMenuListsControllerGetIndex', 'normal', 'fa fa-th-list', 0, 1, 0, 1, 7, '2020-05-06 16:49:11', '2020-05-17 21:58:00'),
+(11, 'Service Details', 'Route', 'AdminServiceInfos22ControllerGetIndex', 'normal', 'fa fa-plus', 0, 1, 0, 1, 8, '2020-05-07 02:40:28', '2020-05-17 21:57:56'),
+(12, 'Home Collection', 'Route', 'AdminHomeServicesControllerGetIndex', 'normal', 'fa fa-server', 0, 1, 0, 1, 9, '2020-05-09 15:20:07', '2020-05-17 21:57:53'),
+(13, 'Health Package', 'Route', 'AdminHealthPackagesControllerGetIndex', 'normal', 'fa fa-plus-circle', 0, 1, 0, 1, 10, '2020-05-09 15:49:10', '2020-05-17 21:57:49'),
+(14, 'Health Package Details', 'Route', 'AdminPackageDetailsControllerGetIndex', 'normal', 'fa fa-plus-circle', 0, 1, 0, 1, 11, '2020-05-09 16:14:12', '2020-05-17 21:57:46'),
+(15, 'Career', 'Route', 'AdminCareersControllerGetIndex', 'normal', 'fa fa-file', 0, 1, 0, 1, 12, '2020-05-09 23:19:41', '2020-05-17 21:57:43'),
+(16, 'Corporate Partner', 'Route', 'AdminCorporatePartnersControllerGetIndex', 'normal', 'fa fa-users', 0, 1, 0, 1, 13, '2020-05-10 16:04:35', '2020-05-17 21:57:40'),
+(17, 'Legacy  Info', 'Route', 'AdminIndexInfosControllerGetIndex', 'normal', 'fa fa-info', 0, 1, 0, 1, 14, '2020-05-10 17:43:36', '2020-05-17 21:57:37'),
+(18, 'Lab Info', 'Route', 'AdminLabInfosControllerGetIndex', 'normal', 'fa fa-flask', 0, 1, 0, 1, 15, '2020-05-10 17:45:26', '2020-05-17 21:57:33'),
+(19, 'Corporate  Service', 'Route', 'AdminCorporateServicesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 16, '2020-05-10 17:48:17', '2020-05-17 21:57:29'),
+(20, 'Customer Care', 'Route', 'AdminCustomerCaresControllerGetIndex', 'normal', 'fa fa-phone-square', 0, 1, 0, 1, 17, '2020-05-12 00:15:48', '2020-05-17 21:57:06'),
+(21, 'Franchisee', 'Route', 'AdminFranchiseesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 18, '2020-05-13 00:21:49', '2020-05-17 21:57:13'),
+(22, 'Feedback', 'Route', 'AdminFeedbackControllerGetIndex', 'normal', 'fa fa-repeat', 0, 1, 0, 1, 19, '2020-05-15 00:23:38', '2020-05-17 21:57:19'),
+(23, 'Site Information', 'Route', 'AdminSiteInfosControllerGetIndex', 'normal', 'fa fa-info', 0, 1, 0, 1, 20, '2020-05-15 14:52:23', '2020-05-17 21:57:23'),
+(24, 'Doctor', 'Route', 'AdminDoctorsControllerGetIndex', 'normal', 'fa fa-info', 0, 1, 0, 1, 21, '2020-05-15 14:52:23', '2020-05-17 21:59:01'),
+(25, 'Doctors', 'Route', 'AdminDoctors36ControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 22, '2020-05-15 11:35:55', '2020-05-17 22:02:30'),
+(26, 'Appointment List', 'Route', 'AdminListAppointmentsControllerGetIndex', 'normal', 'fa fa-medkit', 0, 1, 0, 1, 23, '2020-05-15 15:47:38', '2020-05-17 22:02:27'),
+(27, 'Media & Event', 'Route', 'AdminEventsControllerGetIndex', 'normal', 'fa fa-music', 0, 1, 0, 1, 24, '2020-05-16 13:30:42', '2020-05-17 22:02:23'),
+(28, 'Gallery', 'Route', 'AdminGalleriesControllerGetIndex', 'normal', 'fa fa-image', 0, 1, 0, 1, 25, '2020-05-16 16:48:10', '2020-05-17 22:02:14');
 
 -- --------------------------------------------------------
 
@@ -393,30 +447,58 @@ CREATE TABLE `cms_menus_privileges` (
 
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
 (1, 1, 1),
-(2, 2, 1),
-(3, 3, 1),
-(4, 4, 1),
-(5, 5, 1),
-(6, 6, 1),
 (7, 7, 1),
-(8, 8, 1),
-(9, 9, 1),
 (10, 10, 1),
-(11, 11, 1),
-(12, 12, 1),
-(13, 13, 1),
-(14, 14, 1),
-(15, 15, 1),
-(16, 16, 1),
-(17, 17, 1),
-(18, 18, 1),
-(19, 19, 1),
-(20, 20, 1),
-(21, 21, 1),
-(22, 22, 1),
-(23, 23, 1),
-(24, 25, 1),
-(25, 26, 1);
+(28, 2, 2),
+(29, 2, 1),
+(30, 20, 2),
+(31, 20, 1),
+(32, 21, 2),
+(33, 21, 1),
+(34, 22, 2),
+(35, 22, 1),
+(36, 23, 2),
+(37, 23, 1),
+(38, 19, 2),
+(39, 19, 1),
+(40, 18, 2),
+(41, 18, 1),
+(42, 17, 2),
+(43, 17, 1),
+(44, 16, 2),
+(45, 16, 1),
+(46, 15, 2),
+(47, 15, 1),
+(48, 14, 2),
+(49, 14, 1),
+(50, 13, 2),
+(51, 13, 1),
+(52, 12, 2),
+(53, 12, 1),
+(54, 11, 2),
+(55, 11, 1),
+(56, 9, 2),
+(57, 9, 1),
+(58, 8, 2),
+(59, 8, 1),
+(60, 6, 2),
+(61, 6, 1),
+(64, 5, 2),
+(65, 5, 1),
+(66, 4, 2),
+(67, 4, 1),
+(68, 3, 2),
+(69, 3, 1),
+(70, 24, 2),
+(71, 24, 1),
+(72, 28, 2),
+(73, 28, 1),
+(74, 27, 2),
+(75, 27, 1),
+(76, 26, 2),
+(77, 26, 1),
+(78, 25, 2),
+(79, 25, 1);
 
 -- --------------------------------------------------------
 
@@ -431,8 +513,8 @@ CREATE TABLE `cms_moduls` (
   `path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `table_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `controller` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `is_protected` tinyint(1) NOT NULL DEFAULT '0',
-  `is_active` tinyint(1) NOT NULL DEFAULT '0',
+  `is_protected` tinyint(1) NOT NULL DEFAULT 0,
+  `is_active` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -479,7 +561,9 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (34, 'Site Information', 'fa fa-info', 'site_infos', 'site_infos', 'AdminSiteInfosController', 0, 0, '2020-05-15 14:52:22', NULL, NULL),
 (35, 'Doctors', 'fa fa-info', 'doctors', 'doctors', 'AdminDoctorsController', 0, 0, '2020-05-15 14:52:22', NULL, NULL),
 (36, 'Doctors', 'fa fa-glass', 'doctors36', 'doctors', 'AdminDoctors36Controller', 0, 0, '2020-05-15 11:35:55', NULL, NULL),
-(37, 'Appointment List', 'fa fa-medkit', 'list_appointments', 'list_appointments', 'AdminListAppointmentsController', 0, 0, '2020-05-15 15:47:38', NULL, NULL);
+(37, 'Appointment List', 'fa fa-medkit', 'list_appointments', 'list_appointments', 'AdminListAppointmentsController', 0, 0, '2020-05-15 15:47:38', NULL, NULL),
+(38, 'Media & Event', 'fa fa-music', 'events', 'events', 'AdminEventsController', 0, 0, '2020-05-16 13:30:42', NULL, NULL),
+(39, 'Gallery', 'fa fa-image', 'galleries', 'galleries', 'AdminGalleriesController', 0, 0, '2020-05-16 16:48:10', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -517,7 +601,8 @@ CREATE TABLE `cms_privileges` (
 --
 
 INSERT INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `created_at`, `updated_at`) VALUES
-(1, 'Super Administrator', 1, 'skin-red', '2020-05-01 23:30:23', NULL);
+(1, 'Super Administrator', 1, 'skin-red', '2020-05-01 23:30:23', NULL),
+(2, 'Admin', 0, 'skin-black', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -578,7 +663,34 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (33, 1, 1, 1, 1, 1, 1, 33, NULL, NULL),
 (34, 1, 1, 1, 1, 1, 1, 34, NULL, NULL),
 (35, 1, 1, 1, 1, 1, 1, 36, NULL, NULL),
-(36, 1, 1, 1, 1, 1, 1, 37, NULL, NULL);
+(36, 1, 1, 1, 1, 1, 1, 37, NULL, NULL),
+(37, 1, 1, 1, 1, 1, 1, 38, NULL, NULL),
+(38, 1, 1, 1, 1, 1, 1, 39, NULL, NULL),
+(39, 1, 1, 1, 1, 1, 2, 37, NULL, NULL),
+(40, 1, 1, 1, 1, 1, 2, 26, NULL, NULL),
+(41, 1, 1, 1, 1, 1, 2, 16, NULL, NULL),
+(42, 1, 1, 1, 1, 1, 2, 30, NULL, NULL),
+(43, 1, 1, 1, 1, 1, 2, 27, NULL, NULL),
+(44, 1, 1, 1, 1, 1, 2, 19, NULL, NULL),
+(45, 1, 1, 1, 1, 1, 2, 31, NULL, NULL),
+(46, 1, 1, 1, 1, 1, 2, 35, NULL, NULL),
+(47, 1, 1, 1, 1, 1, 2, 36, NULL, NULL),
+(48, 1, 1, 1, 1, 1, 2, 33, NULL, NULL),
+(49, 1, 1, 1, 1, 1, 2, 32, NULL, NULL),
+(50, 1, 1, 1, 1, 1, 2, 39, NULL, NULL),
+(51, 1, 1, 1, 1, 1, 2, 24, NULL, NULL),
+(52, 1, 1, 1, 1, 1, 2, 25, NULL, NULL),
+(53, 1, 1, 1, 1, 1, 2, 23, NULL, NULL),
+(54, 1, 1, 1, 1, 1, 2, 29, NULL, NULL),
+(55, 1, 1, 1, 1, 1, 2, 28, NULL, NULL),
+(56, 1, 1, 1, 1, 1, 2, 38, NULL, NULL),
+(57, 1, 1, 1, 1, 0, 2, 14, NULL, NULL),
+(58, 1, 1, 1, 1, 1, 2, 22, NULL, NULL),
+(59, 1, 1, 1, 1, 1, 2, 34, NULL, NULL),
+(60, 1, 1, 1, 1, 1, 2, 13, NULL, NULL),
+(61, 1, 1, 1, 1, 1, 2, 20, NULL, NULL),
+(62, 1, 1, 1, 1, 1, 2, 15, NULL, NULL),
+(63, 1, 1, 1, 1, 1, 2, 17, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -589,7 +701,7 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 CREATE TABLE `cms_settings` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci,
+  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content_input_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `dataenum` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `helper` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -649,7 +761,7 @@ CREATE TABLE `cms_statistic_components` (
   `area_name` varchar(55) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sorting` int(11) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `config` longtext COLLATE utf8mb4_unicode_ci,
+  `config` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -677,7 +789,8 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$4K0oVzQJfVpXUTY8iih1WO5rc0ZgeF8rg6l8com70roAy9861KxWa', 1, '2020-05-01 23:30:23', NULL, 'Active');
+(1, 'Super Admin', 'uploads/1/2020-05/admin.jpg', 'admin@developer.com', '$2y$10$I2q0tjLDOJefvOgmRx9edeQYaywY/KT4EVa2XxiOASKZ/t1Q5G.W.', 1, '2020-05-01 23:30:23', '2020-05-17 21:52:45', 'Active'),
+(2, 'Fortune', 'uploads/1/2020-05/admin.jpg', 'admin@fortune.com', '$2y$10$ELJDST0tmaBVrCuPyXP.6.jj0gx.MKRNFZV8/YvFApM32DVBt./gS', 2, '2020-05-17 21:54:14', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -860,6 +973,30 @@ INSERT INTO `doctor_times` (`id`, `doctor_id`, `start_days`, `end_days`, `strat_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'NEW CENTRE LAUNCH AT TAMLUK : Eastern India’s largest Superspeciality', 'Eastern India’s largest Superspeciality diagnostic chain now extends to Medinipur with the opening of its pathological lab in Tamluk on 17th August, 2018. On this occasion, Chairman of Tamluk Municipality, Mr. Rabindranath Sen, and Vice Chairman of Tamluk', 'uploads/1/2020-05/img1_s.jpg', '2020-05-16 13:32:58', NULL),
+(2, 'NEW CENTRE LAUNCH AT TAMLUK :', 'Eastern India’s largest Superspeciality diagnostic chain now extends to Medinipur with the opening of its pathological lab in Tamluk on 17th August, 2018. On this occasion, Chairman of Tamluk Municipality, Mr. Rabindranath Sen, and Vice Chairman of Tamluk', 'uploads/1/2020-05/img4_s.jpg', '2020-05-16 13:33:15', NULL),
+(3, 'NEW CENTRE LAUNCH AT TAMLUK : Eastern India’s largest Superspeciality', 'Eastern India’s largest Superspeciality diagnostic chain now extends to Medinipur with the opening of its pathological lab in Tamluk on 17th August, 2018. On this occasion, Chairman of Tamluk Municipality, Mr. Rabindranath Sen, and Vice Chairman of Tamluk', 'uploads/1/2020-05/press_conference_s.jpg', '2020-05-16 13:33:30', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `expert_team`
 --
 
@@ -927,7 +1064,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -997,6 +1134,33 @@ CREATE TABLE `franchisees` (
 
 INSERT INTO `franchisees` (`id`, `name`, `age`, `locality`, `area`, `phone`, `email`, `pin_code`, `created_at`, `updated_at`) VALUES
 (1, 'adf', '343', 'afds', '343', '2323', 'sas@admim.com', '323', '2020-05-13 00:19:49', '2020-05-13 00:19:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `image`, `created_at`, `updated_at`) VALUES
+(2, 'uploads/1/2020-05/scientist_in_laboratory_3735709.jpg', '2020-05-16 16:51:15', NULL),
+(3, 'uploads/1/2020-05/person_in_white_long_sleeve_shirt_holding_injection_3985166.jpg', '2020-05-16 16:51:24', NULL),
+(5, 'uploads/1/2020-05/computer_desk_laptop_stethoscope_48604.jpg', '2020-05-16 16:51:40', NULL),
+(6, 'uploads/1/2020-05/crop_laboratory_technician_examining_interaction_of_3825573.jpg', '2020-05-16 16:51:49', NULL),
+(8, 'uploads/1/2020-05/two_person_doing_surgery_inside_room_1250655.jpg', '2020-05-16 17:00:25', NULL),
+(9, 'uploads/1/2020-05/woman_in_blue_scrub_suit_feeling_happy_3985296.jpg', '2020-05-16 17:00:49', NULL),
+(10, 'uploads/1/2020-05/laboratory_test_tubes_2280549.jpg', '2020-05-16 17:01:41', NULL),
+(11, 'uploads/1/2020-05/adult_biology_chemical_chemist_356040.jpg', '2020-05-16 17:02:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -1103,7 +1267,7 @@ CREATE TABLE `list_appointments` (
   `dateOfAppoinment` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `timeAppoinment` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phoneNumber` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `diseaseTopic` text COLLATE utf8mb4_unicode_ci,
+  `diseaseTopic` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `doctor_id` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1215,7 +1379,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (54, '2020_05_14_175054_create_feedback_table', 22),
 (55, '2020_05_15_084324_create_site_infos_table', 23),
 (56, '2020_05_15_102336_create_faqs_table', 24),
-(57, '2020_05_15_205150_create_list_appointments_table', 25);
+(57, '2020_05_15_205150_create_list_appointments_table', 25),
+(58, '2020_05_15_110702_create_service_submenus_table', 26),
+(59, '2020_05_16_072729_create_events_table', 26),
+(60, '2020_05_16_104429_create_galleries_table', 27);
 
 -- --------------------------------------------------------
 
@@ -1268,6 +1435,22 @@ INSERT INTO `service_infos` (`id`, `title`, `description`, `image`, `menu_list_i
 (5, 'Test', 'dewde', '_user5ebea369bd9c26.41345937.png', '7', NULL, NULL),
 (6, 'dedew', 'dewdew', 'service/55ebea7d1986c8_55eb477db0fdef_nuser-img.png', '7', NULL, NULL),
 (7, 'Test', 'fnjewnfrej', 'public/service/55ebebc402c03e_admin.jpg', '10', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_submenus`
+--
+
+CREATE TABLE `service_submenus` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `submenu_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `route_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subemnu` int(11) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1365,7 +1548,7 @@ INSERT INTO `submenuses` (`id`, `sub_menu_name`, `route_name`, `menu_id`, `creat
 
 CREATE TABLE `submenu_facilities` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `item_name` text COLLATE utf8mb4_unicode_ci,
+  `item_name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `submenu_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1538,6 +1721,12 @@ ALTER TABLE `doctor_times`
   ADD KEY `doctor_times_doctor_id_foreign` (`doctor_id`);
 
 --
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `expert_team`
 --
 ALTER TABLE `expert_team`
@@ -1571,6 +1760,12 @@ ALTER TABLE `feedback`
 -- Indexes for table `franchisees`
 --
 ALTER TABLE `franchisees`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `galleries`
+--
+ALTER TABLE `galleries`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1625,6 +1820,12 @@ ALTER TABLE `package_details`
 -- Indexes for table `service_infos`
 --
 ALTER TABLE `service_infos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `service_submenus`
+--
+ALTER TABLE `service_submenus`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1702,25 +1903,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `cms_notifications`
@@ -1732,13 +1933,13 @@ ALTER TABLE `cms_notifications`
 -- AUTO_INCREMENT for table `cms_privileges`
 --
 ALTER TABLE `cms_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -1762,7 +1963,7 @@ ALTER TABLE `cms_statistic_components`
 -- AUTO_INCREMENT for table `cms_users`
 --
 ALTER TABLE `cms_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `company_profile`
@@ -1807,6 +2008,12 @@ ALTER TABLE `doctor_times`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `expert_team`
 --
 ALTER TABLE `expert_team`
@@ -1841,6 +2048,12 @@ ALTER TABLE `feedback`
 --
 ALTER TABLE `franchisees`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `health_packages`
@@ -1882,7 +2095,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `package_details`
@@ -1895,6 +2108,12 @@ ALTER TABLE `package_details`
 --
 ALTER TABLE `service_infos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `service_submenus`
+--
+ALTER TABLE `service_submenus`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `site_infos`
