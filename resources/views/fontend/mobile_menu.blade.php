@@ -1,8 +1,5 @@
 
 <!--**************  Responsive Menu Start ********************-->
-
-
-
 <div class="menudiv_responsive">
 
 <div id="dl-menu" class="dl-menuwrapper">
