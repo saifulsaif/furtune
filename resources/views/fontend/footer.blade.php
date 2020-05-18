@@ -41,7 +41,7 @@
 <div class="footer_menudiv">
 
 <a href="{{url('/')}}"><div class="footer_menutxt">Home</div></a>
-<a href="find-test.html"><div class="footer_menutxt">Find a Test</div></a>
+<a href="#"><div class="footer_menutxt">Find a Test</div></a>
 <a href="{{url('/getDoctor')}}"><div class="footer_menutxt">Book an Appointment</div></a>
 <!--<a href="https://surakshadiagnostic.com/" target="_blank"><div class="footer_menutxt">Blog</div></a>-->
 <a href="{{route('feedback')}}"><div class="footer_menutxt">Feedback</div></a>
@@ -84,29 +84,28 @@
 
 <div class="copyright_mainBG_responsive">
 
-<div class="copyright_txt">Copyright @ 2019 FurtuneDiagnostic Private Limited.<br />
-Developed By GL Technologies</div>
+<div class="copyright_txt">{{$site_infos->footer_info}}p</div>
 
-<div class="copyright_txt"><div class="app_imgdiv"><a href="https://play.google.com/store/apps/details?id=com.diagnostic.suraksha" target="_blank"><img src="{!! asset('public/images/badges-Apps.png') !!}" alt="Google Play" class="img_css" /></a></div></div>
+<div class="copyright_txt"><div class="app_imgdiv"><a href="{{$site_infos->app_link}}" target="_blank"><img src="{!! asset('public/images/badges-Apps.png') !!}" alt="Google Play" class="img_css" /></a></div></div>
 
 <div class="copyright_txt"><div class="socialicon_mainBG_responsive">
 
 
-<div class="icon_div"><div class="instagram_button"><a href="https://www.instagram.com/suraksha_diagnostics/" target="_blank"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="instagram_button"><a href="{{$site_infos->instagram}}" target="_blank"><i class="fa fa-instagram fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div"><div class="linkedin_button"><a href="https://www.linkedin.com/company/suraksha-diagnostic-pvt-ltd-calcutta-india" target="_blank"><i class="fa fa-linkedin fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="linkedin_button"><a href="#" target="_blank"><i class="fa fa-linkedin fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
-<div class="icon_div"><div class="youtube_button"><a href="https://www.youtube.com/channel/UC61ZuBx3CnjiwkZbLeR9deg" target="_blank"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
-
-
-
-<div class="icon_div"><div class="twitter_button"><a href="https://twitter.com/surakshatweets" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+<div class="icon_div"><div class="youtube_button"><a href="{{$site_infos->youtube}}" target="_blank"><i class="fa fa-youtube-play fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
 
 
 
-<div class="icon_div" style="margin-left:0px;"><div class="facebook_button"><a href="https://www.facebook.com/SurakshaDiagnosticServices/" target="_blank"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
+<div class="icon_div"><div class="twitter_button"><a href="{{$site_infos->twitter}}" ><i class="fa fa-twitter  fa-1x " style="color:#FFFFFF; " ></i></a></div></div>
+
+
+
+<div class="icon_div" style="margin-left:0px;"><div class="facebook_button"><a href="{{$site_infos->facebookpppppppp}}" target="_blank"><i class="fa fa-facebook fa-1x " style="color:#FFFFFF;  " ></i></a></div></div>
 
 
 

@@ -34,7 +34,7 @@
 
 
 <div class="static_pagetxt" style="margin-bottom:25px;">
-FurtuneDiagnostics offers a wide network of home collection services to residents of West Bengal, Bihar, Delhi & NCR.  All home collection services are extended to patients residing within 10-30 km of our centers spread all over West Bengal, and those in Delhi & NCR and Bihar. We have thoroughly trained phlebotomists who ensure that your sample collection is hassle-free and effortless. Availing our home collection services is easy and affordable.
+FortuneDiagnostics offers a wide network of home collection services to residents of West Bengal, Bihar, Delhi & NCR.  All home collection services are extended to patients residing within 10-30 km of our centers spread all over West Bengal, and those in Delhi & NCR and Bihar. We have thoroughly trained phlebotomists who ensure that your sample collection is hassle-free and effortless. Availing our home collection services is easy and affordable.
 
 
 

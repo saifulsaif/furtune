@@ -89,13 +89,15 @@ class AppointmentController extends Controller
     public function getDoctor()
     {
         $doctors = doctors::with('times')->orderBy('id', 'DESC')->get();
-        return view('fontend.appoinment.appointment',compact('doctors'));
+        $site_infos= first_row_date('site_infos');
+        return view('fontend.appoinment.appointment',compact('doctors','site_infos'));
     }
 
     public function getAppoinmet($id)
     {
        $doctors = doctors::with('times')->orderBy('id', 'DESC')->where('id',$id)->first();
-       return view('fontend.appoinment.appointment_form',compact('doctors'));
+       $site_infos= first_row_date('site_infos');
+       return view('fontend.appoinment.appointment_form',compact('doctors','site_infos'));
     }
     public function sendAppointment()
     {

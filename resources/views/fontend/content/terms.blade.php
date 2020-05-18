@@ -39,7 +39,7 @@
 
 
 
-Welcome to Furtune Diagnostics Private Limited’s Web site. Whenever the terms "we," "us," or "our" are used in these terms and conditions, they refer to Furtune Diagnostics Private Limited. We appreciate your interest in us and our services. Our Web site is provided by us for the benefit of our patients, the general public and health professionals. The following terms and conditions govern your use of our Web site. When you access, view or use our Web site, you accept these terms and conditions and agree to be legally bound by them. Please read these terms and conditions carefully; and if you do not accept them, please exit our Web site immediately.<br />
+Welcome to Fortune Diagnostics Private Limited’s Web site. Whenever the terms "we," "us," or "our" are used in these terms and conditions, they refer to Fortune Diagnostics Private Limited. We appreciate your interest in us and our services. Our Web site is provided by us for the benefit of our patients, the general public and health professionals. The following terms and conditions govern your use of our Web site. When you access, view or use our Web site, you accept these terms and conditions and agree to be legally bound by them. Please read these terms and conditions carefully; and if you do not accept them, please exit our Web site immediately.<br />
 <br />
 <br />
 <span class="static_subheading">Changes</span><br />

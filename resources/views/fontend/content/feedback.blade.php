@@ -49,7 +49,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 </div>
 
 <div class="static_pagetxt" style="margin-bottom:30px;">
- <span style="font-size:28px; font-weight:bold; color:#990000;" >Assess Furtune </span>
+ <span style="font-size:28px; font-weight:bold; color:#990000;" >Assess Fortune </span>
 
 </div>
 
@@ -61,7 +61,7 @@ Your opinion has weight! We encourage you to appraise our services.</div>
 <div class="registration_div">
 
 <div class="registrationmain_divleft">
-<div class="formtxt">Are you happy with your experience at Furtune?</div>
+<div class="formtxt">Are you happy with your experience at Fortune?</div>
 
 <div class="feedbackformdiv" >
 <select name="experiance" required id="experiance" class="form_style">

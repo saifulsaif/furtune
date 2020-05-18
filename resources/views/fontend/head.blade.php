@@ -5,8 +5,8 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Furtune</title>
-<meta name="description" content="FurtuneDiagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
+<title>Fortune</title>
+<meta name="description" content="FortuneDiagnostics is the best diagnostic centre in Kolkata for complete health checkups, blood test, cardiology, Pathology, x-ray, Usg, CT scan, ECG"/>
 <meta name="keywords" content="Best Diagnostic Clinic in Kolkata"/>
 <link rel="canonical" href="index.html" />
 

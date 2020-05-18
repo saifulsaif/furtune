@@ -25,15 +25,15 @@
 
 <div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to download report online</div>
 
-<a href="http://Furtunenet.in/" target="_blank"><div class="download_report_div">Download Report</div></a>
+<a href="#" target="_blank"><div class="download_report_div">Download Report</div></a>
 
 
-<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="download_report_div">Download Report</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="download_report_div">Download Report</div></a>-->
 
 
-<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
-<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
-<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" >Online Report Bihar</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
+<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
+<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" >Online Report Bihar</div></a>-->
 
 </div>
 
@@ -50,95 +50,7 @@
 
 <!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code"  maxlength="6" onkeypress="return isNumberKey(event)"/></div>-->
 <div class="icon_subheading"><select data-placeholder="Search By Location..." class="download_report_div" name="center_id" id="center_id" style="width:100%; border:0px; background-color:#FFF;" required >
-             <option value="" selected="selected">Search By Location</option>
 
-  <optgroup label="West Bengal">
-  <option value="west-bengal/bangaon">Bangaon</option>
-
-  <option value="west-bengal/barasat">Barasat</option>
-
-  <option value="west-bengal/barrackpore-">Barrackpore </option>
-
-  <option value="west-bengal/basirhat">Basirhat</option>
-
-  <option value="west-bengal/bhatpara">Bhatpara</option>
-
-  <option value="west-bengal/birati">Birati</option>
-
-  <option value="west-bengal/chinar-park">Chinar Park</option>
-
-  <option value="west-bengal/diamond-harbour">Diamond Harbour</option>
-
-  <option value="west-bengal/dunlop">Dunlop</option>
-
-  <option value="west-bengal/elgin-road">Elgin Road</option>
-
-  <option value="west-bengal/garia">Garia</option>
-
-  <option value="west-bengal/habra">Habra</option>
-
-  <option value="west-bengal/hatibagan">Hatibagan</option>
-
-  <option value="west-bengal/howrah">Howrah</option>
-
-  <option value="west-bengal/jalpaiguri">Jalpaiguri</option>
-
-  <option value="west-bengal/jodhpur-park">Jodhpur Park</option>
-
-  <option value="west-bengal/kasba">Kasba</option>
-
-  <option value="west-bengal/kestopur">Kestopur</option>
-
-  <option value="west-bengal/kharda">Kharda</option>
-
-  <option value="west-bengal/krishnanagar">Krishnanagar</option>
-
-  <option value="west-bengal/laketown">Laketown</option>
-
-  <option value="west-bengal/madhyamgram">Madhyamgram</option>
-
-  <option value="west-bengal/nagerbazar">Nagerbazar</option>
-
-  <option value="west-bengal/new-barrackpore">New Barrackpore</option>
-
-  <option value="west-bengal/nrs-hospital-ajc-bose-rd">NRS Hospital AJC Bose Rd</option>
-
-  <option value="west-bengal/phoolbagan">Phoolbagan</option>
-
-  <option value="west-bengal/pradhan-nagar">Pradhan Nagar</option>
-
-  <option value="west-bengal/salt-lake-dd-18/1">Salt Lake DD 18/1</option>
-
-  <option value="west-bengal/salt-lake-jc-21">Salt Lake JC 21</option>
-
-  <option value="west-bengal/serampore">Serampore</option>
-
-  <option value="west-bengal/siliguri">Siliguri</option>
-
-  <option value="west-bengal/sinthee-">Sinthee </option>
-
-  <option value="west-bengal/sodepur">Sodepur</option>
-
-  <option value="west-bengal/Furtune-mri-and-polyclinic">FurtuneMRI and Polyclinic</option>
-
-  <option value="west-bengal/tamluk">Tamluk</option>
-
-  </optgroup>
- <!--<optgroup label="Delhi & NCR">
-  <option value="delhi-&ncr/janakpuri">Janakpuri</option>
-
-  <option value="delhi-&ncr/kirti-nagar">Kirti Nagar</option>
-
-  <option value="delhi-&ncr/noida">Noida</option>
-
-  <option value="delhi-&ncr/saini-enclave">Saini Enclave</option>
-
-  </optgroup>-->
-
- <optgroup label="Bihar">
-  <option value="bihar/kamini-center">Kamini Center</option>
-
-  </optgroup>
           </select></div>
 <div class="icon_subheading">
 <input name="search" type="button" onclick="get_center()" value="Search" class="nearestlab_btn" style="width:100%;" />
@@ -178,13 +90,13 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<div class="icon_subheading2" style="margin-bottom:15px;">KOLKATA : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hotline}}</span></div>
+<div class="icon_subheading2" style="margin-bottom:15px;">Phone : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
 
 
 
 <!--<div class="icon_subheading2" style="margin-bottom:15px;">DELHI & NCR : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>1800-121-9541 </span></div>-->
 
-<div class="icon_subheading2" >BIHAR : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>0952-309-6399 </span></div>
+<div class="icon_subheading2" >Hotline : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
 
 </div>
 
@@ -205,11 +117,11 @@
 <div class="icon_heading">DOWNLOAD REPORT</div>
 <div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to download report online</div>
 
-<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="download_report_div">Download Report</div></a>
+<a href="#" target="_blank"><div class="download_report_div">Download Report</div></a>
 
-<!--<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
-<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
-<a href="http://52.172.206.185:9623/Furtuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Bihar</div></a>-->
+<!--<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report West Bengal</div></a>
+<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Delhi & NCR</div></a>
+<a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Bihar</div></a>-->
 
 </div>
 
@@ -227,95 +139,7 @@
 <!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code" maxlength="6" onkeypress="return isNumberKey(event)" /></div>
 
 <div class="icon_subheading"><input name="search" type="submit" value="Search" class="nearestlab_btn" /></div>-->
-<div class="icon_subheading"><select data-placeholder="Search By Location..." name="res_center" id="res_center" onchange="resget_center()" class="download_report_div" style="width:100%; background-color:#FFF;" >
-             <option value="" selected="selected">Search By Location</option>
-            <optgroup label="West Bengal">
-  <option value="42">Bangaon</option>
-
-  <option value="1">Barasat</option>
-
-  <option value="2">Barrackpore </option>
-
-  <option value="3">Basirhat</option>
-
-  <option value="4">Bhatpara</option>
-
-  <option value="5">Birati</option>
-
-  <option value="29">Chinar Park</option>
-
-  <option value="28">Diamond Harbour</option>
-
-  <option value="6">Dunlop</option>
-
-  <option value="7">Elgin Road</option>
-
-  <option value="8">Garia</option>
-
-  <option value="12">Habra</option>
-
-  <option value="40">Hatibagan</option>
-
-  <option value="13">Howrah</option>
-
-  <option value="14">Jalpaiguri</option>
-
-  <option value="30">Jodhpur Park</option>
-
-  <option value="15">Kasba</option>
-
-  <option value="16">Kestopur</option>
-
-  <option value="17">Kharda</option>
-
-  <option value="36">Krishnanagar</option>
-
-  <option value="31">Laketown</option>
-
-  <option value="37">Madhyamgram</option>
-
-  <option value="18">Nagerbazar</option>
-
-  <option value="19">New Barrackpore</option>
-
-  <option value="20">NRS Hospital AJC Bose Rd</option>
-
-  <option value="21">Phoolbagan</option>
-
-  <option value="41">Pradhan Nagar</option>
-
-  <option value="23">Salt Lake DD 18/1</option>
-
-  <option value="24">Salt Lake JC 21</option>
-
-  <option value="39">Serampore</option>
-
-  <option value="27">Siliguri</option>
-
-  <option value="26">Sinthee </option>
-
-  <option value="25">Sodepur</option>
-
-  <option value="22">FurtuneMRI and Polyclinic</option>
-
-  <option value="38">Tamluk</option>
-
-  </optgroup>
- <optgroup label="Delhi & NCR">
-  <option value="10">Janakpuri</option>
-
-  <option value="11">Kirti Nagar</option>
-
-  <option value="34">Noida</option>
-
-  <option value="9">Saini Enclave</option>
-
-  </optgroup>
-
- <optgroup label="Bihar">
-  <option value="32">Kamini Center</option>
-
-  </optgroup>
+<div class="icon_subheading"><select data-placeholder="Search By Location..." name="res_center" id="res_center" onchange="resget_center()" class="download_report_div" style="width:100%; background-color:#FFF;" action="false" readonly>
 
 
           </select></div>
@@ -333,13 +157,13 @@
 </div>
 
 <div class="icon_heading">QUICK LINKS</div>
-<a href="customer-care.php"><div class="icon_subheading1">Customer Care</div></a>
+<a href="{{route('customer_care')}}"><div class="icon_subheading1">Customer Care</div></a>
 
-<a href="home-service.php"><div class="icon_subheading1">Home Collection Services</div></a>
+<a href="{{route('home_collection')}}"><div class="icon_subheading1">Home Collection Services</div></a>
 
-<a href="polyclinic.php"><div class="icon_subheading1">Doctor's Appointment</div></a>
+<a href="{{url('/getDoctor')}}"><div class="icon_subheading1">Doctor's Appointment</div></a>
 
-<a href="media.php"><div class="icon_subheading1">Media & Events</div></a>
+<a href="{{route('event')}}"><div class="icon_subheading1">Media & Events</div></a>
 
 
 </div>
@@ -351,13 +175,11 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<a href="tel:03366191000"><div class="icon_subheading2" >KOLKATA  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>033-6619-1000</span></div></a>
+<a href="tel:03366191000"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
 
 
 
-<a href="tel:18001219541"><div class="icon_subheading2" >DELHI & NCR  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>1800-121-9541</span></div></a>
-
-<a href="tel:09523096399"><div class="icon_subheading2" >BIHAR  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>0952-309-6399</span></div></a>
+<a href="tel:18001219541"><div class="icon_subheading2" >hoteline <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div></a>
 
 </div>
 
@@ -380,7 +202,7 @@
 @foreach($index_infos as $info)
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FurtuneDiagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FortuneDiagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
 
 
 <br />
@@ -421,7 +243,7 @@
 <br />
  </div>
 
-<!--<div class="welcome_bodytxt"><a href="https://Furtunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>--->
+<!--<div class="welcome_bodytxt"><a href="https://Fortunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>--->
 
 </div>
 
@@ -438,7 +260,7 @@
 
 <!---<div class="clugenix_partner_div" >
 
-<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#e1272c;">FurtuneDiagnostics Pvt. Ltd </span>Inks JV with <span style="color:#e1272c;">Cluegenix</span>
+<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#e1272c;">FortuneDiagnostics Pvt. Ltd </span>Inks JV with <span style="color:#e1272c;">Cluegenix</span>
  Introduces <span style="color:#e1272c;">AI Enabled Smart Lab</span></div>
 
 <div class="clugenix_logodiv"><img src="images/clugenix-logo.png" alt="Clugenix" /></div>
@@ -447,7 +269,7 @@
 
 
 
-<div class="welcome_bodytxt"><a href="https://Furtunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt"><a href="https://Fortunenet.com/about-us/company-profile"><div class="button" style="float:left;"><span>Read More </span></div></a></div>
 </div>--->
 
 
@@ -465,7 +287,7 @@
 
 
 
-<!--<a href="swine-flu.php"><div class="newindex_aboutdiv" style="margin-bottom:30px;"><img src="images/Furtune-h1n1-1.jpg" class="img_css" /></div></a>-->
+<!--<a href="swine-flu.php"><div class="newindex_aboutdiv" style="margin-bottom:30px;"><img src="images/Fortune-h1n1-1.jpg" class="img_css" /></div></a>-->
 
 
 
@@ -491,7 +313,7 @@
 <div class="index_aboutmaindiv">
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FurtuneDiagnostic</span>--> <span style="color:#e1272c;">Gallery</span> </div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FortuneDiagnostic</span>--> <span style="color:#e1272c;">Gallery</span> </div>
 
 
 <br />
@@ -686,7 +508,7 @@
 
 <div class="preferd_vendormainBG">
 
-<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/Furtunetweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by FurtuneDiagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="twitter_feeddiv"><a class="twitter-timeline" href="https://twitter.com/Fortunetweets" data-chrome=" nofooter noborders transparent" style="width:100%;" data-height="500">Tweets by FortuneDiagnostic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 <div class="instagram_feeddiv"></div>
 

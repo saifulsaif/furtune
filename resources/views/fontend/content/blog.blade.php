@@ -42,9 +42,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune Diagnostics brings Robots to its Lab</div>
+<div class="latestnews_heading">Fortune Diagnostics brings Robots to its Lab</div>
 
-<div class="latestnews_body">Furtune Diagnostics Pvt. Ltd (SDPL), a centre of innovation, is today one of the trusted names in the healthcare industry with its unmatched international standards. The only Lab in Eastern India with the prestigious CAP(College of American Pathology) accreditation. </div>
+<div class="latestnews_body">Fortune Diagnostics Pvt. Ltd (SDPL), a centre of innovation, is today one of the trusted names in the healthcare industry with its unmatched international standards. The only Lab in Eastern India with the prestigious CAP(College of American Pathology) accreditation. </div>
 
 
 
@@ -80,9 +80,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">On 23rd Nov17, Furtune has achieved Award for the Best Quality in Service Delivery </div>
+<div class="latestnews_heading">On 23rd Nov17, Fortune has achieved Award for the Best Quality in Service Delivery </div>
 
-<div class="latestnews_body">Furtune has achieved the Award for the Best Quality in Service Delivery, organized by ABP News in Mumbai. Dr. Somnath Chatterjee, Director of Furtune Diagnostic, was present to receive this award.</div>
+<div class="latestnews_body">Fortune has achieved the Award for the Best Quality in Service Delivery, organized by ABP News in Mumbai. Dr. Somnath Chatterjee, Director of Fortune Diagnostic, was present to receive this award.</div>
 
 
 
@@ -99,9 +99,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune Diagnostics Center organized awareness camp at DISHARI on 12th November 2017 to mark World Diabetes Day and to promote healthy life </div>
+<div class="latestnews_heading">Fortune Diagnostics Center organized awareness camp at DISHARI on 12th November 2017 to mark World Diabetes Day and to promote healthy life </div>
 
-<div class="latestnews_body">Furtune, the leading Diagnostic Center of Eastern India, in an effort to promote healthy lifestyle, organized a Diabetes Awareness Camp . The programme was conducted to mark World Diabetes Day which is celebrated on 14th November every year. The camp was inaugurated by  Ms. Tulsi Sinha Roy, Councilor Bidhan Nagar Municipality,along with Mr. Debasish Basu, Newsreader & Anchor .Mr.RahulChakraborty,(Actor)Mr.RaJib Bose,( Actor) Ms. Sanjukta Roy Choudhury ( Actress)  and Dr. Somnath Chatterjee, Director Furtune Diagnostic.This was followed by Yoga Session and Diabetic Health Camp.</div>
+<div class="latestnews_body">Fortune, the leading Diagnostic Center of Eastern India, in an effort to promote healthy lifestyle, organized a Diabetes Awareness Camp . The programme was conducted to mark World Diabetes Day which is celebrated on 14th November every year. The camp was inaugurated by  Ms. Tulsi Sinha Roy, Councilor Bidhan Nagar Municipality,along with Mr. Debasish Basu, Newsreader & Anchor .Mr.RahulChakraborty,(Actor)Mr.RaJib Bose,( Actor) Ms. Sanjukta Roy Choudhury ( Actress)  and Dr. Somnath Chatterjee, Director Fortune Diagnostic.This was followed by Yoga Session and Diabetic Health Camp.</div>
 
 
 
@@ -120,7 +120,7 @@
 
 <div class="latestnews_heading">Press Conference  at The Oberoi Grand</div>
 
-<div class="latestnews_body">Furtune Diagnostic Centre, the largest diagnostic chain in Eastern India announced its expansion plans for 2017- 18 at a Press Conference held at The Oberoi Grand on 18th April 2017. The conference was opened by Dr. Somnath Chatterjee, Director, Furtune Diagnostics. Mrs. Ritu Mittal, CEO of  Furtune Diagnostics, also was present to address the media.</div>
+<div class="latestnews_body">Fortune Diagnostic Centre, the largest diagnostic chain in Eastern India announced its expansion plans for 2017- 18 at a Press Conference held at The Oberoi Grand on 18th April 2017. The conference was opened by Dr. Somnath Chatterjee, Director, Fortune Diagnostics. Mrs. Ritu Mittal, CEO of  Fortune Diagnostics, also was present to address the media.</div>
 
 
 
@@ -137,9 +137,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune completes 25 Years of Diagnostic Excellence</div>
+<div class="latestnews_heading">Fortune completes 25 Years of Diagnostic Excellence</div>
 
-<div class="latestnews_body">The journey that started in 1992 has been exciting for all of us at Furtune Diagnostics Private limited. We thank everyone for supporting us for 25 years. </div>
+<div class="latestnews_body">The journey that started in 1992 has been exciting for all of us at Fortune Diagnostics Private limited. We thank everyone for supporting us for 25 years. </div>
 
 
 
@@ -175,9 +175,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune invites Franchisees for its network of collection centers across West Bengal</div>
+<div class="latestnews_heading">Fortune invites Franchisees for its network of collection centers across West Bengal</div>
 
-<div class="latestnews_body">People residing in West Bengal urban, suburban and rural areas are welcome to send applications to become Furtune franchisees. </div>
+<div class="latestnews_body">People residing in West Bengal urban, suburban and rural areas are welcome to send applications to become Fortune franchisees. </div>
 
 
 
@@ -270,9 +270,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">New Technology at Furtune: Breast MRI </div>
+<div class="latestnews_heading">New Technology at Fortune: Breast MRI </div>
 
-<div class="latestnews_body">Furtune incorporates advanced technology in Breast MRI to help doctors in detecting or screening for cancer faster and more accurately.</div>
+<div class="latestnews_body">Fortune incorporates advanced technology in Breast MRI to help doctors in detecting or screening for cancer faster and more accurately.</div>
 
 
 
@@ -289,9 +289,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune Organizes Walkathon to Celebrate World Diabetes Day on Nov 14, 2016</div>
+<div class="latestnews_heading">Fortune Organizes Walkathon to Celebrate World Diabetes Day on Nov 14, 2016</div>
 
-<div class="latestnews_body">With participation from more than 600 participants, Furtune Walkathon 2016 was a grand success and helped many people gain insights into diabetes prevention and control at the close of the Walkathon where a Health Awareness Session was conducted by Dr. PS Mondal.</div>
+<div class="latestnews_body">With participation from more than 600 participants, Fortune Walkathon 2016 was a grand success and helped many people gain insights into diabetes prevention and control at the close of the Walkathon where a Health Awareness Session was conducted by Dr. PS Mondal.</div>
 
 
 
@@ -310,9 +310,9 @@
 
 <div class="accordiun_maindiv" style="margin-top:0px;">
 
-<div class="latestnews_heading">Furtune completes 25 Years of Diagnostic Excellence</div>
+<div class="latestnews_heading">Fortune completes 25 Years of Diagnostic Excellence</div>
 
-<div class="latestnews_body">The journey that started in 1992 has been exciting for all of us at Furtune Diagnostics Private limited. We thank everyone for supporting us for 25 years. </div>
+<div class="latestnews_body">The journey that started in 1992 has been exciting for all of us at Fortune Diagnostics Private limited. We thank everyone for supporting us for 25 years. </div>
 
 
 

@@ -34,7 +34,7 @@
 
 
 <div class="static_pagetxt">
-<strong>FurtuneDiagnostics</strong> has its own super speciality laboratory for exclusive patient care. It consists of the disciplines of Molecular Biology, Cytogenetics,  Histopathology, Cytopathology, Immunohistochemistry, Flow Cytometry, Microbiology, Biochemistry, Haematology, Clinical Pathology. Each departmental lab provides qualitative and quantitative analysis of biological fluids such as blood, serum or plasma, tissue, urine and stool for specific constituents.<br />
+<strong>FortuneDiagnostics</strong> has its own super speciality laboratory for exclusive patient care. It consists of the disciplines of Molecular Biology, Cytogenetics,  Histopathology, Cytopathology, Immunohistochemistry, Flow Cytometry, Microbiology, Biochemistry, Haematology, Clinical Pathology. Each departmental lab provides qualitative and quantitative analysis of biological fluids such as blood, serum or plasma, tissue, urine and stool for specific constituents.<br />
 <br />
 The laboratories have state-of-the-art equipments operated by a team of efficient technicians and highly qualified doctors who provide world-class results with quality assurance. The Department of Pathology provides daily routine services with interpretations by competent pathologists as enlisted herein: <br />
 <br />

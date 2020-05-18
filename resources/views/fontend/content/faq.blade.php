@@ -58,7 +58,7 @@ Bihar at <a href="tel:09523096399" style="color:#000000; text-decoration:none;">
 
 Delhi at<a href="tel:18001219541" style="color:#000000; text-decoration:none;"> 1800-121-9541 </a><br />
 
-Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Furtunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Furtunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.
+Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Fortunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Fortunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.
 
 
 
@@ -71,7 +71,7 @@ West Bengal at 03366191000, <br />
 Bihar at 06126692000, <br />
 
 Delhi at 01149773000 <br />
-Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Furtunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Furtunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.   -->
+Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Fortunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Fortunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.   -->
 
 
 
@@ -79,7 +79,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;">How do I locate the nearest Furtune Diagnostics Center?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;">How do I locate the nearest Fortune Diagnostics Center?</div>
 				<div class="acc_content">
 
 
@@ -93,7 +93,7 @@ Bihar at <a href="tel:09523096399" style="color:#000000; text-decoration:none;">
 
 Delhi at<a href="tel:18001219541" style="color:#000000; text-decoration:none;"> 1800-121-9541 </a><br />
 
-Alternatively, you can also visit our website, <a href="index.html" style="color:#333333; text-decoration:none; font-weight:bold;">www.Furtunenet.com</a> and find out the exact location of center nearest to you.
+Alternatively, you can also visit our website, <a href="index.html" style="color:#333333; text-decoration:none; font-weight:bold;">www.Fortunenet.com</a> and find out the exact location of center nearest to you.
 
 
 
@@ -108,7 +108,7 @@ West Bengal at 03366191000, <br />
 Bihar at 06126692000, <br />
 
 Delhi at 01149773000 <br />
-Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Furtunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Furtunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.   -->
+Alternatively, you can send your Name and contact phone number at our email: <a href="mailto:crm@Fortunenet.com" style="color:#333333; text-decoration:none; font-weight:bold;">crm@Fortunenet.com</a> or Whatsapp us at 7044492525 and we will get back to you.   -->
 
 
 
@@ -116,7 +116,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;">What are the tests done at Furtune Diagnostics, other than Pathology Tests?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;">What are the tests done at Fortune Diagnostics, other than Pathology Tests?</div>
 				<div class="acc_content">
 
 
@@ -135,11 +135,11 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;">What are the working hours of Furtune Diagnostics?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;">What are the working hours of Fortune Diagnostics?</div>
 				<div class="acc_content">
 
 
-             Most of our Furtune Diagnostic Centers have a Polyclinic facility associated with it. You can get tested or consult a doctor within the same premises. Timings for each facility is as follows:  <br />
+             Most of our Fortune Diagnostic Centers have a Polyclinic facility associated with it. You can get tested or consult a doctor within the same premises. Timings for each facility is as follows:  <br />
 
              <ol type="A">
              <li>Diagnostic Center: 6:30 AM to 8 PM </li>
@@ -160,11 +160,11 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;"> Do I need to make an appointment in order to get a test done at Furtune Diagnostics?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;"> Do I need to make an appointment in order to get a test done at Fortune Diagnostics?</div>
 				<div class="acc_content">
 
 
-            Yes, it is advised to book an appointment beforehand over helpline to avoid over the counter booking rush. However, you can walk in straight into any of our centers to get a test conducted without prior booking as well. Whether test is conducted same day or not would depend on conditions of patient before test and availability of test at that center. Furtune takes pride in making patient experience hassle-free and our friendly front office always tries to ensure that your test is done at the earliest available slot.
+            Yes, it is advised to book an appointment beforehand over helpline to avoid over the counter booking rush. However, you can walk in straight into any of our centers to get a test conducted without prior booking as well. Whether test is conducted same day or not would depend on conditions of patient before test and availability of test at that center. Fortune takes pride in making patient experience hassle-free and our friendly front office always tries to ensure that your test is done at the earliest available slot.
 
 
 
@@ -183,7 +183,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 				<div class="acc_content">
 
 
-          Fasting depends upon which tests have been prescribed to you. It is advisable to talk to our experts over helpline for details regarding conditions before getting tested for every clinical procedure prescribed to you. Furtune is just a call away!
+          Fasting depends upon which tests have been prescribed to you. It is advisable to talk to our experts over helpline for details regarding conditions before getting tested for every clinical procedure prescribed to you. Fortune is just a call away!
 
 
 
@@ -329,7 +329,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 				<div class="acc_content">
 
 
-     Technically, hard copies of reports are available in the front office of the center on the date and time when Furtune believes in giving ease-of-access to its patients. Test reports are made available for view on smartphones through SMS links or for download from online portals. SMS alerts are sent to the patient’s registered phone number of the same. In addition, reports are sent via emails when the patient is unreachable over phone.
+     Technically, hard copies of reports are available in the front office of the center on the date and time when Fortune believes in giving ease-of-access to its patients. Test reports are made available for view on smartphones through SMS links or for download from online portals. SMS alerts are sent to the patient’s registered phone number of the same. In addition, reports are sent via emails when the patient is unreachable over phone.
 
 
 				</div>
@@ -348,7 +348,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;">How can I get an appointment with my preferred Physician at Furtune Diagnostics?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;">How can I get an appointment with my preferred Physician at Fortune Diagnostics?</div>
 				<div class="acc_content">
 
 
@@ -372,7 +372,7 @@ Alternatively, you can send your Name and contact phone number at our email: <a 
 
 
   Any questions regarding your bill can be addressed to the following contacts:<br />
-<strong>Email: <a href="mailto:crm@Furtunenet.com" style="text-decoration:none; color:#000000;">crm@Furtunenet.com</a>  </strong> <br />
+<strong>Email: <a href="mailto:crm@Fortunenet.com" style="text-decoration:none; color:#000000;">crm@Fortunenet.com</a>  </strong> <br />
 <strong>Helpline:  </strong> <br />
 <strong>West Bengal at <a href="tel:03366191000" style="color:#000000; text-decoration:none;">033-6619-1000,</a> <br />
 
@@ -395,11 +395,11 @@ Whatsapp: 7044492525</strong>
 			</div>
 
             <div class="accordion_in" >
-				<div class="acc_head" style="font-weight:bold; font-style:italic;">How to apply for a job at Furtune Diagnostics?</div>
+				<div class="acc_head" style="font-weight:bold; font-style:italic;">How to apply for a job at Fortune Diagnostics?</div>
 				<div class="acc_content">
 
 
-  Furtune has many openings at its various centers. For queries visit our Career page or mail your resume to <a href="mailto:hrd@Furtunenet.com" style="font-weight:bold; text-decoration:none; color:#000000;"><strong>hrd@Furtunenet.com</strong></a>
+  Fortune has many openings at its various centers. For queries visit our Career page or mail your resume to <a href="mailto:hrd@Fortunenet.com" style="font-weight:bold; text-decoration:none; color:#000000;"><strong>hrd@Fortunenet.com</strong></a>
 
 
 
@@ -439,7 +439,7 @@ Whatsapp: 7044492525</strong>
 				<div class="acc_content">
 
 
-  Each and every doctor consultation lasts around twenty minutes. Our doctors take extra care to provide one-on-one attention to the patient that matches up to the superior healthcare guarantee that Furtune promises.
+  Each and every doctor consultation lasts around twenty minutes. Our doctors take extra care to provide one-on-one attention to the patient that matches up to the superior healthcare guarantee that Fortune promises.
 
 
 
