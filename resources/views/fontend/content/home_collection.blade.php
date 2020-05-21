@@ -50,12 +50,8 @@ FortuneDiagnostics offers a wide network of home collection services to resident
 <div class="static_pagetxt" >
 <span  style="font-weight:600;">
 
-West Bengal : <a href="tel:03366191000" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;033-6619-1000</a><br />
-
-<!--Delhi & NCR : <a href="tel:18001219541" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;1800-121-9541</a><br />-->
-
-Bihar : <a href="tel:09523096399" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;0952-309-6399 </a><br />
-Whatsapp: <a href="whatsapp://send?phone=+917044492525" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;7044492525</a></span>
+Phone : <a href="{{$site_infos->phone}}" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;{{$site_infos->phone}} </a><br />
+Hotline: <a href="{{$site_infos->hotline}}" style="text-decoration:none; color:#000000; line-height:30px;">&nbsp;&nbsp;{{$site_infos->hoteline}}</a></span>
 
 
 
