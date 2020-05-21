@@ -7,7 +7,7 @@
               </div>
               <div class="modal-body">
          <img src="{!! asset('public/images/online_consultation.jpg') !!}" alt="">
-                  <p class="popup_title_main">India&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
+                  <p class="popup_title_main">Bangladesh&#39;s first Diagnostic Centre <br/>to support telemedicine</p>
                   <p class="normal_pra">In view of the recent COVID-19 pandemic, we are launching online consultation.</p>
                   <p class="normal_pra">Now, after booking appointments, you can consult with doctors through video conferencing.</p>
                   <p class="normal_pra">To book an online appointment, <a href="online_consultation/index.html" target="_blank" class="click_here_anc">click here!</a></p>
@@ -228,7 +228,7 @@
 
 <div class="header_div header_div_sticky" >
 
-    <div class="header_topband" style="height:3px; background-color:#e1272c;"></div>
+    <div class="header_topband" style="height:3px; background-color:#4b9b4b;"></div>
 
     <div class="header_middlemaindiv">
 

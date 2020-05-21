@@ -202,7 +202,7 @@
 @foreach($index_infos as $info)
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FortuneDiagnostic</span>--> <span style="color:#e1272c;">{{$info->title}}</span> </div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#16bd28d4 !important;">FortuneDiagnostic</span>--> <span style="color:#16bd28d4 !important;">{{$info->title}}</span> </div>
 
 
 <br />
@@ -235,7 +235,7 @@
 <div class="newhome_aboutdiv" style="width:100%; margin-right;0%">
 
 
-<div class="welcome_header welcome_header_new" style="text-align:left; color:#e1272c; font-weight:400; font-size:28px;">{{$lab->title}}</div>
+<div class="welcome_header welcome_header_new" style="text-align:left; color:#16bd28d4 !important; font-weight:400; font-size:28px;">{{$lab->title}}</div>
 <div class="home_robot">
 
 <div class="robot_txt">
@@ -260,8 +260,8 @@
 
 <!---<div class="clugenix_partner_div" >
 
-<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#e1272c;">FortuneDiagnostics Pvt. Ltd </span>Inks JV with <span style="color:#e1272c;">Cluegenix</span>
- Introduces <span style="color:#e1272c;">AI Enabled Smart Lab</span></div>
+<div class="welcome_header welcome_header_new" style="text-align:left;"><span style="color:#16bd28d4 !important;">FortuneDiagnostics Pvt. Ltd </span>Inks JV with <span style="color:#16bd28d4 !important;">Cluegenix</span>
+ Introduces <span style="color:#16bd28d4 !important;">AI Enabled Smart Lab</span></div>
 
 <div class="clugenix_logodiv"><img src="images/clugenix-logo.png" alt="Clugenix" /></div>
 
@@ -313,7 +313,7 @@
 <div class="index_aboutmaindiv">
 <div class="index_aboutdiv">
 
-<div class="welcome_header" ><!--Welcome to <span style="color:#e1272c;">FortuneDiagnostic</span>--> <span style="color:#e1272c;">Gallery</span> </div>
+<div class="welcome_header" ><!--Welcome to <span style="color:#16bd28d4 !important;">FortuneDiagnostic</span>--> <span style="color:#16bd28d4 !important;">Gallery</span> </div>
 
 
 <br />
@@ -525,7 +525,7 @@
 
 <div class="welcome_header" style="text-align:center;">
 
-Corporate <span style="color:#e1272c;">Partners</span>
+Corporate <span style="color:#16bd28d4 !important;">Partners</span>
 
 </div>
 
@@ -538,7 +538,7 @@ Corporate <span style="color:#e1272c;">Partners</span>
 
 <div class="franchisee_txt_div" >
 
-  <span style="color: #e1272c; font-weight: 400; font-size: 30px;"> What can we do for your company?</span><br/><br/>
+  <span style="color: #16bd28d4 !important; font-weight: 400; font-size: 30px;"> What can we do for your company?</span><br/><br/>
 
       <ul style="list-style:none; margin-left:-35px;">
      @foreach($corporate_services as $service)

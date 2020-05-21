@@ -35,7 +35,7 @@ a {
 .social ul li {
   display: block;
       margin: 5px;
-      background-color: #e1272c;
+      background-color: #4b9b4b;
       width: 300px;
       text-align: left;
       padding: 10px;
@@ -64,7 +64,7 @@ a {
 }
 .social ul li:hover i {
   color: #fff;
-  background-color: #e1272c;
+  background-color: #4b9b4b;
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -79,7 +79,7 @@ a {
 .social ul li i {
   margin-right: 5px;
  color: #000;
-  background-color: #e1272c;
+  background-color: #4b9b4b;
   padding: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

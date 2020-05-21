@@ -74,7 +74,7 @@ if (isMobile) {
         position: static !important;
         width: 71px;
         border-radius: 10px;
-        background-color: #e1272ceb;height: 67px;
+        background-color: #4b9b4beb;height: 67px;
   }
 </style>
 
@@ -560,7 +560,7 @@ display:none;
 		font-size: 31px;
 		text-align: center;
 		font-weight: bold;
-		color: #e1272c;
+		color: #4b9b4b;
 	}
 
 	.normal_pra{
@@ -576,7 +576,7 @@ display:none;
 	}
 
 	.normal_pra .click_here_anc{
-		color: #e1272c;
+		color: #4b9b4b;
 	}
 
 	#pop_mod_onl_con .align_center_cust{
