@@ -91,7 +91,7 @@
 <div class="nabl_logodiv2 header_icon">
   <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-appoinment.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Book</br>Appointment</h4></a> </div>
 <div class="nabl_logodiv2 header_icon">
-  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-portal.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Patient</br>Portal</h4></a> </div>
+  <i style="font-size: 35px;" class="fa fa-user"></i> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Patient</br>Portal</h4></a> </div>
 
 </div>
 

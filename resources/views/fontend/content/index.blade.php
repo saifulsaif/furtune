@@ -175,11 +175,11 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<a href="tel:03366191000"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
+<a href="tel:{{$site_infos->phone}}"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
 
 
 
-<a href="tel:18001219541"><div class="icon_subheading2" >hoteline <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div></a>
+<a href="tel:{{$site_infos->hoteline}}"><div class="icon_subheading2" >Hotline <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div></a>
 
 </div>
 
@@ -210,7 +210,7 @@
 
 {{$info->description}}</div>
 
-<div class="welcome_bodytxt"><a href="about-us/index.html"><div style="margin:0px auto;margin-top: 31px;" class="button"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt"><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button"><span>Read More </span></div></a></div>
 
 </div>
 @endforeach
