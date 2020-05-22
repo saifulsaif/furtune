@@ -15,7 +15,7 @@
 
 
 
- <link rel="icon" type="image/png" href="{{ asset('public/images/fav-icon.png') }}">
+ <link rel="icon" type="image/png" href="{{ asset('public/images/furtune.JPG') }}">
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
