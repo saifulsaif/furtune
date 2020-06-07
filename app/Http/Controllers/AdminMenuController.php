@@ -32,17 +32,20 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Menu Name","name"=>"menu_name"];
 			$this->col[] = ["label"=>"Route Name","name"=>"route_name"];
+			$this->col[] = ["label"=>"Position","name"=>"position"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Menu Name','name'=>'menu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Position','name'=>'position','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Menu Name','name'=>'menu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			# OLD END FORM
 
 			/* 
