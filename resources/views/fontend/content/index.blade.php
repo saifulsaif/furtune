@@ -45,15 +45,12 @@
 <div class="icon1_maindiv"><div class="icon2"></div></div>
 </div>
 
-<div class="icon_heading">FIND A LAB</div>
-<div class="icon_subheading">Find your nearest  center</div>
+<div class="icon_heading"> Appointment</div>
+<div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to book Appointment</div>
 
-<!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code"  maxlength="6" onkeypress="return isNumberKey(event)"/></div>-->
-<div class="icon_subheading"><select data-placeholder="Search By Location..." class="download_report_div" name="center_id" id="center_id" style="width:100%; border:0px; background-color:#FFF;" required >
+<a href="{{route('fortune.getDoctor')}}" target="_blank"><div class="download_report_div ">BOOK</div></a>
 
-          </select></div>
 <div class="icon_subheading">
-<input name="search" type="button" onclick="get_center()" value="Search" class="nearestlab_btn" style="width:100%;" />
 
 <!--<input name="search" type="button"  value="Search" class="nearestlab_btn" style="width:100%;" />-->
 
@@ -107,7 +104,45 @@
 
 
 <div class="body_topBG_main_responsive">
+  <div class="desktop_box1">
 
+  <div class="icon_maindiv">
+  <div class="icon1_maindiv"><div class="icon4"></div></div>
+  </div>
+
+  <div class="icon_heading">HELPLINE NO</div>
+  <a href="tel:{{$site_infos->phone}}"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
+
+
+
+  <a href="tel:{{$site_infos->hoteline}}"><div class="icon_subheading2" >Hotline <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div></a>
+
+  </div>
+
+
+<form action="#" method="post" name="find_lab">
+
+<div class="desktop_box1">
+
+<div class="icon_maindiv">
+<div class="icon1_maindiv"><div class="icon2"></div></div>
+</div>
+
+<div class="icon_heading">Appointment</div>
+<div class="icon_subheading">Click here to book</div>
+
+<!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code" maxlength="6" onkeypress="return isNumberKey(event)" /></div>
+
+<div class="icon_subheading"><input name="search" type="submit" value="Search" class="nearestlab_btn" /></div>-->
+
+<a href="{{route('fortune.getDoctor')}}" target="_blank"><div class="download_report_div ">BOOK</div></a>
+
+<!--<div class="icon_subheading"><input name="search" type="submit" value="Find My Nearest Lab" class="nearestlab_btn" style="width:96%;" /></div>-->
+
+
+</div>
+
+</form>
 <div class="desktop_box1 " >
 
 <div class="icon_maindiv">
@@ -124,32 +159,6 @@
 <a href="http://52.172.206.185:9623/Fortuneweb/" target="_blank"><div class="icon_subheading1" style="margin-bottom:12px;">Online Report Bihar</div></a>-->
 
 </div>
-
-<form action="#" method="post" name="find_lab">
-
-<div class="desktop_box1">
-
-<div class="icon_maindiv">
-<div class="icon1_maindiv"><div class="icon2"></div></div>
-</div>
-
-<div class="icon_heading">FIND A LAB</div>
-<div class="icon_subheading">Find your nearest  center</div>
-
-<!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code" maxlength="6" onkeypress="return isNumberKey(event)" /></div>
-
-<div class="icon_subheading"><input name="search" type="submit" value="Search" class="nearestlab_btn" /></div>-->
-<div class="icon_subheading"><select data-placeholder="Search By Location..." name="res_center" id="res_center" onchange="resget_center()" class="download_report_div" style="width:100%; background-color:#FFF;" action="false" readonly>
-
-
-          </select></div>
-<!--<div class="icon_subheading"><input name="search" type="submit" value="Find My Nearest Lab" class="nearestlab_btn" style="width:96%;" /></div>-->
-
-
-</div>
-
-</form>
-
 <div class="desktop_box1">
 
 <div class="icon_maindiv">
@@ -168,20 +177,7 @@
 
 </div>
 
-<div class="desktop_box1">
 
-<div class="icon_maindiv">
-<div class="icon1_maindiv"><div class="icon4"></div></div>
-</div>
-
-<div class="icon_heading">HELPLINE NO</div>
-<a href="tel:{{$site_infos->phone}}"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
-
-
-
-<a href="tel:{{$site_infos->hoteline}}"><div class="icon_subheading2" >Hotline <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div></a>
-
-</div>
 
 
 </div>
@@ -247,7 +243,7 @@
 
 </div>
 
-<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="{{$lab->video_link}}"><img src="{{asset('public/images/robot-video.jpg')}}" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
+<div class="robot_lab_video"><a class="various2 fancybox.iframe" href="{{$lab->video_link}}"><img src="{{asset($lab->image)}}" style="width:100%;" alt="Video"/></a><!--<iframe width="100%" height="250" src="https://www.youtube.com/embed/pDjxZilfQ30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--></div>
 
 </div>
 
@@ -466,7 +462,7 @@
 
 <div class="owl-carousel1 owl-carousel owl-theme">
     @foreach($events as $event)
-          <a href="media.html#tamluk" > <div class="item">
+          <a href="{{route('event')}}" > <div class="item">
             <div class="producthomeDiv">
 
       <div class="panel_img"><img src="{{$event->image}}" class="img_css" alt="Tamluk Centre" /></div>

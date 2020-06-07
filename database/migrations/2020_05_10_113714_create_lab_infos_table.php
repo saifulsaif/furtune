@@ -17,6 +17,7 @@ class CreateLabInfosTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('description');
+            $table->string('image')->nullable();
             $table->string('video_link');
             $table->timestamps();
         });

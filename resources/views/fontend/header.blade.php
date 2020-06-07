@@ -19,7 +19,8 @@
 
   <div id="home">
 
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ7JXFR"
+  <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ7JXFR"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="main_h">
 

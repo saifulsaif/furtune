@@ -34,23 +34,13 @@
 <link rel="stylesheet" href="{!! asset('public/css/social.css') !!}" media="all">
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-
-{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{{--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
 
 <!--<script src='js/jquery.min.js'></script>-->
 
- <script>
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) {
-
-    window.location.href={{url('/')}}
-} else {
- // window.location.href='dashboard.php'
-}
-
-</script>
 
 <style>
     select{
@@ -295,7 +285,7 @@ function isNumberKey(evt)
 
 <link rel="stylesheet" href="{!! asset('public/css/style.css') !!}">
 
-<script>
+{{-- <script>
 function get_center()
 {
 	var center_Id=$('#center_id').val();
@@ -308,15 +298,15 @@ function get_center()
 		window.location.href='https://surakshanet.com/our-centers/'+center_Id;
     }
 }
-</script>
-
+</script> --}}
+{{--
 <script>
     function resget_center()
     {
     	var center_Id = $('#res_center').val();
     	window.location.href='index.html?center_Id='+center_Id;
     }
-</script>
+</script> --}}
 
 
 <style>
@@ -381,7 +371,7 @@ function get_center()
     }
 
 </script>
-
+{{--
 <script>
     function get_search()
     {
@@ -395,8 +385,8 @@ function get_center()
     		window.location.href='find-test7407.html?search_item='+encodeURIComponent(search_home);
     	}
     }
-</script>
-<script>
+</script> --}}
+{{-- <script>
     function ShowMap(map_location)
     {
         if(map_location=="west_bengal")
@@ -450,7 +440,7 @@ function get_center()
             document.getElementById('biharmap').src += '';
     	}
     }
-</script>
+</script> --}}
 
 
 
@@ -583,5 +573,6 @@ display:none;
     <img height="1" width="1" style="display:none" alt="" src="{{$site_infos->facebook}}"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+
 
 </head>

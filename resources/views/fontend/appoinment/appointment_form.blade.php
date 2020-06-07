@@ -57,8 +57,9 @@
       					<span class="focus-input100"></span>
       				</div>
       				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-      					<span class="label-input100">Time:</span>
-      					<input class="input100" type="time" name="timeAppoinment" placeholder="Enter Time ">
+                        <span class="label-input100">Time:</span>
+
+      					<input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time ">
       					<span class="focus-input100"></span>
       				</div>
 
