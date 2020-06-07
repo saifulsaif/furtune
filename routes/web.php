@@ -26,6 +26,7 @@ Route::get('/service/{id}', 'PageController@service');
 Route::get('/package-details/{id}', 'PageController@packageDetails');
 Route::get('/home-collection', 'PageController@homeCollection')->name('home_collection');
 Route::get('/health-package', 'PageController@healthPackage')->name('health_package');
+Route::get('/health-check-tests', 'PageController@health_check')->name('health_check');
 Route::get('/career', 'PageController@career')->name('career');
 Route::get('/corporate-partner', 'PageController@corporateParter')->name('corporeate_partner');
 Route::get('/franchisee', 'PageController@franchisee')->name('franchisee');

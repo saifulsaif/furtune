@@ -87,13 +87,13 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<div class="icon_subheading2" style="margin-bottom:15px;">Phone : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
+<div class="icon_subheading2" style="margin-bottom:15px;">Phone : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
 
 
 
 <!--<div class="icon_subheading2" style="margin-bottom:15px;">DELHI & NCR : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>1800-121-9541 </span></div>-->
 
-<div class="icon_subheading2" >Hotline : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
+<div class="icon_subheading2" >Hotline : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
 
 </div>
 

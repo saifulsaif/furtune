@@ -39,9 +39,9 @@
 <div class="static_pagetxt" style="margin-bottom:25px;">
 
 
-
+<!--
 <Span style="font-size:18px; font-weight:600; line-height:26px;">As a part of CSR initiative taken by FortuneDiagnostics Private Limited, Saraswati Sishu mandir school buildings have been gifted to the children of Raipur & Dhanara in Bankura (West Bengal)</Span><br />
-<br />
+<br /> -->
 @foreach($csrs as $csr)
 <strong>School Name :</strong>{{$csr->school_name}}<br />
 
@@ -137,8 +137,8 @@
 
 
 <div class="static_pagetxt" style="margin-bottom:25px;">
-
-<span style="font-size:15px; font-weight:500;">Total Investment for Building Construction : Rs. 50 Lacs.</span><br /><br />
+<!--
+<span style="font-size:15px; font-weight:500;">Total Investment for Building Construction : Rs. 50 Lacs.</span><br /><br /> -->
 <!-- <span class="static_subheading">Inaugural Programme :</span><br />
 
 <ul style="list-style:decimal; margin-left:22px;">
