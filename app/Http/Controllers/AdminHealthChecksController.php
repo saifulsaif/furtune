@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminMenuController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminHealthChecksController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "menu_name";
+			$this->title_field = "package_name";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,27 +25,34 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "menu";
+			$this->table = "health_checks";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Menu Name","name"=>"menu_name"];
-			$this->col[] = ["label"=>"Route Name","name"=>"route_name"];
-			$this->col[] = ["label"=>"Position","name"=>"position"];
+			$this->col[] = ["label"=>"Code","name"=>"code"];
+			$this->col[] = ["label"=>"Package Name","name"=>"package_name"];
+			$this->col[] = ["label"=>"Rate","name"=>"rate"];
+			$this->col[] = ["label"=>"Package Rate","name"=>"package_rate"];
+			$this->col[] = ["label"=>"Doctor Fee","name"=>"doctor_fee"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Menu Name','name'=>'menu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Position','name'=>'position','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Code','name'=>'code','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Package Name','name'=>'package_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Rate','name'=>'rate','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Package Rate','name'=>'package_rate','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Doctor Fee','name'=>'doctor_fee','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Menu Name','name'=>'menu_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Route Name','name'=>'route_name','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ["label"=>"Code","name"=>"code","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Package Name","name"=>"package_name","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Rate","name"=>"rate","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Package Rate","name"=>"package_rate","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Doctor Fee","name"=>"doctor_fee","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 

@@ -7,7 +7,7 @@
 */
 
 function getMenuList(){
-    $result = DB::table('menu')->get();
+    $result = DB::table('menu') ->orderBy('position', 'asc')->get();
     return $result;
 }
 

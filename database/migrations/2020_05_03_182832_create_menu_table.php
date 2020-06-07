@@ -17,6 +17,7 @@ class CreateMenuTable extends Migration
             $table->bigIncrements('id');
             $table->string('menu_name');
             $table->string('route_name');
+            $table->integer('position');
             $table->timestamps();
         });
     }

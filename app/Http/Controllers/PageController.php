@@ -5,6 +5,7 @@ use DB;
 use App\franchisee;
 use App\feedback;
 use App\sub_menu_list;
+use App\doctors;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -83,6 +84,15 @@ class PageController extends Controller
      $health_package= getValueByTBName('health_packages');
      $site_infos= first_row_date('site_infos');
       return view('fontend.content.health_package',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','health_package'));
+   }
+   public function health_check(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sliders = getValueByTBName('slider');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $health_checks = getValueByTBName('health_checks');
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.health_check',compact('doctors','site_infos','menu','sub_menu','sliders','health_checks','sub_menu_list'));
    }
    public function franchisee(){
      $menu = getValueByTBName('menu');
