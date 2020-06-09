@@ -193,10 +193,8 @@
     // Modal SHOW
         function appointment_modal(id,name,center){
             document.getElementById('doctor_id').value=id;
-            // $('.modal-header').appendTo  = '<h5>"Doctor Name : "'+name+' </h5>';
-            // $('.modal-header').appendTo  = '<h3>"Center : "'+center+' </h3>';
             document.getElementById('doctor_nameShow').innerText  = "Doctor Name : "+name ;
-            // document.getElementById('centerShow').innerText  = "Center : "+center ;
+            document.getElementById('centerShow').innerText  = "Center : "+center ;
             $('#appointment_model').modal('show');
         }
 

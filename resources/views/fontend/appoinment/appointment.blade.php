@@ -139,13 +139,15 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
         <div class="modal-header  bg-success">
-            <h5 class="modal-title doctor_nameShow" id="contact100-form-title doctor_nameShow"></h5>
-            <h3 class="modal-title centerShow" id="contact100-form-title centerShow"></h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
+            <div class="text-center bg-primary">
+                <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
+                <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
+            </div>
             <form class="contact100-form validate-form" action="{{action('AppointmentController@sendAppointment')}}" method="post">
                     @csrf
                     <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
@@ -188,11 +190,13 @@
       					<textarea class="input100" name="diseaseTopic" placeholder="Wrire something about your Disease..."></textarea>
       					<span class="focus-input100"></span>
                       </div>
-                      <div class="float-right btn-center">
-                        <button type="button" class="btn btn-primary ">Book An Appintment</button>
+
+                    <div class="float-right btn btn-center">
+                        <button type="submit" class="btn btn-primary ">Book An Appintment</button>
                     </div>
+
+            </form>
         </div>
-         </form>
 
 
 
@@ -209,7 +213,7 @@
 
 
 <div class="appointment_mainBG_responsive">
-<div class="pagination_responsive">
+{{-- <div class="pagination_responsive"> --}}
 
     <ul class="pagination">
         <div class="section-title" id="section-title">
@@ -253,7 +257,7 @@
         </div>
 
     </ul>
-</div>
+{{-- </div> --}}
 </div>
 
 
@@ -273,7 +277,7 @@
 <!------------------  profile ------------------->
 </div>
 
-
+</div>
 @endsection
 
 

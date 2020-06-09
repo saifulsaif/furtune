@@ -233,6 +233,56 @@
         $("#addnew6").hide();
 	}
 </script>
+<script>
+	function AddNew7()
+	{
+        $("#addnew3").hide();
+        $("#addnew").hide();
+        $("#addnew1").hide();
+        $("#addnew2").hide();
+        $("#addnew4").hide();
+        $("#addnew5").hide();
+        $("#addnew6").show();
+        $("#addnew7").show();
+	}
+	function DivHide()
+	{
+        $('#addnew1').hide();
+        $("#addnew").hide();
+        $("#addnew2").hide();
+        $("#addnew3").hide();
+        $("#addnew4").hide();
+        $("#addnew5").hide();
+        $("#addnew6").hide();
+        $("#addnew7").hide();
+	}
+</script>
+<script>
+	function AddNew8()
+	{
+        $("#addnew3").hide();
+        $("#addnew").hide();
+        $("#addnew1").hide();
+        $("#addnew2").hide();
+        $("#addnew4").hide();
+        $("#addnew5").hide();
+        $("#addnew6").show();
+        $("#addnew7").show();
+        $("#addnew8").show();
+	}
+	function DivHide()
+	{
+        $('#addnew1').hide();
+        $("#addnew").hide();
+        $("#addnew2").hide();
+        $("#addnew3").hide();
+        $("#addnew4").hide();
+        $("#addnew5").hide();
+        $("#addnew6").hide();
+        $("#addnew7").hide();
+        $("#addnew8").hide();
+	}
+</script>
 
  <!-- Owl Stylesheets -->
 
@@ -575,6 +625,7 @@ display:none;
   '../connect.facebook.net/en_US/fbevents.js');
   fbq('init', '556624911842874');
   fbq('track', 'PageView');
+  
 </script>
 <noscript>
     <img height="1" width="1" style="display:none" alt="" src="{{$site_infos->facebook}}"/>
