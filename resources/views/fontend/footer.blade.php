@@ -138,6 +138,7 @@
 		// $("#pop_mod_onl_con").modal('show');
         $(".searchDoctor").keyup(function () {
             var searchTerm = $(".searchDoctor").val();
+
             var listItem = $('.results tbody').children('tr');
             var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
 
@@ -145,7 +146,7 @@
                     return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
                 }
             });
-
+            if (searchTerm == '') return;
             $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
                 $(this).attr('visible','false');
             });
@@ -163,6 +164,7 @@
             else {
                 $('.no-result').hide();
             }
+
         });
 
         $('#doctable').after('<div id="nav"></div>');

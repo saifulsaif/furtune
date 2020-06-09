@@ -84,6 +84,12 @@
 
 </form>
 
+
+@if (!empty($notification))
+    <div class="alert alert-{{$notification['alert-type']}}" role="alert">
+        {{$notification['message']}}
+    </div>
+@endif
 <!--###################  Desktop Version     ######################-->
 
 
@@ -135,75 +141,7 @@
         </tbody>
     </table>
 
-    <div class="modal fade" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header  bg-success">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="text-center bg-primary">
-                <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
-                <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
-            </div>
-            <form class="contact100-form validate-form" action="{{action('AppointmentController@sendAppointment')}}" method="post">
-                    @csrf
-                    <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
-      				<div class="wrap-input100 validate-input" data-validate="Name is required">
-      					<span class="label-input100">First Name:</span>
-      					<input class="input100" type="text" name="firstName" placeholder="Enter full name">
-      					<span class="focus-input100"></span>
-      				</div>
-      				<div class="wrap-input100 validate-input" data-validate="Name is required">
-      					<span class="label-input100">Last Name:</span>
-      					<input class="input100" type="text" name="lastName" placeholder="Enter last name">
-      					<span class="focus-input100"></span>
-      				</div>
 
-      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-      					<span class="label-input100">Email:</span>
-      					<input class="input100" type="text" name="email" placeholder="Enter email addess">
-      					<span class="focus-input100"></span>
-      				</div>
-      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-      					<span class="label-input100">Date of appointment:</span>
-      					<input class="input100" type="date" name="dateOfAppoinment" placeholder="Enter Appointment date">
-      					<span class="focus-input100"></span>
-      				</div>
-      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <span class="label-input100">Time:</span>
-
-      					<input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time ">
-      					<span class="focus-input100"></span>
-      				</div>
-
-      				<div class="wrap-input100 validate-input" data-validate="Phone is required">
-      					<span class="label-input100">Phone:</span>
-      					<input class="input100" type="text" name="phoneNumber" placeholder="Enter phone number">
-      					<span class="focus-input100"></span>
-      				</div>
-
-      				<div class="wrap-input100 validate-input" data-validate = "Message is required">
-      					<span class="label-input100">About Disease:</span>
-      					<textarea class="input100" name="diseaseTopic" placeholder="Wrire something about your Disease..."></textarea>
-      					<span class="focus-input100"></span>
-                      </div>
-
-                    <div class="float-right btn btn-center">
-                        <button type="submit" class="btn btn-primary ">Book An Appintment</button>
-                    </div>
-
-            </form>
-        </div>
-
-
-
-    </div>
-    </div>
-
-</div>
 
 
 <!--###################  Desktop Version     ######################-->
@@ -211,14 +149,20 @@
 
 <!--###################  Responsive Version     ######################-->
 
+</div>
+
+
+
+
+<!--###################  Responsive Version     ######################-->
 
 <div class="appointment_mainBG_responsive">
-{{-- <div class="pagination_responsive"> --}}
+<div class="pagination_responsive">
 
-    <ul class="pagination">
+    <ul class="pagination" style="width:100%;">
         <div class="section-title" id="section-title">
 
-            <table id="dtBasicExample" class="table table-striped table-bordered table-sm footable" cellspacing="0" style="width:auto !important">
+            <table id="dtBasicExample" class="table table-striped table-bordered table-sm results footable" cellspacing="0" style="width:100% !important">
                 <thead>
                     <tr class="bg-primary">
                         <th>Center Location</th>
@@ -242,7 +186,10 @@
                                 @else
                                     <td>NO Time</td>
                                 @endif --}}
-                               <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a>
+                               <td class="text-center">
+                                    <a type="" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
+                                    <i class="fa fa-medkit" style="font-size:32px;color:green"></i>
+                                </a>
                                 </td>
                             </tr>
                         @endforeach
@@ -257,27 +204,93 @@
         </div>
 
     </ul>
+</div>
+</div>
+</div>
+</div>
 {{-- </div> --}}
-</div>
-
-
-
-
-
-
-<!--###################  Responsive Version     ######################-->
-</div>
-</div>
-</div>
-</div>
 
 
 
 
 <!------------------  profile ------------------->
-</div>
+{{-- </div> --}}
 
 </div>
+
+    <div class="modal fade" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header  bg-success">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center bg-primary">
+                        <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
+                        <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
+                    </div>
+                    <form class="contact100-form validate-form" action="{{action('AppointmentController@sendAppointment')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
+                            <div class="wrap-input100 validate-input" data-validate="Name is required">
+                                <span class="label-input100">First Name:</span>
+                                <input class="input100" type="text" name="firstName" placeholder="Enter full name">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate="Name is required">
+                                <span class="label-input100">Last Name:</span>
+                                <input class="input100" type="text" name="lastName" placeholder="Enter last name">
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <span class="label-input100">Email:</span>
+                                <input class="input100" type="text" name="email" placeholder="Enter email addess">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <span class="label-input100">Date of appointment:</span>
+                                <input class="input100" type="date" name="dateOfAppoinment" placeholder="Enter Appointment date">
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                <span class="label-input100">Time:</span>
+
+                                <input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time ">
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                                <span class="label-input100">Phone:</span>
+                                <input class="input100" type="text" name="phoneNumber" placeholder="Enter phone number">
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                                <span class="label-input100">About Disease:</span>
+                                <textarea class="input100" name="diseaseTopic" placeholder="Wrire something about your Disease..."></textarea>
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <div class="float-right btn btn-center">
+                                <button type="submit" class="btn btn-primary ">Book An Appintment</button>
+                            </div>
+
+                    </form>
+                </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
 @endsection
+
+
+
+
 
 
