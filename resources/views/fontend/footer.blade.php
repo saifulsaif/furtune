@@ -155,7 +155,7 @@
             });
 
             var jobCount = $('.results tbody tr[visible="true"]').length;
-                $('.counter').text(jobCount + ' item');
+                $('.counter').text(jobCount + ' Doctor');
 
             if(jobCount == '0') {
                 $('.no-result').show();
@@ -186,7 +186,20 @@
             $('#doctable tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
             css('display','table-row').animate({opacity:1}, 300);
         });
+
+
 	});
+
+    // Modal SHOW
+        function appointment_modal(id,name,center){
+            document.getElementById('doctor_id').value=id;
+            // $('.modal-header').appendTo  = '<h5>"Doctor Name : "'+name+' </h5>';
+            // $('.modal-header').appendTo  = '<h3>"Center : "'+center+' </h3>';
+            document.getElementById('doctor_nameShow').innerText  = "Doctor Name : "+name ;
+            // document.getElementById('centerShow').innerText  = "Center : "+center ;
+            $('#appointment_model').modal('show');
+        }
+
 </script>
 
 

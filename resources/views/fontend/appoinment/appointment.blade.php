@@ -1,5 +1,7 @@
 @extends('fontend.app')
 @section('content')
+<link rel="stylesheet" href="{!! asset('public/css/appointment/main.css') !!}" type="text/css" />
+<link rel="stylesheet" href="{!! asset('public/css/appointment/util.css') !!}" type="text/css" />
 <style media="screen">
     /* body{
         padding:20px 20px;
@@ -117,8 +119,11 @@
                                     </td> --}}
 
 
-                        {{-- <td class="text-center"><a type="button" onclick="appointment_modal({{ $doctor->id }})"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a> --}}
-                        <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a>
+                        <td class="text-center">
+                            <a type="javascript.void(0)" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
+                                <i class="fa fa-medkit" style="font-size:32px;color:green"></i>
+                            </a>
+                        {{-- <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a> --}}
                         </td>
                     </tr>
                 @endforeach
@@ -130,6 +135,69 @@
         </tbody>
     </table>
 
+    <div class="modal fade" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header  bg-success">
+            <h5 class="modal-title doctor_nameShow" id="contact100-form-title doctor_nameShow"></h5>
+            <h3 class="modal-title centerShow" id="contact100-form-title centerShow"></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="contact100-form validate-form" action="{{action('AppointmentController@sendAppointment')}}" method="post">
+                    @csrf
+                    <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
+      				<div class="wrap-input100 validate-input" data-validate="Name is required">
+      					<span class="label-input100">First Name:</span>
+      					<input class="input100" type="text" name="firstName" placeholder="Enter full name">
+      					<span class="focus-input100"></span>
+      				</div>
+      				<div class="wrap-input100 validate-input" data-validate="Name is required">
+      					<span class="label-input100">Last Name:</span>
+      					<input class="input100" type="text" name="lastName" placeholder="Enter last name">
+      					<span class="focus-input100"></span>
+      				</div>
+
+      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      					<span class="label-input100">Email:</span>
+      					<input class="input100" type="text" name="email" placeholder="Enter email addess">
+      					<span class="focus-input100"></span>
+      				</div>
+      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      					<span class="label-input100">Date of appointment:</span>
+      					<input class="input100" type="date" name="dateOfAppoinment" placeholder="Enter Appointment date">
+      					<span class="focus-input100"></span>
+      				</div>
+      				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <span class="label-input100">Time:</span>
+
+      					<input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time ">
+      					<span class="focus-input100"></span>
+      				</div>
+
+      				<div class="wrap-input100 validate-input" data-validate="Phone is required">
+      					<span class="label-input100">Phone:</span>
+      					<input class="input100" type="text" name="phoneNumber" placeholder="Enter phone number">
+      					<span class="focus-input100"></span>
+      				</div>
+
+      				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+      					<span class="label-input100">About Disease:</span>
+      					<textarea class="input100" name="diseaseTopic" placeholder="Wrire something about your Disease..."></textarea>
+      					<span class="focus-input100"></span>
+                      </div>
+                      <div class="float-right btn-center">
+                        <button type="button" class="btn btn-primary ">Book An Appintment</button>
+                    </div>
+        </div>
+         </form>
+
+
+
+    </div>
+    </div>
 
 </div>
 

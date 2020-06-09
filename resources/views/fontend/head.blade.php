@@ -34,8 +34,7 @@
 <link rel="stylesheet" href="{!! asset('public/css/social.css') !!}" media="all">
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-{{--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
 
@@ -68,6 +67,14 @@
         width: 71px;
         border-radius: 10px;
         background-color: #4b9b4beb;height: 67px;
+    }
+
+    .modal-backdrop {
+    z-index: 1040 !important;
+    }
+    .modal-dialog {
+        margin: 2px auto;
+        z-index: 1100 !important;
     }
 </style>
 
@@ -475,7 +482,7 @@ display:none;
 }
 </style>
 
-<style>
+{{-- <style>
 	#pop_mod_onl_con .modal-backdrop{
 		z-index:999 !important;
 	}
@@ -554,7 +561,7 @@ display:none;
 		font-weight: 300;
 		padding: 0px 25px;
 	}
-</style>
+</style> --}}
 
 <!-- Facebook Pixel Code -->
 <script>

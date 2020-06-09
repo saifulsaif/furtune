@@ -1,5 +1,5 @@
 <body>
-  <div id="pop_mod_onl_con" class="modal fade">
+  {{-- <div id="pop_mod_onl_con" class="modal fade">
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
@@ -15,7 +15,7 @@
               </div>
           </div>
       </div>
- </div>
+ </div> --}}
 
   <div id="home">
 

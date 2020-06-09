@@ -246,7 +246,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 43px 88px 57px 190px;
+  /* padding: 43px 88px 57px 190px; */
 }
 
 
@@ -264,14 +264,11 @@ iframe {
   font-family: Poppins-Regular;
   font-size: 15px;
   color: #808080;
-  line-height: 1.2;
-  text-align: right;
-
+  /* line-height: 1.0; */
+  /* text-align: right; */
   position: absolute;
   top: 14px;
-  left: -105px;
-  width: 80px;
-
+  width: 18%;
 }
 
 /*---------------------------------------------*/
@@ -279,12 +276,12 @@ iframe {
   font-family: Poppins-Regular;
   font-size: 15px;
   color: #555555;
-  line-height: 1.2;
+  line-height: 1.0;
 
   display: block;
-  width: 100%;
+  width: 80%;
   background: transparent;
-  padding: 0 5px;
+  padding: 0 100px;
 }
 
 .focus-input100 {
@@ -336,7 +333,10 @@ textarea.input100 {
   width: 100%;
 }
 
-
+.btn-center{
+    text-align: center;
+    width: 100%;
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-contact100-form-btn {
