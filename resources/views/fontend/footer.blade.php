@@ -136,7 +136,70 @@
 <script>
 	$(document).ready(function(){
 		// $("#pop_mod_onl_con").modal('show');
+        $(".searchDoctor").keyup(function () {
+            var searchTerm = $(".searchDoctor").val();
+
+            var listItem = $('.results tbody').children('tr');
+            var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+
+            $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+                    return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
+            if (searchTerm == '') return;
+            $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+                $(this).attr('visible','false');
+            });
+
+            $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+                $(this).attr('visible','true');
+            });
+
+            var jobCount = $('.results tbody tr[visible="true"]').length;
+                $('.counter').text(jobCount + ' Doctor');
+
+            if(jobCount == '0') {
+                $('.no-result').show();
+            }
+            else {
+                $('.no-result').hide();
+            }
+
+        });
+
+        $('#doctable').after('<div id="nav"></div>');
+        var rowsShown = 4;
+        var rowsTotal = $('#doctable tbody tr').length;
+        var numPages = rowsTotal/rowsShown;
+        for(i = 0;i < numPages;i++) {
+            var pageNum = i + 1;
+            $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+        }
+        $('#doctable tbody tr').hide();
+        $('#doctable tbody tr').slice(0, rowsShown).show();
+        $('#nav a:first').addClass('active');
+        $('#nav a').bind('click', function(){
+
+            $('#nav a').removeClass('active');
+            $(this).addClass('active');
+            var currPage = $(this).attr('rel');
+            var startItem = currPage * rowsShown;
+            var endItem = startItem + rowsShown;
+            $('#doctable tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+            css('display','table-row').animate({opacity:1}, 300);
+        });
+
+
 	});
+
+    // Modal SHOW
+        function appointment_modal(id,name,center){
+            document.getElementById('doctor_id').value=id;
+            document.getElementById('doctor_nameShow').innerText  = "Doctor Name : "+name ;
+            document.getElementById('centerShow').innerText  = "Center : "+center ;
+            $('#appointment_model').modal('show');
+        }
+
 </script>
 
 

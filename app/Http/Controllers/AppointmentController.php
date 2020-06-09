@@ -86,12 +86,15 @@ class AppointmentController extends Controller
         //
     }
 
+    protected $notification = array();
     public function getDoctor()
     {
         $doctors = doctors::with('times')->orderBy('id', 'DESC')->get();
         $site_infos= first_row_date('site_infos');
-        return view('fontend.appoinment.appointment',compact('doctors','site_infos'));
+        $notification = $this->notification;
+        return view('fontend.appoinment.appointment',compact('doctors','site_infos', 'notification'));
     }
+
 
     public function getAppoinmet($id)
     {
@@ -122,18 +125,18 @@ class AppointmentController extends Controller
         $appointment->phoneNumber = request()->phoneNumber;
         $appointment->diseaseTopic = request()->diseaseTopic;
         if ($appointment->save()) {
-            $notification = array(
-                'message' => $msg,
-                'alert-type' => "Successfull Send"
+            $this->notification = array(
+                'message' =>  "Successfull Send your request for appointment",
+                'alert-type' => "success"
             );
         }
         else {
-            $notification = array(
-                'message' => $msg,
-                'alert-type' => "Not Sended"
+            $this->notification = array(
+                'message' => 'There might be a problem !!!',
+                'alert-type' => "warning"
             );
         }
-        return view('fontend.appoinment.appointment_form',compact('notification'));
+        return $this->getDoctor();
 
     }
 
