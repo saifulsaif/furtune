@@ -714,7 +714,7 @@ body {
     float: left;
     width: 60%;
     height: auto;
-    margin-right: 3%
+    /* margin-right: 3% */
 }
 
 .news_div {
@@ -4898,8 +4898,8 @@ span.ValidationErrors {
         float: left;
         width: 60%;
         height: auto;
-        margin-right: 3%;
-        margin-left: 0;
+        /* margin-right: ; */
+        /* margin-left: 0; */
         margin-bottom: 15px
     }
 
@@ -5999,8 +5999,8 @@ span.ValidationErrors {
         float: left;
         width: 90%;
         height: auto;
-        margin-right: 5%;
-        margin-left: 5%;
+        /* margin-right: 5%;
+        margin-left: 5%; */
         margin-bottom: 15px
     }
 

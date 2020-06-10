@@ -117,7 +117,7 @@ class AppointmentController extends Controller
         // DB::table('list_appointments')->insert($data);
         $appointment = new listAppointment;
         $appointment->doctor_id = request()->doctor_id;
-        $appointment->firstName = request()->firstName;
+        $appointment->full_name = request()->firstName;
         $appointment->lastName = request()->lastName;
         $appointment->email = request()->email;
         $appointment->dateOfAppoinment = request()->dateOfAppoinment;
