@@ -206,7 +206,7 @@
 
 {{$info->description}}</div>
 
-<div class="welcome_bodytxt"><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt "><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button readmore"><span>Read More </span></div></a></div>
 
 </div>
 @endforeach
@@ -303,7 +303,6 @@
 
 
 
-
 <!--  BODY Part2 -->
 
 <div class="index_aboutmaindiv">
@@ -375,7 +374,7 @@
 
 <div class="welcome_bodytxt">
   <a href="{{route('gallery')}}">
-    <div style="margin:0px auto;" class="button">
+    <div style="margin:0px auto;" class="button readmore">
       <span>Read More </span>
     </div>
   </a>
@@ -439,10 +438,54 @@
 
 
 <!--  BODY Part3 -->
+<div class="static_bodydiv">
+
+<div class="static_mainbody_div">
 
 
 
 
+<div class="static_pagetxt">
+
+<div class="shared_values_div">
+  <div class="welcome_header" style="text-align:center;margin-bottom:36px;">
+
+  Our <span style="color:#16bd28d4 !important;">Services</span>
+
+  </div>
+
+  @foreach($sub_menu as $sub)
+  @if($sub->menu_id==1)
+  @php
+       $submenu_list = getAll_id('submenu_id',$sub->id,'submenu_facilities');
+  @endphp
+  <div class="shared_values_maindiv1"><span class="static_subheading">{{$sub->sub_menu_name}}</span><br />
+  <ul style="margin-left:-18px;">
+    @if (!empty($submenu_list))
+            @foreach($submenu_list as $list)
+                @if($list->submenu_id==$sub->id)
+                <li><a  style="color:black;" href="{{url('service/'.$list->id)}}" title="">{{$list->item_name}}</a></li>
+                @endif
+        @endforeach
+    @endif
+  </ul>
+  </div>
+  @endif
+   @endforeach
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
 <!--  BODY Part4 -->
 
 <div class="media_maindiv">
@@ -450,7 +493,7 @@
 
 <div class="preferd_vendormainBG">
 
-<div class="media_div" style="width:100%; margin-right:0%;">
+<div class="media_div" >
 <div class="media_heading">Media & Events</div>
 
 <div class="scroll_div">
@@ -526,37 +569,18 @@ Corporate <span style="color:#16bd28d4 !important;">Partners</span>
 </div>
 
 <div class="tipup_scrollmaindiv">
-
-
-
-
-
-
 <div class="franchisee_txt_div" >
-
   <span style="color: #16bd28d4 !important; font-weight: 400; font-size: 30px;"> What can we do for your company?</span><br/><br/>
 
       <ul style="list-style:none; margin-left:-35px;">
      @foreach($corporate_services as $service)
       <li>{{$service->service}}</li>
-    @endforeach
-
-
+      @endforeach
       </ul>
-
-
-
-
-
-<!--<div class="welcome_bodytxt" style="margin-top:25px;"><a href="corporate-tieup.php"><button class="button" style="float:right;"> Read More </button></a></div>-->
 </div>
-
 <div class="franchisee_img_div">
   <div class="merchants-list">
     <div class="wrapper1">
-    <!-- <div class="merchants-image">
-      vsdfsdfsdf
-    </div> -->
     <div class="row">
       @foreach($partners as $part)
       <div class="col-md-3">
@@ -565,11 +589,8 @@ Corporate <span style="color:#16bd28d4 !important;">Partners</span>
       @endforeach
     </div>
   </div>
-
-
-
-
-</div></div>
+</div>
+</div>
 
 
 </div>

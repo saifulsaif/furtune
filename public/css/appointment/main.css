@@ -411,6 +411,16 @@ textarea.input100 {
 @media (max-width: 480px) {
   .contact100-form {
     padding: 43px 15px 57px 15px;
+
+  }
+  .owl-stage-outer{
+      max-width: 350px !important;
+  }
+  .owl-stage {
+      max-width: 100%;
+  }
+  .readmore {
+      max-width: 95% !important;
   }
 
   .label-input100 {
