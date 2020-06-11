@@ -413,6 +413,11 @@ textarea.input100 {
     padding: 43px 15px 57px 15px;
 
   }
+
+  #appointment_model{
+      padding:25px;
+  }
+
   .owl-stage-outer{
       max-width: 350px !important;
   }

@@ -218,8 +218,8 @@
 
 </div>
 
-    <div class="modal fade bd-example-modal-lg" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header  bg-light">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -252,13 +252,13 @@
                             </div>
                             <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                                 <span class="label-input100">Date of appointment:</span>
-                                <input class="input100" type="date" required name="dateOfAppoinment" placeholder="Enter Appointment date">
+                            <input class="input100" type="date" required name="dateOfAppoinment" placeholder="Enter Appointment date" value="{{date("Y-m-d")}}">
                                 <span class="focus-input100"></span>
                             </div>
                             <div class="wrap-input100 validate-input" data-validate = "Time">
                                 <span class="label-input100">Time:</span>
 
-                                <input class="input100" type="time" required name="timeAppoinment" id="time" placeholder="Enter Time ">
+                            <input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time " value="{{date("H:i:s")}}">
                                 <span class="focus-input100"></span>
                             </div>
 
