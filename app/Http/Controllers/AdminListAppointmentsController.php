@@ -31,8 +31,8 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Doctor Name","name"=>"doctor_id","join"=>"doctors,doctor_name"];
-			$this->col[] = ["label"=>"FirstName","name"=>"firstName"];
-			$this->col[] = ["label"=>"Last Name","name"=>"lastName"];
+			$this->col[] = ["label"=>"Full Name","name"=>"firstName"];
+			$this->col[] = ["label"=>"Age","name"=>"lastName"];
 			$this->col[] = ["label"=>"Email","name"=>"email"];
 			$this->col[] = ["label"=>"DateOfAppoinment","name"=>"dateOfAppoinment"];
 			$this->col[] = ["label"=>"TimeAppoinment","name"=>"timeAppoinment"];
@@ -54,14 +54,14 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"FirstName","name"=>"firstName","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"LastName","name"=>"lastName","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Email","name"=>"email","type"=>"email","required"=>TRUE,"validation"=>"required|min:1|max:255|email|unique:list_appointments","placeholder"=>"Please enter a valid email address"];
-			//$this->form[] = ["label"=>"DateOfAppoinment","name"=>"dateOfAppoinment","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"TimeAppoinment","name"=>"timeAppoinment","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"PhoneNumber","name"=>"phoneNumber","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"DiseaseTopic","name"=>"diseaseTopic","type"=>"textarea","required"=>TRUE,"validation"=>"required|string|min:5|max:5000"];
-			//$this->form[] = ["label"=>"Doctor Id","name"=>"doctor_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"doctor,id"];
+			//$this->form[] = ['label'=>'FirstName','name'=>'firstName','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'LastName','name'=>'lastName','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'min:1|max:255|email|unique:list_appointments','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
+			//$this->form[] = ['label'=>'DateOfAppoinment','name'=>'dateOfAppoinment','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'TimeAppoinment','name'=>'timeAppoinment','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'PhoneNumber','name'=>'phoneNumber','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'DiseaseTopic','name'=>'diseaseTopic','type'=>'textarea','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Doctor Id','name'=>'doctor_id','type'=>'select2','validation'=>'integer|min:0','width'=>'col-sm-10','datatable'=>'doctor,id'];
 			# OLD END FORM
 
 			/* 

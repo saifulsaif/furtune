@@ -206,7 +206,7 @@
 
 {{$info->description}}</div>
 
-<div class="welcome_bodytxt"><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt "><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button readmore"><span>Read More </span></div></a></div>
 
 </div>
 @endforeach
@@ -374,7 +374,7 @@
 
 <div class="welcome_bodytxt">
   <a href="{{route('gallery')}}">
-    <div style="margin:0px auto;" class="button">
+    <div style="margin:0px auto;" class="button readmore">
       <span>Read More </span>
     </div>
   </a>

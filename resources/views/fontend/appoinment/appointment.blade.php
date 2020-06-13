@@ -219,15 +219,15 @@
 </div>
 
     <div class="modal fade" style="margin-top:5%;" id="appointment_model" tabindex="-1" role="dialog" aria-labelledby="appointment_model" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                <div class="modal-header  bg-success">
+                <div class="modal-header  bg-light">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true" style="color: red">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="text-center bg-primary">
+                    <div class="text-center bg-primary modal-head">
                         <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
                         <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
                     </div>
@@ -235,13 +235,13 @@
                             @csrf
                             <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
                             <div class="wrap-input100 validate-input" data-validate="Name is required">
-                                <span class="label-input100">First Name:</span>
-                                <input class="input100" type="text" name="firstName" placeholder="Enter full name">
+                                <span class="label-input100">Full Name:</span>
+                                <input class="input100" type="text" name="firstName" required placeholder="Enter full name">
                                 <span class="focus-input100"></span>
                             </div>
                             <div class="wrap-input100 validate-input" data-validate="Name is required">
-                                <span class="label-input100">Last Name:</span>
-                                <input class="input100" type="text" name="lastName" placeholder="Enter last name">
+                                <span class="label-input100">Age:</span>
+                                <input class="input100" type="text" name="lastName" required placeholder="Enter age">
                                 <span class="focus-input100"></span>
                             </div>
 
@@ -252,17 +252,17 @@
                             </div>
                             <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                                 <span class="label-input100">Date of appointment:</span>
-                                <input class="input100" type="date" name="dateOfAppoinment" placeholder="Enter Appointment date">
+                            <input class="input100" type="date" required name="dateOfAppoinment" placeholder="Enter Appointment date" value="{{date("Y-m-d")}}">
                                 <span class="focus-input100"></span>
                             </div>
-                            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            <div class="wrap-input100 validate-input" data-validate = "Time">
                                 <span class="label-input100">Time:</span>
 
-                                <input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time ">
+                            <input class="input100" type="time" name="timeAppoinment" id="time" placeholder="Enter Time " value="{{date("H:i:s")}}">
                                 <span class="focus-input100"></span>
                             </div>
 
-                            <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                            <div class="wrap-input100 validate-input" required data-validate="Phone is required">
                                 <span class="label-input100">Phone:</span>
                                 <input class="input100" type="text" name="phoneNumber" placeholder="Enter phone number">
                                 <span class="focus-input100"></span>
@@ -275,7 +275,9 @@
                             </div>
 
                             <div class="float-right btn btn-center">
-                                <button type="submit" class="btn btn-primary ">Book An Appintment</button>
+                                <button type="submit" class="btn btn-primary ">
+                                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                    Book An Appintment</button>
                             </div>
 
                     </form>

@@ -2954,7 +2954,7 @@ margin-right: 20px;
 .findtestbox_div{
 float:left;
 /*width:30%;*/
-width:45%;
+width:100%;
 height:auto;
 margin-right: 20px;
 }
@@ -5016,7 +5016,7 @@ padding: 14px 0;
 .findtestbox_div{
 float:left;
 /*width:35%;*/
-width:65%;
+width:100%;
 height:auto;
 margin-right: 20px;
 }
@@ -6386,7 +6386,7 @@ padding: 14px 0;
 .findtestbox_div{
 float:left;
 /*width:35%;*/
-width:65%;
+width:100%;
 height:auto;
 margin-right: 20px;
 }
@@ -7389,6 +7389,9 @@ height:auto;
 margin-left:5%;
 margin-right:5%;
 }
+  .readmore {
+      max-width: 95% !important;
+  }
 
 .welcome_header_new{
 font-size:25px !important;

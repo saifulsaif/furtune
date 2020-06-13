@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\appointment;
-use App\doctors;
-use App\listAppointment;
 use DB;
+use App\doctors;
+use App\appointment;
+use App\listAppointment;
+use App\Mail\sendmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AppointmentController extends Controller
 {
@@ -102,29 +104,55 @@ class AppointmentController extends Controller
        $site_infos= first_row_date('site_infos');
        return view('fontend.appoinment.appointment_form',compact('doctors','site_infos'));
     }
-    public function sendAppointment()
+    public function sendAppointment(Request $request)
     {
-        $data = array(
-            'doctor_id' => request()->doctor_id,
-            'firstName' => request()->firstName,
-            'lastName' => request()->lastName,
-            'email' => request()->email,
-            'dateOfAppoinment' => request()->dateOfAppoinment,
-            'timeAppoinment' => request()->timeAppoinmen,
-            'phoneNumber' => request()->phoneNumber,
-            'diseaseTopic' => request()->diseaseTopic,
+        $email = getenv('CONTACT_US_RECIPIENT_EMAIL');
+        $subject = 'Appointment Request For ' . doctors::findOrFail($request->doctor_id)->doctor_name;
+        $message = array(
+            'name' => $request->firstName,
+            'age' => $request->lastName,
+            'date' => $request->dateOfAppoinment,
+            'time' => $request->timeAppoinment,
+            'number' =>  $request->phoneNumber,
+            'about' => $request->diseaseTopic,
+        );
+        // dd($message);
+        Mail::to($email)->send(new sendmail($subject, $message));
+        $this->validate($request,[
+            "firstName" => "require",
+            "email" => "require",
+            "dateOfAppoinment" => "require",
+            "timeAppoinment" => "require",
+            "phoneNumber" => "require"
+        ]
         );
         // DB::table('list_appointments')->insert($data);
         $appointment = new listAppointment;
-        $appointment->doctor_id = request()->doctor_id;
-        $appointment->firstName = request()->firstName;
-        $appointment->lastName = request()->lastName;
-        $appointment->email = request()->email;
-        $appointment->dateOfAppoinment = request()->dateOfAppoinment;
-        $appointment->timeAppoinment = request()->timeAppoinment;
-        $appointment->phoneNumber = request()->phoneNumber;
-        $appointment->diseaseTopic = request()->diseaseTopic;
+        $appointment->doctor_id = $request->doctor_id;
+        $appointment->full_name = $request->firstName;
+        $appointment->lastName = $request->lastName;
+        $appointment->email = $request->email;
+        $appointment->dateOfAppoinment = $request->dateOfAppoinment;
+        $appointment->timeAppoinment = $request->timeAppoinment;
+        $appointment->phoneNumber = $request->phoneNumber;
+        $appointment->diseaseTopic = $request->diseaseTopic;
+
+        $email = getenv('CONTACT_US_RECIPIENT_EMAIL');
+        $subject = 'Appointment Request For ' + doctors::findOrFail($request->doctor_id)->doctor_name;
+        $message = array(
+            'name' => $request->firstName,
+            'age' => $request->lastName,
+            'date' => $request->dateOfAppoinment,
+            'time' => $request->timeAppoinment,
+            'number' =>  $request->phoneNumber,
+            'about' => $request->diseaseTopic,
+        );
+        Mail::to($email)->send(new sendmail($subject, $message));
+
         if ($appointment->save()) {
+            #Mail Send
+            Mail::to($email)->send( new sendmail($subject,$message));
+
             $this->notification = array(
                 'message' =>  "Successfull Send your request for appointment",
                 'alert-type' => "success"

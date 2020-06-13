@@ -268,7 +268,7 @@ iframe {
   /* text-align: right; */
   position: absolute;
   top: 4px;
-  width: 18%;
+  width: 25%;
 }
 
 /*---------------------------------------------*/
@@ -279,9 +279,13 @@ iframe {
   line-height: 1.0;
 
   display: block;
-  width: 80%;
+  width: 55%;
   background: transparent;
-  padding: 0 100px;
+  padding: 0 130px;
+}
+
+.modal-head{
+    margin-bottom: 20px;
 }
 
 .focus-input100 {
@@ -407,6 +411,21 @@ textarea.input100 {
 @media (max-width: 480px) {
   .contact100-form {
     padding: 43px 15px 57px 15px;
+
+  }
+
+  #appointment_model{
+      padding:25px;
+  }
+
+  .owl-stage-outer{
+      max-width: 350px !important;
+  }
+  .owl-stage {
+      max-width: 100%;
+  }
+  .readmore {
+      max-width: 95% !important;
   }
 
   .label-input100 {
