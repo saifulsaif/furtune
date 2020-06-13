@@ -41,7 +41,7 @@
 <div class="footer_menudiv">
 
 <a href="{{url('/')}}"><div class="footer_menutxt">Home</div></a>
-<a href="#"><div class="footer_menutxt">Find a Test</div></a>
+<a href="franchisee"><div class="footer_menutxt">Franchisee</div></a>
 <a href="{{url('/getDoctor')}}"><div class="footer_menutxt">Book an Appointment</div></a>
 <!--<a href="https://surakshadiagnostic.com/" target="_blank"><div class="footer_menutxt">Blog</div></a>-->
 <a href="{{route('feedback')}}"><div class="footer_menutxt">Feedback</div></a>

@@ -253,4 +253,26 @@ class PageController extends Controller
      $galleries = getValueByTBName('galleries');
       return view('fontend.content.gallery',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','galleries'));
    }
+   public function covid(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $covids = DB::table('covids')
+             ->select('*')
+             ->first();
+      return view('fontend.content.covid',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','covids'));
+   }
+   public function telemedicine(){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+     $telemedicines =  DB::table('telemedicines')
+             ->select('*')
+             ->first();
+      return view('fontend.content.telemedicine',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','telemedicines'));
+   }
 }

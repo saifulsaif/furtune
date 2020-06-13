@@ -41,6 +41,8 @@ Route::get('/faq', 'PageController@faq')->name('faq');
 Route::get('/latest-news', 'PageController@blog')->name('blog');
 Route::get('/gallery', 'PageController@gallery')->name('gallery');
 Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
+Route::get('/covid-19', 'PageController@covid')->name('covid');
+Route::get('/telemedicine', 'PageController@telemedicine')->name('telemedicine');
 
 
 
