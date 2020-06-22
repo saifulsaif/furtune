@@ -45,7 +45,7 @@
 <div class="icon1_maindiv"><div class="icon2"></div></div>
 </div>
 
-<div class="icon_heading"> Appointment</div>
+<div class="icon_heading">Doctor Appointment</div>
 <div class="icon_subheading1" style="margin-bottom:12px; font-size:14px;">Click here to book Appointment</div>
 
 <a href="{{route('fortune.getDoctor')}}" target="_blank"><div class="download_report_div ">BOOK</div></a>
@@ -87,13 +87,11 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<div class="icon_subheading2" style="margin-bottom:15px;">Phone : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
-
-
+<div class="icon_subheading2" style="margin-bottom:15px;text-align: center;">Phone : <span style="text-align:center; margin-left: 10px;; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
 
 <!--<div class="icon_subheading2" style="margin-bottom:15px;">DELHI & NCR : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>1800-121-9541 </span></div>-->
 
-<div class="icon_subheading2" >Hotline : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
+<div class="icon_subheading2"  style="margin-bottom:15px;text-align: center;">Hotline : <span style="text-align:right;margin-left: 10px; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
 
 </div>
 
@@ -206,7 +204,7 @@
 
 {{$info->description}}</div>
 
-<div class="welcome_bodytxt "><a href="{{url('/')}}"><div style="margin:0px auto;margin-top: 31px;" class="button readmore"><span>Read More </span></div></a></div>
+<div class="welcome_bodytxt "><a href="{{route('company_profile')}}"><div style="margin:0px auto;margin-top: 31px;" class="button readmore"><span>Read More </span></div></a></div>
 
 </div>
 @endforeach

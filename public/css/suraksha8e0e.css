@@ -3242,9 +3242,10 @@ padding-right:5%;
 }
 
 .shared_values_maindiv1{
-float:left;
-width:32.33%;
-height: 220px;
+  float: left;
+   width: 25.33%;
+   height: 220px;
+   margin-left: 90px;
 
 }
 

@@ -86,11 +86,11 @@
     <i style="font-size: 35px;" class="fa fa-user"></i> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Patient</br>Portal</h4></a>
   </div>
 <div class="nabl_logodiv2 header_icon">
-  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-appoinment.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Book</br>Appointment</h4></a>
+  <img style="width: 51%;height: 34px;" src="{!! asset('public/images/icon/right-appoinment.png') !!}" class="img_css" alt="CAP" /> <a href="#"><h4 style="margin-top: 7px;font-size: 11px;font-weight: 600;">Doctor</br>Appointment</h4></a>
 </div>
 <div class="nabl_logodiv2 header_icon" style="background-color:#f31e24;">
   <img style="width: 71%;height: 50px;" src="{!! asset('public/images/icon/covid.png') !!}" class="img_css" alt="CAP" />
-  <a href="{{route('covid')}}">
+   <a href="https://www.worldometers.info/coronavirus/" target="_blank">
     <h4 style="margin-top: 2px;font-size: 11px;font-weight: 600;">COVID-19</h4>
   </a>
 </div>

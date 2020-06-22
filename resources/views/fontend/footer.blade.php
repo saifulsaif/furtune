@@ -52,7 +52,7 @@
 <div class="footer_menudiv">
 
 <a href="{{route('corporeate_partner')}}"><div class="footer_menutxt">Corporate Partners</div></a>
-<a href="{{route('home_collection')}}"><div class="footer_menutxt">Home Collection </div></a>
+<a href="{{route('covid')}}"><div class="footer_menutxt">COVID-19 </div></a>
 <a href="{{route('customer_care')}}"><div class="footer_menutxt">Customer Care</div></a>
 <a href="{{route('faq')}}"><div class="footer_menutxt">FAQ's</div></a>
 

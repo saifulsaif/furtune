@@ -1,18 +1,9 @@
 
 @extends('fontend.app')
 @section('content')
-
-
 <!-----------------  Body Start  ------------------ -->
-
-
 <div class="body_maindiv">
-
-
-
-
 <!------------------  profile  ------------------->
-
 <div class="profile_aboutmaindiv">
 
 <div class="header_bandmaindiv">
@@ -67,7 +58,7 @@ The laboratories have state-of-the-art equipments operated by a team of efficien
 
 </div>
 
-<div class="view_fullprofile"><div class="fullprofile_div"><a class="various" data-fancybox-type="iframe" href="../../suparba-chakrabarti.php"><button class="button" style="float:right; width:100%;"><span>View Full Profile </span></button> </a></div></div>
+<div class="view_fullprofile"><div class="fullprofile_div"><a class="various" data-fancybox-type="iframe" href="http://localhost/furtune/team-of-expert"><button class="button" style="float:right; width:100%;"><span>View Full Profile </span></button> </a></div></div>
 
 
 </div>
