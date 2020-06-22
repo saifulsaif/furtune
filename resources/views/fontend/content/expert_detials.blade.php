@@ -27,18 +27,20 @@
 <div class="static_pagetxt">
 
 
-
 @foreach($experts as $expert)
 <div class="expartBG_main">
 
 <div class="expart_maindiv">
 
-<div class="expartsimage"><img src="{{$expert->image}}" class="img_css" alt="Suparba Chakrabarti" /></div>
+<div class="expartsimage"><img src="{{asset($expert->image)}}" class="img_css" alt="Suparba Chakrabarti" /></div>
 <div class="teamtxt_mainBG">
 <span class="team_name">{{$expert->name}}</span><br />
 <strong>{{$expert->specialization}} </strong><br />
 <br />
-<strong>From :</strong> {{$expert->from}}
+<strong>Designation : </strong> {{$expert->designation}}
+<br />
+<br />
+<strong>From : </strong> {{$expert->from}}
 <br />
 <br />
 
@@ -47,16 +49,20 @@
 <br />
 
 
-<strong>Area of Interest :</strong>{{$expert->intertest}}
+<strong>Experiance : </strong>{{$expert->experience}}
+<br />
+<br />
+<strong>Area of Interest : </strong>{{$expert->intertest}}
+<br />
+<br />
 
-
+<strong>Description : </strong> {{$expert->descreption}}
+<br />
+<br />
 
 </div>
 
 </div>
-
-<div class="view_fullprofile"><div class="fullprofile_div"><a class="various"  href="{{url('expert-details/'.$expert->id)}}"><button class="button" style="float:right; width:100%;"><span>View Full Profile </span></button> </a></div></div>
-
 
 </div>
 @endforeach

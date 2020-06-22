@@ -45,7 +45,7 @@
 <div class="healthpackage_new_maindiv">
 <div class="healthpackage_imgdivmain"><div class="healthpackage_imgdiv"><img src="{{asset($packages->image)}}" style="width:100%;" alt="Executive Health  Package" /></div>
 
-<div class="book_packagediv"><a class="various5" href="book-package.php?i=Executive Health Package" data-fancybox-type="iframe"><div class="feedback_submit_btn packagebooking1" style="float:left; width:100%; margin-top:10px;">BOOK PACKAGE</div></a></div>
+<div class="book_packagediv"><a class="various5" onclick="appointment_modal({{'2'}},'{{ 'Book Package' }}','{{ '' }}')" data-fancybox-type="iframe"><div class="feedback_submit_btn packagebooking1" style="float:left; width:100%; margin-top:10px;">BOOK PACKAGE</div></a></div>
 
 
 </div>
@@ -71,7 +71,7 @@
 
 </div>
 
-<div class="book_packagediv"><a class="various5" href="book-package.php?i=Executive Health Package" data-fancybox-type="iframe"><div class="feedback_submit_btn packagebooking2" style="float:left; width:100%; margin-top:10px;">BOOK PACKAGE</div></a></div>
+
 
 
 </div>
@@ -109,5 +109,59 @@
 
 <!-----------------  Body End  ------------------ -->
 
+<div class="modal fade" style="margin-top:5%;" id="appointment_model_new" tabindex="-1" role="dialog" aria-labelledby="appointment_model_new" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header  bg-light">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color: red">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="text-center bg-primary modal-head">
+                      <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
+                      <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
+                  </div><br/>
+                  <form class="contact100-form validate-form" >
+                          @csrf
+                          <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
 
+                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+
+                              <input class="input100" placeholder="Please Enter Name" style="border: none;border-bottom: 1px solid #999999;width:100%" type="text" name="name" >
+                              <span class="focus-input100"></span>
+                          </div><br/>
+                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+
+                              <input class="input100"  placeholder="Please Enter Email" type="text" name="email"  style="border: none;border-bottom: 1px solid #999999;width:100%" >
+                              <span class="focus-input100"></span>
+                          </div><br/>
+
+                          <div class="wrap-input100 validate-input" required data-validate="Phone is required">
+
+                              <input class="input100"  placeholder="Please Enter Phone" type="text"  style="border: none;border-bottom: 1px solid #999999;width:100%"  name="phoneNumber" >
+                              <span class="focus-input100"></span>
+                          </div><br/>
+                          <div class="wrap-input100 validate-input" required data-validate="Phone is required">
+                              <input class="input100" placeholder="Write Message" type="text"  style="border: none;border-bottom: 1px solid #999999;width:100%" >
+                              <span class="focus-input100"></span>
+                          </div><br/>
+
+
+
+                          <div class="float-right btn btn-center">
+                              <button type="submit" class="btn btn-primary ">
+                                  <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                  Book Now</button>
+                          </div>
+
+                  </form>
+              </div>
+
+
+
+              </div>
+          </div>
+
+      </div>
 @endsection

@@ -45,6 +45,18 @@ class PageController extends Controller
      $site_infos= first_row_date('site_infos');
       return view('fontend.content.team_of_expert',compact('site_infos','menu','sub_menu','sliders','experts','sub_menu_list'));
    }
+   public function expertDetails($id){
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sliders = getValueByTBName('slider');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $experts = DB::table('expert_team')
+             ->select('*')
+             ->where('id','=',$id)
+             ->get();
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.expert_detials',compact('site_infos','menu','sub_menu','sliders','experts','sub_menu_list'));
+   }
    public function csr(){
      $menu = getValueByTBName('menu');
      $sub_menu = getValueByTBName('submenuses');

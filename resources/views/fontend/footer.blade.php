@@ -199,7 +199,13 @@
             document.getElementById('centerShow').innerText  = "Center : "+center ;
             $('#appointment_model').modal('show');
         }
-
+				// Modal SHOW
+						function appointment_modal(id,name,center){
+								document.getElementById('doctor_id').value=id;
+								document.getElementById('doctor_nameShow').innerText  = " "+name ;
+								document.getElementById('centerShow').innerText  = " "+center ;
+								$('#appointment_model_new').modal('show');
+						}
 </script>
 
 

@@ -76,6 +76,7 @@ E-mail: <a href="{{$site_infos->email}}" style="color:#333333; text-decoration:n
 
 
 <div class="feedbackformdiv" style="margin-top:10px;"><input class="feedback_submit_btn" type="submit" value="SUBMIT " name="submit" style="width:100%; margin-right:0px; margin-top:15px;"></input></div>
+
 </div>
 
 </form>

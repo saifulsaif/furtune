@@ -21,6 +21,7 @@ Route::get('/#', 'PageController@index')->name('#');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/commpany-profile', 'PageController@companyProfile')->name('company_profile');
 Route::get('/team-of-expert', 'PageController@teamOfExpert')->name('team_of_expert');
+Route::get('/expert-details/{id}', 'PageController@expertDetails');
 Route::get('/CSR', 'PageController@csr')->name('csr');
 Route::get('/service/{id}', 'PageController@service');
 Route::get('/package-details/{id}', 'PageController@packageDetails');
