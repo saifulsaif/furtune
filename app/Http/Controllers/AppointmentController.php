@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use DB;
 use App\doctors;
 use App\appointment;
-use App\listAppointment;
 use App\Mail\sendmail;
+use App\listAppointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Redirect;
 
 class AppointmentController extends Controller
 {
@@ -106,30 +108,29 @@ class AppointmentController extends Controller
     }
     public function sendAppointment(Request $request)
     {
-        $email = getenv('CONTACT_US_RECIPIENT_EMAIL');
+        $request->validate([
+            'firstName' => 'required',
+            'email' => 'required|email',
+            'dateOfAppoinment' => 'required',
+            'timeAppoinment' => 'required',
+            'phoneNumber' => 'required',
+        ]);
+        $email = Config::get('mail.from.address');
+            // dd($email);
         $subject = 'Appointment Request For ' . doctors::findOrFail($request->doctor_id)->doctor_name;
-        $message = array(
+        $mail_data = array(
             'name' => $request->firstName,
             'age' => $request->lastName,
             'date' => $request->dateOfAppoinment,
             'time' => $request->timeAppoinment,
             'number' =>  $request->phoneNumber,
             'about' => $request->diseaseTopic,
+            'email' => $request->email,
+            'app_name' => config('app.name'),
         );
-        // dd($message);
-        Mail::to($email)->send(new sendmail($subject, $message));
-        $this->validate($request,[
-            "firstName" => "require",
-            "email" => "require",
-            "dateOfAppoinment" => "require",
-            "timeAppoinment" => "require",
-            "phoneNumber" => "require"
-        ]
-        );
-        // DB::table('list_appointments')->insert($data);
         $appointment = new listAppointment;
         $appointment->doctor_id = $request->doctor_id;
-        $appointment->full_name = $request->firstName;
+        $appointment->firstName = $request->firstName;
         $appointment->lastName = $request->lastName;
         $appointment->email = $request->email;
         $appointment->dateOfAppoinment = $request->dateOfAppoinment;
@@ -137,35 +138,49 @@ class AppointmentController extends Controller
         $appointment->phoneNumber = $request->phoneNumber;
         $appointment->diseaseTopic = $request->diseaseTopic;
 
-        $email = getenv('CONTACT_US_RECIPIENT_EMAIL');
-        $subject = 'Appointment Request For ' + doctors::findOrFail($request->doctor_id)->doctor_name;
-        $message = array(
-            'name' => $request->firstName,
-            'age' => $request->lastName,
-            'date' => $request->dateOfAppoinment,
-            'time' => $request->timeAppoinment,
-            'number' =>  $request->phoneNumber,
-            'about' => $request->diseaseTopic,
-        );
-        Mail::to($email)->send(new sendmail($subject, $message));
-
-        if ($appointment->save()) {
+        if($appointment->save()) {
             #Mail Send
-            Mail::to($email)->send( new sendmail($subject,$message));
-
-            $this->notification = array(
-                'message' =>  "Successfull Send your request for appointment",
-                'alert-type' => "success"
-            );
+            Mail::send('mail.mailtemplate', $mail_data, function ($mail) use ($mail_data, $email, $subject) {
+                $mail->from($mail_data['email'], $mail_data['name'])
+                ->to('sajib155@gmail.com')
+                ->subject($subject);
+            });
+            return Redirect::back()->withErrors(['success', 'We have received your mail.Thank You!!']);
         }
         else {
-            $this->notification = array(
-                'message' => 'There might be a problem !!!',
-                'alert-type' => "warning"
-            );
-        }
-        return $this->getDoctor();
 
+            return Redirect::back()->withErrors(['warning', 'There might be a problem !!!']);
+        }
+
+    }
+    function contact_us(Request $req){
+        $req->validate([
+            'Uname' => 'required',
+            'email' => 'required|email',
+            'complaint' => 'required'
+        ]);
+        $data = array(
+            'user_name' => $req->Uname,
+            'email' => $req->email,
+            'mobile' => $req->mob,
+            'compliment' => $req->complaint
+        );
+        $data_save = array(
+            'user_name' => $req->Uname,
+            'email' => $req->email,
+            'mobile' => $req->mob,
+            'message' => $req->complaint,
+            'created_at' => date("Y-m-d H:i:s")
+        );
+        DB::table('contact_us')->insert($data_save);
+        // dd($data);
+        Mail::send('mail.contact_us_mail', $data, function ($mail) use ($data) {
+            $mail->from($data['email'], $data['user_name'])
+                ->to('sajib155@gmail.com')
+                ->subject("Message From ". $data['user_name']);
+        });
+
+        return Redirect::back()->withErrors(['success', 'We received your mail . Thanks for Your valueable openion!!!']);
     }
 
 
