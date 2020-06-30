@@ -22,6 +22,7 @@
     }
 
 </style>
+
 <div class="body_maindiv" >
 
 <!------------------  profile  ------------------->
@@ -38,7 +39,11 @@
 </div>
 
 <div class="static_bodydiv">
-
+@if ($errors->any())
+        <div class="alert alert-{{$errors->all()[0]}}">
+        {{$errors->all()[1]}}
+    </div>
+@endif
 <div class="static_mainbody_div">
 
 
@@ -85,11 +90,7 @@
 </form>
 
 
-@if (!empty($notification))
-    <div class="alert alert-{{$notification['alert-type']}}" role="alert">
-        {{$notification['message']}}
-    </div>
-@endif
+
 <!--###################  Desktop Version     ######################-->
 
 
@@ -119,17 +120,10 @@
                         @else
                             <td>NO Time</td>
                         @endif
-                        {{-- <td class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointment_model">
-                                            <i class="fa fa-medkit" style="font-size:32px;color:red"></i>
-                                        </button>
-                                    </td> --}}
-
-
                         <td class="text-center">
-                            <a type="javascript.void(0)" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
+                            <a class="appointment_btn" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
                                 <i class="fa fa-medkit" style="font-size:32px;color:green"></i>
                             </a>
-                        {{-- <td class="text-center"><a type="button" href="{{ route('fortune.getAppoinmet',[$doctor->id]) }}"><i class="fa fa-medkit" style="font-size:32px;color:red"></i></a> --}}
                         </td>
                     </tr>
                 @endforeach
@@ -187,7 +181,7 @@
                                     <td>NO Time</td>
                                 @endif --}}
                                <td class="text-center">
-                                    <a type="" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
+                                    <a type="button" onclick="appointment_modal({{ $doctor->id }},'{{ $doctor->doctor_name }}','{{ $doctor->center }}')">
                                     <i class="fa fa-medkit" style="font-size:32px;color:green"></i>
                                 </a>
                                 </td>
@@ -231,7 +225,7 @@
                         <h3 class="modal-title centerShow" id="doctor_nameShow"></h3>
                         <h5 class="modal-title doctor_nameShow" id="centerShow"></h5>
                     </div>
-                    <form class="contact100-form validate-form" action="{{action('AppointmentController@sendAppointment')}}" method="post">
+                    <form class="contact100-form validate-form" action="{{ route('sendAppointment') }}" method="post">
                             @csrf
                             <input type="hidden" name="doctor_id" id="doctor_id" class="col-md-12" value="" >
                             <div class="wrap-input100 validate-input" data-validate="Name is required">
@@ -289,6 +283,7 @@
             </div>
 
         </div>
+
 @endsection
 
 

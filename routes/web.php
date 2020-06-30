@@ -49,6 +49,8 @@ Route::get('/telemedicine', 'PageController@telemedicine')->name('telemedicine')
 
 
 Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
+Route::post('/contact_us', 'AppointmentController@contact_us')->name('contact_us');
+
 Route::group(['as' => 'fortune.', 'prefix' => 'fortune'], function () {
 
     Route::get('/getDoctor', 'AppointmentController@getDoctor')->name('getDoctor');

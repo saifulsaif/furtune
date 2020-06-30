@@ -324,7 +324,7 @@
 	    |
 	    */
 	    public function hook_after_delete($id) {
-	        //Your code here
+            doctors::with('times')->find($id)->delete();
 
 	    }
 

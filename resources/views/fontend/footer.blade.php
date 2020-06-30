@@ -5,9 +5,7 @@
 <div class="footer_div">
 
 <div class="copyright_mainBG">
-<div class="copyright_txt">
-{{$site_infos->footer_info}}
-</div>
+<div class="copyright_txt"> {{ $site_infos->footer_info }} </div>
 
 <div class="copyright_txt"><a href="{{$site_infos->app_link}}" target="_blank" rel="noopener"><img src="{!! asset($site_infos->app_icon) !!}"   alt="Google Play" /></a>
 
@@ -130,7 +128,7 @@
 </div>
 
 
-<script src='{!! asset('public/js/jquery-1.9.1.min.js') !!}'></script>
+<script src='{{ asset('public/js/jquery-1.9.1.min.js') }}'></script>
 
 <script src='{!! asset('public/js/bootstrap.min.js') !!}'></script>
 <script>
@@ -197,15 +195,10 @@
             document.getElementById('doctor_id').value=id;
             document.getElementById('doctor_nameShow').innerText  = "Doctor Name : "+name ;
             document.getElementById('centerShow').innerText  = "Center : "+center ;
+            $('.appointment_btn').attr('data-toggle','modal');
+            // $('.appointment_btn').attr('data-toggle','modal')
             $('#appointment_model').modal('show');
         }
-				// Modal SHOW
-						function appointment_modal(id,name,center){
-								document.getElementById('doctor_id').value=id;
-								document.getElementById('doctor_nameShow').innerText  = " "+name ;
-								document.getElementById('centerShow').innerText  = " "+center ;
-								$('#appointment_model_new').modal('show');
-						}
 </script>
 
 

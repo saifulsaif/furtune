@@ -19,9 +19,9 @@
 
                                    {{-- <ul class="dl-submenu"> --}}
                                         <li>
-                                            <a href="#">{{ $submenus->sub_menu_name }}</a>
+                                        <a  >{{ $submenus->sub_menu_name }}</a>
                                             <ul class="dl-submenu">
-                                                {{-- @php $submenu_lists = getAll_id('submenu_id',$submenus->id,'submenu_facilities'); @endphp --}}
+
                                                 @foreach ($submenu_lists as $key => $sub_list)
                                                     <li>
                                                         <a href="{{url('service/'.$sub_list->id)}}">{{ $sub_list->item_name }}</a>
@@ -31,9 +31,9 @@
                                         </li>
                                     {{-- </ul> --}}
                                 @else
-                                    {{-- <li> --}}
+                                    <li>
                                         <a href="@if($submenus->route_name != null) {{ route($submenus->route_name) }} @else {{ route('#') }}  @endif">{{ $submenus->sub_menu_name }}</a>
-                                    {{-- </li> --}}
+                                    </li>
                                 @endif
 
                             @endforeach
