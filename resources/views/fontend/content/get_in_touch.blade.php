@@ -37,10 +37,7 @@
 
 <div class="wb_address_div">
 
-<span class="static_subheading">
 
-
-<strong>Corporate office</strong> </span><br />
 <strong>{{$site_infos->applicaton_name}}</strong><br />
 
 

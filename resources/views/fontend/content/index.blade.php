@@ -2,6 +2,7 @@
 @extends('fontend.app')
 @section('content')
 
+@include('fontend.slider')
 <!-- Body Start  -->
 
 
