@@ -143,8 +143,15 @@ class PageController extends Controller
              ->select('*')
              ->Where('package_id', '=', $package_id)
              ->get();
+
+      $packageinfo = DB::table('health_package_lists')->where('id',$package_id)->first();
+      $services = DB::table('health_package_lists')
+            ->join('package_services', 'health_package_lists.id','=', 'package_services.packageList_id')
+            ->where('health_package_lists.id',$package_id)
+            ->get();  
+
      $site_infos= first_row_date('site_infos');
-      return view('fontend.content.health_package_list_details',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
+      return view('fontend.content.health_package_list_details',compact('services','packageinfo','site_infos','menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
    }
    public function career(){
      $menu = getValueByTBName('menu');
@@ -304,5 +311,12 @@ class PageController extends Controller
      $sliders = getValueByTBName('slider');
      $site_infos= first_row_date('site_infos');
       return view('fontend.content.feedback',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
+   }
+
+   public function deleteservice(){
+       DB::table('package_services')->delete(request()->id);
+        return response()->json([
+            'success'   => true
+        ]);
    }
 }
