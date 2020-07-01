@@ -316,7 +316,11 @@ text-align:center;
 
 
 }
-
+.columns{
+  width: 33.3%;
+  padding: 8px;
+  margin: 0 auto;
+}
 .icon_subheading1{
 float:left;
 width:100%;
@@ -346,6 +350,7 @@ height:auto;
 margin-bottom:10px;
 font-family: 'Arimo', sans-serif;
 font-size:15px;
+  margin-right: 14px;
 color:#FFFFFF;
 font-weight:normal;
 text-align:left;
@@ -4491,7 +4496,11 @@ height:auto;
 @media only screen and (max-width:1200px) and (min-width: 999px) {
 
 
-
+  .columns{
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+  }
 .newhome_aboutdiv{
 float:left;
 width:94%;
@@ -5845,7 +5854,13 @@ margin-top:30px;
 
 @media only screen and (max-width:999px) {
 
-
+  .columns{
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+    padding: 8px;
+    margin: 0 auto;
+  }
 .clugenix_partner_div{
 float:left;
 width:90%;
@@ -7140,7 +7155,7 @@ float:left;
 width:120px;
 height:auto;
 margin-left:10px;
-margin-top: 8px;
+margin-top: 20px;
 }
 
 .accreditation_div{
@@ -7202,7 +7217,11 @@ margin-bottom:15px;
 /*===========================================================*/
 
 @media only screen and (max-width:768px) {
-
+  .columns{
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+  }
 .static_pagetxt1{
 float:left;
 width:100%;
@@ -7382,7 +7401,11 @@ font-weight:bold;
 
 @media only screen and (max-width:480px) {
 
-
+  .columns{
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+  }
 .clugenix_partner_div{
 float:left;
 width:90%;

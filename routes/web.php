@@ -48,11 +48,12 @@ Route::get('/telemedicine', 'PageController@telemedicine')->name('telemedicine')
 
 
 
+
 Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
 Route::post('/contact_us', 'AppointmentController@contact_us')->name('contact_us');
 
 Route::group(['as' => 'fortune.', 'prefix' => 'fortune'], function () {
-
+    Route::post('/make-appointment', 'PageController@make_an_appointment');
     Route::get('/getDoctor', 'AppointmentController@getDoctor')->name('getDoctor');
     Route::get('/getAppoinmet/{id}', 'AppointmentController@getAppoinmet')->name('getAppoinmet');
     // Route::get('/getpdf', 'CartController@generatePDF')->name('getpdf');

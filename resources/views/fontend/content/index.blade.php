@@ -88,11 +88,11 @@
 </div>
 
 <div class="icon_heading">HELPLINE NO</div>
-<div class="icon_subheading2" style="margin-bottom:15px;text-align: center;">Phone : <span style="text-align:center; margin-left: 10px;; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
+<div class="icon_subheading2" style="margin-bottom:15px;text-align: center;">Phone : <span style="text-align:center;  font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div>
 
 <!--<div class="icon_subheading2" style="margin-bottom:15px;">DELHI & NCR : <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>1800-121-9541 </span></div>-->
 
-<div class="icon_subheading2"  style="margin-bottom:15px;text-align: center;">Hotline : <span style="text-align:right;margin-left: 10px; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
+<div class="icon_subheading2"  style="margin-bottom:15px; margin-right: 14px;text-align: center;">Hotline : <span style="text-align:right;margin-left: 10px; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->hoteline}}</span></div>
 
 </div>
 
@@ -110,7 +110,7 @@
   </div>
 
   <div class="icon_heading">HELPLINE NO</div>
-  <a href="tel:{{$site_infos->phone}}"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
+  <a href="tel:{{$site_infos->phone}}"><div class="icon_subheading2" >Phone  <span style="text-align:right; float:right; font-weight:bold;margin-right:14px;"><i class="fa fa-phone" style="margin-right:10px; font-size:16px;" ></i>{{$site_infos->phone}}</span></div></a>
 
 
 
@@ -127,7 +127,7 @@
 <div class="icon1_maindiv"><div class="icon2"></div></div>
 </div>
 
-<div class="icon_heading">Appointment</div>
+<div class="icon_heading">Doctor Appointment</div>
 <div class="icon_subheading">Click here to book</div>
 
 <!--<div class="icon_subheading"><input name="find_lab" type="text" class="find_location_txtbox" placeholder="Enter Your Pin Code" maxlength="6" onkeypress="return isNumberKey(event)" /></div>

@@ -60,22 +60,20 @@
         <table id="" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>Code</th>
-                    <th> Package Name</th>
-                    <th>Rate</th>
-                    <th>Package Rate</th>
-                    <th>Doctor Fee</th>
+                    <th>Service Head</th>
+                    <th> Service Type</th>
+                    <th>Test Name</th>
+                    <th>Test Rate</th>
                 </tr>
             </thead>
             <tbody>
                 @if(!empty($health_checks))
                     @foreach ($health_checks as $key => $doctor)
                         <tr>
-                            <td>{{ $doctor->code }}</td>
+                            <td>{{ $doctor->doctor_fee }}</td>
+                            <td>{{ $doctor->package_rate }}</td>
                             <td>{{ $doctor->package_name }}</td>
                             <td>{{ $doctor->rate }}</td>
-                            <td>{{ $doctor->package_rate }}</td>
-                            <td>{{ $doctor->doctor_fee }}</td>
                         </tr>
                     @endforeach
                 @else

@@ -5,6 +5,7 @@ use DB;
 use App\franchisee;
 use App\feedback;
 use App\sub_menu_list;
+use App\make_appointment;
 use App\doctors;
 use Illuminate\Http\Request;
 
@@ -94,8 +95,9 @@ class PageController extends Controller
      $sub_menu_list = getValueByTBName('submenu_facilities');
      $sliders = getValueByTBName('slider');
      $health_package= getValueByTBName('health_packages');
+     $health_package_list= getValueByTBName('health_package_lists');
      $site_infos= first_row_date('site_infos');
-      return view('fontend.content.health_package',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','health_package'));
+      return view('fontend.content.health_package_list',compact('health_package_list','site_infos','menu','sub_menu','sliders','sub_menu_list','health_package'));
    }
    public function health_check(){
      $menu = getValueByTBName('menu');
@@ -142,7 +144,7 @@ class PageController extends Controller
              ->Where('package_id', '=', $package_id)
              ->get();
      $site_infos= first_row_date('site_infos');
-      return view('fontend.content.package_details',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
+      return view('fontend.content.health_package_list_details',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','package_details','packages'));
    }
    public function career(){
      $menu = getValueByTBName('menu');
@@ -286,5 +288,21 @@ class PageController extends Controller
              ->select('*')
              ->first();
       return view('fontend.content.telemedicine',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','telemedicines'));
+   }
+   public function make_an_appointment(Request $request){
+     $request->all();
+     $appointment = new make_appointment;
+     $appointment->name =  $request->name;
+     $appointment->age =  $request->age;
+     $appointment->phone =  $request->phone;
+     $appointment->department =  $request->department;
+     $appointment->save();
+     return back();
+     $menu = getValueByTBName('menu');
+     $sub_menu = getValueByTBName('submenuses');
+     $sub_menu_list = getValueByTBName('submenu_facilities');
+     $sliders = getValueByTBName('slider');
+     $site_infos= first_row_date('site_infos');
+      return view('fontend.content.feedback',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
    }
 }

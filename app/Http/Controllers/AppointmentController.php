@@ -96,7 +96,11 @@ class AppointmentController extends Controller
         $doctors = doctors::with('times')->orderBy('id', 'DESC')->get();
         $site_infos= first_row_date('site_infos');
         $notification = $this->notification;
-        return view('fontend.appoinment.appointment',compact('doctors','site_infos', 'notification'));
+        $departments = getValueByTBName('departments');
+        $sliders =  DB::table('slider')
+                ->select('*')
+                ->first();
+        return view('fontend.appoinment.make_appointment',compact('departments','sliders','doctors','site_infos', 'notification'));
     }
 
 
