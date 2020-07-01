@@ -60,7 +60,12 @@
 
   <div class="static_pagetxt">
 
-
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success alert-block">
+    	<button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+    </div>
+    @endif
   <form action="{{action('PageController@make_an_appointment')}}" method="post" style="background-color: #fcfafa;">
       @csrf
       <div class="get_touch_formdiv">

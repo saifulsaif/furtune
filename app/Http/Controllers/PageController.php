@@ -290,19 +290,12 @@ class PageController extends Controller
       return view('fontend.content.telemedicine',compact('site_infos','menu','sub_menu','sliders','sub_menu_list','telemedicines'));
    }
    public function make_an_appointment(Request $request){
-     $request->all();
      $appointment = new make_appointment;
      $appointment->name =  $request->name;
      $appointment->age =  $request->age;
      $appointment->phone =  $request->phone;
      $appointment->department =  $request->department;
      $appointment->save();
-     return back();
-     $menu = getValueByTBName('menu');
-     $sub_menu = getValueByTBName('submenuses');
-     $sub_menu_list = getValueByTBName('submenu_facilities');
-     $sliders = getValueByTBName('slider');
-     $site_infos= first_row_date('site_infos');
-      return view('fontend.content.feedback',compact('site_infos','menu','sub_menu','sliders','sub_menu_list'));
+     return back()->with('success','Your appointment sent successfully!');
    }
 }
