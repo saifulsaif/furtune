@@ -14,10 +14,10 @@
 
 
 
-<!------------------  profile  ------------------->
+<!------------------  profile  -------------------> 
 
 <div class="profile_aboutmaindiv">
-  <h3 class="text-center" style="font-weight:700;"> Executive Health Check-Up (Female Above 40) Basic</h3>
+  <h3 class="text-center" style="font-weight:700;"> {{$packageinfo->package_name}}</h3>
 <div class="columns">
   <ul class="price" style="list-style-type: none;
     border: 1px solid #eee;
@@ -26,9 +26,12 @@
     -webkit-transition: 0.3s;
     transition: 0.3s;">
     <li class="header" style="text-align: center;background-color: #40b176 !important;  color: #fff;  font-size: 20px;font-weight: 700;">Packages</li>
-    <li style="border-bottom: 1px solid #ddd;padding: 10px;  text-align: center;color: #111;">Glucose, fasting</li>
-    <li style="border-bottom: 1px solid #ddd;padding: 10px;text-align: center;color: #111;">Creatinine</li>
-    <li class="grey" style="text-align: center;background-color: #d21010 !important;  font-size: 18px;font-weight: 700;color: #fff;">Package Price (Tk) 10,990/=</li>
+    @if (!empty($services))
+        @foreach ($services as $item)
+        <li style="border-bottom: 1px solid #ddd;padding: 10px;  text-align: center;color: #111;">{{$item->service_name}}</li>
+        @endforeach
+    @endif
+    <li class="grey" style="text-align: center;background-color: #d21010 !important;  font-size: 18px;font-weight: 700;color: #fff;">Package Price (Tk) {{$packageinfo->rate}}/=</li>
   </ul>
 </div>
 </div>

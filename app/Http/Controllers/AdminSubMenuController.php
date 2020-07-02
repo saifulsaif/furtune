@@ -327,7 +327,7 @@ class AdminSubMenuController extends \crocodicstudio\crudbooster\controllers\CBC
 	    */
     public function hook_after_delete($id)
     {
-        //Your code here
+        DB::table('submenuses')->where('id', $id)->delete();
 
     }
 

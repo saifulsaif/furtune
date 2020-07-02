@@ -14,7 +14,7 @@ class CreateHealthPackageListsTable extends Migration
     public function up()
     {
         Schema::create('health_package_lists', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('package_name');
             $table->string('rate');
             $table->timestamps();

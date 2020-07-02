@@ -46,6 +46,9 @@ Route::get('/covid-19', 'PageController@covid')->name('covid');
 Route::get('/telemedicine', 'PageController@telemedicine')->name('telemedicine');
 
 
+Route::post('/deleteservice', 'PageController@deleteservice')->name('deleteservice');
+
+
 
 
 
