@@ -44,13 +44,7 @@ Route::get('/gallery', 'PageController@gallery')->name('gallery');
 Route::get('/get-in-touch', 'PageController@getInTouch')->name('get_in_touch');
 Route::get('/covid-19', 'PageController@covid')->name('covid');
 Route::get('/telemedicine', 'PageController@telemedicine')->name('telemedicine');
-
-
 Route::post('/deleteservice', 'PageController@deleteservice')->name('deleteservice');
-
-
-
-
 
 Route::post('/sendAppointment', 'AppointmentController@sendAppointment')->name('sendAppointment');
 Route::post('/contact_us', 'AppointmentController@contact_us')->name('contact_us');
